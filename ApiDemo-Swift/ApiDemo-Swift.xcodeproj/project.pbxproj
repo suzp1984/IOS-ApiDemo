@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61C69A41C02EBD600ADF518 /* AppDelegate.swift */; };
-		A61C69A71C02EBD600ADF518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61C69A61C02EBD600ADF518 /* ViewController.swift */; };
-		A61C69AA1C02EBD600ADF518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61C69A81C02EBD600ADF518 /* Main.storyboard */; };
 		A61C69AC1C02EBD600ADF518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A61C69AB1C02EBD600ADF518 /* Assets.xcassets */; };
 		A61C69AF1C02EBD600ADF518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61C69AD1C02EBD600ADF518 /* LaunchScreen.storyboard */; };
 		A61C69BA1C02EBD600ADF518 /* ApiDemo_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61C69B91C02EBD600ADF518 /* ApiDemo_SwiftTests.swift */; };
@@ -36,8 +34,6 @@
 /* Begin PBXFileReference section */
 		A61C69A11C02EBD600ADF518 /* ApiDemo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ApiDemo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61C69A41C02EBD600ADF518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A61C69A61C02EBD600ADF518 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A61C69A91C02EBD600ADF518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A61C69AB1C02EBD600ADF518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A61C69AE1C02EBD600ADF518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A61C69B01C02EBD600ADF518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				A61C69A41C02EBD600ADF518 /* AppDelegate.swift */,
-				A61C69A61C02EBD600ADF518 /* ViewController.swift */,
-				A61C69A81C02EBD600ADF518 /* Main.storyboard */,
 				A61C69AB1C02EBD600ADF518 /* Assets.xcassets */,
 				A61C69AD1C02EBD600ADF518 /* LaunchScreen.storyboard */,
 				A61C69B01C02EBD600ADF518 /* Info.plist */,
@@ -234,7 +228,6 @@
 			files = (
 				A61C69AF1C02EBD600ADF518 /* LaunchScreen.storyboard in Resources */,
 				A61C69AC1C02EBD600ADF518 /* Assets.xcassets in Resources */,
-				A61C69AA1C02EBD600ADF518 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A61C69A71C02EBD600ADF518 /* ViewController.swift in Sources */,
 				A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +288,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A61C69A81C02EBD600ADF518 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A61C69A91C02EBD600ADF518 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A61C69AD1C02EBD600ADF518 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -401,10 +385,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ApiDemo-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.ApiDemo-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ApiDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -413,10 +400,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ApiDemo-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.ApiDemo-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ApiDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -487,6 +477,7 @@
 				A61C69CB1C02EBD600ADF518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A61C69CC1C02EBD600ADF518 /* Build configuration list for PBXNativeTarget "ApiDemo-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +486,7 @@
 				A61C69CE1C02EBD600ADF518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A61C69CF1C02EBD600ADF518 /* Build configuration list for PBXNativeTarget "ApiDemo-SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +495,7 @@
 				A61C69D11C02EBD600ADF518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
