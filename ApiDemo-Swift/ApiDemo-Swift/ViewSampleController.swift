@@ -1,20 +1,23 @@
 //
-//  MainViewController.swift
+//  ViewSampleController.swift
 //  ApiDemo-Swift
 //
-//  Created by Jacob su on 5/2/16.
+//  Created by Jacob su on 5/3/16.
 //  Copyright © 2016 iboxpay. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class ViewSampleController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    let cellIdentifier = "view"
+    let demos = ["view", "transform", "trait collection", "autoresizing", "autolayout", "drawing", "layers", "animation", "touches"]
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "ApiDemo"
+        self.title = "View Samples"
         let tableView = UITableView(frame: self.view.bounds)
         tableView.delegate = self
         tableView.dataSource = self
@@ -22,13 +25,8 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
         tableView.backgroundColor = UIColor.cyanColor()
         
         self.view.addSubview(tableView)
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationItem.leftItemsSupplementBackButton = true
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,8 +35,6 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
     }
     
 
-    let cellIdentifier = "Cell"
-    let demos = ["view", "drawing", "layers", "animation", "touches", "controller"]
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -48,7 +44,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demos.count
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell : UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
         if cell == nil {
@@ -73,14 +69,14 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //CODE TO BE RUN ON CELL TOUCH
         switch demos[indexPath.row] {
-        case demos[0]:
-            self.navigationController!.pushViewController(ViewSampleController(), animated: true)
+        case demos[3]:
+            self.navigationController!.pushViewController(ResizingViewController(), animated: true)
             break
         default:
             break
         }
     }
-    
+
     /*
     // MARK: - Navigation
 
