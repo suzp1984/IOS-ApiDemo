@@ -8,6 +8,15 @@
 
 import UIKit
 
+func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+        dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(delay * Double(NSEC_PER_SEC))
+        ),
+        dispatch_get_main_queue(), closure)
+}
+
 class ResizingViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -28,6 +37,21 @@ class ResizingViewController: UIViewController {
         
         v2.autoresizingMask = .FlexibleWidth
         v3.autoresizingMask = [.FlexibleTopMargin, .FlexibleLeftMargin]
+        
+        delay(2, closure: {
+            v1.bounds.size.width += 20
+            v1.bounds.size.height -= 20
+        })
+        
+        delay(4) {
+            v1.bounds.size.width += 20
+            v1.bounds.size.height -= 40
+        }
+        
+        delay(6) {
+            v1.bounds.size.width -= 40
+            v1.bounds.size.height += 60
+        }
     }
 
     override func didReceiveMemoryWarning() {
