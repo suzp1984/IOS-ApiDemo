@@ -69,6 +69,9 @@ class ViewSampleController: UIViewController, UINavigationControllerDelegate, UI
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //CODE TO BE RUN ON CELL TOUCH
         switch demos[indexPath.row] {
+        case demos[0]:
+            self.navigationController!.pushViewController(FrameViewController(), animated: true)
+            break
         case demos[3]:
             self.navigationController!.pushViewController(ResizingViewController(), animated: true)
             break
