@@ -78,6 +78,9 @@ class ViewSampleController: UIViewController, UINavigationControllerDelegate, UI
         case demos[3]:
             self.navigationController!.pushViewController(ResizingViewController(), animated: true)
             break
+        case demos[4]:
+            self.navigationController!.pushViewController(AutoLayoutViewController(), animated: true)
+            break
         default:
             break
         }
