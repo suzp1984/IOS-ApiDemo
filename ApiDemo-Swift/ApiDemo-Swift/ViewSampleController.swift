@@ -11,7 +11,7 @@ import UIKit
 class ViewSampleController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "view"
-    let demos = ["view", "transform", "autoresizing", "autolayout", "ConstraintSwap", "LayoutMargin", "animation", "trait collection"]
+    let demos = ["view", "transform", "autoresizing", "autolayout", "ConstraintSwap", "LayoutMargin", "StackView", "trait collection"]
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +86,9 @@ class ViewSampleController: UIViewController, UINavigationControllerDelegate, UI
             break
         case demos[5]:
             self.navigationController!.pushViewController(LayoutMarginViewController(), animated: true)
+            break
+        case demos[6]:
+            self.navigationController!.pushViewController(StackViewController(), animated: true)
             break
         default:
             break

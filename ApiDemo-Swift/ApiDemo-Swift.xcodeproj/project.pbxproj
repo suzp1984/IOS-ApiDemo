@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
+		37C3F76E1CE1CA9C0073A348 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3F76D1CE1CA9C0073A348 /* StackViewController.swift */; };
 		37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F54F401CD84D6000E70D2B /* ViewSampleController.swift */; };
 		37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F54F421CD85B7F00E70D2B /* ResizingViewController.swift */; };
 		37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE99D1CE072B5002A28E2 /* FrameViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		37C3F76D1CE1CA9C0073A348 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		37F54F401CD84D6000E70D2B /* ViewSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSampleController.swift; sourceTree = "<group>"; };
 		37F54F421CD85B7F00E70D2B /* ResizingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingViewController.swift; sourceTree = "<group>"; };
 		37FEE99D1CE072B5002A28E2 /* FrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				37FEE9A21CE07DD3002A28E2 /* AutoLayoutViewController.swift */,
 				37FEE9A41CE092C4002A28E2 /* ConstraintSwapViewController.swift */,
 				37FEE9A61CE18B99002A28E2 /* LayoutMarginViewController.swift */,
+				37C3F76D1CE1CA9C0073A348 /* StackViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */,
+				37C3F76E1CE1CA9C0073A348 /* StackViewController.swift in Sources */,
 				37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */,
 				37FEE9A71CE18B99002A28E2 /* LayoutMarginViewController.swift in Sources */,
 			);
