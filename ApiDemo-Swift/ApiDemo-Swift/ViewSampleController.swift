@@ -11,7 +11,7 @@ import UIKit
 class ViewSampleController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "view"
-    let demos = ["view", "transform", "autoresizing", "autolayout", "touches", "layers", "animation", "trait collection"]
+    let demos = ["view", "transform", "autoresizing", "autolayout", "ConstraintSwap", "LayoutMargin", "animation", "trait collection"]
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +83,9 @@ class ViewSampleController: UIViewController, UINavigationControllerDelegate, UI
             break
         case demos[4]:
             self.navigationController!.pushViewController(ConstraintSwapViewController(), animated: true)
+            break
+        case demos[5]:
+            self.navigationController!.pushViewController(LayoutMarginViewController(), animated: true)
             break
         default:
             break

@@ -14,6 +14,7 @@
 		37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE9A01CE075A0002A28E2 /* TransformViewController.swift */; };
 		37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE9A21CE07DD3002A28E2 /* AutoLayoutViewController.swift */; };
 		37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE9A41CE092C4002A28E2 /* ConstraintSwapViewController.swift */; };
+		37FEE9A71CE18B99002A28E2 /* LayoutMarginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE9A61CE18B99002A28E2 /* LayoutMarginViewController.swift */; };
 		A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61C69A41C02EBD600ADF518 /* AppDelegate.swift */; };
 		A61C69AC1C02EBD600ADF518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A61C69AB1C02EBD600ADF518 /* Assets.xcassets */; };
 		A61C69AF1C02EBD600ADF518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61C69AD1C02EBD600ADF518 /* LaunchScreen.storyboard */; };
@@ -46,6 +47,7 @@
 		37FEE9A01CE075A0002A28E2 /* TransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
 		37FEE9A21CE07DD3002A28E2 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
 		37FEE9A41CE092C4002A28E2 /* ConstraintSwapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintSwapViewController.swift; sourceTree = "<group>"; };
+		37FEE9A61CE18B99002A28E2 /* LayoutMarginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutMarginViewController.swift; sourceTree = "<group>"; };
 		A61C69A11C02EBD600ADF518 /* ApiDemo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ApiDemo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61C69A41C02EBD600ADF518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A61C69AB1C02EBD600ADF518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				37FEE9A01CE075A0002A28E2 /* TransformViewController.swift */,
 				37FEE9A21CE07DD3002A28E2 /* AutoLayoutViewController.swift */,
 				37FEE9A41CE092C4002A28E2 /* ConstraintSwapViewController.swift */,
+				37FEE9A61CE18B99002A28E2 /* LayoutMarginViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */,
 				37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */,
+				37FEE9A71CE18B99002A28E2 /* LayoutMarginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
