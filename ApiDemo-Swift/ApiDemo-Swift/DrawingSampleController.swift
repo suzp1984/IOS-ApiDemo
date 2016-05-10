@@ -17,6 +17,15 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "Drawing Samples"
+        let tableView = UITableView(frame: self.view.bounds)
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.backgroundColor = UIColor.cyanColor()
+        
+        self.view.addSubview(tableView)
+        self.navigationItem.leftItemsSupplementBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
