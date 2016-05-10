@@ -11,7 +11,7 @@ import UIKit
 class ViewSampleController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "view"
-    let demos = ["view", "transform", "autoresizing", "autolayout", "ConstraintSwap", "LayoutMargin", "StackView", "trait collection"]
+    let demos = ["view", "transform", "autoresizing", "autolayout", "ConstraintSwap", "LayoutMargin", "StackView"]
         
     override func viewDidLoad() {
         super.viewDidLoad()
