@@ -11,7 +11,7 @@ import UIKit
 class DrawingSampleController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "drawing"
-    let demos = ["ImageView Resolution"]
+    let demos = ["ImageView Resolution", "Image TraitCollection"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +68,9 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController!.pushViewController(ImageResolutionViewController(), animated: true)
+            break
+        case demos[1]:
+            self.navigationController!.pushViewController(ImageTraitCollectionViewController(), animated: true)
             break
         default:
             break
