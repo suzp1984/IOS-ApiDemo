@@ -11,7 +11,7 @@ import UIKit
 class DrawingSampleController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "drawing"
-    let demos = ["ImageView Resolution", "Image TraitCollection", "ImageView ContentMode"]
+    let demos = ["ImageView Resolution", "Image TraitCollection", "ImageView ContentMode", "Image Resizable"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +75,9 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
         case demos[2]:
             self.navigationController!.pushViewController(ImageViewContentModeViewController(), animated: true)
             break
+        case demos[3]:
+            self.navigationController!.pushViewController(ImageResizableViewController(), animated: true)
+            break;
         default:
             break
         }
