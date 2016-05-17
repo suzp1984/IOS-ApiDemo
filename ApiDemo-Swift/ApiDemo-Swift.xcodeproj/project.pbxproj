@@ -22,6 +22,7 @@
 		37C7D2181CE9F93000407AA8 /* GraphicContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C7D2171CE9F93000407AA8 /* GraphicContextViewController.swift */; };
 		37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C7D2191CE9F9A500407AA8 /* Views.swift */; };
 		37C7D21E1CEA0C5E00407AA8 /* ImageDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C7D21D1CEA0C5E00407AA8 /* ImageDrawingViewController.swift */; };
+		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F54F401CD84D6000E70D2B /* ViewSampleController.swift */; };
 		37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F54F421CD85B7F00E70D2B /* ResizingViewController.swift */; };
 		37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE99D1CE072B5002A28E2 /* FrameViewController.swift */; };
@@ -69,6 +70,7 @@
 		37C7D2171CE9F93000407AA8 /* GraphicContextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicContextViewController.swift; sourceTree = "<group>"; };
 		37C7D2191CE9F9A500407AA8 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		37C7D21D1CEA0C5E00407AA8 /* ImageDrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDrawingViewController.swift; sourceTree = "<group>"; };
+		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37F54F401CD84D6000E70D2B /* ViewSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSampleController.swift; sourceTree = "<group>"; };
 		37F54F421CD85B7F00E70D2B /* ResizingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingViewController.swift; sourceTree = "<group>"; };
 		37FEE99D1CE072B5002A28E2 /* FrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				37C7D2171CE9F93000407AA8 /* GraphicContextViewController.swift */,
 				37C7D2191CE9F9A500407AA8 /* Views.swift */,
 				37C7D21D1CEA0C5E00407AA8 /* ImageDrawingViewController.swift */,
+				37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */,
 			);
 			name = Drawing;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
+				37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */,
 				3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */,
 				37C3F77B1CE407130073A348 /* MyImageView.swift in Sources */,
 				37C3F76E1CE1CA9C0073A348 /* StackViewController.swift in Sources */,

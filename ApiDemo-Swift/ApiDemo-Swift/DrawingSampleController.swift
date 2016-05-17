@@ -12,7 +12,7 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
 
     let cellIdentifier = "drawing"
     let demos = ["ImageView Resolution", "Image TraitCollection", "ImageView ContentMode", "Image Resizable", "Graphic Context",
-                 "Image Drawing"]
+                 "Image Drawing", "Snapshot"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +84,9 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
             break
         case demos[5]:
             self.navigationController!.pushViewController(ImageDrawingViewController(), animated: true)
+            break
+        case demos[6]:
+            self.navigationController!.pushViewController(SnapshotViewController(), animated: true)
             break
         default:
             break
