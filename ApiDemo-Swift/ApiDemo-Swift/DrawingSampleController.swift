@@ -12,7 +12,8 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
 
     let cellIdentifier = "drawing"
     let demos = ["ImageView Resolution", "Image TraitCollection", "ImageView ContentMode", "Image Resizable", "Graphic Context",
-                 "Image Drawing", "Snapshot", "Image Filter 1", "Image Filter 2", "Visual Effect"]
+                 "Image Drawing", "Snapshot", "Image Filter 1", "Image Filter 2", "Visual Effect", "Custom Drawing 1",
+                 "Custom Drawing 2", "Custom Drawing 3", "Custom Drawing 4", "Custom Drawing 5", "Custom Drawing 6"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +97,36 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
             break
         case demos[9]:
             self.navigationController!.pushViewController(VisualEffectViewController(), animated: true)
+            break
+        case demos[10]:
+            let c = CustomeDrawingViewController()
+            c.whitch = 1
+            self.navigationController!.pushViewController(c, animated: true)
+            break
+        case demos[11]:
+            let c = CustomeDrawingViewController()
+            c.whitch = 2
+            self.navigationController!.pushViewController(c, animated: true)
+            break
+        case demos[12]:
+            let c = CustomeDrawingViewController()
+            c.whitch = 3
+            self.navigationController!.pushViewController(c, animated: true)
+            break
+        case demos[13]:
+            let c = CustomeDrawingViewController()
+            c.whitch = 4
+            self.navigationController!.pushViewController(c, animated: true)
+            break
+        case demos[14]:
+            let c = CustomeDrawingViewController()
+            c.whitch = 5
+            self.navigationController!.pushViewController(c, animated: true)
+            break
+        case demos[15]:
+            let c = CustomeDrawingViewController()
+            c.whitch = 6
+            self.navigationController!.pushViewController(c, animated: true)
             break
         default:
             break

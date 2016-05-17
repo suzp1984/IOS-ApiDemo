@@ -29,6 +29,8 @@
 		37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F54F401CD84D6000E70D2B /* ViewSampleController.swift */; };
 		37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F54F421CD85B7F00E70D2B /* ResizingViewController.swift */; };
 		37FE42521CEB47E300EE8E38 /* VisualEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE42511CEB47E300EE8E38 /* VisualEffectViewController.swift */; };
+		37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE42531CEB4B6200EE8E38 /* MyCustomDrawingView.swift */; };
+		37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE42551CEB4C4700EE8E38 /* CustomeDrawingViewController.swift */; };
 		37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE99D1CE072B5002A28E2 /* FrameViewController.swift */; };
 		37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE9A01CE075A0002A28E2 /* TransformViewController.swift */; };
 		37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FEE9A21CE07DD3002A28E2 /* AutoLayoutViewController.swift */; };
@@ -81,6 +83,8 @@
 		37F54F401CD84D6000E70D2B /* ViewSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSampleController.swift; sourceTree = "<group>"; };
 		37F54F421CD85B7F00E70D2B /* ResizingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizingViewController.swift; sourceTree = "<group>"; };
 		37FE42511CEB47E300EE8E38 /* VisualEffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectViewController.swift; sourceTree = "<group>"; };
+		37FE42531CEB4B6200EE8E38 /* MyCustomDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomDrawingView.swift; sourceTree = "<group>"; };
+		37FE42551CEB4C4700EE8E38 /* CustomeDrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeDrawingViewController.swift; sourceTree = "<group>"; };
 		37FEE99D1CE072B5002A28E2 /* FrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
 		37FEE9A01CE075A0002A28E2 /* TransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
 		37FEE9A21CE07DD3002A28E2 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */,
 				37E20A561CEABEC600383A56 /* MyVignetteFilter.swift */,
 				37FE42511CEB47E300EE8E38 /* VisualEffectViewController.swift */,
+				37FE42531CEB4B6200EE8E38 /* MyCustomDrawingView.swift */,
+				37FE42551CEB4C4700EE8E38 /* CustomeDrawingViewController.swift */,
 			);
 			name = Drawing;
 			sourceTree = "<group>";
@@ -359,9 +365,11 @@
 				A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */,
 				37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */,
 				37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */,
+				37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */,
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
+				37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */,
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
