@@ -1,10 +1,4 @@
-//
-//  ImageFilter1ViewController.swift
-//  ApiDemo-Swift
-//
-//  Created by Jacob su on 5/17/16.
-//  Copyright © 2016 iboxpay. All rights reserved.
-//
+
 
 import UIKit
 
