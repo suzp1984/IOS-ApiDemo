@@ -11,7 +11,7 @@ import UIKit
 class LayerSampleController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "Heriarchy layer"
-    let demos = ["layer heriarchy", "Drawing into Layers"]
+    let demos = ["layer heriarchy", "Drawing into Layers", "Compass"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +69,8 @@ class LayerSampleController: UIViewController, UINavigationControllerDelegate, U
             self.navigationController!.pushViewController(LayerHierarchyViewController(), animated: true)
         case demos[1]:
             self.navigationController!.pushViewController(DrawingIntoLayerViewController(), animated: true)
+        case demos[2]:
+            self.navigationController!.pushViewController(CompassViewController(), animated: true)
         default:
             break
         }
