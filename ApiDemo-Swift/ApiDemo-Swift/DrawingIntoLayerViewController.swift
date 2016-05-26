@@ -6,6 +6,9 @@ class DrawingIntoLayerViewController: UIViewController {
     var views = [UIView]()
     var smilers = [Smiler(), Smiler2()]
     
+    var layer0 : CALayer!
+    var layer1 : CALayer!
+    
     func makeLayerOfClass(klass:CALayer.Type, andAddToView ix:Int) -> CALayer {
         let lay = klass.init()
         lay.contentsScale = UIScreen.mainScreen().scale
@@ -71,18 +74,32 @@ class DrawingIntoLayerViewController: UIViewController {
         
         self.views = [v1, v2, v3, v4]
         
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         // four ways of getting content into a layer
         
         // 0: delegate draws
-        self.makeLayerOfClass(CALayer.self, andAddToView:0).delegate = self.smilers[0]
+        self.layer0 = self.makeLayerOfClass(CALayer.self, andAddToView:0)
+        self.layer0.delegate = self.smilers[0]
         // 1: delegate sets contents
-        self.makeLayerOfClass(CALayer.self, andAddToView:1).delegate = self.smilers[1]
+        self.layer1 = self.makeLayerOfClass(CALayer.self, andAddToView:1)
+        self.layer1.delegate = self.smilers[1]
+        
         // 2: subclass draws
         self.makeLayerOfClass(SmilerLayer.self, andAddToView:2)
         // 3: subclass sets contents
         self.makeLayerOfClass(SmilerLayer2.self, andAddToView:3)
     }
-
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.layer0.delegate = nil
+        self.layer1.delegate = nil
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
