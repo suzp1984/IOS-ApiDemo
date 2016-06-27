@@ -1,44 +1,37 @@
 //
-//  MainViewController.swift
+//  AnimationSampleController.swift
 //  ApiDemo-Swift
 //
-//  Created by Jacob su on 5/2/16.
+//  Created by Jacob su on 6/27/16.
 //  Copyright © 2016 iboxpay. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class AnimationSampleController: UIViewController, UINavigationControllerDelegate,
+                                    UITableViewDelegate, UITableViewDataSource {
+
+    
+    let cellIdentifier = "animation"
+    let demos = ["ImageView Animation"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.title = "ApiDemo"
-        let tableView = UITableView(frame: self.view.bounds)
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.title = "Animation"
+        let table = UITableView(frame: self.view.bounds)
+        table.delegate = self
+        table.dataSource = self
+        table.backgroundColor = UIColor.cyanColor()
         
-        tableView.backgroundColor = UIColor.cyanColor()
-        
-        self.view.addSubview(tableView)
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.hidesBarsOnSwipe = false
+        self.view.addSubview(table)
+        self.navigationItem.leftItemsSupplementBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    let cellIdentifier = "Cell"
-    let demos = ["view", "drawing", "layers", "animation", "touches", "controller"]
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -69,21 +62,11 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
         cell.textLabel!.text = demos[indexPath.row]
         return cell
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //CODE TO BE RUN ON CELL TOUCH
         switch demos[indexPath.row] {
         case demos[0]:
-            self.navigationController!.pushViewController(ViewSampleController(), animated: true)
-           
-        case demos[1]:
-            self.navigationController!.pushViewController(DrawingSampleController(), animated: true)
-           
-        case demos[2]:
-            self.navigationController!.pushViewController(LayerSampleController(), animated: true)
-        case demos[3]:
-            self.navigationController!.pushViewController(AnimationSampleController(), animated: true)
-            
+            self.navigationController!.pushViewController(ImageViewAnimationViewController(), animated: true)
         default:
             break
         }
