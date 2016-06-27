@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */; };
+		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */; };
 		37A6E09C1CF68EC600632BDF /* LayerHierarchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E09B1CF68EC600632BDF /* LayerHierarchyViewController.swift */; };
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layermask2ViewController.swift; sourceTree = "<group>"; };
+		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSampleController.swift; sourceTree = "<group>"; };
 		37A6E09B1CF68EC600632BDF /* LayerHierarchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerHierarchyViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				37A6E09F1CF6FE3100632BDF /* smilers.swift */,
 				37A6E0A11CF7110700632BDF /* CompassViewController.swift */,
 				37A6E0A31CF7112D00632BDF /* CompassView.swift */,
+				377DDCBB1D210630006C884D /* LayerMaskViewController.swift */,
+				3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */,
 			);
 			name = layers;
 			sourceTree = "<group>";
@@ -397,12 +403,14 @@
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,
+				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
 				37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */,
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
 				37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
+				3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */,
 				37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */,
 				37A6E0A21CF7110700632BDF /* CompassViewController.swift in Sources */,
 				3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */,
