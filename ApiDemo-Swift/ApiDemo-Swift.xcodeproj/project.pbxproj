@@ -11,6 +11,7 @@
 		371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291801D2154B9006F0A68 /* AnimationSampleController.swift */; };
 		371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
+		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */; };
@@ -76,6 +77,7 @@
 		371291801D2154B9006F0A68 /* AnimationSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationSampleController.swift; sourceTree = "<group>"; };
 		371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationViewController.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
+		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSampleController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */,
+				377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
+				377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */,
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,
 				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
 				37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */,

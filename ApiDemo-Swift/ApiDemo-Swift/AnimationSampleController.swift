@@ -13,7 +13,7 @@ class AnimationSampleController: UIViewController, UINavigationControllerDelegat
 
     
     let cellIdentifier = "animation"
-    let demos = ["ImageView Animation"]
+    let demos = ["ImageView Animation", "UIView Animation"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +67,8 @@ class AnimationSampleController: UIViewController, UINavigationControllerDelegat
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController!.pushViewController(ImageViewAnimationViewController(), animated: true)
+        case demos[1]:
+            self.navigationController!.pushViewController(UIViewAnimationViewController(), animated: true)
         default:
             break
         }
