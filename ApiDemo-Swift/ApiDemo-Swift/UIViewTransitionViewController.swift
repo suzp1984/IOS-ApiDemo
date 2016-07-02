@@ -7,6 +7,7 @@ class UIViewTransitionViewController: UIViewController {
     var rv : MyReverseView!
     var outer : UIView!
     var inner : UIView!
+    var lab : UILabel!
     var reverse : Bool = false
     
     override func viewDidLoad() {
@@ -59,6 +60,14 @@ class UIViewTransitionViewController: UIViewController {
         inner.leftAnchor.constraintEqualToAnchor(self.outer.leftAnchor).active = true
         inner.topAnchor.constraintEqualToAnchor(self.outer.topAnchor, constant: 10).active = true
     
+        lab = UILabel()
+        lab.text = "Hello"
+        lab.sizeToFit()
+        
+        self.view.addSubview(lab)
+        lab.translatesAutoresizingMaskIntoConstraints = false
+        lab.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 10).active = true
+        lab.topAnchor.constraintEqualToAnchor(self.outer.bottomAnchor, constant: 10).active = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,5 +102,14 @@ class UIViewTransitionViewController: UIViewController {
                 f.origin.x = 0
                 self.inner.frame = f
             }, completion: nil)
+        
+//        let lab2 = UILabel(frame: self.lab.frame)
+//        lab2.text = self.lab.text == "Hello" ? "Howdy" : "Hello"
+//        // lab2.sizeToFit()
+//        
+//        UIView.transitionFromView(self.lab, toView: lab2, duration: 2.0, options: .TransitionFlipFromLeft, completion: {
+//            _ in
+//            self.lab = lab2
+//        })
     }
 }
