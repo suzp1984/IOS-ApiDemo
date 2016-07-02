@@ -347,7 +347,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = iboxpay;
+				ORGANIZATIONNAME = "suzp1984@gmail.com";
 				TargetAttributes = {
 					A61C69A01C02EBD600ADF518 = {
 						CreatedOnToolsVersion = 7.1;

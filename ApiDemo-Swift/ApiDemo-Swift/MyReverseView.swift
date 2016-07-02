@@ -1,10 +1,3 @@
-//
-//  MyReverseView.swift
-//  ApiDemo-Swift
-//
-//  Created by Jacob su on 7/2/16.
-//  Copyright © 2016 iboxpay. All rights reserved.
-//
 
 import UIKit
 

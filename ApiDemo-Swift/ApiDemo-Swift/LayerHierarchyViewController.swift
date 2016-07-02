@@ -1,10 +1,3 @@
-//
-//  LayerHierarchyViewController.swift
-//  ApiDemo-Swift
-//
-//  Created by Jacob su on 5/26/16.
-//  Copyright © 2016 iboxpay. All rights reserved.
-//
 
 import UIKit
 

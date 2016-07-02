@@ -1,10 +1,3 @@
-//
-//  UIViewAnimationViewController.swift
-//  ApiDemo-Swift
-//
-//  Created by Jacob su on 6/30/16.
-//  Copyright © 2016 iboxpay. All rights reserved.
-//
 
 import UIKit
 
