@@ -23,6 +23,7 @@
 		37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */; };
 		37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */; };
 		37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276371D27CEEF00B22546 /* MyReverseView.swift */; };
+		37C2763A1D293AFB00B22546 /* LayerAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276391D293AFB00B22546 /* LayerAnimationViewController.swift */; };
 		37C3F76E1CE1CA9C0073A348 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3F76D1CE1CA9C0073A348 /* StackViewController.swift */; };
 		37C3F7701CE1D8940073A348 /* DrawingSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3F76F1CE1D8940073A348 /* DrawingSampleController.swift */; };
 		37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3F7721CE377240073A348 /* ImageResolutionViewController.swift */; };
@@ -92,6 +93,7 @@
 		37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation2ViewController.swift; sourceTree = "<group>"; };
 		37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTransitionViewController.swift; sourceTree = "<group>"; };
 		37C276371D27CEEF00B22546 /* MyReverseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReverseView.swift; sourceTree = "<group>"; };
+		37C276391D293AFB00B22546 /* LayerAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationViewController.swift; sourceTree = "<group>"; };
 		37C3F76D1CE1CA9C0073A348 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		37C3F76F1CE1D8940073A348 /* DrawingSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingSampleController.swift; sourceTree = "<group>"; };
 		37C3F7721CE377240073A348 /* ImageResolutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResolutionViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */,
 				37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */,
 				37C276371D27CEEF00B22546 /* MyReverseView.swift */,
+				37C276391D293AFB00B22546 /* LayerAnimationViewController.swift */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */,
 				37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */,
 				37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */,
+				37C2763A1D293AFB00B22546 /* LayerAnimationViewController.swift in Sources */,
 				37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */,
 				37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */,
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
