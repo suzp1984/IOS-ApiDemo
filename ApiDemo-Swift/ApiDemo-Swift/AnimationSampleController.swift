@@ -13,7 +13,7 @@ class AnimationSampleController: UIViewController, UINavigationControllerDelegat
 
     
     let cellIdentifier = "animation"
-    let demos = ["ImageView Animation", "UIView Animation", "UIView Animation 2", "UIView Transition", "Layer Animation"]
+    let demos = ["ImageView Animation", "UIView Animation", "UIView Animation 2", "UIView Transition", "Layer Animation", "Grouped Animation"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +75,8 @@ class AnimationSampleController: UIViewController, UINavigationControllerDelegat
             self.navigationController!.pushViewController(UIViewTransitionViewController(), animated: true)
         case demos[4]:
             self.navigationController!.pushViewController(LayerAnimationViewController(), animated: true)
+        case demos[5]:
+            self.navigationController!.pushViewController(GroupedAnimationViewController(), animated: true)
         default:
             break
         }

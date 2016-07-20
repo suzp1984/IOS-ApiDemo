@@ -14,6 +14,8 @@
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
+		3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3796A0E11D3F8435007BC3B3 /* boat.gif */; };
+		3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */; };
 		37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */; };
 		37A6E09C1CF68EC600632BDF /* LayerHierarchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E09B1CF68EC600632BDF /* LayerHierarchyViewController.swift */; };
 		37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E09D1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift */; };
@@ -84,6 +86,8 @@
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3796A0E11D3F8435007BC3B3 /* boat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boat.gif; sourceTree = "<group>"; };
+		3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedAnimationViewController.swift; sourceTree = "<group>"; };
 		37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSampleController.swift; sourceTree = "<group>"; };
 		37A6E09B1CF68EC600632BDF /* LayerHierarchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerHierarchyViewController.swift; sourceTree = "<group>"; };
 		37A6E09D1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingIntoLayerViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */,
 				37C276371D27CEEF00B22546 /* MyReverseView.swift */,
 				37C276391D293AFB00B22546 /* LayerAnimationViewController.swift */,
+				3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				37F54F401CD84D6000E70D2B /* ViewSampleController.swift */,
 				37C3F76F1CE1D8940073A348 /* DrawingSampleController.swift */,
 				37C3F7741CE406780073A348 /* frowney.png */,
+				3796A0E11D3F8435007BC3B3 /* boat.gif */,
 				37C3F77E1CE47C5E0073A348 /* bottle5.png */,
 				37C3F7751CE406780073A348 /* smiley.png */,
 				37C3F7801CE47C910073A348 /* smileyiPhone.png */,
@@ -395,6 +401,7 @@
 			files = (
 				37C3F7771CE406780073A348 /* smiley.png in Resources */,
 				3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */,
+				3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */,
 				37C3F7811CE47C910073A348 /* smileyiPhone.png in Resources */,
 				37C3F7761CE406780073A348 /* frowney.png in Resources */,
 				37C3F77F1CE47C5E0073A348 /* bottle5.png in Resources */,
@@ -440,6 +447,7 @@
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
+				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
 				377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */,
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,
 				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
