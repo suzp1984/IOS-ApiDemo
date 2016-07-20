@@ -10,6 +10,7 @@
 		3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */; };
 		371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291801D2154B9006F0A68 /* AnimationSampleController.swift */; };
 		371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */; };
+		3760D09B1D3FA83F0073BE02 /* FrozenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -82,6 +83,7 @@
 		3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layermask2ViewController.swift; sourceTree = "<group>"; };
 		371291801D2154B9006F0A68 /* AnimationSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationSampleController.swift; sourceTree = "<group>"; };
 		371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationViewController.swift; sourceTree = "<group>"; };
+		3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrozenAnimationViewController.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				37C276371D27CEEF00B22546 /* MyReverseView.swift */,
 				37C276391D293AFB00B22546 /* LayerAnimationViewController.swift */,
 				3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */,
+				3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				37C3F77B1CE407130073A348 /* MyImageView.swift in Sources */,
 				37E20A571CEABEC600383A56 /* MyVignetteFilter.swift in Sources */,
 				37C3F76E1CE1CA9C0073A348 /* StackViewController.swift in Sources */,
+				3760D09B1D3FA83F0073BE02 /* FrozenAnimationViewController.swift in Sources */,
 				37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */,
 				37C3F7701CE1D8940073A348 /* DrawingSampleController.swift in Sources */,
 				37C3F7791CE406C80073A348 /* ImageTraitCollectionViewController.swift in Sources */,
