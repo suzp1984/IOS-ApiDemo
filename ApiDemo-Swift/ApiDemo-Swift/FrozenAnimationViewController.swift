@@ -46,16 +46,16 @@ class FrozenAnimationViewController: UIViewController {
         v.widthAnchor.constraintEqualToConstant(200).active = true
         v.heightAnchor.constraintEqualToConstant(200).active = true
         v.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor, constant: 0.0).active = true
+        
+        // add shape sublayer
+        self.shape = CAShapeLayer()
+        self.v.layer.addSublayer(shape)
     }
 
     override func viewDidLayoutSubviews() {
         print(self.v.bounds)
         
-        // add shape sublayer
-        self.shape = CAShapeLayer()
         self.shape.frame = self.v.bounds
-        
-        v.layer.addSublayer(shape)
         
         self.shape.fillColor = UIColor.clearColor().CGColor
         self.shape.strokeColor = UIColor.redColor().CGColor
