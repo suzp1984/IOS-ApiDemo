@@ -27,6 +27,7 @@
 		37B3DB6A1D40AE1E00CFF75A /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB691D40AE1E00CFF75A /* ActionsViewController.swift */; };
 		37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB6B1D40B9D400CFF75A /* EmitterLayerViewController.swift */; };
 		37B3DB6E1D40C13500CFF75A /* CIFilterTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB6D1D40C13500CFF75A /* CIFilterTransitionViewController.swift */; };
+		37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB6F1D41D36400CFF75A /* DynamicsViewController.swift */; };
 		37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */; };
 		37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */; };
 		37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276371D27CEEF00B22546 /* MyReverseView.swift */; };
@@ -104,6 +105,7 @@
 		37B3DB691D40AE1E00CFF75A /* ActionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
 		37B3DB6B1D40B9D400CFF75A /* EmitterLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmitterLayerViewController.swift; sourceTree = "<group>"; };
 		37B3DB6D1D40C13500CFF75A /* CIFilterTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIFilterTransitionViewController.swift; sourceTree = "<group>"; };
+		37B3DB6F1D41D36400CFF75A /* DynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicsViewController.swift; sourceTree = "<group>"; };
 		37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation2ViewController.swift; sourceTree = "<group>"; };
 		37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTransitionViewController.swift; sourceTree = "<group>"; };
 		37C276371D27CEEF00B22546 /* MyReverseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReverseView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				37B3DB691D40AE1E00CFF75A /* ActionsViewController.swift */,
 				37B3DB6B1D40B9D400CFF75A /* EmitterLayerViewController.swift */,
 				37B3DB6D1D40C13500CFF75A /* CIFilterTransitionViewController.swift */,
+				37B3DB6F1D41D36400CFF75A /* DynamicsViewController.swift */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
+				37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */,
 				3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */,
 				37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */,
 				37A6E0A21CF7110700632BDF /* CompassViewController.swift in Sources */,
