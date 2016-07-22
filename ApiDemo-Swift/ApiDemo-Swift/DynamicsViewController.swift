@@ -51,7 +51,7 @@ class DynamicsViewController: UIViewController {
         self.iv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.iv)
         self.iv.topAnchor.constraintEqualToAnchor(button.bottomAnchor, constant: 20).active = true
-        self.iv.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+        self.iv.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
         self.iv.widthAnchor.constraintEqualToConstant(100).active = true
         self.iv.heightAnchor.constraintEqualToConstant(100).active = true
         
