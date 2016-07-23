@@ -30,6 +30,7 @@
 		37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB6F1D41D36400CFF75A /* DynamicsViewController.swift */; };
 		37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB711D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift */; };
 		37B3DB741D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB731D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift */; };
+		37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB751D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift */; };
 		37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */; };
 		37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */; };
 		37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276371D27CEEF00B22546 /* MyReverseView.swift */; };
@@ -110,6 +111,7 @@
 		37B3DB6F1D41D36400CFF75A /* DynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicsViewController.swift; sourceTree = "<group>"; };
 		37B3DB711D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeDynamicsBehaviorViewController.swift; sourceTree = "<group>"; };
 		37B3DB731D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDropBounceAndRollBehavior.swift; sourceTree = "<group>"; };
+		37B3DB751D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation2ViewController.swift; sourceTree = "<group>"; };
 		37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTransitionViewController.swift; sourceTree = "<group>"; };
 		37C276371D27CEEF00B22546 /* MyReverseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReverseView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				37B3DB6F1D41D36400CFF75A /* DynamicsViewController.swift */,
 				37B3DB711D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift */,
 				37B3DB731D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift */,
+				37B3DB751D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */,
 				371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
+				37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
 				37B3DB741D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift in Sources */,
 				37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */,

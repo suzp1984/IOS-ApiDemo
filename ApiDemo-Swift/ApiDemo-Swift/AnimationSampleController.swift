@@ -14,7 +14,8 @@ class AnimationSampleController: UIViewController, UINavigationControllerDelegat
     
     let cellIdentifier = "animation"
     let demos = ["ImageView Animation", "UIView Animation", "UIView Animation 2", "UIView Transition", "Layer Animation", "Grouped Animation", "Frozen Animation", "Layer Transition", "Actions",
-                 "Emitter Layer", "CIFilter Transition", "Dynamics View", "Custome Dynamics Behavior"]
+                 "Emitter Layer", "CIFilter Transition", "Dynamics View", "Custome Dynamics Behavior",
+                 "AutoLayout Animation"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +93,8 @@ class AnimationSampleController: UIViewController, UINavigationControllerDelegat
             self.navigationController!.pushViewController(DynamicsViewController(), animated: true)
         case demos[12]:
             self.navigationController!.pushViewController(CustomeDynamicsBehaviorViewController(), animated: true)
+        case demos[13]:
+            self.navigationController!.pushViewController(AnimationAutoLayoutViewController(), animated: true)
         default:
             break
         }
