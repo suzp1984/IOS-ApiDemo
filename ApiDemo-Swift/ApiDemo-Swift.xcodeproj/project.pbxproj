@@ -34,6 +34,7 @@
 		37B3DB781D43801200CFF75A /* TouchesSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB771D43801200CFF75A /* TouchesSampleController.swift */; };
 		37B3DB7B1D43AA7200CFF75A /* TouchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7A1D43AA7200CFF75A /* TouchesViewController.swift */; };
 		37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */; };
+		37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */; };
 		37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */; };
 		37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */; };
 		37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276371D27CEEF00B22546 /* MyReverseView.swift */; };
@@ -118,6 +119,7 @@
 		37B3DB771D43801200CFF75A /* TouchesSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchesSampleController.swift; sourceTree = "<group>"; };
 		37B3DB7A1D43AA7200CFF75A /* TouchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchesViewController.swift; sourceTree = "<group>"; };
 		37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTouchEventViews.swift; sourceTree = "<group>"; };
+		37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersSampleController.swift; sourceTree = "<group>"; };
 		37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation2ViewController.swift; sourceTree = "<group>"; };
 		37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTransitionViewController.swift; sourceTree = "<group>"; };
 		37C276371D27CEEF00B22546 /* MyReverseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReverseView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */,
 				371291801D2154B9006F0A68 /* AnimationSampleController.swift */,
 				37B3DB771D43801200CFF75A /* TouchesSampleController.swift */,
+				37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */,
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */,
+				37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
