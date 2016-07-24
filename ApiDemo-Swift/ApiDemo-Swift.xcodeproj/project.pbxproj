@@ -35,6 +35,7 @@
 		37B3DB7B1D43AA7200CFF75A /* TouchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7A1D43AA7200CFF75A /* TouchesViewController.swift */; };
 		37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */; };
 		37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */; };
+		37B3DB821D450F3A00CFF75A /* StatusBarStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB811D450F3A00CFF75A /* StatusBarStyleViewController.swift */; };
 		37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */; };
 		37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */; };
 		37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276371D27CEEF00B22546 /* MyReverseView.swift */; };
@@ -120,6 +121,7 @@
 		37B3DB7A1D43AA7200CFF75A /* TouchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchesViewController.swift; sourceTree = "<group>"; };
 		37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTouchEventViews.swift; sourceTree = "<group>"; };
 		37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersSampleController.swift; sourceTree = "<group>"; };
+		37B3DB811D450F3A00CFF75A /* StatusBarStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarStyleViewController.swift; sourceTree = "<group>"; };
 		37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation2ViewController.swift; sourceTree = "<group>"; };
 		37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTransitionViewController.swift; sourceTree = "<group>"; };
 		37C276371D27CEEF00B22546 /* MyReverseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReverseView.swift; sourceTree = "<group>"; };
@@ -236,6 +238,14 @@
 			name = touches;
 			sourceTree = "<group>";
 		};
+		37B3DB801D450EAC00CFF75A /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37B3DB811D450F3A00CFF75A /* StatusBarStyleViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
 		37C3F7711CE1D9E00073A348 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				37B3DB801D450EAC00CFF75A /* controllers */,
 				37B3DB791D43AA5800CFF75A /* touches */,
 				371291821D215626006F0A68 /* animation */,
 				37A6E0981CF68C9800632BDF /* layers */,
@@ -500,6 +511,7 @@
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
 				37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */,
+				37B3DB821D450F3A00CFF75A /* StatusBarStyleViewController.swift in Sources */,
 				37B3DB6E1D40C13500CFF75A /* CIFilterTransitionViewController.swift in Sources */,
 				377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */,
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,

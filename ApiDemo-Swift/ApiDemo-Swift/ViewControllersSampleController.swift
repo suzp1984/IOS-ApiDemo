@@ -12,7 +12,7 @@ class ViewControllersSampleController: UIViewController, UINavigationControllerD
                                         UITableViewDelegate, UITableViewDataSource  {
 
     let cellIdentifier = "ViewController"
-    let demos: [String] = [""]
+    let demos: [String] = ["Hide StatusBar"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +64,7 @@ class ViewControllersSampleController: UIViewController, UINavigationControllerD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch demos[indexPath.row] {
         case demos[0]:
+            self.navigationController?.pushViewController(StatusBarStyleViewController(), animated: true)
             break
         default:
             break
