@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PresentControllerViewController: UIViewController {
+class PresentControllerViewController: UIViewController, SecondPresentControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,11 @@ class PresentControllerViewController: UIViewController {
 
     func doPresent(sender: UIButton) -> Void {
         let svc = SecondPresentViewController()
+        svc.delegate = self
         self.presentViewController(svc, animated: true, completion: nil)
+    }
+    
+    func acceptData(data: AnyObject!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

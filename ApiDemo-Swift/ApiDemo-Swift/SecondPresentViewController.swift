@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol SecondPresentControllerDelegate : class {
+    func acceptData(data: AnyObject!)
+}
+
 class SecondPresentViewController: UIViewController {
 
+    weak var delegate : SecondPresentControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +40,8 @@ class SecondPresentViewController: UIViewController {
     }
     
     func doDismiss(sender: UIButton) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        // self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        self.delegate?.acceptData("Do Dismiss")
     }
 
 }
