@@ -36,6 +36,8 @@
 		37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */; };
 		37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */; };
 		37B3DB821D450F3A00CFF75A /* StatusBarStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB811D450F3A00CFF75A /* StatusBarStyleViewController.swift */; };
+		37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB831D464CC800CFF75A /* PresentControllerViewController.swift */; };
+		37B3DB861D464D5D00CFF75A /* SecondPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3DB851D464D5D00CFF75A /* SecondPresentViewController.swift */; };
 		37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */; };
 		37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */; };
 		37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C276371D27CEEF00B22546 /* MyReverseView.swift */; };
@@ -122,6 +124,8 @@
 		37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTouchEventViews.swift; sourceTree = "<group>"; };
 		37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersSampleController.swift; sourceTree = "<group>"; };
 		37B3DB811D450F3A00CFF75A /* StatusBarStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarStyleViewController.swift; sourceTree = "<group>"; };
+		37B3DB831D464CC800CFF75A /* PresentControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentControllerViewController.swift; sourceTree = "<group>"; };
+		37B3DB851D464D5D00CFF75A /* SecondPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPresentViewController.swift; sourceTree = "<group>"; };
 		37C276331D279D2600B22546 /* UIViewAnimation2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation2ViewController.swift; sourceTree = "<group>"; };
 		37C276351D27B6B900B22546 /* UIViewTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTransitionViewController.swift; sourceTree = "<group>"; };
 		37C276371D27CEEF00B22546 /* MyReverseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReverseView.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				37B3DB811D450F3A00CFF75A /* StatusBarStyleViewController.swift */,
+				37B3DB831D464CC800CFF75A /* PresentControllerViewController.swift */,
+				37B3DB851D464D5D00CFF75A /* SecondPresentViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -508,6 +514,7 @@
 				37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */,
 				37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
+				37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
 				37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */,
@@ -520,6 +527,7 @@
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
 				37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */,
+				37B3DB861D464D5D00CFF75A /* SecondPresentViewController.swift in Sources */,
 				37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */,
 				371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
