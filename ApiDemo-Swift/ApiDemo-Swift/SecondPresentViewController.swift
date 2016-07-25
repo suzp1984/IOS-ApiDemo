@@ -32,6 +32,18 @@ class SecondPresentViewController: UIViewController {
             button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
             button.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
             ])
+        
+        let presentButton = UIButton(type: .System)
+        presentButton.setTitle("start Third Controller", forState: .Normal)
+        presentButton.addTarget(self, action: #selector(SecondPresentViewController.startThird(_:)), forControlEvents: .TouchUpInside)
+        presentButton.setTitleColor(UIColor.yellowColor(), forState: .Normal)
+        
+        self.view.addSubview(presentButton)
+        presentButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activateConstraints([
+            presentButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
+            presentButton.bottomAnchor.constraintEqualToAnchor(button.topAnchor, constant: -20)
+            ])
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,9 +51,22 @@ class SecondPresentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.delegate?.acceptData("Test")
+    }
+    
     func doDismiss(sender: UIButton) {
-        // self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-        self.delegate?.acceptData("Do Dismiss")
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func startThird(sender: UIButton) {
+        let third = ThirdPresentViewController()
+        self.definesPresentationContext = true
+        third.modalPresentationStyle = .CurrentContext
+        third.modalTransitionStyle = .FlipHorizontal
+        self.presentViewController(third, animated: true, completion: nil)
     }
 
 }

@@ -34,10 +34,15 @@ class PresentControllerViewController: UIViewController, SecondPresentController
     func doPresent(sender: UIButton) -> Void {
         let svc = SecondPresentViewController()
         svc.delegate = self
+        // svc.modalTransitionStyle = .PartialCurl
+        self.definesPresentationContext = true
+        svc.modalPresentationStyle = .CurrentContext
         self.presentViewController(svc, animated: true, completion: nil)
     }
     
     func acceptData(data: AnyObject!) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        // do nothing
+        
+        // self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
