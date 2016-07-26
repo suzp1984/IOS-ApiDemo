@@ -88,6 +88,8 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
             self.navigationController!.pushViewController(TouchesSampleController(), animated: true)
         case demos[5]:
             self.navigationController!.pushViewController(ViewControllersSampleController(), animated: true)
+        case demos[6]:
+            self.navigationController!.pushViewController(ScrollSamplesViewController(), animated: true)
         default:
             break
         }
