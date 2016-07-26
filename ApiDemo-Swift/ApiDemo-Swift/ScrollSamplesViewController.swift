@@ -12,7 +12,7 @@ class ScrollSamplesViewController: UIViewController, UINavigationControllerDeleg
                                     UITableViewDelegate, UITableViewDataSource  {
 
     let cellIdentifier = "ScrollsSample"
-    let demos: [String] = ["AutoSizeable ScrollView", "AutoLayout ScrollView"]
+    let demos: [String] = ["AutoSizeable ScrollView", "AutoLayout ScrollView", "Content ScrollView"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +65,8 @@ class ScrollSamplesViewController: UIViewController, UINavigationControllerDeleg
             self.navigationController?.pushViewController(AutoResizeScrollViewController(), animated: true)
         case demos[1]:
             self.navigationController?.pushViewController(AutoLayoutScrollViewController(), animated: true)
+        case demos[2]:
+            self.navigationController?.pushViewController(ContentScrollViewController(), animated: true)
         default:
             break
         }

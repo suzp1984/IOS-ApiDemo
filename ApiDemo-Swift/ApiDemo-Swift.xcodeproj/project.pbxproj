@@ -12,6 +12,7 @@
 		371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */; };
 		3760D09B1D3FA83F0073BE02 /* FrozenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */; };
 		37670FDA1D474286001E353C /* AutoLayoutScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */; };
+		37670FDC1D475381001E353C /* ContentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FDB1D475381001E353C /* ContentScrollViewController.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -104,6 +105,7 @@
 		371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationViewController.swift; sourceTree = "<group>"; };
 		3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrozenAnimationViewController.swift; sourceTree = "<group>"; };
 		37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutScrollViewController.swift; sourceTree = "<group>"; };
+		37670FDB1D475381001E353C /* ContentScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentScrollViewController.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			children = (
 				37B3DB8C1D46E9EE00CFF75A /* AutoResizeScrollViewController.swift */,
 				37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */,
+				37670FDB1D475381001E353C /* ContentScrollViewController.swift */,
 			);
 			name = scrollviews;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */,
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */,
+				37670FDC1D475381001E353C /* ContentScrollViewController.swift in Sources */,
 				37B3DB8B1D46E8CF00CFF75A /* ScrollSamplesViewController.swift in Sources */,
 				37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
