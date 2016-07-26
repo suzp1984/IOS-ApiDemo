@@ -11,6 +11,7 @@
 		371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291801D2154B9006F0A68 /* AnimationSampleController.swift */; };
 		371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */; };
 		3760D09B1D3FA83F0073BE02 /* FrozenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */; };
+		37670FDA1D474286001E353C /* AutoLayoutScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -102,6 +103,7 @@
 		371291801D2154B9006F0A68 /* AnimationSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationSampleController.swift; sourceTree = "<group>"; };
 		371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationViewController.swift; sourceTree = "<group>"; };
 		3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrozenAnimationViewController.swift; sourceTree = "<group>"; };
+		37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutScrollViewController.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				37B3DB8C1D46E9EE00CFF75A /* AutoResizeScrollViewController.swift */,
+				37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */,
 			);
 			name = scrollviews;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
 				37B3DB741D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift in Sources */,
+				37670FDA1D474286001E353C /* AutoLayoutScrollViewController.swift in Sources */,
 				37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */,
 				3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */,
 				37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */,
