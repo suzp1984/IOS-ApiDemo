@@ -15,6 +15,7 @@
 		37670FDC1D475381001E353C /* ContentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FDB1D475381001E353C /* ContentScrollViewController.swift */; };
 		37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FDD1D48AA22001E353C /* TableSampleViewController.swift */; };
 		37670FE11D48AAB0001E353C /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */; };
+		37670FE31D48B60D001E353C /* linen.png in Resources */ = {isa = PBXBuildFile; fileRef = 37670FE21D48B60D001E353C /* linen.png */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -110,6 +111,7 @@
 		37670FDB1D475381001E353C /* ContentScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentScrollViewController.swift; sourceTree = "<group>"; };
 		37670FDD1D48AA22001E353C /* TableSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSampleViewController.swift; sourceTree = "<group>"; };
 		37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		37670FE21D48B60D001E353C /* linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linen.png; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				37C3F76F1CE1D8940073A348 /* DrawingSampleController.swift */,
 				37C3F7741CE406780073A348 /* frowney.png */,
 				3796A0E11D3F8435007BC3B3 /* boat.gif */,
+				37670FE21D48B60D001E353C /* linen.png */,
 				37C3F77E1CE47C5E0073A348 /* bottle5.png */,
 				37C3F7751CE406780073A348 /* smiley.png */,
 				37C3F7801CE47C910073A348 /* smileyiPhone.png */,
@@ -502,6 +505,7 @@
 			files = (
 				37C3F7771CE406780073A348 /* smiley.png in Resources */,
 				3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */,
+				37670FE31D48B60D001E353C /* linen.png in Resources */,
 				3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */,
 				37C3F7811CE47C910073A348 /* smileyiPhone.png in Resources */,
 				37C3F7761CE406780073A348 /* frowney.png in Resources */,

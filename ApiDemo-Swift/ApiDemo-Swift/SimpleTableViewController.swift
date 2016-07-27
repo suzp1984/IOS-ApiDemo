@@ -43,8 +43,15 @@ class SimpleTableViewController: UIViewController, UITableViewDelegate, UITableV
         if cell == nil {
             cell = UITableViewCell(style:.Default, reuseIdentifier:cellIdentifier)
             
-            cell.textLabel!.textColor = UIColor.redColor()
-            
+            cell.textLabel!.textColor = UIColor.whiteColor()
+            let v = UIImageView()
+            v.contentMode = .ScaleToFill
+            v.image = UIImage(named: "linen.png")
+            cell.backgroundView = v
+            let v2 = UIView()
+            v2.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.2)
+            cell.selectedBackgroundView = v2
+            cell.backgroundColor = UIColor.redColor()
         }
         
         cell.textLabel!.text = "Hello There! \(indexPath.row)"
