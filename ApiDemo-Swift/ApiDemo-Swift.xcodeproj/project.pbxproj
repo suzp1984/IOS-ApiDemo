@@ -18,6 +18,7 @@
 		37670FE31D48B60D001E353C /* linen.png in Resources */ = {isa = PBXBuildFile; fileRef = 37670FE21D48B60D001E353C /* linen.png */; };
 		37670FE51D48FF25001E353C /* CustomeCellLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE41D48FF25001E353C /* CustomeCellLayoutViewController.swift */; };
 		37670FE71D48FF9B001E353C /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE61D48FF9B001E353C /* MyCell.swift */; };
+		37670FE91D49055C001E353C /* CustomContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE81D49055C001E353C /* CustomContentViewController.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -116,6 +117,7 @@
 		37670FE21D48B60D001E353C /* linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linen.png; sourceTree = "<group>"; };
 		37670FE41D48FF25001E353C /* CustomeCellLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeCellLayoutViewController.swift; sourceTree = "<group>"; };
 		37670FE61D48FF9B001E353C /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		37670FE81D49055C001E353C /* CustomContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContentViewController.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */,
 				37670FE41D48FF25001E353C /* CustomeCellLayoutViewController.swift */,
 				37670FE61D48FF9B001E353C /* MyCell.swift */,
+				37670FE81D49055C001E353C /* CustomContentViewController.swift */,
 			);
 			name = tableviews;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				37B3DB6E1D40C13500CFF75A /* CIFilterTransitionViewController.swift in Sources */,
 				377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */,
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,
+				37670FE91D49055C001E353C /* CustomContentViewController.swift in Sources */,
 				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
 				37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */,
 				37670FE11D48AAB0001E353C /* SimpleTableViewController.swift in Sources */,
