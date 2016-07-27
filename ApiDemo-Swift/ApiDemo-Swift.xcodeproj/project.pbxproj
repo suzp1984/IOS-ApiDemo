@@ -16,6 +16,8 @@
 		37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FDD1D48AA22001E353C /* TableSampleViewController.swift */; };
 		37670FE11D48AAB0001E353C /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */; };
 		37670FE31D48B60D001E353C /* linen.png in Resources */ = {isa = PBXBuildFile; fileRef = 37670FE21D48B60D001E353C /* linen.png */; };
+		37670FE51D48FF25001E353C /* CustomeCellLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE41D48FF25001E353C /* CustomeCellLayoutViewController.swift */; };
+		37670FE71D48FF9B001E353C /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE61D48FF9B001E353C /* MyCell.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -112,6 +114,8 @@
 		37670FDD1D48AA22001E353C /* TableSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSampleViewController.swift; sourceTree = "<group>"; };
 		37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		37670FE21D48B60D001E353C /* linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linen.png; sourceTree = "<group>"; };
+		37670FE41D48FF25001E353C /* CustomeCellLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeCellLayoutViewController.swift; sourceTree = "<group>"; };
+		37670FE61D48FF9B001E353C /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */,
+				37670FE41D48FF25001E353C /* CustomeCellLayoutViewController.swift */,
+				37670FE61D48FF9B001E353C /* MyCell.swift */,
 			);
 			name = tableviews;
 			sourceTree = "<group>";
@@ -561,6 +567,7 @@
 				37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
+				37670FE51D48FF25001E353C /* CustomeCellLayoutViewController.swift in Sources */,
 				37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */,
 				37B3DB821D450F3A00CFF75A /* StatusBarStyleViewController.swift in Sources */,
 				37B3DB6E1D40C13500CFF75A /* CIFilterTransitionViewController.swift in Sources */,
@@ -588,6 +595,7 @@
 				37A6E0A21CF7110700632BDF /* CompassViewController.swift in Sources */,
 				3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */,
 				37C3F77B1CE407130073A348 /* MyImageView.swift in Sources */,
+				37670FE71D48FF9B001E353C /* MyCell.swift in Sources */,
 				37B3DB6A1D40AE1E00CFF75A /* ActionsViewController.swift in Sources */,
 				37E20A571CEABEC600383A56 /* MyVignetteFilter.swift in Sources */,
 				37B3DB781D43801200CFF75A /* TouchesSampleController.swift in Sources */,

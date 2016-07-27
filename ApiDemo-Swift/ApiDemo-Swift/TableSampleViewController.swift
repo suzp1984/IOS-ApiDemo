@@ -12,7 +12,7 @@ class TableSampleViewController: UIViewController, UINavigationControllerDelegat
                                     UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "TableSample"
-    let demos: [String] = ["Simple Table"]
+    let demos: [String] = ["Simple Table", "Custome Cell"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +64,8 @@ class TableSampleViewController: UIViewController, UINavigationControllerDelegat
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController?.pushViewController(SimpleTableViewController(), animated: true)
+        case demos[1]:
+            self.navigationController?.pushViewController(CustomeCellLayoutViewController(), animated: true)
         default:
             break
         }
