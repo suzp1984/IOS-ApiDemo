@@ -39,7 +39,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
 
     let cellIdentifier = "Cell"
     let demos = ["view", "drawing", "layers", "animation", "touches", "view controllers",
-                 "Scroll Views", "Collection Views", "iPad Interface", "Text", "Web Views"]
+                 "Scroll Views", "Table Views", "iPad Interface", "Text", "Web Views"]
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -90,6 +90,8 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
             self.navigationController!.pushViewController(ViewControllersSampleController(), animated: true)
         case demos[6]:
             self.navigationController!.pushViewController(ScrollSamplesViewController(), animated: true)
+        case demos[7]:
+            self.navigationController?.pushViewController(TableSampleViewController(), animated: true)
         default:
             break
         }

@@ -13,6 +13,8 @@
 		3760D09B1D3FA83F0073BE02 /* FrozenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */; };
 		37670FDA1D474286001E353C /* AutoLayoutScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */; };
 		37670FDC1D475381001E353C /* ContentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FDB1D475381001E353C /* ContentScrollViewController.swift */; };
+		37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FDD1D48AA22001E353C /* TableSampleViewController.swift */; };
+		37670FE11D48AAB0001E353C /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -106,6 +108,8 @@
 		3760D09A1D3FA83F0073BE02 /* FrozenAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrozenAnimationViewController.swift; sourceTree = "<group>"; };
 		37670FD91D474286001E353C /* AutoLayoutScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutScrollViewController.swift; sourceTree = "<group>"; };
 		37670FDB1D475381001E353C /* ContentScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentScrollViewController.swift; sourceTree = "<group>"; };
+		37670FDD1D48AA22001E353C /* TableSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSampleViewController.swift; sourceTree = "<group>"; };
+		37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +233,14 @@
 			name = animation;
 			sourceTree = "<group>";
 		};
+		37670FDF1D48AA91001E353C /* tableviews */ = {
+			isa = PBXGroup;
+			children = (
+				37670FE01D48AAB0001E353C /* SimpleTableViewController.swift */,
+			);
+			name = tableviews;
+			sourceTree = "<group>";
+		};
 		37A6E0981CF68C9800632BDF /* layers */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +344,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				37670FDF1D48AA91001E353C /* tableviews */,
 				37B3DB891D46E88E00CFF75A /* scrollviews */,
 				37B3DB801D450EAC00CFF75A /* controllers */,
 				37B3DB791D43AA5800CFF75A /* touches */,
@@ -357,6 +370,7 @@
 				37B3DB771D43801200CFF75A /* TouchesSampleController.swift */,
 				37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */,
 				37B3DB8A1D46E8CF00CFF75A /* ScrollSamplesViewController.swift */,
+				37670FDD1D48AA22001E353C /* TableSampleViewController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -521,6 +535,7 @@
 				37A6E09C1CF68EC600632BDF /* LayerHierarchyViewController.swift in Sources */,
 				37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */,
 				371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */,
+				37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */,
 				37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */,
 				37C3F7831CE5ED840073A348 /* ImageResizableViewController.swift in Sources */,
 				37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */,
@@ -549,6 +564,7 @@
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,
 				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
 				37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */,
+				37670FE11D48AAB0001E353C /* SimpleTableViewController.swift in Sources */,
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
 				37B3DB881D4667E200CFF75A /* ThirdPresentViewController.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
