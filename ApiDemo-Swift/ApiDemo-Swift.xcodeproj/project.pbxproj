@@ -74,6 +74,7 @@
 		376710531D49BE1E001E353C /* us_flag_small.gif in Resources */ = {isa = PBXBuildFile; fileRef = 376710201D49BE1E001E353C /* us_flag_small.gif */; };
 		376710561D49F369001E353C /* TextSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376710551D49F369001E353C /* TextSampleViewController.swift */; };
 		3767105A1D4A07F2001E353C /* LabelFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376710591D4A07F2001E353C /* LabelFontViewController.swift */; };
+		3767105B1D4A0D64001E353C /* SourceCodePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376710581D4A0717001E353C /* SourceCodePro-Regular.ttf */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -695,6 +696,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3767105B1D4A0D64001E353C /* SourceCodePro-Regular.ttf in Resources */,
 				3767102D1D49BE1E001E353C /* flag_illinois.gif in Resources */,
 				37C3F7771CE406780073A348 /* smiley.png in Resources */,
 				376710411D49BE1E001E353C /* flag_northcarolina.gif in Resources */,

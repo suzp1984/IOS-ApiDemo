@@ -34,6 +34,25 @@ class LabelFontViewController: UIViewController {
             label2.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
             ])
         
+        // set label2 font
+        
+        // print all font family and its fontnames first
+        for family: String in UIFont.familyNames()
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNamesForFamilyName(family)
+            {
+                print("== \(names)")
+            }
+        }
+        
+        let font2Name = "SourceCodePro-Regular"
+        let f2 = UIFont(name: font2Name, size: 20)
+        if let f2 = f2 {
+            label2.font = f2
+        }
+
+        
         // set lable1 fonts
         label1.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
@@ -80,8 +99,6 @@ class LabelFontViewController: UIViewController {
                 return true
         })
 
-        // set label2 font 
-        
     }
 
     override func didReceiveMemoryWarning() {
