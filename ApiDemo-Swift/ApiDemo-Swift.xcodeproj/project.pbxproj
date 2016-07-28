@@ -72,6 +72,8 @@
 		376710511D49BE1E001E353C /* flag_wisconsin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3767101E1D49BE1E001E353C /* flag_wisconsin.gif */; };
 		376710521D49BE1E001E353C /* flag_wyoming.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3767101F1D49BE1E001E353C /* flag_wyoming.gif */; };
 		376710531D49BE1E001E353C /* us_flag_small.gif in Resources */ = {isa = PBXBuildFile; fileRef = 376710201D49BE1E001E353C /* us_flag_small.gif */; };
+		376710561D49F369001E353C /* TextSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376710551D49F369001E353C /* TextSampleViewController.swift */; };
+		3767105A1D4A07F2001E353C /* LabelFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376710591D4A07F2001E353C /* LabelFontViewController.swift */; };
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
@@ -224,6 +226,9 @@
 		3767101E1D49BE1E001E353C /* flag_wisconsin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = flag_wisconsin.gif; sourceTree = "<group>"; };
 		3767101F1D49BE1E001E353C /* flag_wyoming.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = flag_wyoming.gif; sourceTree = "<group>"; };
 		376710201D49BE1E001E353C /* us_flag_small.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = us_flag_small.gif; sourceTree = "<group>"; };
+		376710551D49F369001E353C /* TextSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSampleViewController.swift; sourceTree = "<group>"; };
+		376710581D4A0717001E353C /* SourceCodePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.ttf"; sourceTree = "<group>"; };
+		376710591D4A07F2001E353C /* LabelFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelFontViewController.swift; sourceTree = "<group>"; };
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +424,15 @@
 			name = flags;
 			sourceTree = "<group>";
 		};
+		376710571D4A0705001E353C /* text */ = {
+			isa = PBXGroup;
+			children = (
+				376710581D4A0717001E353C /* SourceCodePro-Regular.ttf */,
+				376710591D4A07F2001E353C /* LabelFontViewController.swift */,
+			);
+			name = text;
+			sourceTree = "<group>";
+		};
 		37A6E0981CF68C9800632BDF /* layers */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +536,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				376710571D4A0705001E353C /* text */,
 				37670FDF1D48AA91001E353C /* tableviews */,
 				37B3DB891D46E88E00CFF75A /* scrollviews */,
 				37B3DB801D450EAC00CFF75A /* controllers */,
@@ -550,6 +565,7 @@
 				37B3DB7E1D43BD5900CFF75A /* ViewControllersSampleController.swift */,
 				37B3DB8A1D46E8CF00CFF75A /* ScrollSamplesViewController.swift */,
 				37670FDD1D48AA22001E353C /* TableSampleViewController.swift */,
+				376710551D49F369001E353C /* TextSampleViewController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -799,6 +815,7 @@
 				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
 				37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */,
 				37670FE11D48AAB0001E353C /* SimpleTableViewController.swift in Sources */,
+				376710561D49F369001E353C /* TextSampleViewController.swift in Sources */,
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
 				37B3DB881D4667E200CFF75A /* ThirdPresentViewController.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
@@ -806,6 +823,7 @@
 				37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */,
 				37B3DB861D464D5D00CFF75A /* SecondPresentViewController.swift in Sources */,
 				37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */,
+				3767105A1D4A07F2001E353C /* LabelFontViewController.swift in Sources */,
 				371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */,

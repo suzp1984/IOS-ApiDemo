@@ -35,11 +35,10 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     let cellIdentifier = "Cell"
     let demos = ["view", "drawing", "layers", "animation", "touches", "view controllers",
-                 "Scroll Views", "Table Views", "iPad Interface", "Text", "Web Views"]
+                 "Scroll Views", "Table Views", "Text", "Web Views"]
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -92,6 +91,8 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
             self.navigationController!.pushViewController(ScrollSamplesViewController(), animated: true)
         case demos[7]:
             self.navigationController?.pushViewController(TableSampleViewController(), animated: true)
+        case demos[8]:
+            self.navigationController?.pushViewController(TextSampleViewController(), animated: true)
         default:
             break
         }
