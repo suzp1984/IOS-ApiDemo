@@ -58,6 +58,10 @@ class ControllersAndViewsSampleViewController: UIViewController, UINavigationCon
             cell.backgroundColor = UIColor.redColor()
         }
         
+        let v2 = UIView() // no need to set frame
+        v2.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.2)
+        cell.selectedBackgroundView = v2
+        
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.redColor()
         cell.textLabel!.text = demos[indexPath.row]

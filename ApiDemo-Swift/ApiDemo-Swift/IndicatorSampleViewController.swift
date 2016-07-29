@@ -28,6 +28,25 @@ class IndicatorSampleViewController: UIViewController {
                 button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 30),
                 button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
             ])
+        
+        // custome indicator
+        let lay = CAReplicatorLayer()
+        lay.frame = CGRectMake(0, 0, 100, 20)
+        let bar = CALayer()
+        bar.frame = CGRectMake(0, 0, 10, 20)
+        bar.backgroundColor = UIColor.redColor().CGColor
+        lay.addSublayer(bar)
+        lay.instanceCount = 5
+        lay.instanceTransform = CATransform3DMakeTranslation(20, 0, 0)
+        let anim = CABasicAnimation(keyPath: "opacity")
+        anim.fromValue = 1.0
+        anim.toValue = 0.2
+        anim.duration = 1.0
+        anim.repeatCount = Float.infinity
+        bar.addAnimation(anim, forKey: nil)
+        lay.instanceDelay = anim.duration / Double(lay.instanceCount)
+        self.view.layer.addSublayer(lay)
+        lay.position = CGPointMake(self.view.layer.bounds.midX, self.view.layer.bounds.midY)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,9 +71,9 @@ class IndicatorSampleViewController: UIViewController {
             
             NSLayoutConstraint.activateConstraints([
                     indicator.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 30),
-                    indicator.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30),
-                    indicator.widthAnchor.constraintEqualToConstant(50),
-                    indicator.heightAnchor.constraintEqualToConstant(50)
+                    indicator.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30)
+//                    indicator.widthAnchor.constraintEqualToConstant(50),
+//                    indicator.heightAnchor.constraintEqualToConstant(50)
                 ])
             indicator.startAnimating()
         }
