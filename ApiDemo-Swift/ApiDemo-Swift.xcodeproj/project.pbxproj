@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3710B17B1D4B6C4100FB8099 /* WebViewSamplesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710B17A1D4B6C4100FB8099 /* WebViewSamplesController.swift */; };
 		3710B17D1D4B6D1200FB8099 /* SimpleWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710B17C1D4B6D1200FB8099 /* SimpleWKViewController.swift */; };
+		3710B17F1D4B73BA00FB8099 /* htmlTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3710B17E1D4B73BA00FB8099 /* htmlTemplate.txt */; };
+		3710B1811D4B73C600FB8099 /* htmlbody.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3710B1801D4B73C600FB8099 /* htmlbody.txt */; };
+		3710B1831D4B73E600FB8099 /* HtmlStringWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710B1821D4B73E600FB8099 /* HtmlStringWKViewController.swift */; };
 		3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */; };
 		371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291801D2154B9006F0A68 /* AnimationSampleController.swift */; };
 		371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */; };
@@ -166,6 +169,9 @@
 /* Begin PBXFileReference section */
 		3710B17A1D4B6C4100FB8099 /* WebViewSamplesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewSamplesController.swift; sourceTree = "<group>"; };
 		3710B17C1D4B6D1200FB8099 /* SimpleWKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWKViewController.swift; sourceTree = "<group>"; };
+		3710B17E1D4B73BA00FB8099 /* htmlTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = htmlTemplate.txt; sourceTree = "<group>"; };
+		3710B1801D4B73C600FB8099 /* htmlbody.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = htmlbody.txt; sourceTree = "<group>"; };
+		3710B1821D4B73E600FB8099 /* HtmlStringWKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HtmlStringWKViewController.swift; sourceTree = "<group>"; };
 		3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layermask2ViewController.swift; sourceTree = "<group>"; };
 		371291801D2154B9006F0A68 /* AnimationSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationSampleController.swift; sourceTree = "<group>"; };
 		371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationViewController.swift; sourceTree = "<group>"; };
@@ -338,6 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				3710B17C1D4B6D1200FB8099 /* SimpleWKViewController.swift */,
+				3710B17E1D4B73BA00FB8099 /* htmlTemplate.txt */,
+				3710B1801D4B73C600FB8099 /* htmlbody.txt */,
+				3710B1821D4B73E600FB8099 /* HtmlStringWKViewController.swift */,
 			);
 			name = webview;
 			sourceTree = "<group>";
@@ -761,6 +770,7 @@
 				376710351D49BE1E001E353C /* flag_massachusetts.gif in Resources */,
 				376710531D49BE1E001E353C /* us_flag_small.gif in Resources */,
 				376710401D49BE1E001E353C /* flag_newyork.gif in Resources */,
+				3710B17F1D4B73BA00FB8099 /* htmlTemplate.txt in Resources */,
 				376710491D49BE1E001E353C /* flag_southdakota.gif in Resources */,
 				376710291D49BE1E001E353C /* flag_florida.gif in Resources */,
 				A61C69AF1C02EBD600ADF518 /* LaunchScreen.storyboard in Resources */,
@@ -770,6 +780,7 @@
 				376710301D49BE1E001E353C /* flag_kansas.gif in Resources */,
 				376710381D49BE1E001E353C /* flag_mississippi.gif in Resources */,
 				376710241D49BE1E001E353C /* flag_arkansas.gif in Resources */,
+				3710B1811D4B73C600FB8099 /* htmlbody.txt in Resources */,
 				A61C69AC1C02EBD600ADF518 /* Assets.xcassets in Resources */,
 				376710311D49BE1E001E353C /* flag_kentucky.gif in Resources */,
 			);
@@ -798,6 +809,7 @@
 			files = (
 				37A6E09C1CF68EC600632BDF /* LayerHierarchyViewController.swift in Sources */,
 				37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */,
+				3710B1831D4B73E600FB8099 /* HtmlStringWKViewController.swift in Sources */,
 				371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */,
 				37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */,
 				37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */,
