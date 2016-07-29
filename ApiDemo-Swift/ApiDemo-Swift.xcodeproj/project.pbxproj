@@ -83,6 +83,7 @@
 		3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3776068E1D254014009A17A5 /* Pacman.xcassets */; };
 		377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */; };
 		377D92951D4B924C00E57237 /* TrackingChangeWebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92941D4B924B00E57237 /* TrackingChangeWebkitViewController.swift */; };
+		377D92971D4B9C1B00E57237 /* WebKitNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92961D4B9C1B00E57237 /* WebKitNavigationViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3796A0E11D3F8435007BC3B3 /* boat.gif */; };
@@ -244,6 +245,7 @@
 		3776068E1D254014009A17A5 /* Pacman.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pacman.xcassets; sourceTree = "<group>"; };
 		377606901D256E6D009A17A5 /* UIViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationViewController.swift; sourceTree = "<group>"; };
 		377D92941D4B924B00E57237 /* TrackingChangeWebkitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingChangeWebkitViewController.swift; sourceTree = "<group>"; };
+		377D92961D4B9C1B00E57237 /* WebKitNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebKitNavigationViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3796A0E11D3F8435007BC3B3 /* boat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boat.gif; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				3710B1801D4B73C600FB8099 /* htmlbody.txt */,
 				3710B1821D4B73E600FB8099 /* HtmlStringWKViewController.swift */,
 				377D92941D4B924B00E57237 /* TrackingChangeWebkitViewController.swift */,
+				377D92961D4B9C1B00E57237 /* WebKitNavigationViewController.swift */,
 			);
 			name = webview;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */,
 				3710B17B1D4B6C4100FB8099 /* WebViewSamplesController.swift in Sources */,
 				37B3DB821D450F3A00CFF75A /* StatusBarStyleViewController.swift in Sources */,
+				377D92971D4B9C1B00E57237 /* WebKitNavigationViewController.swift in Sources */,
 				37B3DB6E1D40C13500CFF75A /* CIFilterTransitionViewController.swift in Sources */,
 				377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */,
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,

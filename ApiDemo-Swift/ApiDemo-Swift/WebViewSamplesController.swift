@@ -12,7 +12,7 @@ class WebViewSamplesController: UIViewController, UINavigationControllerDelegate
                                 UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "WebView Sample"
-    let demos: [String] = ["simple Webkit", "Html String", "Tracking Webkit change"]
+    let demos: [String] = ["simple Webkit", "Html String", "Tracking Webkit change", "Navigation Controll"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +67,8 @@ class WebViewSamplesController: UIViewController, UINavigationControllerDelegate
             self.navigationController?.pushViewController(HtmlStringWKViewController(), animated: true)
         case demos[2]:
             self.navigationController?.pushViewController(TrackingChangeWebkitViewController(), animated: true)
+        case demos[3]:
+            self.navigationController?.pushViewController(WebKitNavigationViewController(), animated: true)
         default:
             break
         }
