@@ -93,6 +93,8 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
             self.navigationController?.pushViewController(TableSampleViewController(), animated: true)
         case demos[8]:
             self.navigationController?.pushViewController(TextSampleViewController(), animated: true)
+        case demos[9]:
+            self.navigationController?.pushViewController(WebViewSamplesController(), animated: true)
         default:
             break
         }

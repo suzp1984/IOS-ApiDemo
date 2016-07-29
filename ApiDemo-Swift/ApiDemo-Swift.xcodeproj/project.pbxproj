@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3710B17B1D4B6C4100FB8099 /* WebViewSamplesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710B17A1D4B6C4100FB8099 /* WebViewSamplesController.swift */; };
+		3710B17D1D4B6D1200FB8099 /* SimpleWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710B17C1D4B6D1200FB8099 /* SimpleWKViewController.swift */; };
 		3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */; };
 		371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291801D2154B9006F0A68 /* AnimationSampleController.swift */; };
 		371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */; };
@@ -162,6 +164,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3710B17A1D4B6C4100FB8099 /* WebViewSamplesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewSamplesController.swift; sourceTree = "<group>"; };
+		3710B17C1D4B6D1200FB8099 /* SimpleWKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWKViewController.swift; sourceTree = "<group>"; };
 		3712917E1D212A0A006F0A68 /* Layermask2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layermask2ViewController.swift; sourceTree = "<group>"; };
 		371291801D2154B9006F0A68 /* AnimationSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationSampleController.swift; sourceTree = "<group>"; };
 		371291831D2156AC006F0A68 /* ImageViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +334,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3710B1791D4B6C1800FB8099 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				3710B17C1D4B6D1200FB8099 /* SimpleWKViewController.swift */,
+			);
+			name = webview;
+			sourceTree = "<group>";
+		};
 		371291821D215626006F0A68 /* animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +549,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				3710B1791D4B6C1800FB8099 /* webview */,
 				376710571D4A0705001E353C /* text */,
 				37670FDF1D48AA91001E353C /* tableviews */,
 				37B3DB891D46E88E00CFF75A /* scrollviews */,
@@ -567,6 +580,7 @@
 				37B3DB8A1D46E8CF00CFF75A /* ScrollSamplesViewController.swift */,
 				37670FDD1D48AA22001E353C /* TableSampleViewController.swift */,
 				376710551D49F369001E353C /* TextSampleViewController.swift */,
+				3710B17A1D4B6C4100FB8099 /* WebViewSamplesController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -787,6 +801,7 @@
 				371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */,
 				37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */,
 				37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */,
+				3710B17D1D4B6D1200FB8099 /* SimpleWKViewController.swift in Sources */,
 				37C3F7831CE5ED840073A348 /* ImageResizableViewController.swift in Sources */,
 				37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */,
 				37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */,
@@ -809,6 +824,7 @@
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
 				37670FE51D48FF25001E353C /* CustomeCellLayoutViewController.swift in Sources */,
 				37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */,
+				3710B17B1D4B6C4100FB8099 /* WebViewSamplesController.swift in Sources */,
 				37B3DB821D450F3A00CFF75A /* StatusBarStyleViewController.swift in Sources */,
 				37B3DB6E1D40C13500CFF75A /* CIFilterTransitionViewController.swift in Sources */,
 				377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */,
