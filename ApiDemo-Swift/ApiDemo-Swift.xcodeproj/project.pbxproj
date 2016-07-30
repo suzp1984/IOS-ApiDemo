@@ -93,6 +93,9 @@
 		377D92A81D4C8AC800E57237 /* AudioPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92A71D4C8AC800E57237 /* AudioPlayViewController.swift */; };
 		377D92AA1D4C8AFA00E57237 /* AudioSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92A91D4C8AFA00E57237 /* AudioSamplesViewController.swift */; };
 		377D92AC1D4C8EA500E57237 /* test.aif in Resources */ = {isa = PBXBuildFile; fileRef = 377D92AB1D4C8BB300E57237 /* test.aif */; };
+		377D92B01D4CCEBC00E57237 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92AF1D4CCEBC00E57237 /* VideoPlayerViewController.swift */; };
+		377D92B21D4CCEEE00E57237 /* VideoSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */; };
+		377D92B31D4CCF7500E57237 /* ElMirage.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377D92AE1D4CCE6100E57237 /* ElMirage.mp4 */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3796A0E11D3F8435007BC3B3 /* boat.gif */; };
@@ -264,6 +267,9 @@
 		377D92A71D4C8AC800E57237 /* AudioPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayViewController.swift; sourceTree = "<group>"; };
 		377D92A91D4C8AFA00E57237 /* AudioSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSamplesViewController.swift; sourceTree = "<group>"; };
 		377D92AB1D4C8BB300E57237 /* test.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.aif; sourceTree = "<group>"; };
+		377D92AE1D4CCE6100E57237 /* ElMirage.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ElMirage.mp4; sourceTree = "<group>"; };
+		377D92AF1D4CCEBC00E57237 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSamplesViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3796A0E11D3F8435007BC3B3 /* boat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boat.gif; sourceTree = "<group>"; };
@@ -506,6 +512,15 @@
 			name = Audio;
 			sourceTree = "<group>";
 		};
+		377D92AD1D4CCE4C00E57237 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				377D92AE1D4CCE6100E57237 /* ElMirage.mp4 */,
+				377D92AF1D4CCEBC00E57237 /* VideoPlayerViewController.swift */,
+			);
+			name = video;
+			sourceTree = "<group>";
+		};
 		37A6E0981CF68C9800632BDF /* layers */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +624,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				377D92AD1D4CCE4C00E57237 /* video */,
 				377D92A61D4C8AAE00E57237 /* Audio */,
 				377D92A11D4C4B4300E57237 /* Modal Dialogs */,
 				377D929A1D4BAB1200E57237 /* controllers and views */,
@@ -647,6 +663,7 @@
 				377D92981D4BA9D800E57237 /* ControllersAndViewsSampleViewController.swift */,
 				377D92A21D4C4BA000E57237 /* ModalDialogSampleViewController.swift */,
 				377D92A91D4C8AFA00E57237 /* AudioSamplesViewController.swift */,
+				377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -776,6 +793,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377D92B31D4CCF7500E57237 /* ElMirage.mp4 in Resources */,
 				377D92AC1D4C8EA500E57237 /* test.aif in Resources */,
 				3767105B1D4A0D64001E353C /* SourceCodePro-Regular.ttf in Resources */,
 				3767102D1D49BE1E001E353C /* flag_illinois.gif in Resources */,
@@ -893,6 +911,7 @@
 				37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */,
 				37670FDC1D475381001E353C /* ContentScrollViewController.swift in Sources */,
 				37B3DB8B1D46E8CF00CFF75A /* ScrollSamplesViewController.swift in Sources */,
+				377D92B21D4CCEEE00E57237 /* VideoSamplesViewController.swift in Sources */,
 				37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */,
@@ -917,6 +936,7 @@
 				37B3DB8D1D46E9EE00CFF75A /* AutoResizeScrollViewController.swift in Sources */,
 				37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */,
 				377D92A31D4C4BA000E57237 /* ModalDialogSampleViewController.swift in Sources */,
+				377D92B01D4CCEBC00E57237 /* VideoPlayerViewController.swift in Sources */,
 				37B3DB861D464D5D00CFF75A /* SecondPresentViewController.swift in Sources */,
 				37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */,
 				3767105A1D4A07F2001E353C /* LabelFontViewController.swift in Sources */,
