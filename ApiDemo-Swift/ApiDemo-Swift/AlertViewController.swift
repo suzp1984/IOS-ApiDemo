@@ -25,7 +25,7 @@ class AlertViewController: UIViewController {
                 button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
                 button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
             ])
-        
+        // textfield alert dialog
         let textFieldButton = UIButton(type: .System)
         textFieldButton.setTitle("EnterNumber Alert", forState: .Normal)
         textFieldButton.addTarget(self, action: #selector(AlertViewController.presentTextFieldAlert(_:)), forControlEvents: .TouchUpInside)
@@ -34,6 +34,17 @@ class AlertViewController: UIViewController {
         NSLayoutConstraint.activateConstraints([
                 textFieldButton.topAnchor.constraintEqualToAnchor(button.bottomAnchor, constant: 20),
                 textFieldButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+            ])
+        
+        // alert sheet style dialog
+        let actionSheetButton = UIButton(type: .System)
+        actionSheetButton.setTitle("Action Sheet alert", forState: .Normal)
+        actionSheetButton.addTarget(self, action: #selector(AlertViewController.presentActionSheet(_:)), forControlEvents: .TouchUpInside)
+        actionSheetButton.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(actionSheetButton)
+        NSLayoutConstraint.activateConstraints([
+                actionSheetButton.topAnchor.constraintEqualToAnchor(textFieldButton.bottomAnchor, constant: 20),
+                actionSheetButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
             ])
     }
 
@@ -68,6 +79,20 @@ class AlertViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         alert.actions[0].enabled = false
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func presentActionSheet(sender: UIButton) {
+        let alert = UIAlertController(title: "Choice new Layout", message: nil, preferredStyle: .ActionSheet)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        for s in ["3", "4", "5", "6"] {
+            alert.addAction(UIAlertAction(title: s, style: .Default, handler: { (act: UIAlertAction) in
+                if let s = act.title {
+                    print("Selected action: \(s)")
+                }
+            }))
+        }
+        
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
