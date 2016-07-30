@@ -56,6 +56,7 @@ class AlertViewController: UIViewController {
         alert.addTextFieldWithConfigurationHandler {
             (tf: UITextField) in
             tf.keyboardType = .NumberPad
+            tf.addTarget(self, action: #selector(AlertViewController.textChanged(_:)), forControlEvents: .EditingChanged)
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (act: UIAlertAction) in
@@ -66,6 +67,7 @@ class AlertViewController: UIViewController {
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alert.actions[0].enabled = false
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
@@ -73,7 +75,15 @@ class AlertViewController: UIViewController {
         print("User tapped \(act.title)")
     }
     
-    func handleNumber(act: UIAlertAction) {
+    func textChanged(sender: UITextField) {
+        // print("TextField changed: \(sender.text)")
         
+        var resp : UIResponder = sender
+        while !(resp is UIAlertController) {
+            resp = resp.nextResponder()!
+        }
+        
+        let alert = resp as! UIAlertController
+        alert.actions[0].enabled = (sender.text != "")
     }
 }
