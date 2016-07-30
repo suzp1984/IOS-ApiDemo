@@ -13,7 +13,7 @@ class ControllersAndViewsSampleViewController: UIViewController, UINavigationCon
 
     
     let cellIdentifier = "Controllers Views"
-    let demos: [String] = ["indicator"]
+    let demos: [String] = ["indicator", "progress bar"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +72,8 @@ class ControllersAndViewsSampleViewController: UIViewController, UINavigationCon
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController?.pushViewController(IndicatorSampleViewController(), animated: true)
+        case demos[1]:
+            self.navigationController?.pushViewController(ProgressBarViewController(), animated: true)
         default:
             break
         }

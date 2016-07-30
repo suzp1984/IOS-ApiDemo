@@ -86,6 +86,7 @@
 		377D92971D4B9C1B00E57237 /* WebKitNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92961D4B9C1B00E57237 /* WebKitNavigationViewController.swift */; };
 		377D92991D4BA9D800E57237 /* ControllersAndViewsSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92981D4BA9D800E57237 /* ControllersAndViewsSampleViewController.swift */; };
 		377D929C1D4BAC7600E57237 /* IndicatorSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D929B1D4BAC7600E57237 /* IndicatorSampleViewController.swift */; };
+		377D929E1D4C2C7C00E57237 /* ProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D929D1D4C2C7C00E57237 /* ProgressBarViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3796A0E11D3F8435007BC3B3 /* boat.gif */; };
@@ -250,6 +251,7 @@
 		377D92961D4B9C1B00E57237 /* WebKitNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebKitNavigationViewController.swift; sourceTree = "<group>"; };
 		377D92981D4BA9D800E57237 /* ControllersAndViewsSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllersAndViewsSampleViewController.swift; sourceTree = "<group>"; };
 		377D929B1D4BAC7600E57237 /* IndicatorSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorSampleViewController.swift; sourceTree = "<group>"; };
+		377D929D1D4C2C7C00E57237 /* ProgressBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3796A0E11D3F8435007BC3B3 /* boat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boat.gif; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				377D929B1D4BAC7600E57237 /* IndicatorSampleViewController.swift */,
+				377D929D1D4C2C7C00E57237 /* ProgressBarViewController.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				37B3DB7B1D43AA7200CFF75A /* TouchesViewController.swift in Sources */,
 				37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */,
 				37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */,
+				377D929E1D4C2C7C00E57237 /* ProgressBarViewController.swift in Sources */,
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */,
 				37670FDC1D475381001E353C /* ContentScrollViewController.swift in Sources */,
