@@ -12,7 +12,7 @@ class VideoSamplesViewController: UIViewController, UINavigationControllerDelega
                                 UITableViewDelegate, UITableViewDataSource  {
 
     let cellIdentifier = "Video"
-    let demos: [String] = ["video"]
+    let demos: [String] = ["video", "Embedded Video"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +71,8 @@ class VideoSamplesViewController: UIViewController, UINavigationControllerDelega
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController?.pushViewController(VideoPlayerViewController(), animated: true)
+        case demos[1]:
+            self.navigationController?.pushViewController(EmbededVideoViewController(), animated: true)
         default:
             break
         }

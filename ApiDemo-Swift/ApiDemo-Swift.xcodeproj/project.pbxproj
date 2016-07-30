@@ -96,6 +96,7 @@
 		377D92B01D4CCEBC00E57237 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92AF1D4CCEBC00E57237 /* VideoPlayerViewController.swift */; };
 		377D92B21D4CCEEE00E57237 /* VideoSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */; };
 		377D92B31D4CCF7500E57237 /* ElMirage.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377D92AE1D4CCE6100E57237 /* ElMirage.mp4 */; };
+		377D92B51D4CD7FC00E57237 /* EmbededVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92B41D4CD7FC00E57237 /* EmbededVideoViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3796A0E11D3F8435007BC3B3 /* boat.gif */; };
@@ -270,6 +271,7 @@
 		377D92AE1D4CCE6100E57237 /* ElMirage.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ElMirage.mp4; sourceTree = "<group>"; };
 		377D92AF1D4CCEBC00E57237 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSamplesViewController.swift; sourceTree = "<group>"; };
+		377D92B41D4CD7FC00E57237 /* EmbededVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbededVideoViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3796A0E11D3F8435007BC3B3 /* boat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boat.gif; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 			children = (
 				377D92AE1D4CCE6100E57237 /* ElMirage.mp4 */,
 				377D92AF1D4CCEBC00E57237 /* VideoPlayerViewController.swift */,
+				377D92B41D4CD7FC00E57237 /* EmbededVideoViewController.swift */,
 			);
 			name = video;
 			sourceTree = "<group>";
@@ -945,6 +948,7 @@
 				37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
 				37B3DB741D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift in Sources */,
+				377D92B51D4CD7FC00E57237 /* EmbededVideoViewController.swift in Sources */,
 				37670FDA1D474286001E353C /* AutoLayoutScrollViewController.swift in Sources */,
 				37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */,
 				3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */,
