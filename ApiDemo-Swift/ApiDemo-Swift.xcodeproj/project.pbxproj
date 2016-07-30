@@ -90,6 +90,9 @@
 		377D92A01D4C3C4200E57237 /* MyCustomeProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D929F1D4C3C4200E57237 /* MyCustomeProgressView.swift */; };
 		377D92A31D4C4BA000E57237 /* ModalDialogSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92A21D4C4BA000E57237 /* ModalDialogSampleViewController.swift */; };
 		377D92A51D4C4C3F00E57237 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92A41D4C4C3F00E57237 /* AlertViewController.swift */; };
+		377D92A81D4C8AC800E57237 /* AudioPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92A71D4C8AC800E57237 /* AudioPlayViewController.swift */; };
+		377D92AA1D4C8AFA00E57237 /* AudioSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92A91D4C8AFA00E57237 /* AudioSamplesViewController.swift */; };
+		377D92AC1D4C8EA500E57237 /* test.aif in Resources */ = {isa = PBXBuildFile; fileRef = 377D92AB1D4C8BB300E57237 /* test.aif */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3796A0E11D3F8435007BC3B3 /* boat.gif */; };
@@ -258,6 +261,9 @@
 		377D929F1D4C3C4200E57237 /* MyCustomeProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomeProgressView.swift; sourceTree = "<group>"; };
 		377D92A21D4C4BA000E57237 /* ModalDialogSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDialogSampleViewController.swift; sourceTree = "<group>"; };
 		377D92A41D4C4C3F00E57237 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		377D92A71D4C8AC800E57237 /* AudioPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayViewController.swift; sourceTree = "<group>"; };
+		377D92A91D4C8AFA00E57237 /* AudioSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSamplesViewController.swift; sourceTree = "<group>"; };
+		377D92AB1D4C8BB300E57237 /* test.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.aif; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3796A0E11D3F8435007BC3B3 /* boat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boat.gif; sourceTree = "<group>"; };
@@ -491,6 +497,15 @@
 			name = "Modal Dialogs";
 			sourceTree = "<group>";
 		};
+		377D92A61D4C8AAE00E57237 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				377D92A71D4C8AC800E57237 /* AudioPlayViewController.swift */,
+				377D92AB1D4C8BB300E57237 /* test.aif */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
 		37A6E0981CF68C9800632BDF /* layers */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +609,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				377D92A61D4C8AAE00E57237 /* Audio */,
 				377D92A11D4C4B4300E57237 /* Modal Dialogs */,
 				377D929A1D4BAB1200E57237 /* controllers and views */,
 				3710B1791D4B6C1800FB8099 /* webview */,
@@ -630,6 +646,7 @@
 				3710B17A1D4B6C4100FB8099 /* WebViewSamplesController.swift */,
 				377D92981D4BA9D800E57237 /* ControllersAndViewsSampleViewController.swift */,
 				377D92A21D4C4BA000E57237 /* ModalDialogSampleViewController.swift */,
+				377D92A91D4C8AFA00E57237 /* AudioSamplesViewController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -759,6 +776,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377D92AC1D4C8EA500E57237 /* test.aif in Resources */,
 				3767105B1D4A0D64001E353C /* SourceCodePro-Regular.ttf in Resources */,
 				3767102D1D49BE1E001E353C /* flag_illinois.gif in Resources */,
 				37C3F7771CE406780073A348 /* smiley.png in Resources */,
@@ -849,12 +867,14 @@
 			files = (
 				37A6E09C1CF68EC600632BDF /* LayerHierarchyViewController.swift in Sources */,
 				37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */,
+				377D92AA1D4C8AFA00E57237 /* AudioSamplesViewController.swift in Sources */,
 				3710B1831D4B73E600FB8099 /* HtmlStringWKViewController.swift in Sources */,
 				371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */,
 				37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */,
 				37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */,
 				3710B17D1D4B6D1200FB8099 /* SimpleWKViewController.swift in Sources */,
 				37C3F7831CE5ED840073A348 /* ImageResizableViewController.swift in Sources */,
+				377D92A81D4C8AC800E57237 /* AudioPlayViewController.swift in Sources */,
 				377D929C1D4BAC7600E57237 /* IndicatorSampleViewController.swift in Sources */,
 				37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */,
 				37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */,
