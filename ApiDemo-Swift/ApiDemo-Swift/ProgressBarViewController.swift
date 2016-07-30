@@ -11,6 +11,7 @@ import UIKit
 class ProgressBarViewController: UIViewController {
 
     var progress: UIProgressView?
+    var customeImgProgress: UIProgressView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,40 @@ class ProgressBarViewController: UIViewController {
             ])
         
         self.progress = progress
+        
+        // custome background image progress
+        var im : UIImage? = nil
+        let customeImgProgress = UIProgressView(progressViewStyle: .Default)
+        customeImgProgress.backgroundColor = UIColor.blackColor()
+        customeImgProgress.trackTintColor = UIColor.blackColor()
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(10, 10), true, 0)
+        if let con = UIGraphicsGetCurrentContext() {
+            CGContextSetFillColorWithColor(con, UIColor.yellowColor().CGColor)
+            CGContextFillRect(con, CGRectMake(0, 0, 10, 10))
+            let r = CGRectInset(CGContextGetClipBoundingBox(con), 1, 1)
+            CGContextSetLineWidth(con, 2)
+            CGContextSetStrokeColorWithColor(con, UIColor.blackColor().CGColor)
+            CGContextStrokeRect(con, r)
+            CGContextStrokeEllipseInRect(con, r)
+            im = UIGraphicsGetImageFromCurrentImageContext().resizableImageWithCapInsets(UIEdgeInsetsMake(4, 4, 4, 4), resizingMode: .Stretch)
+        }
+        
+        UIGraphicsEndImageContext()
+        
+        if let im = im {
+            customeImgProgress.progressImage = im
+        }
+        
+        customeImgProgress.progress = 0.5
+        
+        customeImgProgress.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(customeImgProgress)
+        NSLayoutConstraint.activateConstraints([
+                customeImgProgress.topAnchor.constraintEqualToAnchor(left.bottomAnchor, constant: 30),
+                customeImgProgress.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20),
+                customeImgProgress.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -20)
+            ])
+        self.customeImgProgress = customeImgProgress
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,22 +89,26 @@ class ProgressBarViewController: UIViewController {
     }
     
     func increase(sender: UIButton) {
-        if let progress = self.progress {
+        if let progress = self.progress, let customeImgProgress = self.customeImgProgress {
             if progress.progress <= 0.9 {
                 progress.setProgress(progress.progress + 0.1, animated: true)
+                customeImgProgress.setProgress(progress.progress + 0.1, animated: true)
             } else {
                 progress.setProgress(1.0, animated: true)
+                customeImgProgress.setProgress(1.0, animated: true)
             }
             
         }
     }
     
     func decrease(sender: UIButton) {
-        if let progress = self.progress {
+        if let progress = self.progress, let customeImgProgress = self.customeImgProgress {
             if progress.progress >= 0.1 {
                 progress.setProgress(progress.progress - 0.1, animated: true)
+                customeImgProgress.setProgress(progress.progress - 0.1, animated: true)
             } else {
                 progress.setProgress(0, animated: true)
+                customeImgProgress.setProgress(0, animated: true)
             }
         }
     }
