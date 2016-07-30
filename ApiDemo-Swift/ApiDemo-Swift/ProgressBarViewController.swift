@@ -12,6 +12,7 @@ class ProgressBarViewController: UIViewController {
 
     var progress: UIProgressView?
     var customeImgProgress: UIProgressView?
+    var customeProgress : MyCustomeProgressView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +82,21 @@ class ProgressBarViewController: UIViewController {
                 customeImgProgress.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -20)
             ])
         self.customeImgProgress = customeImgProgress
+        
+        // custome progress view
+        let customeProgress = MyCustomeProgressView()
+        customeProgress.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(customeProgress)
+        NSLayoutConstraint.activateConstraints([
+                customeProgress.topAnchor.constraintEqualToAnchor(customeImgProgress.bottomAnchor, constant: 20),
+                customeProgress.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20),
+                customeProgress.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -20),
+                customeProgress.heightAnchor.constraintEqualToConstant(20)
+            ])
+        
+        customeProgress.value = 0.5
+        
+        self.customeProgress = customeProgress
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,26 +105,36 @@ class ProgressBarViewController: UIViewController {
     }
     
     func increase(sender: UIButton) {
-        if let progress = self.progress, let customeImgProgress = self.customeImgProgress {
+        if let progress = self.progress, let customeImgProgress = self.customeImgProgress,
+                let customeProgress = self.customeProgress {
             if progress.progress <= 0.9 {
                 progress.setProgress(progress.progress + 0.1, animated: true)
                 customeImgProgress.setProgress(progress.progress + 0.1, animated: true)
+                customeProgress.value = CGFloat(progress.progress + 0.1)
+                //customeProgress.setNeedsDisplay()
             } else {
                 progress.setProgress(1.0, animated: true)
                 customeImgProgress.setProgress(1.0, animated: true)
+                customeProgress.value = 1.0
+                //customeProgress.setNeedsDisplay()
             }
             
         }
     }
     
     func decrease(sender: UIButton) {
-        if let progress = self.progress, let customeImgProgress = self.customeImgProgress {
+        if let progress = self.progress, let customeImgProgress = self.customeImgProgress,
+            let customeProgress = self.customeProgress {
             if progress.progress >= 0.1 {
                 progress.setProgress(progress.progress - 0.1, animated: true)
                 customeImgProgress.setProgress(progress.progress - 0.1, animated: true)
+                customeProgress.value = CGFloat(progress.progress - 0.1)
+                //customeProgress.setNeedsDisplay()
             } else {
                 progress.setProgress(0, animated: true)
                 customeImgProgress.setProgress(0, animated: true)
+                customeProgress.value = 0
+                //customeProgress.setNeedsDisplay()
             }
         }
     }
