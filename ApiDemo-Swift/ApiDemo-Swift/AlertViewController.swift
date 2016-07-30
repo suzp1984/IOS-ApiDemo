@@ -25,6 +25,16 @@ class AlertViewController: UIViewController {
                 button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
                 button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
             ])
+        
+        let textFieldButton = UIButton(type: .System)
+        textFieldButton.setTitle("EnterNumber Alert", forState: .Normal)
+        textFieldButton.addTarget(self, action: #selector(AlertViewController.presentTextFieldAlert(_:)), forControlEvents: .TouchUpInside)
+        textFieldButton.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(textFieldButton)
+        NSLayoutConstraint.activateConstraints([
+                textFieldButton.topAnchor.constraintEqualToAnchor(button.bottomAnchor, constant: 20),
+                textFieldButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+            ])
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +50,30 @@ class AlertViewController: UIViewController {
         
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    func presentTextFieldAlert(sender: UIButton) {
+        let alert = UIAlertController(title: "Enter a Number:", message: nil, preferredStyle: .Alert)
+        alert.addTextFieldWithConfigurationHandler {
+            (tf: UITextField) in
+            tf.keyboardType = .NumberPad
+        }
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (act: UIAlertAction) in
+            let tf: UITextField = alert.textFields![0]
+            if let s = tf.text {
+                print("Entered number is \(s)")
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 
     func handler(act: UIAlertAction) {
         print("User tapped \(act.title)")
+    }
+    
+    func handleNumber(act: UIAlertAction) {
+        
     }
 }
