@@ -97,6 +97,8 @@
 		377D92B21D4CCEEE00E57237 /* VideoSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */; };
 		377D92B31D4CCF7500E57237 /* ElMirage.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377D92AE1D4CCE6100E57237 /* ElMirage.mp4 */; };
 		377D92B51D4CD7FC00E57237 /* EmbededVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92B41D4CD7FC00E57237 /* EmbededVideoViewController.swift */; };
+		377D92B91D4D044700E57237 /* FileOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92B81D4D044700E57237 /* FileOperationsViewController.swift */; };
+		377D92BB1D4D048700E57237 /* PersistentStorageSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D92BA1D4D048700E57237 /* PersistentStorageSamplesViewController.swift */; };
 		377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DDCBB1D210630006C884D /* LayerMaskViewController.swift */; };
 		3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780FB7B1CD7534A00F056B7 /* MainViewController.swift */; };
 		3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3796A0E11D3F8435007BC3B3 /* boat.gif */; };
@@ -272,6 +274,8 @@
 		377D92AF1D4CCEBC00E57237 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSamplesViewController.swift; sourceTree = "<group>"; };
 		377D92B41D4CD7FC00E57237 /* EmbededVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbededVideoViewController.swift; sourceTree = "<group>"; };
+		377D92B81D4D044700E57237 /* FileOperationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOperationsViewController.swift; sourceTree = "<group>"; };
+		377D92BA1D4D048700E57237 /* PersistentStorageSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorageSamplesViewController.swift; sourceTree = "<group>"; };
 		377DDCBB1D210630006C884D /* LayerMaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
 		3780FB7B1CD7534A00F056B7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3796A0E11D3F8435007BC3B3 /* boat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boat.gif; sourceTree = "<group>"; };
@@ -524,6 +528,14 @@
 			name = video;
 			sourceTree = "<group>";
 		};
+		377D92B71D4D040700E57237 /* Persistent Storage */ = {
+			isa = PBXGroup;
+			children = (
+				377D92B81D4D044700E57237 /* FileOperationsViewController.swift */,
+			);
+			name = "Persistent Storage";
+			sourceTree = "<group>";
+		};
 		37A6E0981CF68C9800632BDF /* layers */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +639,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				377D92B71D4D040700E57237 /* Persistent Storage */,
 				377D92AD1D4CCE4C00E57237 /* video */,
 				377D92A61D4C8AAE00E57237 /* Audio */,
 				377D92A11D4C4B4300E57237 /* Modal Dialogs */,
@@ -667,6 +680,7 @@
 				377D92A21D4C4BA000E57237 /* ModalDialogSampleViewController.swift */,
 				377D92A91D4C8AFA00E57237 /* AudioSamplesViewController.swift */,
 				377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */,
+				377D92BA1D4D048700E57237 /* PersistentStorageSamplesViewController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -943,6 +957,7 @@
 				37B3DB861D464D5D00CFF75A /* SecondPresentViewController.swift in Sources */,
 				37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */,
 				3767105A1D4A07F2001E353C /* LabelFontViewController.swift in Sources */,
+				377D92BB1D4D048700E57237 /* PersistentStorageSamplesViewController.swift in Sources */,
 				371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */,
@@ -950,6 +965,7 @@
 				37B3DB741D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift in Sources */,
 				377D92B51D4CD7FC00E57237 /* EmbededVideoViewController.swift in Sources */,
 				37670FDA1D474286001E353C /* AutoLayoutScrollViewController.swift in Sources */,
+				377D92B91D4D044700E57237 /* FileOperationsViewController.swift in Sources */,
 				37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */,
 				3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */,
 				37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */,
