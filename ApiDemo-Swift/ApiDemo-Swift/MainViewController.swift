@@ -39,7 +39,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
     let cellIdentifier = "Cell"
     let demos = ["view", "drawing", "layers", "animation", "touches", "view controllers",
                  "Scroll Views", "Table Views", "Text", "Web Views", "Controllers and Views",
-                 "Modal Dialogs", "Audio", "Video", "Persistent Storage"]
+                 "Modal Dialogs", "Audio", "Video", "Persistent Storage", "Network"]
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -104,6 +104,8 @@ class MainViewController: UIViewController, UINavigationControllerDelegate, UITa
             self.navigationController?.pushViewController(VideoSamplesViewController(), animated: true)
         case demos[14]:
             self.navigationController?.pushViewController(PersistentStorageSamplesViewController(), animated: true)
+        case demos[15]:
+            self.navigationController?.pushViewController(NetworkSamplesViewController(), animated: true)
         default:
             break
         }
