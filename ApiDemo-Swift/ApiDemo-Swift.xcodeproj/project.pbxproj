@@ -147,6 +147,8 @@
 		37C7D21E1CEA0C5E00407AA8 /* ImageDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C7D21D1CEA0C5E00407AA8 /* ImageDrawingViewController.swift */; };
 		37CEC1CE1D506C100013DF8C /* SimpleHttpClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1CD1D506C100013DF8C /* SimpleHttpClientViewController.swift */; };
 		37CEC1D01D50739C0013DF8C /* NetworkSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1CF1D50739C0013DF8C /* NetworkSamplesViewController.swift */; };
+		37CEC1D21D509DF20013DF8C /* SessionDownloadHttpClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D11D509DF10013DF8C /* SessionDownloadHttpClientViewController.swift */; };
+		37CEC1D41D50A3350013DF8C /* SessionDataHttpClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -326,6 +328,8 @@
 		37C7D21D1CEA0C5E00407AA8 /* ImageDrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDrawingViewController.swift; sourceTree = "<group>"; };
 		37CEC1CD1D506C100013DF8C /* SimpleHttpClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleHttpClientViewController.swift; sourceTree = "<group>"; };
 		37CEC1CF1D50739C0013DF8C /* NetworkSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSamplesViewController.swift; sourceTree = "<group>"; };
+		37CEC1D11D509DF10013DF8C /* SessionDownloadHttpClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDownloadHttpClientViewController.swift; sourceTree = "<group>"; };
+		37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataHttpClientViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -610,6 +614,8 @@
 			isa = PBXGroup;
 			children = (
 				37CEC1CD1D506C100013DF8C /* SimpleHttpClientViewController.swift */,
+				37CEC1D11D509DF10013DF8C /* SessionDownloadHttpClientViewController.swift */,
+				37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -919,6 +925,7 @@
 				377D92AA1D4C8AFA00E57237 /* AudioSamplesViewController.swift in Sources */,
 				3710B1831D4B73E600FB8099 /* HtmlStringWKViewController.swift in Sources */,
 				371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */,
+				37CEC1D41D50A3350013DF8C /* SessionDataHttpClientViewController.swift in Sources */,
 				37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */,
 				37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */,
 				3710B17D1D4B6D1200FB8099 /* SimpleWKViewController.swift in Sources */,
@@ -960,6 +967,7 @@
 				37670FE91D49055C001E353C /* CustomContentViewController.swift in Sources */,
 				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
 				37FE42541CEB4B6200EE8E38 /* MyCustomDrawingView.swift in Sources */,
+				37CEC1D21D509DF20013DF8C /* SessionDownloadHttpClientViewController.swift in Sources */,
 				37670FE11D48AAB0001E353C /* SimpleTableViewController.swift in Sources */,
 				376710561D49F369001E353C /* TextSampleViewController.swift in Sources */,
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
