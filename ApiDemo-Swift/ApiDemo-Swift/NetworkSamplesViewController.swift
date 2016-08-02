@@ -12,7 +12,8 @@ class NetworkSamplesViewController: UIViewController, UINavigationControllerDele
                                     UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "Network"
-    let demos: [String] = ["shared Session HTTP Client", "Session Download delegate", "Session Data Delegate"]
+    let demos: [String] = ["shared Session HTTP Client", "Session Download delegate", "Session Data Delegate",
+                           "Customed Downloader"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,8 @@ class NetworkSamplesViewController: UIViewController, UINavigationControllerDele
             self.navigationController?.pushViewController(SessionDownloadHttpClientViewController(), animated: true)
         case demos[2]:
             self.navigationController?.pushViewController(SessionDataHttpClientViewController(), animated: true)
+        case demos[3]:
+            self.navigationController?.pushViewController(DownloaderTableViewController(), animated: true)
         default:
             break
         }

@@ -149,6 +149,8 @@
 		37CEC1D01D50739C0013DF8C /* NetworkSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1CF1D50739C0013DF8C /* NetworkSamplesViewController.swift */; };
 		37CEC1D21D509DF20013DF8C /* SessionDownloadHttpClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D11D509DF10013DF8C /* SessionDownloadHttpClientViewController.swift */; };
 		37CEC1D41D50A3350013DF8C /* SessionDataHttpClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */; };
+		37CEC1D61D50B1A50013DF8C /* MyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D51D50B1A50013DF8C /* MyDownloader.swift */; };
+		37CEC1D81D50B2620013DF8C /* DownloaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D71D50B2620013DF8C /* DownloaderTableViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -330,6 +332,8 @@
 		37CEC1CF1D50739C0013DF8C /* NetworkSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSamplesViewController.swift; sourceTree = "<group>"; };
 		37CEC1D11D509DF10013DF8C /* SessionDownloadHttpClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDownloadHttpClientViewController.swift; sourceTree = "<group>"; };
 		37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataHttpClientViewController.swift; sourceTree = "<group>"; };
+		37CEC1D51D50B1A50013DF8C /* MyDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDownloader.swift; sourceTree = "<group>"; };
+		37CEC1D71D50B2620013DF8C /* DownloaderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloaderTableViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -616,6 +620,8 @@
 				37CEC1CD1D506C100013DF8C /* SimpleHttpClientViewController.swift */,
 				37CEC1D11D509DF10013DF8C /* SessionDownloadHttpClientViewController.swift */,
 				37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */,
+				37CEC1D51D50B1A50013DF8C /* MyDownloader.swift */,
+				37CEC1D71D50B2620013DF8C /* DownloaderTableViewController.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -988,6 +994,7 @@
 				37B3DB741D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift in Sources */,
 				377D92B51D4CD7FC00E57237 /* EmbededVideoViewController.swift in Sources */,
 				37670FDA1D474286001E353C /* AutoLayoutScrollViewController.swift in Sources */,
+				37CEC1D61D50B1A50013DF8C /* MyDownloader.swift in Sources */,
 				377D92B91D4D044700E57237 /* FileOperationsViewController.swift in Sources */,
 				37B3DB701D41D36400CFF75A /* DynamicsViewController.swift in Sources */,
 				3712917F1D212A0A006F0A68 /* Layermask2ViewController.swift in Sources */,
@@ -1013,6 +1020,7 @@
 				37A6E0A41CF7112D00632BDF /* CompassView.swift in Sources */,
 				37FE42521CEB47E300EE8E38 /* VisualEffectViewController.swift in Sources */,
 				37C7D2181CE9F93000407AA8 /* GraphicContextViewController.swift in Sources */,
+				37CEC1D81D50B2620013DF8C /* DownloaderTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
