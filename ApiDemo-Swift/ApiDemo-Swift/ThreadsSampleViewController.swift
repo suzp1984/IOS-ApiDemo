@@ -12,7 +12,7 @@ class ThreadsSampleViewController: UIViewController, UINavigationControllerDeleg
                                 UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "Thread"
-    let demos: [String] = ["No Threads"]
+    let demos: [String] = ["No Threads", "Manual Thread"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +72,8 @@ class ThreadsSampleViewController: UIViewController, UINavigationControllerDeleg
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController?.pushViewController(NoThreadMandelbrotViewController(), animated: true)
+        case demos[1]:
+            self.navigationController?.pushViewController(ManualThreadMandelbrotViewController(), animated: true)
         default:
             break
         }
