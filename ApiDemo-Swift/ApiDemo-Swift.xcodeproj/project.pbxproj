@@ -156,6 +156,9 @@
 		37DF59081D5228A00069ADAF /* MandelbrotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59071D5228A00069ADAF /* MandelbrotView.swift */; };
 		37DF590A1D5231B30069ADAF /* ManualThreadedMandelbrotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59091D5231B30069ADAF /* ManualThreadedMandelbrotView.swift */; };
 		37DF590C1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF590B1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift */; };
+		37DF590E1D5236C30069ADAF /* OperationMandelbrotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF590D1D5236C30069ADAF /* OperationMandelbrotView.swift */; };
+		37DF59101D5238270069ADAF /* MandelbrotOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF590F1D5238270069ADAF /* MandelbrotOperation.swift */; };
+		37DF59121D5238D30069ADAF /* OperationMandelbrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -344,6 +347,9 @@
 		37DF59071D5228A00069ADAF /* MandelbrotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotView.swift; sourceTree = "<group>"; };
 		37DF59091D5231B30069ADAF /* ManualThreadedMandelbrotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualThreadedMandelbrotView.swift; sourceTree = "<group>"; };
 		37DF590B1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualThreadMandelbrotViewController.swift; sourceTree = "<group>"; };
+		37DF590D1D5236C30069ADAF /* OperationMandelbrotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMandelbrotView.swift; sourceTree = "<group>"; };
+		37DF590F1D5238270069ADAF /* MandelbrotOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotOperation.swift; sourceTree = "<group>"; };
+		37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMandelbrotViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -643,6 +649,9 @@
 				37DF59071D5228A00069ADAF /* MandelbrotView.swift */,
 				37DF59091D5231B30069ADAF /* ManualThreadedMandelbrotView.swift */,
 				37DF590B1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift */,
+				37DF590D1D5236C30069ADAF /* OperationMandelbrotView.swift */,
+				37DF590F1D5238270069ADAF /* MandelbrotOperation.swift */,
+				37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */,
 			);
 			name = threads;
 			sourceTree = "<group>";
@@ -957,6 +966,7 @@
 				37CEC1D41D50A3350013DF8C /* SessionDataHttpClientViewController.swift in Sources */,
 				37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */,
 				37C276381D27CEEF00B22546 /* MyReverseView.swift in Sources */,
+				37DF590E1D5236C30069ADAF /* OperationMandelbrotView.swift in Sources */,
 				3710B17D1D4B6D1200FB8099 /* SimpleWKViewController.swift in Sources */,
 				37C3F7831CE5ED840073A348 /* ImageResizableViewController.swift in Sources */,
 				37CEC1CE1D506C100013DF8C /* SimpleHttpClientViewController.swift in Sources */,
@@ -986,6 +996,7 @@
 				37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */,
+				37DF59121D5238D30069ADAF /* OperationMandelbrotViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
 				37670FE51D48FF25001E353C /* CustomeCellLayoutViewController.swift in Sources */,
@@ -1031,6 +1042,7 @@
 				3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */,
 				377D92991D4BA9D800E57237 /* ControllersAndViewsSampleViewController.swift in Sources */,
 				37670FED1D49BD15001E353C /* MultiSectionTableViewController.swift in Sources */,
+				37DF59101D5238270069ADAF /* MandelbrotOperation.swift in Sources */,
 				37C3F77B1CE407130073A348 /* MyImageView.swift in Sources */,
 				37670FE71D48FF9B001E353C /* MyCell.swift in Sources */,
 				37CEC1D01D50739C0013DF8C /* NetworkSamplesViewController.swift in Sources */,
