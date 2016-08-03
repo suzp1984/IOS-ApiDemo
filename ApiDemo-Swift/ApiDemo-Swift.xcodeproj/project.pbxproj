@@ -151,6 +151,9 @@
 		37CEC1D41D50A3350013DF8C /* SessionDataHttpClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */; };
 		37CEC1D61D50B1A50013DF8C /* MyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D51D50B1A50013DF8C /* MyDownloader.swift */; };
 		37CEC1D81D50B2620013DF8C /* DownloaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CEC1D71D50B2620013DF8C /* DownloaderTableViewController.swift */; };
+		37DF59041D5227620069ADAF /* ThreadsSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59031D5227620069ADAF /* ThreadsSampleViewController.swift */; };
+		37DF59061D5228040069ADAF /* NoThreadMandelbrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59051D5228040069ADAF /* NoThreadMandelbrotViewController.swift */; };
+		37DF59081D5228A00069ADAF /* MandelbrotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59071D5228A00069ADAF /* MandelbrotView.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -334,6 +337,9 @@
 		37CEC1D31D50A3350013DF8C /* SessionDataHttpClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataHttpClientViewController.swift; sourceTree = "<group>"; };
 		37CEC1D51D50B1A50013DF8C /* MyDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDownloader.swift; sourceTree = "<group>"; };
 		37CEC1D71D50B2620013DF8C /* DownloaderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloaderTableViewController.swift; sourceTree = "<group>"; };
+		37DF59031D5227620069ADAF /* ThreadsSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsSampleViewController.swift; sourceTree = "<group>"; };
+		37DF59051D5228040069ADAF /* NoThreadMandelbrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoThreadMandelbrotViewController.swift; sourceTree = "<group>"; };
+		37DF59071D5228A00069ADAF /* MandelbrotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotView.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -626,6 +632,15 @@
 			name = network;
 			sourceTree = "<group>";
 		};
+		37DF59021D5227390069ADAF /* threads */ = {
+			isa = PBXGroup;
+			children = (
+				37DF59051D5228040069ADAF /* NoThreadMandelbrotViewController.swift */,
+				37DF59071D5228A00069ADAF /* MandelbrotView.swift */,
+			);
+			name = threads;
+			sourceTree = "<group>";
+		};
 		37FEE99F1CE07400002A28E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +678,7 @@
 		A61C69A31C02EBD600ADF518 /* ApiDemo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				37DF59021D5227390069ADAF /* threads */,
 				37CEC1CC1D506BB90013DF8C /* network */,
 				377D92B71D4D040700E57237 /* Persistent Storage */,
 				377D92AD1D4CCE4C00E57237 /* video */,
@@ -707,6 +723,7 @@
 				377D92B11D4CCEEE00E57237 /* VideoSamplesViewController.swift */,
 				377D92BA1D4D048700E57237 /* PersistentStorageSamplesViewController.swift */,
 				37CEC1CF1D50739C0013DF8C /* NetworkSamplesViewController.swift */,
+				37DF59031D5227620069ADAF /* ThreadsSampleViewController.swift */,
 			);
 			path = "ApiDemo-Swift";
 			sourceTree = "<group>";
@@ -940,6 +957,7 @@
 				377D92A81D4C8AC800E57237 /* AudioPlayViewController.swift in Sources */,
 				377D929C1D4BAC7600E57237 /* IndicatorSampleViewController.swift in Sources */,
 				37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */,
+				37DF59081D5228A00069ADAF /* MandelbrotView.swift in Sources */,
 				37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */,
 				A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */,
 				377D92A01D4C3C4200E57237 /* MyCustomeProgressView.swift in Sources */,
@@ -950,6 +968,7 @@
 				37C2763A1D293AFB00B22546 /* LayerAnimationViewController.swift in Sources */,
 				37B3DB7B1D43AA7200CFF75A /* TouchesViewController.swift in Sources */,
 				37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */,
+				37DF59041D5227620069ADAF /* ThreadsSampleViewController.swift in Sources */,
 				37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */,
 				377D929E1D4C2C7C00E57237 /* ProgressBarViewController.swift in Sources */,
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
@@ -984,6 +1003,7 @@
 				377D92A31D4C4BA000E57237 /* ModalDialogSampleViewController.swift in Sources */,
 				377D92B01D4CCEBC00E57237 /* VideoPlayerViewController.swift in Sources */,
 				37B3DB861D464D5D00CFF75A /* SecondPresentViewController.swift in Sources */,
+				37DF59061D5228040069ADAF /* NoThreadMandelbrotViewController.swift in Sources */,
 				37B3DB7D1D43AAC500CFF75A /* MyTouchEventViews.swift in Sources */,
 				3767105A1D4A07F2001E353C /* LabelFontViewController.swift in Sources */,
 				377D92BB1D4D048700E57237 /* PersistentStorageSamplesViewController.swift in Sources */,
