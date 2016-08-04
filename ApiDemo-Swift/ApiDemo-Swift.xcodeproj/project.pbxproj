@@ -159,6 +159,8 @@
 		37DF590E1D5236C30069ADAF /* OperationMandelbrotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF590D1D5236C30069ADAF /* OperationMandelbrotView.swift */; };
 		37DF59101D5238270069ADAF /* MandelbrotOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF590F1D5238270069ADAF /* MandelbrotOperation.swift */; };
 		37DF59121D5238D30069ADAF /* OperationMandelbrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */; };
+		37DF59141D5377B50069ADAF /* GCDMandelrotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59131D5377B50069ADAF /* GCDMandelrotView.swift */; };
+		37DF59161D537A420069ADAF /* GCDMandelrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59151D537A420069ADAF /* GCDMandelrotViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -350,6 +352,8 @@
 		37DF590D1D5236C30069ADAF /* OperationMandelbrotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMandelbrotView.swift; sourceTree = "<group>"; };
 		37DF590F1D5238270069ADAF /* MandelbrotOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotOperation.swift; sourceTree = "<group>"; };
 		37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMandelbrotViewController.swift; sourceTree = "<group>"; };
+		37DF59131D5377B50069ADAF /* GCDMandelrotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDMandelrotView.swift; sourceTree = "<group>"; };
+		37DF59151D537A420069ADAF /* GCDMandelrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDMandelrotViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -652,6 +656,8 @@
 				37DF590D1D5236C30069ADAF /* OperationMandelbrotView.swift */,
 				37DF590F1D5238270069ADAF /* MandelbrotOperation.swift */,
 				37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */,
+				37DF59131D5377B50069ADAF /* GCDMandelrotView.swift */,
+				37DF59151D537A420069ADAF /* GCDMandelrotViewController.swift */,
 			);
 			name = threads;
 			sourceTree = "<group>";
@@ -1006,6 +1012,7 @@
 				377D92971D4B9C1B00E57237 /* WebKitNavigationViewController.swift in Sources */,
 				37B3DB6E1D40C13500CFF75A /* CIFilterTransitionViewController.swift in Sources */,
 				377606911D256E6D009A17A5 /* UIViewAnimationViewController.swift in Sources */,
+				37DF59141D5377B50069ADAF /* GCDMandelrotView.swift in Sources */,
 				37A6E0A01CF6FE3100632BDF /* smilers.swift in Sources */,
 				37670FE91D49055C001E353C /* CustomContentViewController.swift in Sources */,
 				377DDCBC1D210630006C884D /* LayerMaskViewController.swift in Sources */,
@@ -1044,6 +1051,7 @@
 				37670FED1D49BD15001E353C /* MultiSectionTableViewController.swift in Sources */,
 				37DF59101D5238270069ADAF /* MandelbrotOperation.swift in Sources */,
 				37C3F77B1CE407130073A348 /* MyImageView.swift in Sources */,
+				37DF59161D537A420069ADAF /* GCDMandelrotViewController.swift in Sources */,
 				37670FE71D48FF9B001E353C /* MyCell.swift in Sources */,
 				37CEC1D01D50739C0013DF8C /* NetworkSamplesViewController.swift in Sources */,
 				37B3DB6A1D40AE1E00CFF75A /* ActionsViewController.swift in Sources */,
