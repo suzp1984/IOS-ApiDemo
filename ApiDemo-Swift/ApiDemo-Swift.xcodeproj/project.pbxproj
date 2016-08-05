@@ -163,6 +163,10 @@
 		37DF59161D537A420069ADAF /* GCDMandelrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59151D537A420069ADAF /* GCDMandelrotViewController.swift */; };
 		37DF59181D54CF460069ADAF /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59171D54CF460069ADAF /* UIPickerViewController.swift */; };
 		37DF591A1D54D39E0069ADAF /* usa-states.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59191D54D39E0069ADAF /* usa-states.txt */; };
+		37DF591C1D54E2790069ADAF /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF591B1D54E2790069ADAF /* SearchBarViewController.swift */; };
+		37DF591E1D54E2CB0069ADAF /* sepia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF591D1D54E2CB0069ADAF /* sepia.jpg */; };
+		37DF59201D54E2D70069ADAF /* moe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF591F1D54E2D70069ADAF /* moe.jpg */; };
+		37DF59221D54E2DF0069ADAF /* manny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59211D54E2DF0069ADAF /* manny.jpg */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -358,6 +362,10 @@
 		37DF59151D537A420069ADAF /* GCDMandelrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDMandelrotViewController.swift; sourceTree = "<group>"; };
 		37DF59171D54CF460069ADAF /* UIPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerViewController.swift; sourceTree = "<group>"; };
 		37DF59191D54D39E0069ADAF /* usa-states.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-states.txt"; sourceTree = "<group>"; };
+		37DF591B1D54E2790069ADAF /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		37DF591D1D54E2CB0069ADAF /* sepia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sepia.jpg; sourceTree = "<group>"; };
+		37DF591F1D54E2D70069ADAF /* moe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moe.jpg; sourceTree = "<group>"; };
+		37DF59211D54E2DF0069ADAF /* manny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manny.jpg; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -530,11 +538,15 @@
 		377D929A1D4BAB1200E57237 /* controllers and views */ = {
 			isa = PBXGroup;
 			children = (
+				37DF59211D54E2DF0069ADAF /* manny.jpg */,
+				37DF591F1D54E2D70069ADAF /* moe.jpg */,
+				37DF591D1D54E2CB0069ADAF /* sepia.jpg */,
 				377D929B1D4BAC7600E57237 /* IndicatorSampleViewController.swift */,
 				377D929D1D4C2C7C00E57237 /* ProgressBarViewController.swift */,
 				377D929F1D4C3C4200E57237 /* MyCustomeProgressView.swift */,
 				37DF59171D54CF460069ADAF /* UIPickerViewController.swift */,
 				37DF59191D54D39E0069ADAF /* usa-states.txt */,
+				37DF591B1D54E2790069ADAF /* SearchBarViewController.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -889,6 +901,7 @@
 				3767104B1D49BE1E001E353C /* flag_texas.gif in Resources */,
 				376710371D49BE1E001E353C /* flag_minnesota.gif in Resources */,
 				376710421D49BE1E001E353C /* flag_northdakota.gif in Resources */,
+				37DF59201D54E2D70069ADAF /* moe.jpg in Resources */,
 				37DF591A1D54D39E0069ADAF /* usa-states.txt in Resources */,
 				3767104D1D49BE1E001E353C /* flag_vermont.gif in Resources */,
 				3767103C1D49BE1E001E353C /* flag_nevada.gif in Resources */,
@@ -926,6 +939,7 @@
 				3767102B1D49BE1E001E353C /* flag_hawaii.gif in Resources */,
 				376710341D49BE1E001E353C /* flag_maryland.gif in Resources */,
 				376710211D49BE1E001E353C /* flag_alabama.gif in Resources */,
+				37DF59221D54E2DF0069ADAF /* manny.jpg in Resources */,
 				37C3F7761CE406780073A348 /* frowney.png in Resources */,
 				3767104E1D49BE1E001E353C /* flag_virginia.gif in Resources */,
 				376710431D49BE1E001E353C /* flag_ohio.gif in Resources */,
@@ -938,6 +952,7 @@
 				376710491D49BE1E001E353C /* flag_southdakota.gif in Resources */,
 				376710291D49BE1E001E353C /* flag_florida.gif in Resources */,
 				A61C69AF1C02EBD600ADF518 /* LaunchScreen.storyboard in Resources */,
+				37DF591E1D54E2CB0069ADAF /* sepia.jpg in Resources */,
 				3767104C1D49BE1E001E353C /* flag_utah.gif in Resources */,
 				3767104A1D49BE1E001E353C /* flag_tennessee.gif in Resources */,
 				376710461D49BE1E001E353C /* flag_pennsylvania.gif in Resources */,
@@ -1032,6 +1047,7 @@
 				37B3DB881D4667E200CFF75A /* ThirdPresentViewController.swift in Sources */,
 				37DF590A1D5231B30069ADAF /* ManualThreadedMandelbrotView.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
+				37DF591C1D54E2790069ADAF /* SearchBarViewController.swift in Sources */,
 				37B3DB8D1D46E9EE00CFF75A /* AutoResizeScrollViewController.swift in Sources */,
 				37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */,
 				377D92A31D4C4BA000E57237 /* ModalDialogSampleViewController.swift in Sources */,
