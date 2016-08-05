@@ -161,6 +161,8 @@
 		37DF59121D5238D30069ADAF /* OperationMandelbrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */; };
 		37DF59141D5377B50069ADAF /* GCDMandelrotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59131D5377B50069ADAF /* GCDMandelrotView.swift */; };
 		37DF59161D537A420069ADAF /* GCDMandelrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59151D537A420069ADAF /* GCDMandelrotViewController.swift */; };
+		37DF59181D54CF460069ADAF /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59171D54CF460069ADAF /* UIPickerViewController.swift */; };
+		37DF591A1D54D39E0069ADAF /* usa-states.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59191D54D39E0069ADAF /* usa-states.txt */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -354,6 +356,8 @@
 		37DF59111D5238D30069ADAF /* OperationMandelbrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationMandelbrotViewController.swift; sourceTree = "<group>"; };
 		37DF59131D5377B50069ADAF /* GCDMandelrotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDMandelrotView.swift; sourceTree = "<group>"; };
 		37DF59151D537A420069ADAF /* GCDMandelrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDMandelrotViewController.swift; sourceTree = "<group>"; };
+		37DF59171D54CF460069ADAF /* UIPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerViewController.swift; sourceTree = "<group>"; };
+		37DF59191D54D39E0069ADAF /* usa-states.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "usa-states.txt"; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -529,6 +533,8 @@
 				377D929B1D4BAC7600E57237 /* IndicatorSampleViewController.swift */,
 				377D929D1D4C2C7C00E57237 /* ProgressBarViewController.swift */,
 				377D929F1D4C3C4200E57237 /* MyCustomeProgressView.swift */,
+				37DF59171D54CF460069ADAF /* UIPickerViewController.swift */,
+				37DF59191D54D39E0069ADAF /* usa-states.txt */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -883,6 +889,7 @@
 				3767104B1D49BE1E001E353C /* flag_texas.gif in Resources */,
 				376710371D49BE1E001E353C /* flag_minnesota.gif in Resources */,
 				376710421D49BE1E001E353C /* flag_northdakota.gif in Resources */,
+				37DF591A1D54D39E0069ADAF /* usa-states.txt in Resources */,
 				3767104D1D49BE1E001E353C /* flag_vermont.gif in Resources */,
 				3767103C1D49BE1E001E353C /* flag_nevada.gif in Resources */,
 				376710441D49BE1E001E353C /* flag_oklahoma.gif in Resources */,
@@ -1004,6 +1011,7 @@
 				37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */,
 				37DF59121D5238D30069ADAF /* OperationMandelbrotViewController.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
+				37DF59181D54CF460069ADAF /* UIPickerViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
 				37670FE51D48FF25001E353C /* CustomeCellLayoutViewController.swift in Sources */,
 				37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */,
