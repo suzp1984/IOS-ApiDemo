@@ -12,6 +12,7 @@ class UIPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
     var picker : UIPickerView?
     var states : [String]?
+    var selectedLabel : UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +29,20 @@ class UIPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 picker.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor)
             ])
         
+        let selected = UILabel()
+        selected.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(selected)
+        NSLayoutConstraint.activateConstraints([
+                selected.bottomAnchor.constraintEqualToAnchor(picker.topAnchor, constant: -20),
+                selected.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+            ])
+        
+        self.selectedLabel = selected
+        
         if let f = NSBundle.mainBundle().pathForResource("usa-states", ofType: "txt") {
             let s = try! String(contentsOfFile: f, encoding: NSUTF8StringEncoding)
             self.states = s.componentsSeparatedByString("\n")
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +79,12 @@ class UIPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         lab.backgroundColor = UIColor.clearColor()
         lab.sizeToFit()
         return lab
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if let selectedLabel = self.selectedLabel, states = self.states {
+            selectedLabel.text = states[row]
+        }
     }
 }
 
