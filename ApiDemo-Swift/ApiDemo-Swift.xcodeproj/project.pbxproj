@@ -168,6 +168,7 @@
 		37DF59201D54E2D70069ADAF /* moe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF591F1D54E2D70069ADAF /* moe.jpg */; };
 		37DF59221D54E2DF0069ADAF /* manny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59211D54E2DF0069ADAF /* manny.jpg */; };
 		37DF59241D55D5FA0069ADAF /* UISwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59231D55D5FA0069ADAF /* UISwitchViewController.swift */; };
+		37DF59261D55DA3B0069ADAF /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59251D55DA3B0069ADAF /* StepperViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -368,6 +369,7 @@
 		37DF591F1D54E2D70069ADAF /* moe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moe.jpg; sourceTree = "<group>"; };
 		37DF59211D54E2DF0069ADAF /* manny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manny.jpg; sourceTree = "<group>"; };
 		37DF59231D55D5FA0069ADAF /* UISwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchViewController.swift; sourceTree = "<group>"; };
+		37DF59251D55DA3B0069ADAF /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -550,6 +552,7 @@
 				37DF59191D54D39E0069ADAF /* usa-states.txt */,
 				37DF591B1D54E2790069ADAF /* SearchBarViewController.swift */,
 				37DF59231D55D5FA0069ADAF /* UISwitchViewController.swift */,
+				37DF59251D55DA3B0069ADAF /* StepperViewController.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -1004,6 +1007,7 @@
 				377D92A81D4C8AC800E57237 /* AudioPlayViewController.swift in Sources */,
 				377D929C1D4BAC7600E57237 /* IndicatorSampleViewController.swift in Sources */,
 				37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */,
+				37DF59261D55DA3B0069ADAF /* StepperViewController.swift in Sources */,
 				37DF59081D5228A00069ADAF /* MandelbrotView.swift in Sources */,
 				37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */,
 				A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */,
