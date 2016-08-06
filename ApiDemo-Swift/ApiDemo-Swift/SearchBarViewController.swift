@@ -103,6 +103,12 @@ class SearchBarViewController: UIViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        
+        self.view.endEditing(true)
+    }
+    
     func imageFromContextOfSize(size:CGSize, closure:() -> ()) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         closure()
