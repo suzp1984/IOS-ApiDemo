@@ -169,6 +169,8 @@
 		37DF59221D54E2DF0069ADAF /* manny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59211D54E2DF0069ADAF /* manny.jpg */; };
 		37DF59241D55D5FA0069ADAF /* UISwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59231D55D5FA0069ADAF /* UISwitchViewController.swift */; };
 		37DF59261D55DA3B0069ADAF /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59251D55DA3B0069ADAF /* StepperViewController.swift */; };
+		37DF59281D55DE590069ADAF /* pic1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59271D55DE590069ADAF /* pic1.png */; };
+		37DF592A1D55DE600069ADAF /* pic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59291D55DE600069ADAF /* pic2.png */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -370,6 +372,8 @@
 		37DF59211D54E2DF0069ADAF /* manny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manny.jpg; sourceTree = "<group>"; };
 		37DF59231D55D5FA0069ADAF /* UISwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchViewController.swift; sourceTree = "<group>"; };
 		37DF59251D55DA3B0069ADAF /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperViewController.swift; sourceTree = "<group>"; };
+		37DF59271D55DE590069ADAF /* pic1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic1.png; sourceTree = "<group>"; };
+		37DF59291D55DE600069ADAF /* pic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic2.png; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -542,6 +546,8 @@
 		377D929A1D4BAB1200E57237 /* controllers and views */ = {
 			isa = PBXGroup;
 			children = (
+				37DF59291D55DE600069ADAF /* pic2.png */,
+				37DF59271D55DE590069ADAF /* pic1.png */,
 				37DF59211D54E2DF0069ADAF /* manny.jpg */,
 				37DF591F1D54E2D70069ADAF /* moe.jpg */,
 				37DF591D1D54E2CB0069ADAF /* sepia.jpg */,
@@ -917,6 +923,7 @@
 				3767102A1D49BE1E001E353C /* flag_georgia.gif in Resources */,
 				376710501D49BE1E001E353C /* flag_westvirginia.gif in Resources */,
 				3767103F1D49BE1E001E353C /* flag_newmexico.gif in Resources */,
+				37DF59281D55DE590069ADAF /* pic1.png in Resources */,
 				3767102F1D49BE1E001E353C /* flag_iowa.gif in Resources */,
 				376710391D49BE1E001E353C /* flag_missouri.gif in Resources */,
 				3776068F1D254014009A17A5 /* Pacman.xcassets in Resources */,
@@ -962,6 +969,7 @@
 				3767104C1D49BE1E001E353C /* flag_utah.gif in Resources */,
 				3767104A1D49BE1E001E353C /* flag_tennessee.gif in Resources */,
 				376710461D49BE1E001E353C /* flag_pennsylvania.gif in Resources */,
+				37DF592A1D55DE600069ADAF /* pic2.png in Resources */,
 				376710301D49BE1E001E353C /* flag_kansas.gif in Resources */,
 				376710381D49BE1E001E353C /* flag_mississippi.gif in Resources */,
 				376710241D49BE1E001E353C /* flag_arkansas.gif in Resources */,
