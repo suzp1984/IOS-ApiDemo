@@ -179,6 +179,8 @@
 		37DF59361D55F2DE0069ADAF /* gold2b.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59351D55F2DE0069ADAF /* gold2b.png */; };
 		37DF59381D55F2E60069ADAF /* moneybag1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59371D55F2E60069ADAF /* moneybag1.png */; };
 		37DF593A1D55F2FF0069ADAF /* MySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59391D55F2FF0069ADAF /* MySlider.swift */; };
+		37DF593C1D5612DB0069ADAF /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF593B1D5612DB0069ADAF /* SegmentViewController.swift */; };
+		37DF593E1D56173E0069ADAF /* jack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF593D1D56173E0069ADAF /* jack.jpg */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -390,6 +392,8 @@
 		37DF59351D55F2DE0069ADAF /* gold2b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold2b.png; sourceTree = "<group>"; };
 		37DF59371D55F2E60069ADAF /* moneybag1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneybag1.png; sourceTree = "<group>"; };
 		37DF59391D55F2FF0069ADAF /* MySlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySlider.swift; sourceTree = "<group>"; };
+		37DF593B1D5612DB0069ADAF /* SegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
+		37DF593D1D56173E0069ADAF /* jack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jack.jpg; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -566,6 +570,7 @@
 				37DF59331D55F2D70069ADAF /* gold1b.png */,
 				37DF59291D55DE600069ADAF /* pic2.png */,
 				37DF59271D55DE590069ADAF /* pic1.png */,
+				37DF593D1D56173E0069ADAF /* jack.jpg */,
 				37DF59371D55F2E60069ADAF /* moneybag1.png */,
 				37DF59351D55F2DE0069ADAF /* gold2b.png */,
 				37DF59211D54E2DF0069ADAF /* manny.jpg */,
@@ -583,6 +588,7 @@
 				37DF592D1D55EB5C0069ADAF /* DatePickerViewController.swift */,
 				37DF592F1D55EFD10069ADAF /* SliderSampleViewController.swift */,
 				37DF59391D55F2FF0069ADAF /* MySlider.swift */,
+				37DF593B1D5612DB0069ADAF /* SegmentViewController.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -977,6 +983,7 @@
 				376710271D49BE1E001E353C /* flag_connecticut.gif in Resources */,
 				3767102B1D49BE1E001E353C /* flag_hawaii.gif in Resources */,
 				376710341D49BE1E001E353C /* flag_maryland.gif in Resources */,
+				37DF593E1D56173E0069ADAF /* jack.jpg in Resources */,
 				37DF59361D55F2DE0069ADAF /* gold2b.png in Resources */,
 				376710211D49BE1E001E353C /* flag_alabama.gif in Resources */,
 				37DF59221D54E2DF0069ADAF /* manny.jpg in Resources */,
@@ -1068,6 +1075,7 @@
 				37B3DB8B1D46E8CF00CFF75A /* ScrollSamplesViewController.swift in Sources */,
 				37DF59241D55D5FA0069ADAF /* UISwitchViewController.swift in Sources */,
 				377D92B21D4CCEEE00E57237 /* VideoSamplesViewController.swift in Sources */,
+				37DF593C1D5612DB0069ADAF /* SegmentViewController.swift in Sources */,
 				37B3DB7F1D43BD5900CFF75A /* ViewControllersSampleController.swift in Sources */,
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */,
