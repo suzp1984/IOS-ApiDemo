@@ -109,6 +109,10 @@ class SearchBarViewController: UIViewController, UISearchBarDelegate {
         self.view.endEditing(true)
     }
     
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
     func imageFromContextOfSize(size:CGSize, closure:() -> ()) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         closure()
