@@ -183,6 +183,9 @@
 		37DF593E1D56173E0069ADAF /* jack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF593D1D56173E0069ADAF /* jack.jpg */; };
 		37DF59401D561D6E0069ADAF /* ButtonSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF593F1D561D6E0069ADAF /* ButtonSampleViewController.swift */; };
 		37DF59421D561FB80069ADAF /* MyShrinkingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59411D561FB80069ADAF /* MyShrinkingButton.swift */; };
+		37DF59441D5626240069ADAF /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59431D5626240069ADAF /* knob.png */; };
+		37DF59461D56264E0069ADAF /* CustomControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59451D56264E0069ADAF /* CustomControlViewController.swift */; };
+		37DF59481D5626820069ADAF /* MyKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59471D5626820069ADAF /* MyKnob.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -398,6 +401,9 @@
 		37DF593D1D56173E0069ADAF /* jack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jack.jpg; sourceTree = "<group>"; };
 		37DF593F1D561D6E0069ADAF /* ButtonSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSampleViewController.swift; sourceTree = "<group>"; };
 		37DF59411D561FB80069ADAF /* MyShrinkingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyShrinkingButton.swift; sourceTree = "<group>"; };
+		37DF59431D5626240069ADAF /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		37DF59451D56264E0069ADAF /* CustomControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomControlViewController.swift; sourceTree = "<group>"; };
+		37DF59471D5626820069ADAF /* MyKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyKnob.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -572,6 +578,7 @@
 			children = (
 				37DF59311D55F2D00069ADAF /* coin2.png */,
 				37DF59331D55F2D70069ADAF /* gold1b.png */,
+				37DF59431D5626240069ADAF /* knob.png */,
 				37DF59291D55DE600069ADAF /* pic2.png */,
 				37DF59271D55DE590069ADAF /* pic1.png */,
 				37DF593D1D56173E0069ADAF /* jack.jpg */,
@@ -595,6 +602,8 @@
 				37DF593B1D5612DB0069ADAF /* SegmentViewController.swift */,
 				37DF593F1D561D6E0069ADAF /* ButtonSampleViewController.swift */,
 				37DF59411D561FB80069ADAF /* MyShrinkingButton.swift */,
+				37DF59451D56264E0069ADAF /* CustomControlViewController.swift */,
+				37DF59471D5626820069ADAF /* MyKnob.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -975,6 +984,7 @@
 				376710281D49BE1E001E353C /* flag_delaware.gif in Resources */,
 				3767103D1D49BE1E001E353C /* flag_newhampshire.gif in Resources */,
 				3767102E1D49BE1E001E353C /* flag_indiana.gif in Resources */,
+				37DF59441D5626240069ADAF /* knob.png in Resources */,
 				376710511D49BE1E001E353C /* flag_wisconsin.gif in Resources */,
 				3796A0E21D3F8435007BC3B3 /* boat.gif in Resources */,
 				376710321D49BE1E001E353C /* flag_louisiana.gif in Resources */,
@@ -1066,6 +1076,7 @@
 				37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */,
 				37B3DB681D3FBEB300CFF75A /* LayerTransitionViewController.swift in Sources */,
 				37DF592E1D55EB5C0069ADAF /* DatePickerViewController.swift in Sources */,
+				37DF59461D56264E0069ADAF /* CustomControlViewController.swift in Sources */,
 				377D92951D4B924C00E57237 /* TrackingChangeWebkitViewController.swift in Sources */,
 				37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */,
 				37DF590C1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift in Sources */,
@@ -1113,6 +1124,7 @@
 				37B3DB8D1D46E9EE00CFF75A /* AutoResizeScrollViewController.swift in Sources */,
 				37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */,
 				377D92A31D4C4BA000E57237 /* ModalDialogSampleViewController.swift in Sources */,
+				37DF59481D5626820069ADAF /* MyKnob.swift in Sources */,
 				377D92B01D4CCEBC00E57237 /* VideoPlayerViewController.swift in Sources */,
 				37B3DB861D464D5D00CFF75A /* SecondPresentViewController.swift in Sources */,
 				37DF59061D5228040069ADAF /* NoThreadMandelbrotViewController.swift in Sources */,
