@@ -14,7 +14,7 @@ class ControllersAndViewsSampleViewController: UIViewController, UINavigationCon
     
     let cellIdentifier = "Controllers Views"
     let demos: [String] = ["indicator", "progress bar", "picker view", "search bar", "switcher", "stepper",
-                           "page controller", "date picker", "slider", "Segmented View"]
+                           "page controller", "date picker", "slider", "Segmented View", "Button"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +91,8 @@ class ControllersAndViewsSampleViewController: UIViewController, UINavigationCon
             self.navigationController?.pushViewController(SliderSampleViewController(), animated: true)
         case demos[9]:
             self.navigationController?.pushViewController(SegmentViewController(), animated: true)
+        case demos[10]:
+            self.navigationController?.pushViewController(ButtonSampleViewController(), animated: true)
         default:
             break
         }

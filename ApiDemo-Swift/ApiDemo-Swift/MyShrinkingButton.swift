@@ -1,0 +1,33 @@
+//
+//  MyShrinkingButton.swift
+//  ApiDemo-Swift
+//
+//  Created by Jacob su on 8/6/16.
+//  Copyright © 2016 suzp1984@gmail.com. All rights reserved.
+//
+
+import UIKit
+
+extension CGSize {
+    func sizeByDelta(dw dw:CGFloat, dh:CGFloat) -> CGSize {
+        return CGSizeMake(self.width + dw, self.height + dh)
+    }
+}
+
+class MyShrinkingButton: UIButton {
+    
+    override func backgroundRectForBounds(bounds: CGRect) -> CGRect {
+        var result = super.backgroundRectForBounds(bounds)
+        if self.highlighted {
+            result.insetInPlace(dx: 3, dy: 3)
+        }
+        
+        return result
+    }
+    
+    override func intrinsicContentSize() -> CGSize {
+        return super.intrinsicContentSize().sizeByDelta(dw:25, dh: 20)
+    }
+
+    
+}

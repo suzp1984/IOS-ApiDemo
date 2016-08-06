@@ -181,6 +181,8 @@
 		37DF593A1D55F2FF0069ADAF /* MySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59391D55F2FF0069ADAF /* MySlider.swift */; };
 		37DF593C1D5612DB0069ADAF /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF593B1D5612DB0069ADAF /* SegmentViewController.swift */; };
 		37DF593E1D56173E0069ADAF /* jack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37DF593D1D56173E0069ADAF /* jack.jpg */; };
+		37DF59401D561D6E0069ADAF /* ButtonSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF593F1D561D6E0069ADAF /* ButtonSampleViewController.swift */; };
+		37DF59421D561FB80069ADAF /* MyShrinkingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59411D561FB80069ADAF /* MyShrinkingButton.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -394,6 +396,8 @@
 		37DF59391D55F2FF0069ADAF /* MySlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySlider.swift; sourceTree = "<group>"; };
 		37DF593B1D5612DB0069ADAF /* SegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
 		37DF593D1D56173E0069ADAF /* jack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jack.jpg; sourceTree = "<group>"; };
+		37DF593F1D561D6E0069ADAF /* ButtonSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSampleViewController.swift; sourceTree = "<group>"; };
+		37DF59411D561FB80069ADAF /* MyShrinkingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyShrinkingButton.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -589,6 +593,8 @@
 				37DF592F1D55EFD10069ADAF /* SliderSampleViewController.swift */,
 				37DF59391D55F2FF0069ADAF /* MySlider.swift */,
 				37DF593B1D5612DB0069ADAF /* SegmentViewController.swift */,
+				37DF593F1D561D6E0069ADAF /* ButtonSampleViewController.swift */,
+				37DF59411D561FB80069ADAF /* MyShrinkingButton.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -1138,11 +1144,13 @@
 				37E20A571CEABEC600383A56 /* MyVignetteFilter.swift in Sources */,
 				37B3DB781D43801200CFF75A /* TouchesSampleController.swift in Sources */,
 				37C3F76E1CE1CA9C0073A348 /* StackViewController.swift in Sources */,
+				37DF59401D561D6E0069ADAF /* ButtonSampleViewController.swift in Sources */,
 				3760D09B1D3FA83F0073BE02 /* FrozenAnimationViewController.swift in Sources */,
 				377D92A51D4C4C3F00E57237 /* AlertViewController.swift in Sources */,
 				37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */,
 				37C3F7701CE1D8940073A348 /* DrawingSampleController.swift in Sources */,
 				37C3F7791CE406C80073A348 /* ImageTraitCollectionViewController.swift in Sources */,
+				37DF59421D561FB80069ADAF /* MyShrinkingButton.swift in Sources */,
 				37FEE9A71CE18B99002A28E2 /* LayoutMarginViewController.swift in Sources */,
 				37C7D21E1CEA0C5E00407AA8 /* ImageDrawingViewController.swift in Sources */,
 				37A6E0A41CF7112D00632BDF /* CompassView.swift in Sources */,
