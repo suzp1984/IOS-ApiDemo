@@ -173,6 +173,12 @@
 		37DF592A1D55DE600069ADAF /* pic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59291D55DE600069ADAF /* pic2.png */; };
 		37DF592C1D55E6E30069ADAF /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF592B1D55E6E30069ADAF /* PageControlViewController.swift */; };
 		37DF592E1D55EB5C0069ADAF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF592D1D55EB5C0069ADAF /* DatePickerViewController.swift */; };
+		37DF59301D55EFD10069ADAF /* SliderSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF592F1D55EFD10069ADAF /* SliderSampleViewController.swift */; };
+		37DF59321D55F2D00069ADAF /* coin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59311D55F2D00069ADAF /* coin2.png */; };
+		37DF59341D55F2D70069ADAF /* gold1b.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59331D55F2D70069ADAF /* gold1b.png */; };
+		37DF59361D55F2DE0069ADAF /* gold2b.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59351D55F2DE0069ADAF /* gold2b.png */; };
+		37DF59381D55F2E60069ADAF /* moneybag1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59371D55F2E60069ADAF /* moneybag1.png */; };
+		37DF593A1D55F2FF0069ADAF /* MySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59391D55F2FF0069ADAF /* MySlider.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -378,6 +384,12 @@
 		37DF59291D55DE600069ADAF /* pic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic2.png; sourceTree = "<group>"; };
 		37DF592B1D55E6E30069ADAF /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		37DF592D1D55EB5C0069ADAF /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		37DF592F1D55EFD10069ADAF /* SliderSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderSampleViewController.swift; sourceTree = "<group>"; };
+		37DF59311D55F2D00069ADAF /* coin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin2.png; sourceTree = "<group>"; };
+		37DF59331D55F2D70069ADAF /* gold1b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold1b.png; sourceTree = "<group>"; };
+		37DF59351D55F2DE0069ADAF /* gold2b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold2b.png; sourceTree = "<group>"; };
+		37DF59371D55F2E60069ADAF /* moneybag1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneybag1.png; sourceTree = "<group>"; };
+		37DF59391D55F2FF0069ADAF /* MySlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySlider.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -550,8 +562,12 @@
 		377D929A1D4BAB1200E57237 /* controllers and views */ = {
 			isa = PBXGroup;
 			children = (
+				37DF59311D55F2D00069ADAF /* coin2.png */,
+				37DF59331D55F2D70069ADAF /* gold1b.png */,
 				37DF59291D55DE600069ADAF /* pic2.png */,
 				37DF59271D55DE590069ADAF /* pic1.png */,
+				37DF59371D55F2E60069ADAF /* moneybag1.png */,
+				37DF59351D55F2DE0069ADAF /* gold2b.png */,
 				37DF59211D54E2DF0069ADAF /* manny.jpg */,
 				37DF591F1D54E2D70069ADAF /* moe.jpg */,
 				37DF591D1D54E2CB0069ADAF /* sepia.jpg */,
@@ -565,6 +581,8 @@
 				37DF59251D55DA3B0069ADAF /* StepperViewController.swift */,
 				37DF592B1D55E6E30069ADAF /* PageControlViewController.swift */,
 				37DF592D1D55EB5C0069ADAF /* DatePickerViewController.swift */,
+				37DF592F1D55EFD10069ADAF /* SliderSampleViewController.swift */,
+				37DF59391D55F2FF0069ADAF /* MySlider.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -913,9 +931,11 @@
 				377D92B31D4CCF7500E57237 /* ElMirage.mp4 in Resources */,
 				377D92AC1D4C8EA500E57237 /* test.aif in Resources */,
 				3767105B1D4A0D64001E353C /* SourceCodePro-Regular.ttf in Resources */,
+				37DF59381D55F2E60069ADAF /* moneybag1.png in Resources */,
 				3767102D1D49BE1E001E353C /* flag_illinois.gif in Resources */,
 				37C3F7771CE406780073A348 /* smiley.png in Resources */,
 				376710411D49BE1E001E353C /* flag_northcarolina.gif in Resources */,
+				37DF59341D55F2D70069ADAF /* gold1b.png in Resources */,
 				3767104B1D49BE1E001E353C /* flag_texas.gif in Resources */,
 				376710371D49BE1E001E353C /* flag_minnesota.gif in Resources */,
 				376710421D49BE1E001E353C /* flag_northdakota.gif in Resources */,
@@ -957,6 +977,7 @@
 				376710271D49BE1E001E353C /* flag_connecticut.gif in Resources */,
 				3767102B1D49BE1E001E353C /* flag_hawaii.gif in Resources */,
 				376710341D49BE1E001E353C /* flag_maryland.gif in Resources */,
+				37DF59361D55F2DE0069ADAF /* gold2b.png in Resources */,
 				376710211D49BE1E001E353C /* flag_alabama.gif in Resources */,
 				37DF59221D54E2DF0069ADAF /* manny.jpg in Resources */,
 				37C3F7761CE406780073A348 /* frowney.png in Resources */,
@@ -977,6 +998,7 @@
 				376710461D49BE1E001E353C /* flag_pennsylvania.gif in Resources */,
 				37DF592A1D55DE600069ADAF /* pic2.png in Resources */,
 				376710301D49BE1E001E353C /* flag_kansas.gif in Resources */,
+				37DF59321D55F2D00069ADAF /* coin2.png in Resources */,
 				376710381D49BE1E001E353C /* flag_mississippi.gif in Resources */,
 				376710241D49BE1E001E353C /* flag_arkansas.gif in Resources */,
 				3710B1811D4B73C600FB8099 /* htmlbody.txt in Resources */,
@@ -1020,6 +1042,7 @@
 				37C3F7831CE5ED840073A348 /* ImageResizableViewController.swift in Sources */,
 				37CEC1CE1D506C100013DF8C /* SimpleHttpClientViewController.swift in Sources */,
 				377D92A81D4C8AC800E57237 /* AudioPlayViewController.swift in Sources */,
+				37DF59301D55EFD10069ADAF /* SliderSampleViewController.swift in Sources */,
 				377D929C1D4BAC7600E57237 /* IndicatorSampleViewController.swift in Sources */,
 				37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */,
 				37DF59261D55DA3B0069ADAF /* StepperViewController.swift in Sources */,
@@ -1049,6 +1072,7 @@
 				37FEE9A11CE075A0002A28E2 /* TransformViewController.swift in Sources */,
 				37B3DB841D464CC800CFF75A /* PresentControllerViewController.swift in Sources */,
 				37DF59121D5238D30069ADAF /* OperationMandelbrotViewController.swift in Sources */,
+				37DF593A1D55F2FF0069ADAF /* MySlider.swift in Sources */,
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				37DF59181D54CF460069ADAF /* UIPickerViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
