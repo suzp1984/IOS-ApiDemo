@@ -188,6 +188,7 @@
 		37DF59481D5626820069ADAF /* MyKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59471D5626820069ADAF /* MyKnob.swift */; };
 		37DF594A1D562EFC0069ADAF /* SliderBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59491D562EFC0069ADAF /* SliderBubbleView.swift */; };
 		37DF594C1D5630D50069ADAF /* SliderBubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594B1D5630D50069ADAF /* SliderBubbleViewController.swift */; };
+		37DF594E1D563A3B0069ADAF /* BarShadowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594D1D563A3B0069ADAF /* BarShadowViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -408,6 +409,7 @@
 		37DF59471D5626820069ADAF /* MyKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyKnob.swift; sourceTree = "<group>"; };
 		37DF59491D562EFC0069ADAF /* SliderBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBubbleView.swift; sourceTree = "<group>"; };
 		37DF594B1D5630D50069ADAF /* SliderBubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBubbleViewController.swift; sourceTree = "<group>"; };
+		37DF594D1D563A3B0069ADAF /* BarShadowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarShadowViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -610,6 +612,7 @@
 				37DF59471D5626820069ADAF /* MyKnob.swift */,
 				37DF59491D562EFC0069ADAF /* SliderBubbleView.swift */,
 				37DF594B1D5630D50069ADAF /* SliderBubbleViewController.swift */,
+				37DF594D1D563A3B0069ADAF /* BarShadowViewController.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -1061,6 +1064,7 @@
 				37C276361D27B6B900B22546 /* UIViewTransitionViewController.swift in Sources */,
 				377D92AA1D4C8AFA00E57237 /* AudioSamplesViewController.swift in Sources */,
 				3710B1831D4B73E600FB8099 /* HtmlStringWKViewController.swift in Sources */,
+				37DF594E1D563A3B0069ADAF /* BarShadowViewController.swift in Sources */,
 				371291811D2154B9006F0A68 /* AnimationSampleController.swift in Sources */,
 				37CEC1D41D50A3350013DF8C /* SessionDataHttpClientViewController.swift in Sources */,
 				37670FDE1D48AA22001E353C /* TableSampleViewController.swift in Sources */,
