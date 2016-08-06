@@ -172,6 +172,7 @@
 		37DF59281D55DE590069ADAF /* pic1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59271D55DE590069ADAF /* pic1.png */; };
 		37DF592A1D55DE600069ADAF /* pic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DF59291D55DE600069ADAF /* pic2.png */; };
 		37DF592C1D55E6E30069ADAF /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF592B1D55E6E30069ADAF /* PageControlViewController.swift */; };
+		37DF592E1D55EB5C0069ADAF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF592D1D55EB5C0069ADAF /* DatePickerViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -376,6 +377,7 @@
 		37DF59271D55DE590069ADAF /* pic1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic1.png; sourceTree = "<group>"; };
 		37DF59291D55DE600069ADAF /* pic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic2.png; sourceTree = "<group>"; };
 		37DF592B1D55E6E30069ADAF /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		37DF592D1D55EB5C0069ADAF /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				37DF59231D55D5FA0069ADAF /* UISwitchViewController.swift */,
 				37DF59251D55DA3B0069ADAF /* StepperViewController.swift */,
 				37DF592B1D55E6E30069ADAF /* PageControlViewController.swift */,
+				37DF592D1D55EB5C0069ADAF /* DatePickerViewController.swift */,
 			);
 			name = "controllers and views";
 			sourceTree = "<group>";
@@ -1026,6 +1029,7 @@
 				377D92A01D4C3C4200E57237 /* MyCustomeProgressView.swift in Sources */,
 				37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */,
 				37B3DB681D3FBEB300CFF75A /* LayerTransitionViewController.swift in Sources */,
+				37DF592E1D55EB5C0069ADAF /* DatePickerViewController.swift in Sources */,
 				377D92951D4B924C00E57237 /* TrackingChangeWebkitViewController.swift in Sources */,
 				37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */,
 				37DF590C1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift in Sources */,

@@ -14,7 +14,7 @@ class ControllersAndViewsSampleViewController: UIViewController, UINavigationCon
     
     let cellIdentifier = "Controllers Views"
     let demos: [String] = ["indicator", "progress bar", "picker view", "search bar", "switcher", "stepper",
-                           "page controller"]
+                           "page controller", "date picker"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +85,8 @@ class ControllersAndViewsSampleViewController: UIViewController, UINavigationCon
             self.navigationController?.pushViewController(StepperViewController(), animated: true)
         case demos[6]:
             self.navigationController?.pushViewController(PageControlViewController(), animated: true)
+        case demos[7]:
+            self.navigationController?.pushViewController(DatePickerViewController(), animated: true)
         default:
             break
         }
