@@ -189,6 +189,7 @@
 		37DF594A1D562EFC0069ADAF /* SliderBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59491D562EFC0069ADAF /* SliderBubbleView.swift */; };
 		37DF594C1D5630D50069ADAF /* SliderBubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594B1D5630D50069ADAF /* SliderBubbleViewController.swift */; };
 		37DF594E1D563A3B0069ADAF /* BarShadowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594D1D563A3B0069ADAF /* BarShadowViewController.swift */; };
+		37DF59501D5A1B360069ADAF /* GestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -410,6 +411,7 @@
 		37DF59491D562EFC0069ADAF /* SliderBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBubbleView.swift; sourceTree = "<group>"; };
 		37DF594B1D5630D50069ADAF /* SliderBubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBubbleViewController.swift; sourceTree = "<group>"; };
 		37DF594D1D563A3B0069ADAF /* BarShadowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarShadowViewController.swift; sourceTree = "<group>"; };
+		37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -671,6 +673,7 @@
 			children = (
 				37B3DB7A1D43AA7200CFF75A /* TouchesViewController.swift */,
 				37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */,
+				37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */,
 			);
 			name = touches;
 			sourceTree = "<group>";
@@ -1130,6 +1133,7 @@
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
 				37B3DB881D4667E200CFF75A /* ThirdPresentViewController.swift in Sources */,
 				37DF590A1D5231B30069ADAF /* ManualThreadedMandelbrotView.swift in Sources */,
+				37DF59501D5A1B360069ADAF /* GestureRecognizerViewController.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
 				37DF591C1D54E2790069ADAF /* SearchBarViewController.swift in Sources */,
 				37B3DB8D1D46E9EE00CFF75A /* AutoResizeScrollViewController.swift in Sources */,

@@ -12,7 +12,7 @@ class TouchesSampleController: UIViewController, UINavigationControllerDelegate,
                                 UITableViewDelegate, UITableViewDataSource {
 
     let cellIdentifier = "Touches"
-    let demos: [String] = ["Touch Events"]
+    let demos: [String] = ["Touch Events", "Gesture Recognizer"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +65,8 @@ class TouchesSampleController: UIViewController, UINavigationControllerDelegate,
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController?.pushViewController(TouchesViewController(), animated: true)
+        case demos[1]:
+            self.navigationController?.pushViewController(GestureRecognizerViewController(), animated: true)
         default:
             break
         }
