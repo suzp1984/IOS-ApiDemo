@@ -190,6 +190,8 @@
 		37DF594C1D5630D50069ADAF /* SliderBubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594B1D5630D50069ADAF /* SliderBubbleViewController.swift */; };
 		37DF594E1D563A3B0069ADAF /* BarShadowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594D1D563A3B0069ADAF /* BarShadowViewController.swift */; };
 		37DF59501D5A1B360069ADAF /* GestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */; };
+		37DF59521D5A20560069ADAF /* HorizVertPanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59511D5A20560069ADAF /* HorizVertPanGestureViewController.swift */; };
+		37DF59541D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59531D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -412,6 +414,8 @@
 		37DF594B1D5630D50069ADAF /* SliderBubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBubbleViewController.swift; sourceTree = "<group>"; };
 		37DF594D1D563A3B0069ADAF /* BarShadowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarShadowViewController.swift; sourceTree = "<group>"; };
 		37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureRecognizerViewController.swift; sourceTree = "<group>"; };
+		37DF59511D5A20560069ADAF /* HorizVertPanGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizVertPanGestureViewController.swift; sourceTree = "<group>"; };
+		37DF59531D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizVertPanGestureRecognizers.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -674,6 +678,8 @@
 				37B3DB7A1D43AA7200CFF75A /* TouchesViewController.swift */,
 				37B3DB7C1D43AAC500CFF75A /* MyTouchEventViews.swift */,
 				37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */,
+				37DF59511D5A20560069ADAF /* HorizVertPanGestureViewController.swift */,
+				37DF59531D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift */,
 			);
 			name = touches;
 			sourceTree = "<group>";
@@ -1090,11 +1096,13 @@
 				37B3DB681D3FBEB300CFF75A /* LayerTransitionViewController.swift in Sources */,
 				37DF592E1D55EB5C0069ADAF /* DatePickerViewController.swift in Sources */,
 				37DF59461D56264E0069ADAF /* CustomControlViewController.swift in Sources */,
+				37DF59521D5A20560069ADAF /* HorizVertPanGestureViewController.swift in Sources */,
 				377D92951D4B924C00E57237 /* TrackingChangeWebkitViewController.swift in Sources */,
 				37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */,
 				37DF590C1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift in Sources */,
 				37C2763A1D293AFB00B22546 /* LayerAnimationViewController.swift in Sources */,
 				37B3DB7B1D43AA7200CFF75A /* TouchesViewController.swift in Sources */,
+				37DF59541D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift in Sources */,
 				37F54F431CD85B7F00E70D2B /* ResizingViewController.swift in Sources */,
 				37DF59041D5227620069ADAF /* ThreadsSampleViewController.swift in Sources */,
 				37FE42561CEB4C4700EE8E38 /* CustomeDrawingViewController.swift in Sources */,
