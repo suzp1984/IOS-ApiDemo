@@ -13,6 +13,8 @@ class FrameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor.whiteColor()
+        
         // Do any additional setup after loading the view.
         let v1 = UIView(frame:CGRectMake(113, 111, 132, 194))
         v1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1)
