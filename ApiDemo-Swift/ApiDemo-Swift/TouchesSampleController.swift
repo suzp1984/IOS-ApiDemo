@@ -13,7 +13,8 @@ class TouchesSampleController: UIViewController, UINavigationControllerDelegate,
 
     let cellIdentifier = "Touches"
     let demos: [String] = ["Touch Events", "Tap Gesture Recognizer", "Custom PanGesture", "Pinch Gesture Recognizer",
-                           "Rotation Gesture", "Swipe Gesture", "screen Edge dragging"]
+                           "Rotation Gesture", "Swipe Gesture", "screen Edge dragging",
+                           "Long Press Gesture"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,8 @@ class TouchesSampleController: UIViewController, UINavigationControllerDelegate,
             self.navigationController?.pushViewController(SwipeGestureRecognizerViewController(), animated: true)
         case demos[6]:
             self.navigationController?.pushViewController(ScreenEdgePanGestureViewController(), animated: true)
+        case demos[7]:
+            self.navigationController?.pushViewController(LongPressGestureViewController(), animated: true)
         default:
             break
         }

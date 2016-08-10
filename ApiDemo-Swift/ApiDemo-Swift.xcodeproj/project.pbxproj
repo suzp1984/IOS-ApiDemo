@@ -196,6 +196,7 @@
 		37DF59581D5B55860069ADAF /* RotationGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59571D5B55860069ADAF /* RotationGestureRecognizerViewController.swift */; };
 		37DF595A1D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59591D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift */; };
 		37DF595C1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */; };
+		37DF595E1D5B60CD0069ADAF /* LongPressGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF595D1D5B60CD0069ADAF /* LongPressGestureViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -424,6 +425,7 @@
 		37DF59571D5B55860069ADAF /* RotationGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		37DF59591D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEdgePanGestureViewController.swift; sourceTree = "<group>"; };
+		37DF595D1D5B60CD0069ADAF /* LongPressGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressGestureViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 				37DF59571D5B55860069ADAF /* RotationGestureRecognizerViewController.swift */,
 				37DF59591D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift */,
 				37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */,
+				37DF595D1D5B60CD0069ADAF /* LongPressGestureViewController.swift */,
 			);
 			name = touches;
 			sourceTree = "<group>";
@@ -1156,6 +1159,7 @@
 				37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */,
 				37B3DB881D4667E200CFF75A /* ThirdPresentViewController.swift in Sources */,
 				37DF590A1D5231B30069ADAF /* ManualThreadedMandelbrotView.swift in Sources */,
+				37DF595E1D5B60CD0069ADAF /* LongPressGestureViewController.swift in Sources */,
 				37DF59501D5A1B360069ADAF /* GestureRecognizerViewController.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
 				37DF591C1D54E2790069ADAF /* SearchBarViewController.swift in Sources */,
