@@ -195,6 +195,7 @@
 		37DF59561D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59551D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift */; };
 		37DF59581D5B55860069ADAF /* RotationGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59571D5B55860069ADAF /* RotationGestureRecognizerViewController.swift */; };
 		37DF595A1D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59591D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift */; };
+		37DF595C1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -422,6 +423,7 @@
 		37DF59551D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		37DF59571D5B55860069ADAF /* RotationGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		37DF59591D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeGestureRecognizerViewController.swift; sourceTree = "<group>"; };
+		37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEdgePanGestureViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -689,6 +691,7 @@
 				37DF59551D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift */,
 				37DF59571D5B55860069ADAF /* RotationGestureRecognizerViewController.swift */,
 				37DF59591D5B575E0069ADAF /* SwipeGestureRecognizerViewController.swift */,
+				37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */,
 			);
 			name = touches;
 			sourceTree = "<group>";
@@ -1099,6 +1102,7 @@
 				37C3F7731CE377240073A348 /* ImageResolutionViewController.swift in Sources */,
 				37DF59261D55DA3B0069ADAF /* StepperViewController.swift in Sources */,
 				37DF59081D5228A00069ADAF /* MandelbrotView.swift in Sources */,
+				37DF595C1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift in Sources */,
 				37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */,
 				A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */,
 				377D92A01D4C3C4200E57237 /* MyCustomeProgressView.swift in Sources */,
