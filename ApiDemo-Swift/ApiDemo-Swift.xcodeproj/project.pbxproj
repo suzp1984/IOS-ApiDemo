@@ -192,6 +192,7 @@
 		37DF59501D5A1B360069ADAF /* GestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */; };
 		37DF59521D5A20560069ADAF /* HorizVertPanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59511D5A20560069ADAF /* HorizVertPanGestureViewController.swift */; };
 		37DF59541D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59531D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift */; };
+		37DF59561D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59551D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -416,6 +417,7 @@
 		37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		37DF59511D5A20560069ADAF /* HorizVertPanGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizVertPanGestureViewController.swift; sourceTree = "<group>"; };
 		37DF59531D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizVertPanGestureRecognizers.swift; sourceTree = "<group>"; };
+		37DF59551D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 				37DF594F1D5A1B360069ADAF /* GestureRecognizerViewController.swift */,
 				37DF59511D5A20560069ADAF /* HorizVertPanGestureViewController.swift */,
 				37DF59531D5A20CB0069ADAF /* HorizVertPanGestureRecognizers.swift */,
+				37DF59551D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift */,
 			);
 			name = touches;
 			sourceTree = "<group>";
@@ -1157,6 +1160,7 @@
 				371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */,
+				37DF59561D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift in Sources */,
 				37C3F77D1CE477F60073A348 /* ImageViewContentModeViewController.swift in Sources */,
 				37B3DB741D41DC6E00CFF75A /* MyDropBounceAndRollBehavior.swift in Sources */,
 				377D92B51D4CD7FC00E57237 /* EmbededVideoViewController.swift in Sources */,
