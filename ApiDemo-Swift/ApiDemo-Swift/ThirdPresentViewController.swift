@@ -26,7 +26,8 @@ class ThirdPresentViewController: UIViewController {
             button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
             button.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
             ])
-
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

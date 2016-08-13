@@ -44,6 +44,7 @@ class SecondPresentViewController: UIViewController {
             presentButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
             presentButton.bottomAnchor.constraintEqualToAnchor(button.topAnchor, constant: -20)
             ])
+       
     }
 
     override func didReceiveMemoryWarning() {
