@@ -12,7 +12,8 @@ class ViewControllersSampleController: UIViewController, UINavigationControllerD
                                         UITableViewDelegate, UITableViewDataSource  {
 
     let cellIdentifier = "ViewController"
-    let demos: [String] = ["Hide StatusBar", "Present ViewController", "Tabbar sample", "Page View"]
+    let demos: [String] = ["Hide StatusBar", "Present ViewController", "Tabbar sample", "Page View",
+                           "Container ViewControll"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +72,8 @@ class ViewControllersSampleController: UIViewController, UINavigationControllerD
             self.navigationController?.pushViewController(TabBarSampleViewController(), animated: true)
         case demos[3]:
             self.navigationController?.pushViewController(PageViewSampleViewController(), animated: true)
+        case demos[4]:
+            self.navigationController?.pushViewController(ContainerControlSampleViewController(), animated: true)
         default:
             break
         }
