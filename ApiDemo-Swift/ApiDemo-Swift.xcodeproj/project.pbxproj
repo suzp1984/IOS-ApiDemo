@@ -198,6 +198,7 @@
 		37DF595C1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */; };
 		37DF595E1D5B60CD0069ADAF /* LongPressGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF595D1D5B60CD0069ADAF /* LongPressGestureViewController.swift */; };
 		37DF59601D5F08130069ADAF /* TabBarSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF595F1D5F08130069ADAF /* TabBarSampleViewController.swift */; };
+		37DF59621D5F6D390069ADAF /* PageViewSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59611D5F6D390069ADAF /* PageViewSampleViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -428,6 +429,7 @@
 		37DF595B1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEdgePanGestureViewController.swift; sourceTree = "<group>"; };
 		37DF595D1D5B60CD0069ADAF /* LongPressGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressGestureViewController.swift; sourceTree = "<group>"; };
 		37DF595F1D5F08130069ADAF /* TabBarSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarSampleViewController.swift; sourceTree = "<group>"; };
+		37DF59611D5F6D390069ADAF /* PageViewSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewSampleViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 				37B3DB851D464D5D00CFF75A /* SecondPresentViewController.swift */,
 				37B3DB871D4667E200CFF75A /* ThirdPresentViewController.swift */,
 				37DF595F1D5F08130069ADAF /* TabBarSampleViewController.swift */,
+				37DF59611D5F6D390069ADAF /* PageViewSampleViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -1131,6 +1134,7 @@
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
 				37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */,
 				37DF594A1D562EFC0069ADAF /* SliderBubbleView.swift in Sources */,
+				37DF59621D5F6D390069ADAF /* PageViewSampleViewController.swift in Sources */,
 				37670FDC1D475381001E353C /* ContentScrollViewController.swift in Sources */,
 				37B3DB8B1D46E8CF00CFF75A /* ScrollSamplesViewController.swift in Sources */,
 				37DF59241D55D5FA0069ADAF /* UISwitchViewController.swift in Sources */,
