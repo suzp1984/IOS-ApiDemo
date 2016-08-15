@@ -200,6 +200,7 @@
 		37DF59601D5F08130069ADAF /* TabBarSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF595F1D5F08130069ADAF /* TabBarSampleViewController.swift */; };
 		37DF59621D5F6D390069ADAF /* PageViewSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59611D5F6D390069ADAF /* PageViewSampleViewController.swift */; };
 		37DF59641D6028950069ADAF /* ContainerControlSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59631D6028950069ADAF /* ContainerControlSampleViewController.swift */; };
+		37DF59661D61F4020069ADAF /* OriginChangedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59651D61F4020069ADAF /* OriginChangedViewController.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -432,6 +433,7 @@
 		37DF595F1D5F08130069ADAF /* TabBarSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarSampleViewController.swift; sourceTree = "<group>"; };
 		37DF59611D5F6D390069ADAF /* PageViewSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewSampleViewController.swift; sourceTree = "<group>"; };
 		37DF59631D6028950069ADAF /* ContainerControlSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerControlSampleViewController.swift; sourceTree = "<group>"; };
+		37DF59651D61F4020069ADAF /* OriginChangedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginChangedViewController.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -789,6 +791,7 @@
 				37FEE9A41CE092C4002A28E2 /* ConstraintSwapViewController.swift */,
 				37FEE9A61CE18B99002A28E2 /* LayoutMarginViewController.swift */,
 				37C3F76D1CE1CA9C0073A348 /* StackViewController.swift */,
+				37DF59651D61F4020069ADAF /* OriginChangedViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1117,6 +1120,7 @@
 				37DF595C1D5B5B6C0069ADAF /* ScreenEdgePanGestureViewController.swift in Sources */,
 				37FEE9A31CE07DD3002A28E2 /* AutoLayoutViewController.swift in Sources */,
 				A61C69A51C02EBD600ADF518 /* AppDelegate.swift in Sources */,
+				37DF59661D61F4020069ADAF /* OriginChangedViewController.swift in Sources */,
 				377D92A01D4C3C4200E57237 /* MyCustomeProgressView.swift in Sources */,
 				37FEE99E1CE072B5002A28E2 /* FrameViewController.swift in Sources */,
 				37B3DB681D3FBEB300CFF75A /* LayerTransitionViewController.swift in Sources */,
