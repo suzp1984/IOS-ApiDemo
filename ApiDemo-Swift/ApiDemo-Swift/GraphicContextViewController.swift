@@ -58,6 +58,48 @@ class GraphicContextViewController: UIViewController {
         
         iv1.awakeFromNib()
         iv2.awakeFromNib()
+        
+        // graphic context
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(100, 100), false, 1)
+        let p = UIBezierPath(ovalInRect: CGRectMake(0,0,100,100))
+        UIColor.redColor().setFill()
+        p.fill()
+        
+        let cimage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let iv3 = UIImageView(image: cimage)
+        iv3.backgroundColor = UIColor.clearColor()
+        iv3.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(iv3)
+        
+        NSLayoutConstraint.activateConstraints([
+                iv3.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -10),
+                iv3.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor, constant: -50)
+            ])
+        
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(100, 100), false, 1)
+        
+        let ctx = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(ctx, UIColor(red: 0, green: 1, blue: 1, alpha: 0).CGColor)
+        CGContextFillRect(ctx, CGRectMake(0, 0, 100, 100))
+        
+        CGContextAddEllipseInRect(ctx, CGRectMake(0,0,100,100))
+        CGContextSetFillColorWithColor(ctx, UIColor.blackColor().CGColor)
+        CGContextFillPath(ctx)
+        
+        let yimage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let iv4 = UIImageView(image: yimage)
+        iv4.backgroundColor = UIColor.clearColor()
+        iv4.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(iv4)
+        
+        NSLayoutConstraint.activateConstraints([
+                iv4.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -10),
+                iv4.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor, constant: 50)
+            ])
     }
 
     override func didReceiveMemoryWarning() {
