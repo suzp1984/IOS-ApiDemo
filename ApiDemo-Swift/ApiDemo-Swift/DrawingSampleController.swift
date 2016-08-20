@@ -14,7 +14,7 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
     let demos = ["ImageView Resolution", "Image TraitCollection", "ImageView ContentMode", "Image Resizable", "Graphic Context",
                  "Image Drawing", "Snapshot", "Image Filter 1", "Image Filter 2", "Visual Effect", "Custom Drawing 1",
                  "Custom Drawing 2", "Custom Drawing 3", "Custom Drawing 4", "Custom Drawing 5", "Custom Drawing 6",
-                 "Custom Drawing 7", "Custome Drawing 8", "Custom Drawing 9", "Clear Rect"]
+                 "Custom Drawing 7", "Custome Drawing 8", "Custom Drawing 9", "Clear Rect", "Image RenderMode"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,17 +138,16 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
             let c = CustomeDrawingViewController()
             c.whitch = 8
             self.navigationController!.pushViewController(c, animated: true)
-            break
         case demos[18]:
             let c = CustomeDrawingViewController()
             c.whitch = 9
             self.navigationController!.pushViewController(c, animated: true)
-            break
         case demos[19]:
             let c = CustomeDrawingViewController()
             c.whitch = 10
             self.navigationController!.pushViewController(c, animated: true)
-            break
+        case demos[20]:
+            self.navigationController?.pushViewController(ImageRenderModeViewController(), animated: true)
         default:
             break
         }
