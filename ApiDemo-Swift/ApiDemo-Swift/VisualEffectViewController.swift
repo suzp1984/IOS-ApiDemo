@@ -3,7 +3,7 @@
 //  ApiDemo-Swift
 //
 //  Created by Jacob su on 5/17/16.
-//  Copyright © 2016 iboxpay. All rights reserved.
+//  Copyright © 2016 suzp1984@gmail.com. All rights reserved.
 //
 
 import UIKit
