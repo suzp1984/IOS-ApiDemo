@@ -202,6 +202,8 @@
 		37DF59641D6028950069ADAF /* ContainerControlSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59631D6028950069ADAF /* ContainerControlSampleViewController.swift */; };
 		37DF59661D61F4020069ADAF /* OriginChangedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59651D61F4020069ADAF /* OriginChangedViewController.swift */; };
 		37DF59681D688F670069ADAF /* ImageRenderModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59671D688F670069ADAF /* ImageRenderModeViewController.swift */; };
+		37DF59A91D81A4610069ADAF /* StarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59A81D81A4610069ADAF /* StarsViewController.swift */; };
+		37DF59AB1D81A49C0069ADAF /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF59AA1D81A49C0069ADAF /* StarsView.swift */; };
 		37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */; };
 		37E20A531CEAAD9700383A56 /* ImageFilter1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */; };
 		37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */; };
@@ -436,6 +438,8 @@
 		37DF59631D6028950069ADAF /* ContainerControlSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerControlSampleViewController.swift; sourceTree = "<group>"; };
 		37DF59651D61F4020069ADAF /* OriginChangedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginChangedViewController.swift; sourceTree = "<group>"; };
 		37DF59671D688F670069ADAF /* ImageRenderModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRenderModeViewController.swift; sourceTree = "<group>"; };
+		37DF59A81D81A4610069ADAF /* StarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsViewController.swift; sourceTree = "<group>"; };
+		37DF59AA1D81A49C0069ADAF /* StarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 		37E20A501CEAA33B00383A56 /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		37E20A521CEAAD9700383A56 /* ImageFilter1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter1ViewController.swift; sourceTree = "<group>"; };
 		37E20A541CEABE6500383A56 /* ImageFilter2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter2ViewController.swift; sourceTree = "<group>"; };
@@ -752,6 +756,8 @@
 				37FE42531CEB4B6200EE8E38 /* MyCustomDrawingView.swift */,
 				37FE42551CEB4C4700EE8E38 /* CustomeDrawingViewController.swift */,
 				37DF59671D688F670069ADAF /* ImageRenderModeViewController.swift */,
+				37DF59A81D81A4610069ADAF /* StarsViewController.swift */,
+				37DF59AA1D81A49C0069ADAF /* StarsView.swift */,
 			);
 			name = Drawing;
 			sourceTree = "<group>";
@@ -1133,6 +1139,7 @@
 				37DF59521D5A20560069ADAF /* HorizVertPanGestureViewController.swift in Sources */,
 				377D92951D4B924C00E57237 /* TrackingChangeWebkitViewController.swift in Sources */,
 				37C276341D279D2600B22546 /* UIViewAnimation2ViewController.swift in Sources */,
+				37DF59AB1D81A49C0069ADAF /* StarsView.swift in Sources */,
 				37DF590C1D5232740069ADAF /* ManualThreadMandelbrotViewController.swift in Sources */,
 				37C2763A1D293AFB00B22546 /* LayerAnimationViewController.swift in Sources */,
 				37B3DB7B1D43AA7200CFF75A /* TouchesViewController.swift in Sources */,
@@ -1221,6 +1228,7 @@
 				37C3F76E1CE1CA9C0073A348 /* StackViewController.swift in Sources */,
 				37DF59401D561D6E0069ADAF /* ButtonSampleViewController.swift in Sources */,
 				3760D09B1D3FA83F0073BE02 /* FrozenAnimationViewController.swift in Sources */,
+				37DF59A91D81A4610069ADAF /* StarsViewController.swift in Sources */,
 				377D92A51D4C4C3F00E57237 /* AlertViewController.swift in Sources */,
 				37F54F411CD84D6000E70D2B /* ViewSampleController.swift in Sources */,
 				37C3F7701CE1D8940073A348 /* DrawingSampleController.swift in Sources */,
