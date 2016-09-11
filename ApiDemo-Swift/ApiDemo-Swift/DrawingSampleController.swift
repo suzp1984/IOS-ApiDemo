@@ -14,7 +14,8 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
     let demos = ["ImageView Resolution", "Image TraitCollection", "ImageView ContentMode", "Image Resizable", "Graphic Context",
                  "Image Drawing", "Snapshot", "Image Filter 1", "Image Filter 2", "Visual Effect", "Custom Drawing 1",
                  "Custom Drawing 2", "Custom Drawing 3", "Custom Drawing 4", "Custom Drawing 5", "Custom Drawing 6",
-                 "Custom Drawing 7", "Custome Drawing 8", "Custom Drawing 9", "Clear Rect", "Image RenderMode", "StarsView"]
+                 "Custom Drawing 7", "Custome Drawing 8", "Custom Drawing 9", "Clear Rect", "Image RenderMode", "StarsView",
+                 "Pixels Art"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,44 +72,44 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
         switch demos[indexPath.row] {
         case demos[0]:
             self.navigationController!.pushViewController(ImageResolutionViewController(), animated: true)
-            break
+    
         case demos[1]:
             self.navigationController!.pushViewController(ImageTraitCollectionViewController(), animated: true)
-            break
+            
         case demos[2]:
             self.navigationController!.pushViewController(ImageViewContentModeViewController(), animated: true)
-            break
+            
         case demos[3]:
             self.navigationController!.pushViewController(ImageResizableViewController(), animated: true)
-            break
+           
         case demos[4]:
             self.navigationController!.pushViewController(GraphicContextViewController(), animated: true)
-            break
+           
         case demos[5]:
             self.navigationController!.pushViewController(ImageDrawingViewController(), animated: true)
-            break
+           
         case demos[6]:
             self.navigationController!.pushViewController(SnapshotViewController(), animated: true)
-            break
+            
         case demos[7]:
             self.navigationController!.pushViewController(ImageFilter1ViewController(), animated: true)
-            break
+            
         case demos[8]:
             self.navigationController!.pushViewController(ImageFilter2ViewController(), animated: true)
             break
         case demos[9]:
             self.navigationController!.pushViewController(VisualEffectViewController(), animated: true)
-            break
+           
         case demos[10]:
             let c = CustomeDrawingViewController()
             c.whitch = 1
             self.navigationController!.pushViewController(c, animated: true)
-            break
+           
         case demos[11]:
             let c = CustomeDrawingViewController()
             c.whitch = 2
             self.navigationController!.pushViewController(c, animated: true)
-            break
+           
         case demos[12]:
             let c = CustomeDrawingViewController()
             c.whitch = 3
@@ -118,22 +119,22 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
             let c = CustomeDrawingViewController()
             c.whitch = 4
             self.navigationController!.pushViewController(c, animated: true)
-            break
+          
         case demos[14]:
             let c = CustomeDrawingViewController()
             c.whitch = 5
             self.navigationController!.pushViewController(c, animated: true)
-            break
+           
         case demos[15]:
             let c = CustomeDrawingViewController()
             c.whitch = 6
             self.navigationController!.pushViewController(c, animated: true)
-            break
+            
         case demos[16]:
             let c = CustomeDrawingViewController()
             c.whitch = 7
             self.navigationController!.pushViewController(c, animated: true)
-            break
+        
         case demos[17]:
             let c = CustomeDrawingViewController()
             c.whitch = 8
@@ -150,6 +151,8 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
             self.navigationController?.pushViewController(ImageRenderModeViewController(), animated: true)
         case demos[21]:
             self.navigationController?.pushViewController(StarsViewController(), animated: true)
+        case demos[22]:
+            self.navigationController?.pushViewController(PixelsArtViewController(), animated: true)
         default:
             break
         }
