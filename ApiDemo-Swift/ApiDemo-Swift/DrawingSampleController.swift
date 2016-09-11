@@ -15,7 +15,7 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
                  "Image Drawing", "Snapshot", "Image Filter 1", "Image Filter 2", "Visual Effect", "Custom Drawing 1",
                  "Custom Drawing 2", "Custom Drawing 3", "Custom Drawing 4", "Custom Drawing 5", "Custom Drawing 6",
                  "Custom Drawing 7", "Custome Drawing 8", "Custom Drawing 9", "Clear Rect", "Image RenderMode", "StarsView",
-                 "Pixels Art"]
+                 "Pixels Art", "MandelBrot"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,6 +153,8 @@ class DrawingSampleController: UIViewController, UINavigationControllerDelegate,
             self.navigationController?.pushViewController(StarsViewController(), animated: true)
         case demos[22]:
             self.navigationController?.pushViewController(PixelsArtViewController(), animated: true)
+        case demos[23]:
+            self.navigationController?.pushViewController(MandelBrotViewController(), animated: true)
         default:
             break
         }

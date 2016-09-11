@@ -1,5 +1,5 @@
 //
-//  PixelsArtView.swift
+//  MandelbrotDrawView.swift
 //  ApiDemo-Swift
 //
 //  Created by Jacob su on 9/11/16.
@@ -8,20 +8,18 @@
 
 import UIKit
 
-class PixelsArtView: UIView {
+class MandelbrotDrawView: UIView {
 
-    
+
     override func drawRect(rect: CGRect) {
-        
-        if let img = generatePixels(rect.width, height: rect.height) {
+        if let img = generateMandelBrotImg(rect.width, height: rect.height) {
             let con = UIGraphicsGetCurrentContext()
             CGContextDrawImage(con, rect, img)
         }
-        
     }
- 
 
-    private func generatePixels(width: CGFloat, height: CGFloat) -> CGImage? {
+    private func generateMandelBrotImg(width: CGFloat, height: CGFloat) -> CGImage? {
+        
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let bytesPerPixel = 4
         let bitsPerComponent = 8
@@ -35,10 +33,23 @@ class PixelsArtView: UIView {
         
         for j in 0..<Int(height) {
             for i in 0..<Int(width) {
-            
-                let r = UInt8(pow(cos(atan2(Double(j - Int(width)/2), Double(i - Int(width)/2))/2), 2) * 255)
-                let g = UInt8(pow(cos(atan2(Double(j - Int(width)/2), Double(i - Int(width)/2))/2 + 2 * acos(-1)/3), 2) * 255)
-                let b = UInt8(pow(cos(atan2(Double(j - Int(width)/2), Double(i - Int(width)/2))/2 + 2 * acos(-1)/3), 2) * 255)
+                var x : CGFloat = 0
+                var y : CGFloat = 0
+                var tmp = 255
+                for k in 1..<256 {
+                    let a = CGFloat(x*x) - CGFloat(y*y) + (CGFloat(i) - width * 0.75)/160
+                    y = 2*x*y + (CGFloat(j) - width*0.5)/160
+                    x = a
+                    
+                    if (x*x + y*y) > 4 {
+                        tmp = k
+                        break
+                    }
+                }
+                
+                let r = UInt8(log(Double(tmp)) * 46)
+                let g = UInt8(log(Double(tmp)) * 46)
+                let b = 128 - UInt8(log(Double(tmp)) * 23)
                 
                 currentPixel.memory = RGB32(red: r, green: g, blue: b, alpha: UInt8(255))
                 currentPixel += 1
@@ -75,8 +86,9 @@ class PixelsArtView: UIView {
         
         static let bitmapInfo = CGImageAlphaInfo.PremultipliedLast.rawValue | CGBitmapInfo.ByteOrder32Little.rawValue
         
-//        static func ==(lhs: RGB32, rhs: RGB32) -> Bool {
-//            return rhs.color == rhs.color
-//        }
+        //        static func ==(lhs: RGB32, rhs: RGB32) -> Bool {
+        //            return rhs.color == rhs.color
+        //        }
     }
+
 }
