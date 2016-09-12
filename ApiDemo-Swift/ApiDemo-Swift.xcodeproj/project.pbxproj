@@ -105,6 +105,8 @@
 		3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */; };
 		379FAC201D85738D00103F58 /* MandelbrotDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC1F1D85738D00103F58 /* MandelbrotDrawView.swift */; };
 		379FAC221D8577DF00103F58 /* MandelBrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC211D8577DF00103F58 /* MandelBrotViewController.swift */; };
+		379FAC241D86F25F00103F58 /* MartinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC231D86F25F00103F58 /* MartinView.swift */; };
+		379FAC261D87000B00103F58 /* MartinArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC251D87000B00103F58 /* MartinArtViewController.swift */; };
 		37A6E09A1CF68CEA00632BDF /* LayerSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */; };
 		37A6E09C1CF68EC600632BDF /* LayerHierarchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E09B1CF68EC600632BDF /* LayerHierarchyViewController.swift */; };
 		37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E09D1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift */; };
@@ -345,6 +347,8 @@
 		3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedAnimationViewController.swift; sourceTree = "<group>"; };
 		379FAC1F1D85738D00103F58 /* MandelbrotDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotDrawView.swift; sourceTree = "<group>"; };
 		379FAC211D8577DF00103F58 /* MandelBrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelBrotViewController.swift; sourceTree = "<group>"; };
+		379FAC231D86F25F00103F58 /* MartinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MartinView.swift; sourceTree = "<group>"; };
+		379FAC251D87000B00103F58 /* MartinArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MartinArtViewController.swift; sourceTree = "<group>"; };
 		37A6E0991CF68CEA00632BDF /* LayerSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSampleController.swift; sourceTree = "<group>"; };
 		37A6E09B1CF68EC600632BDF /* LayerHierarchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerHierarchyViewController.swift; sourceTree = "<group>"; };
 		37A6E09D1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingIntoLayerViewController.swift; sourceTree = "<group>"; };
@@ -770,6 +774,8 @@
 				37DF59AE1D853FB50069ADAF /* PixelsArtViewController.swift */,
 				379FAC1F1D85738D00103F58 /* MandelbrotDrawView.swift */,
 				379FAC211D8577DF00103F58 /* MandelBrotViewController.swift */,
+				379FAC231D86F25F00103F58 /* MartinView.swift */,
+				379FAC251D87000B00103F58 /* MartinArtViewController.swift */,
 			);
 			name = Drawing;
 			sourceTree = "<group>";
@@ -1216,6 +1222,7 @@
 				379FAC221D8577DF00103F58 /* MandelBrotViewController.swift in Sources */,
 				371291841D2156AC006F0A68 /* ImageViewAnimationViewController.swift in Sources */,
 				37DF59601D5F08130069ADAF /* TabBarSampleViewController.swift in Sources */,
+				379FAC241D86F25F00103F58 /* MartinView.swift in Sources */,
 				37C7D21A1CE9F9A500407AA8 /* Views.swift in Sources */,
 				37B3DB761D436E4B00CFF75A /* AnimationAutoLayoutViewController.swift in Sources */,
 				37DF59561D5B3DA10069ADAF /* PinchGestureRecognizerViewController.swift in Sources */,
@@ -1231,6 +1238,7 @@
 				37E20A511CEAA33B00383A56 /* SnapshotViewController.swift in Sources */,
 				37A6E0A21CF7110700632BDF /* CompassViewController.swift in Sources */,
 				3780FB7C1CD7534A00F056B7 /* MainViewController.swift in Sources */,
+				379FAC261D87000B00103F58 /* MartinArtViewController.swift in Sources */,
 				377D92991D4BA9D800E57237 /* ControllersAndViewsSampleViewController.swift in Sources */,
 				37670FED1D49BD15001E353C /* MultiSectionTableViewController.swift in Sources */,
 				37DF59101D5238270069ADAF /* MandelbrotOperation.swift in Sources */,
