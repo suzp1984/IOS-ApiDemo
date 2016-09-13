@@ -10,9 +10,8 @@ import UIKit
 
 class MartinView: UIView {
 
-    var r : [[UInt8]] = []
-    var g : [[UInt8]] = []
-    var b : [[UInt8]] = []
+    var width: Int = 0
+    var height: Int = 0;
     
     override func drawRect(rect: CGRect) {
         if let img = generateMartinArt(Int(rect.width), height: Int(rect.height)) {
@@ -22,6 +21,9 @@ class MartinView: UIView {
     }
  
     private func generateMartinArt(width: Int, height: Int) -> CGImage? {
+        print("\(width) \(height)")
+        self.width = width
+        self.height = height
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let bytesPerPixel = 4
         let bitsPerComponent = 8
@@ -33,47 +35,52 @@ class MartinView: UIView {
         
         var currentPixel = pixelBuffer
         
-        var r = [[Int]](count: height, repeatedValue: [Int](count: width, repeatedValue: 0))
-        var g = [[Int]](count: height, repeatedValue: [Int](count: width, repeatedValue: 0))
-        var b = [[Int]](count: height, repeatedValue: [Int](count: width, repeatedValue: 0))
+        var r = [[UInt8]](count: height, repeatedValue: [UInt8](count: width, repeatedValue: 0))
+        var g = [[UInt8]](count: height, repeatedValue: [UInt8](count: width, repeatedValue: 0))
+        var b = [[UInt8]](count: height, repeatedValue: [UInt8](count: width, repeatedValue: 0))
         
         for j in 0 ..< height {
             for i in 0 ..< width {
-                let r = martin_pixel_r(i, h: j)
-                let g = martin_pixel_g(i, h: j)
-                let b = martin_pixel_b(i, h: j)
+                let red = martin_pixel_r(&r, w: i, h: j)
+                let green = martin_pixel_g(&g, w: i, h: j)
+                let blue = martin_pixel_b(&b, w: i, h: j)
                 
-                currentPixel.memory = RGB32(red: r, green: g, blue: b, alpha: UInt8(255))
+                currentPixel.memory = RGB32(red: red, green: green, blue: blue, alpha: UInt8(255))
                 currentPixel += 1
 
             }
         }
         
-        return nil
+        let outImgCG = CGBitmapContextCreateImage(context)
+        
+        return outImgCG
     }
     
-    private func martin_pixel_r(w: Int, h: Int) -> UInt8 {
-        if r[w][h] == 0 {
-            r[w][h] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_r(w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2)) % Int(self.bounds.width), h: h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2)) % Int(self.bounds.width))
+    private func martin_pixel_r(inout r: [[UInt8]], w: Int, h: Int) -> UInt8 {
+        
+        if r[h][w] == 0 {
+            r[h][w] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_r(&r, w: (w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % width, h: (h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % height)
         }
         
-        return r[w][h]
+        return r[h][w]
     }
 
-    private func martin_pixel_g(w: Int, h: Int) -> UInt8 {
-        if g[w][h] == 0 {
-            g[w][h] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_g(w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2)) % Int(self.bounds.width), h: h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2)) % Int(self.bounds.width))
+    private func martin_pixel_g(inout g: [[UInt8]], w: Int, h: Int) -> UInt8 {
+        
+        if g[h][w] == 0 {
+            g[h][w] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_g(&g, w: (w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % width, h: (h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % height)
         }
         
-        return g[w][h]
+        return g[h][w]
     }
     
-    private func martin_pixel_b(w: Int, h: Int) -> UInt8 {
-        if b[w][h] == 0 {
-            b[w][h] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_b(w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2)) % Int(self.bounds.width), h: h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2)) % Int(self.bounds.width))
+    private func martin_pixel_b(inout b: [[UInt8]], w: Int, h: Int) -> UInt8 {
+        
+        if b[h][w] == 0 {
+            b[h][w] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_b(&b, w: (w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % width, h: (h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % height)
         }
         
-        return b[w][h]
+        return b[h][w]
     }
     
     struct RGB32 {
