@@ -29,9 +29,9 @@ class PixelsArtView: UIView {
         let bitmapInfo = RGB32.bitmapInfo
         
         let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
-        let pixelBuffer = UnsafeMutablePointer<RGB32>(context?.data)
+        let pixelBuffer = context?.data?.assumingMemoryBound(to: RGB32.self)
         
-        var currentPixel = pixelBuffer
+        var currentPixel = pixelBuffer!
         
         for j in 0..<Int(height) {
             for i in 0..<Int(width) {
@@ -75,8 +75,5 @@ class PixelsArtView: UIView {
         
         static let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Little.rawValue
         
-//        static func ==(lhs: RGB32, rhs: RGB32) -> Bool {
-//            return rhs.color == rhs.color
-//        }
     }
 }

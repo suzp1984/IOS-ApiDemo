@@ -15,10 +15,12 @@ class StarsView: UIView {
         let con = UIGraphicsGetCurrentContext()
         
         // draw gradient background
+        let colors = [UIColor.black.cgColor, UIColor.white.cgColor] as CFArray
+        
         let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(),
-                                                  colors: [UIColor.black.cgColor, UIColor.white.cgColor],
+                                                  colors: colors,
                                                   locations: [0.0, 1.0])
-        con.drawLinearGradient(gradient, start: CGPoint.zero, end: CGPoint(x: 0, y: rect.height),
+        con?.drawLinearGradient(gradient!, start: CGPoint.zero, end: CGPoint(x: 0, y: rect.height),
                                     options: CGGradientDrawingOptions.drawsBeforeStartLocation)
         
         // draw 100 stars

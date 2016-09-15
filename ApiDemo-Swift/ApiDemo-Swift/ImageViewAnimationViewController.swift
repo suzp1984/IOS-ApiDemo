@@ -41,7 +41,7 @@ class ImageViewAnimationViewController: UIViewController {
             con.fillPath()
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            howdy_arr += [im]
+            howdy_arr += [im!]
         }
         let howdy_im = UIImage.animatedImage(with: howdy_arr, duration:0.5)
         let howdy_b = UIButton(type:.system)

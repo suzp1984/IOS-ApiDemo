@@ -67,7 +67,7 @@ class LabelFontViewController: UIViewController {
         print("attempting to download font")
         let desc = UIFontDescriptor(name:name, size:size)
         CTFontDescriptorMatchFontDescriptorsWithProgressHandler(
-            [desc], nil, {
+            [desc] as CFArray, nil, {
                 (state:CTFontDescriptorMatchingState, prog:CFDictionary!) -> Bool in
                 switch state {
                 case .didBegin:
@@ -76,11 +76,11 @@ class LabelFontViewController: UIViewController {
                     NSLog("%@", "downloading will begin")
                 case .downloading:
                     let d = prog as NSDictionary
-                    let key = kCTFontDescriptorMatchingPercentage
-                    let cur : AnyObject? = d[key as NSString]
-                    if let cur = cur as? NSNumber {
-                        NSLog("progress: %@%%", cur)
-                    }
+//                    let key = kCTFontDescriptorMatchingPercentage
+//                    let cur : AnyObject? = d[key as String]
+//                    if let cur = cur as? NSNumber {
+//                        NSLog("progress: %@%%", cur)
+//                    }
                 case .didFinishDownloading:
                     NSLog("%@", "downloading did finish")
                 case .didFailWithError:

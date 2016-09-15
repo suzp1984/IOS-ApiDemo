@@ -83,10 +83,10 @@ class DrawingIntoLayerViewController: UIViewController {
         
         // 0: delegate draws
         self.layer0 = self.makeLayerOfClass(CALayer.self, andAddToView:0)
-        self.layer0.delegate = self.smilers[0]
+        self.layer0.delegate = self.smilers[0] as! CALayerDelegate
         // 1: delegate sets contents
         self.layer1 = self.makeLayerOfClass(CALayer.self, andAddToView:1)
-        self.layer1.delegate = self.smilers[1]
+        self.layer1.delegate = self.smilers[1] as! CALayerDelegate
         
         // 2: subclass draws
         self.makeLayerOfClass(SmilerLayer.self, andAddToView:2)

@@ -18,8 +18,8 @@ class GCDMandelrotView: UIView {
     let MANDELBROT_STEPS = 200
     
     let draw_queue : DispatchQueue = {
-        let q = DispatchQueue(label: QVAL, attributes: [])
-        q.setSpecific(key: /*Migrator FIXME: Use a variable of type DispatchSpecificKey*/ QKEY, value: &QVAL)
+        let q = DispatchQueue(label: String(qvalString))
+        
         return q
     }()
     

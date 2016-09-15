@@ -50,15 +50,19 @@ class GroupedAnimationViewController: UIViewController {
         var leftright : CGFloat = 1
         var next : CGPoint = self.v.layer.position
         var pos : CGPoint
-        CGPathMoveToPoint(path, nil, next.x, next.y)
+        path.move(to: CGPoint(x: next.x, y: next.y))
+        // CGPathMoveToPoint(path, nil, next.x, next.y)
         for _ in 0 ..< 4 {
             pos = next
             leftright *= -1
             next = CGPoint(x: pos.x+h*leftright, y: pos.y+v)
-            CGPathAddCurveToPoint(path, nil,
-                                  pos.x, pos.y+30,
-                                  next.x, next.y-30,
-                                  next.x, next.y)
+            path.addCurve(to: CGPoint(x: pos.x, y: pos.y+30),
+                          control1: CGPoint(x: next.x, y: next.y-30),
+                          control2: CGPoint(x: next.x, y: next.y))
+//            CGPathAddCurveToPoint(path, nil,
+//                                  pos.x, pos.y+30,
+//                                  next.x, next.y-30,
+//                                  next.x, next.y)
         }
         let anim1 = CAKeyframeAnimation(keyPath:"position")
         anim1.path = path

@@ -64,7 +64,7 @@ class SessionDownloadHttpClientViewController: UIViewController, URLSessionDownl
         if let url = URL(string: s) {
             let req = NSMutableURLRequest(url: url)
             URLProtocol.setProperty("howdy", forKey: "greeting", in: req)
-            self.task = self.session.downloadTask(with: req)
+            self.task = self.session.downloadTask(with: url)
             self.task?.resume()
         }
     }

@@ -34,13 +34,18 @@ class MyCustomeProgressView: UIView {
             let radius : CGFloat = r.size.height / 2.0
             let mpi = CGFloat(M_PI)
             let path = CGMutablePath()
-            // path.move(to: CGPoint(x: r.maxX - radius, y: ins))
-            CGPathMoveToPoint(path, nil, r.maxX - radius, ins)
-            
-            CGPathAddArc(path, nil,
-                         radius+ins, radius+ins, radius, -mpi/2.0, mpi/2.0, true)
-            CGPathAddArc(path, nil,
-                         r.maxX - radius, radius+ins, radius, mpi/2.0, -mpi/2.0, true)
+            path.move(to: CGPoint(x: r.maxX - radius, y: ins))
+            // CGPathMoveToPoint(path, nil, r.maxX - radius, ins)
+            path.addArc(tangent1End: CGPoint(x: radius+ins, y: radius+ins),
+                        tangent2End: CGPoint(x: -mpi/2.0, y: mpi/2.0),
+                        radius: radius)
+//            CGPathAddArc(path, nil,
+//                         radius+ins, radius+ins, radius, -mpi/2.0, mpi/2.0, true)
+            path.addArc(tangent1End: CGPoint(x: r.maxX-radius, y: radius+ins),
+                        tangent2End: CGPoint(x: mpi/2.0, y: -mpi/2.0),
+                        radius: radius)
+//            CGPathAddArc(path, nil,
+//                         r.maxX - radius, radius+ins, radius, mpi/2.0, -mpi/2.0, true)
             path.closeSubpath()
             c.addPath(path)
             c.setLineWidth(2)

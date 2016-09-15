@@ -27,9 +27,9 @@ class MandelbrotDrawView: UIView {
         let bitmapInfo = RGB32.bitmapInfo
         
         let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
-        let pixelBuffer = UnsafeMutablePointer<RGB32>(context?.data)
+        let pixelBuffer = context?.data?.assumingMemoryBound(to: RGB32.self)
         
-        var currentPixel = pixelBuffer
+        var currentPixel = pixelBuffer!
         
         for j in 0..<Int(height) {
             for i in 0..<Int(width) {

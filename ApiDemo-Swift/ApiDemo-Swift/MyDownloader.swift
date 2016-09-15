@@ -36,7 +36,7 @@ class MyDownloader: NSObject, URLSessionDownloadDelegate {
         let url = URL(string:s)!
         let req = NSMutableURLRequest(url:url)
         URLProtocol.setProperty(Wrapper(ch), forKey:"ch", in:req)
-        let task = self.session.downloadTask(with: req)
+        let task = self.session.downloadTask(with: url)
         task.resume()
         return task
     }

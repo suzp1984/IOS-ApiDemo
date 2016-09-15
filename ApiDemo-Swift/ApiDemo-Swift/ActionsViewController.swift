@@ -46,7 +46,7 @@ class MyWagglePositionAction : NSObject, CAAction {
     }
 }
 
-class ActionsViewController: UIViewController {
+class ActionsViewController: UIViewController, CALayerDelegate, CAAnimationDelegate {
 
     var layer : CALayer!
     let which = 10
@@ -165,7 +165,7 @@ class ActionsViewController: UIViewController {
     }
     
     
-    override func actionForLayer(_ layer: CALayer, forKey key: String) -> CAAction? {
+    func action(for layer: CALayer, forKey key: String) -> CAAction? {
         if key == "position" {
             return MyWagglePositionAction()
         }
@@ -222,8 +222,8 @@ class ActionsViewController: UIViewController {
         
         return nil
     }
-    
-    override func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if let layer = anim.value(forKey: "remove") as? CALayer {
             layer.removeFromSuperlayer()
         }

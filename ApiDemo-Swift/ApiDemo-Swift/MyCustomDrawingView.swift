@@ -77,7 +77,8 @@ class MyCustomDrawingView: UIView {
             con.addLine(to: CGPoint(x: 110, y: 100))
             con.closePath()
             con.addRect(con.boundingBoxOfClipPath)
-            CGContextEOClip(con)
+            con.clip()
+            // CGContextEOClip(con)
             
             // draw the vertical line
             con.move(to: CGPoint(x: 100, y: 100))
@@ -103,7 +104,8 @@ class MyCustomDrawingView: UIView {
             con.addLine(to: CGPoint(x: 110, y: 100))
             con.closePath()
             con.addRect(con.boundingBoxOfClipPath)
-            CGContextEOClip(con)
+            con.clip()
+            // CGContextEOClip(con)
             
             // draw the vertical line, add its shape to the clipping region
             con.move(to: CGPoint(x: 100, y: 100))
@@ -145,7 +147,8 @@ class MyCustomDrawingView: UIView {
             con.addLine(to: CGPoint(x: 110, y: 100))
             con.closePath()
             con.addRect(con.boundingBoxOfClipPath)
-            CGContextEOClip(con)
+            con.clip()
+            // CGContextEOClip(con)
             
             // draw the vertical line, add its shape to the clipping region
             con.move(to: CGPoint(x: 100, y: 100))
@@ -198,7 +201,8 @@ class MyCustomDrawingView: UIView {
             con.addLine(to: CGPoint(x: 110, y: 100))
             con.closePath()
             con.addRect(con.boundingBoxOfClipPath)
-            CGContextEOClip(con)
+            con.clip()
+            // CGContextEOClip(con)
             
             // draw the vertical line, add its shape to the clipping region
             con.move(to: CGPoint(x: 100, y: 100))
@@ -307,7 +311,8 @@ class MyCustomDrawingView: UIView {
         con.addLine(to: CGPoint(x: 30, y: 100))
         con.closePath()
         con.addRect(con.boundingBoxOfClipPath)
-        CGContextEOClip(con)
+        con.clip()
+        // CGContextEOClip(con)
         
         // draw the vertical line, add its shape to the clipping region
         con.move(to: CGPoint(x: 20, y: 100))

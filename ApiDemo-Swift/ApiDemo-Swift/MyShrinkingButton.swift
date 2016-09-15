@@ -19,7 +19,8 @@ class MyShrinkingButton: UIButton {
     override func backgroundRect(forBounds bounds: CGRect) -> CGRect {
         var result = super.backgroundRect(forBounds: bounds)
         if self.isHighlighted {
-            result.insetInPlace(dx: 3, dy: 3)
+            // result.insetInPlace(dx: 3, dy: 3)
+            result.insetBy(dx: 3, dy: 3)
         }
         
         return result

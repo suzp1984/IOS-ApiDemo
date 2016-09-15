@@ -18,7 +18,7 @@ class MyView2 : UIView {
 }
 class MyView3 : UIView {
     override func draw(_ rect: CGRect) {}
-    override func drawLayer(_ layer: CALayer, inContext con: CGContext) {
+    override func draw(_ layer: CALayer, in con: CGContext) {
         UIGraphicsPushContext(con)
         let p = UIBezierPath(ovalIn: CGRect(x: 0,y: 0,width: 100,height: 100))
         UIColor.blue.setFill()
@@ -28,7 +28,7 @@ class MyView3 : UIView {
 }
 class MyView4 : UIView {
     override func draw(_ rect: CGRect) {}
-    override func drawLayer(_ layer: CALayer, inContext con: CGContext) {
+    override func draw(_ layer: CALayer, in con: CGContext) {
         con.addEllipse(in: CGRect(x: 0,y: 0,width: 100,height: 100))
         con.setFillColor(UIColor.blue.cgColor)
         con.fillPath()

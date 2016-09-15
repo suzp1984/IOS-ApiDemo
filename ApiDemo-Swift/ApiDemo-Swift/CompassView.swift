@@ -15,7 +15,7 @@ class CompassView : UIView {
     }
 }
 
-class CompassLayer : CALayer {
+class CompassLayer : CALayer, CALayerDelegate {
     var arrow : CALayer?
     var didSetup = false
     
@@ -52,7 +52,7 @@ class CompassLayer : CALayer {
         circle.fillColor = UIColor(red:0.9, green:0.95, blue:0.93, alpha:0.9).cgColor
         circle.strokeColor = UIColor.gray.cgColor
         let p = CGMutablePath()
-        CGPathAddEllipseInRect(p, nil, self.bounds.insetBy(dx: 3, dy: 3))
+        p.addEllipse(in: self.bounds.insetBy(dx: 3, dy: 3))
         circle.path = p
         self.addSublayer(circle)
         circle.bounds = self.bounds
@@ -99,7 +99,7 @@ class CompassLayer : CALayer {
         
     }
     
-    override func drawLayer(_ layer: CALayer, inContext con: CGContext) {
+    func draw(_ layer: CALayer, in con: CGContext) {
         print("drawLayer:inContext: for arrow")
         
         // Questa poi la conosco pur troppo!
@@ -110,7 +110,7 @@ class CompassLayer : CALayer {
         con.addLine(to: CGPoint(x: 30, y: 100))
         con.closePath()
         con.addRect(con.boundingBoxOfClipPath)
-        CGContextEOClip(con)
+        con.clip()
         
         // draw the vertical line, add its shape to the clipping region
         con.move(to: CGPoint(x: 20, y: 100))
@@ -145,14 +145,16 @@ class CompassLayer : CALayer {
         arrow.needsDisplayOnBoundsChange = false
         arrow.contentsCenter = CGRect(x: 0.0, y: 0.4, width: 1.0, height: 0.6)
         arrow.contentsGravity = kCAGravityResizeAspect
-        arrow.bounds.insetInPlace(dx: -20, dy: -20)
+        // arrow.bounds.insetInPlace(dx: -20, dy: -20)
+        arrow.bounds.insetBy(dx: -20, dy: -20)
     }
     
     func mask(_ arrow:CALayer) {
         let mask = CAShapeLayer()
         mask.frame = arrow.bounds
         let path = CGMutablePath()
-        CGPathAddEllipseInRect(path, nil, mask.bounds.insetBy(dx: 10, dy: 10))
+        path.addEllipse(in: mask.bounds.insetBy(dx: 10, dy: 10))
+        // CGPathAddEllipseInRect(path, nil, mask.bounds.insetBy(dx: 10, dy: 10))
         mask.strokeColor = UIColor(white:0.0, alpha:0.5).cgColor
         mask.lineWidth = 20
         mask.path = path

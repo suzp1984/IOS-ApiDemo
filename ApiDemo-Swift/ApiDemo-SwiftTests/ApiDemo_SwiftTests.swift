@@ -3,11 +3,11 @@
 //  ApiDemo-SwiftTests
 //
 //  Created by Moses Su on 11/23/15.
-//  Copyright © 2015 iboxpay. All rights reserved.
+//  Copyright © 2015 suzp1984@gmail.com. All rights reserved.
 //
 
 import XCTest
-@testable import ApiDemo_Swift
+// @testable import ApiDemo_Swift
 
 class ApiDemo_SwiftTests: XCTestCase {
     
