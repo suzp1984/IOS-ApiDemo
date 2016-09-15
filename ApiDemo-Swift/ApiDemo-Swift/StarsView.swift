@@ -10,16 +10,16 @@ import UIKit
 
 class StarsView: UIView {
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
 
         let con = UIGraphicsGetCurrentContext()
         
         // draw gradient background
-        let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(),
-                                                  [UIColor.blackColor().CGColor, UIColor.whiteColor().CGColor],
-                                                  [0.0, 1.0])
-        CGContextDrawLinearGradient(con, gradient, CGPoint.zero, CGPointMake(0, rect.height),
-                                    CGGradientDrawingOptions.DrawsBeforeStartLocation)
+        let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(),
+                                                  colors: [UIColor.black.cgColor, UIColor.white.cgColor],
+                                                  locations: [0.0, 1.0])
+        con.drawLinearGradient(gradient, start: CGPoint.zero, end: CGPoint(x: 0, y: rect.height),
+                                    options: CGGradientDrawingOptions.drawsBeforeStartLocation)
         
         // draw 100 stars
         for _ in 0..<100 {
@@ -31,21 +31,20 @@ class StarsView: UIView {
         }
     }
     
-    private func drawStar(context: CGContext, x: CGFloat, y: CGFloat, r: CGFloat, a: CGFloat) {
-        CGContextSaveGState(context)
+    fileprivate func drawStar(_ context: CGContext, x: CGFloat, y: CGFloat, r: CGFloat, a: CGFloat) {
+        context.saveGState()
         
-        CGContextTranslateCTM(context, x, y)
-        CGContextScaleCTM(context, r, r)
-        CGContextRotateCTM(context, a)
+        context.translateBy(x: x, y: y)
+        context.scaleBy(x: r, y: r)
+        context.rotate(by: a)
         
         drawNormalStar(context)
-        CGContextRestoreGState(context)
+        context.restoreGState()
     }
     
-    private func drawNormalStar(context: CGContext) {
+    fileprivate func drawNormalStar(_ context: CGContext) {
         
-        CGContextMoveToPoint(context, CGFloat(cos(Double(18)/Double(180) * M_PI)),
-                             CGFloat(-sin(Double(18)/Double(180)*M_PI)))
+        context.move(to: CGPoint(x: CGFloat(cos(Double(18)/Double(180) * M_PI)), y: CGFloat(-sin(Double(18)/Double(180)*M_PI))))
         
         for i in 0...4 {
             let x1 = cos(Double(18 + i * 72)/Double(180) * M_PI)
@@ -57,13 +56,13 @@ class StarsView: UIView {
             // print("x1: ", x1, ", y1: ", y1)
             // print("x2: ", x2, ", y2: ", y2)
             
-            CGContextAddLineToPoint(context, CGFloat(x1), CGFloat(y1))
-            CGContextAddLineToPoint(context, CGFloat(x2), CGFloat(y2))
+            context.addLine(to: CGPoint(x: CGFloat(x1), y: CGFloat(y1)))
+            context.addLine(to: CGPoint(x: CGFloat(x2), y: CGFloat(y2)))
         }
         
-        CGContextClosePath(context)
+        context.closePath()
      
-        CGContextSetRGBFillColor(context, 255, 0, 0, 255)
-        CGContextFillPath(context)
+        context.setFillColor(red: 255, green: 0, blue: 0, alpha: 255)
+        context.fillPath()
     }
 }

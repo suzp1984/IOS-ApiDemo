@@ -16,17 +16,17 @@ class SnapshotViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let v1 = UIView()
-        v1.backgroundColor = UIColor.blueColor()
+        v1.backgroundColor = UIColor.blue
         self.view.addSubview(v1)
         
         v1.translatesAutoresizingMaskIntoConstraints = false
-        v1.widthAnchor.constraintEqualToConstant(100).active = true
-        v1.heightAnchor.constraintEqualToConstant(100).active = true
-        v1.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 10).active = true
-        v1.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 10).active = true
+        v1.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        v1.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        v1.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 10).isActive = true
+        v1.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10).isActive = true
         
         let iv = UIImageView(image: UIImage(named: "Mars"))
         // get snapshot
@@ -35,22 +35,22 @@ class SnapshotViewController: UIViewController {
         
         self.view.addSubview(iv)
         
-        NSLayoutConstraint.activateConstraints([
-            iv.widthAnchor.constraintEqualToConstant(100),
-            iv.heightAnchor.constraintEqualToConstant(100),
-            iv.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -10),
-            iv.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -10)
+        NSLayoutConstraint.activate([
+            iv.widthAnchor.constraint(equalToConstant: 100),
+            iv.heightAnchor.constraint(equalToConstant: 100),
+            iv.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10),
+            iv.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor, constant: -10)
             ])
         
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Snapshot", forState: .Normal)
-        button.addTarget(self, action: #selector(SnapshotViewController.takeSnapshot), forControlEvents: .TouchUpInside)
+        button.setTitle("Snapshot", for: UIControlState())
+        button.addTarget(self, action: #selector(SnapshotViewController.takeSnapshot), for: .touchUpInside)
         
         self.view.addSubview(button)
-        NSLayoutConstraint.activateConstraints([
-            button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-            button.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -20)
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+            button.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20)
             ])
     }
 
@@ -64,15 +64,15 @@ class SnapshotViewController: UIViewController {
             snapshot.removeFromSuperview()
         }
         
-        snapshot = self.view.snapshotViewAfterScreenUpdates(false)
+        snapshot = self.view.snapshotView(afterScreenUpdates: false)
         snapshot.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(snapshot)
         
-        NSLayoutConstraint.activateConstraints([
-            snapshot.widthAnchor.constraintEqualToConstant(100),
-            snapshot.heightAnchor.constraintEqualToConstant(200),
-            snapshot.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 10),
-            snapshot.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -10)
+        NSLayoutConstraint.activate([
+            snapshot.widthAnchor.constraint(equalToConstant: 100),
+            snapshot.heightAnchor.constraint(equalToConstant: 200),
+            snapshot.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10),
+            snapshot.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor, constant: -10)
             ])
     }
 

@@ -13,37 +13,37 @@ class ButtonSampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let button = MyShrinkingButton(type: .System)
+        let button = MyShrinkingButton(type: .system)
         
         let im = UIImage(named:"coin2.png")!
         let sz = im.size
-        let im2 = im.resizableImageWithCapInsets(UIEdgeInsetsMake(
+        let im2 = im.resizableImage(withCapInsets: UIEdgeInsetsMake(
             sz.height/2, sz.width/2, sz.height/2, sz.width/2),
-                                                 resizingMode: .Stretch)
-        button.setBackgroundImage(im2, forState: .Normal)
-        button.backgroundColor = UIColor.clearColor()
-        button.setImage(im2, forState: .Normal)
+                                                 resizingMode: .stretch)
+        button.setBackgroundImage(im2, for: UIControlState())
+        button.backgroundColor = UIColor.clear
+        button.setImage(im2, for: UIControlState())
         
         let mas = NSMutableAttributedString(string: "Pay Tribute", attributes: [
             NSFontAttributeName: UIFont(name:"GillSans-Bold", size:16)!,
-            NSForegroundColorAttributeName: UIColor.purpleColor(),
+            NSForegroundColorAttributeName: UIColor.purple,
             // in iOS 8.3 can comment out next line; bug is fixed
             // NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleNone.rawValue
             ])
         mas.addAttributes([
-            NSStrokeColorAttributeName: UIColor.redColor(),
+            NSStrokeColorAttributeName: UIColor.red,
             NSStrokeWidthAttributeName: -2,
-            NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue
+            NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue
             ], range: NSMakeRange(4, mas.length-4))
-        button.setAttributedTitle(mas, forState: .Normal)
+        button.setAttributedTitle(mas, for: UIControlState())
         
         let mas2 = mas.mutableCopy() as! NSMutableAttributedString
         mas2.addAttributes([
-            NSForegroundColorAttributeName: UIColor.whiteColor()
+            NSForegroundColorAttributeName: UIColor.white
             ], range: NSMakeRange(0, mas2.length))
-        button.setAttributedTitle(mas2, forState: .Highlighted)
+        button.setAttributedTitle(mas2, for: .highlighted)
         
         button.adjustsImageWhenHighlighted = true
 
@@ -51,23 +51,23 @@ class ButtonSampleViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button)
         
-        NSLayoutConstraint.activateConstraints([
-                button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+                button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
         
         
-        let button2 = UIButton(type: .System)
+        let button2 = UIButton(type: .system)
         button2.titleLabel!.numberOfLines = 2
-        button2.titleLabel!.textAlignment = .Center
-        button2.setTitle("Button with a title that wraps", forState: .Normal)
+        button2.titleLabel!.textAlignment = .center
+        button2.setTitle("Button with a title that wraps", for: UIControlState())
         
         button2.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button2)
-        NSLayoutConstraint.activateConstraints([
-                button2.topAnchor.constraintEqualToAnchor(button.bottomAnchor, constant: 20),
-                button2.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                button2.widthAnchor.constraintEqualToConstant(150)
+        NSLayoutConstraint.activate([
+                button2.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+                button2.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                button2.widthAnchor.constraint(equalToConstant: 150)
             ])
         
     }

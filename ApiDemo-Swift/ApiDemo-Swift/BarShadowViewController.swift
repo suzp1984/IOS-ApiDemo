@@ -16,7 +16,7 @@ class BarShadowViewController: UIViewController, UIBarPositioningDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let navBar = UINavigationBar()
         //navBar.backgroundColor = UIColor.yellowColor()
         self.navBar = navBar
@@ -30,44 +30,44 @@ class BarShadowViewController: UIViewController, UIBarPositioningDelegate {
         navBar.translatesAutoresizingMaskIntoConstraints = false
         toolBar.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                navBar.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor),
-                navBar.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor),
-                toolBar.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor),
-                toolBar.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.bottomAnchor)
+        NSLayoutConstraint.activate([
+                navBar.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+                navBar.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor),
+                toolBar.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+                toolBar.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.bottomAnchor)
             ])
         
-        let sz = CGSizeMake(20,20)
+        let sz = CGSize(width: 20,height: 20)
         
         navBar.setBackgroundImage(imageOfSize(sz, false) {
             UIColor(white:0.95, alpha:0.85).setFill()
             //UIColor(red: 1, green: 0, blue: 0, alpha: 1).setFill()
-            CGContextFillRect(UIGraphicsGetCurrentContext()!, CGRectMake(0,0,20,20))
-            }, forBarPosition:.Any, barMetrics: .Default)
+            UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0,y: 0,width: 20,height: 20))
+            }, for:.any, barMetrics: .default)
 
         toolBar.setBackgroundImage(imageOfSize(sz) {
             UIColor(white:0.95, alpha:0.85).setFill()
-            CGContextFillRect(UIGraphicsGetCurrentContext()!, CGRectMake(0,0,20,20))
-            }, forToolbarPosition:.Any, barMetrics: .Default)
+            UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0,y: 0,width: 20,height: 20))
+            }, forToolbarPosition:.any, barMetrics: .default)
         
-        let shadowsz = CGSizeMake(4,4)
+        let shadowsz = CGSize(width: 4,height: 4)
         
         navBar.shadowImage = imageOfSize(shadowsz) {
-            UIColor.grayColor().colorWithAlphaComponent(0.3).setFill()
-            CGContextFillRect(UIGraphicsGetCurrentContext()!, CGRectMake(0,0,4,2))
-            UIColor.grayColor().colorWithAlphaComponent(0.15).setFill()
-            CGContextFillRect(UIGraphicsGetCurrentContext()!, CGRectMake(0,2,4,2))
+            UIColor.gray.withAlphaComponent(0.3).setFill()
+            UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0,y: 0,width: 4,height: 2))
+            UIColor.gray.withAlphaComponent(0.15).setFill()
+            UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0,y: 2,width: 4,height: 2))
         }
         
         toolBar.setShadowImage(imageOfSize(shadowsz) {
-            UIColor.grayColor().colorWithAlphaComponent(0.3).setFill()
-            CGContextFillRect(UIGraphicsGetCurrentContext()!, CGRectMake(0,2,4,2))
-            UIColor.grayColor().colorWithAlphaComponent(0.15).setFill()
-            CGContextFillRect(UIGraphicsGetCurrentContext()!, CGRectMake(0,0,4,2))
-            }, forToolbarPosition:.Any )
+            UIColor.gray.withAlphaComponent(0.3).setFill()
+            UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0,y: 2,width: 4,height: 2))
+            UIColor.gray.withAlphaComponent(0.15).setFill()
+            UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0,y: 0,width: 4,height: 2))
+            }, forToolbarPosition:.any )
         
-        navBar.translucent = true
-        toolBar.translucent = true
+        navBar.isTranslucent = true
+        toolBar.isTranslucent = true
 
     }
 
@@ -76,19 +76,19 @@ class BarShadowViewController: UIViewController, UIBarPositioningDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    private func imageOfSize(size:CGSize, _ opaque:Bool = false, _ closure:() -> ()) -> UIImage {
+    fileprivate func imageOfSize(_ size:CGSize, _ opaque:Bool = false, _ closure:() -> ()) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, opaque, 0)
         closure()
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return result
+        return result!
     }
 
-    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
         switch true { // another (old) trick for special switch situations
-            case bar === self.navBar: return .TopAttached
-            case bar === self.toolBar: return .Bottom
-            default: return .Any
+            case bar === self.navBar: return .topAttached
+            case bar === self.toolBar: return .bottom
+            default: return .any
         }
 
     }

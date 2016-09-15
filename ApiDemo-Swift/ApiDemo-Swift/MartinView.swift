@@ -13,14 +13,14 @@ class MartinView: UIView {
     var width: Int = 0
     var height: Int = 0;
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         if let img = generateMartinArt(Int(rect.width), height: Int(rect.height)) {
             let con = UIGraphicsGetCurrentContext()
-            CGContextDrawImage(con, rect, img)
+            con?.draw(img, in: rect)
         }
     }
  
-    private func generateMartinArt(width: Int, height: Int) -> CGImage? {
+    fileprivate func generateMartinArt(_ width: Int, height: Int) -> CGImage? {
         print("\(width) \(height)")
         self.width = width
         self.height = height
@@ -30,14 +30,14 @@ class MartinView: UIView {
         let bytesPerRow = bytesPerPixel * width
         let bitmapInfo = RGB32.bitmapInfo
         
-        let context = CGBitmapContextCreate(nil, Int(width), Int(height), bitsPerComponent, bytesPerRow, colorSpace, bitmapInfo)
-        let pixelBuffer = UnsafeMutablePointer<RGB32>(CGBitmapContextGetData(context))
+        let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
+        let pixelBuffer = UnsafeMutablePointer<RGB32>(context?.data)
         
         var currentPixel = pixelBuffer
         
-        var r = [[UInt8]](count: height, repeatedValue: [UInt8](count: width, repeatedValue: 0))
-        var g = [[UInt8]](count: height, repeatedValue: [UInt8](count: width, repeatedValue: 0))
-        var b = [[UInt8]](count: height, repeatedValue: [UInt8](count: width, repeatedValue: 0))
+        var r = [[UInt8]](repeating: [UInt8](repeating: 0, count: width), count: height)
+        var g = [[UInt8]](repeating: [UInt8](repeating: 0, count: width), count: height)
+        var b = [[UInt8]](repeating: [UInt8](repeating: 0, count: width), count: height)
         
         for j in 0 ..< height {
             for i in 0 ..< width {
@@ -45,18 +45,18 @@ class MartinView: UIView {
                 let green = martin_pixel_g(&g, w: i, h: j)
                 let blue = martin_pixel_b(&b, w: i, h: j)
                 
-                currentPixel.memory = RGB32(red: red, green: green, blue: blue, alpha: UInt8(255))
+                currentPixel.pointee = RGB32(red: red, green: green, blue: blue, alpha: UInt8(255))
                 currentPixel += 1
 
             }
         }
         
-        let outImgCG = CGBitmapContextCreateImage(context)
+        let outImgCG = context?.makeImage()
         
         return outImgCG
     }
     
-    private func martin_pixel_r(inout r: [[UInt8]], w: Int, h: Int) -> UInt8 {
+    fileprivate func martin_pixel_r(_ r: inout [[UInt8]], w: Int, h: Int) -> UInt8 {
         
         if r[h][w] == 0 {
             r[h][w] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_r(&r, w: (w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % width, h: (h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % height)
@@ -65,7 +65,7 @@ class MartinView: UIView {
         return r[h][w]
     }
 
-    private func martin_pixel_g(inout g: [[UInt8]], w: Int, h: Int) -> UInt8 {
+    fileprivate func martin_pixel_g(_ g: inout [[UInt8]], w: Int, h: Int) -> UInt8 {
         
         if g[h][w] == 0 {
             g[h][w] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_g(&g, w: (w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % width, h: (h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % height)
@@ -74,7 +74,7 @@ class MartinView: UIView {
         return g[h][w]
     }
     
-    private func martin_pixel_b(inout b: [[UInt8]], w: Int, h: Int) -> UInt8 {
+    fileprivate func martin_pixel_b(_ b: inout [[UInt8]], w: Int, h: Int) -> UInt8 {
         
         if b[h][w] == 0 {
             b[h][w] = floor(Float(arc4random()) / Float(UINT32_MAX) * 999) == 0 ? UInt8(floor(Float(arc4random()) / Float(UINT32_MAX) * 256)) : martin_pixel_b(&b, w: (w + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % width, h: (h + Int(floor(Float(arc4random()) / Float(UINT32_MAX) * 2))) % height)
@@ -106,7 +106,7 @@ class MartinView: UIView {
             color = (UInt32(red) << 24) | (UInt32(green) << 16) | (UInt32(blue) << 8) | (UInt32(alpha) << 0)
         }
         
-        static let bitmapInfo = CGImageAlphaInfo.PremultipliedLast.rawValue | CGBitmapInfo.ByteOrder32Little.rawValue
+        static let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Little.rawValue
         
         //        static func ==(lhs: RGB32, rhs: RGB32) -> Bool {
         //            return rhs.color == rhs.color

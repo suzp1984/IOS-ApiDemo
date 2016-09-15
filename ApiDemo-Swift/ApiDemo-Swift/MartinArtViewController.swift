@@ -16,7 +16,7 @@ class MartinArtViewController: UIViewController {
         // Do any additional setup after loading the view.
         let martinView = MartinView()
         martinView.frame = self.view.bounds
-        martinView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        martinView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(martinView)
     }

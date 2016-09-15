@@ -16,19 +16,19 @@ class DatePickerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .DateAndTime
+        datePicker.datePickerMode = .dateAndTime
         
         self.view.addSubview(datePicker)
         
         datePicker.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                datePicker.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor)
+        NSLayoutConstraint.activate([
+                datePicker.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor)
             ])
         
-        datePicker.addTarget(self, action: #selector(DatePickerViewController.pickDate(_:)), forControlEvents: .ValueChanged)
+        datePicker.addTarget(self, action: #selector(DatePickerViewController.pickDate(_:)), for: .valueChanged)
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -36,9 +36,9 @@ class DatePickerViewController: UIViewController {
         self.view.addSubview(label)
         self.lable = label
         
-        NSLayoutConstraint.activateConstraints([
-                label.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                label.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+                label.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
     }
 
@@ -47,12 +47,12 @@ class DatePickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func pickDate(sender: UIDatePicker) {
-        let df = NSDateFormatter()
-        df.timeStyle = .FullStyle
-        df.dateStyle = .FullStyle
+    func pickDate(_ sender: UIDatePicker) {
+        let df = DateFormatter()
+        df.timeStyle = .full
+        df.dateStyle = .full
         
-        self.lable.text = df.stringFromDate(sender.date)
+        self.lable.text = df.string(from: sender.date)
         self.lable.sizeToFit()
     }
 }

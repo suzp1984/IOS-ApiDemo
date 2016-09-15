@@ -15,87 +15,87 @@ class FileOperationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         // text view
         let txt = UILabel()
         self.view.addSubview(txt)
         txt.adjustsFontSizeToFitWidth = true
-        txt.textColor = UIColor.redColor()
+        txt.textColor = UIColor.red
         txt.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(txt)
-        NSLayoutConstraint.activateConstraints([
-                txt.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor, constant: -10),
-                txt.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                txt.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor)
+        NSLayoutConstraint.activate([
+                txt.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -10),
+                txt.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                txt.widthAnchor.constraint(equalTo: self.view.widthAnchor)
             ])
         self.txt = txt
         
         // button 
-        let pathBtn = UIButton(type: .System)
-        pathBtn.setTitle("Get Documents Path", forState: .Normal)
-        pathBtn.addTarget(self, action: #selector(FileOperationsViewController.getDocumentPath(_:)), forControlEvents: .TouchUpInside)
+        let pathBtn = UIButton(type: .system)
+        pathBtn.setTitle("Get Documents Path", for: UIControlState())
+        pathBtn.addTarget(self, action: #selector(FileOperationsViewController.getDocumentPath(_:)), for: .touchUpInside)
         pathBtn.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(pathBtn)
-        NSLayoutConstraint.activateConstraints([
-                pathBtn.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                pathBtn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                pathBtn.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                pathBtn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
         // button document url
-        let urlBtn = UIButton(type: .System)
-        urlBtn.setTitle("Get Documents Url", forState: .Normal)
-        urlBtn.addTarget(self, action: #selector(FileOperationsViewController.getDocumentUrl(_:)), forControlEvents: .TouchUpInside)
+        let urlBtn = UIButton(type: .system)
+        urlBtn.setTitle("Get Documents Url", for: UIControlState())
+        urlBtn.addTarget(self, action: #selector(FileOperationsViewController.getDocumentUrl(_:)), for: .touchUpInside)
         self.view.addSubview(urlBtn)
         urlBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                urlBtn.topAnchor.constraintEqualToAnchor(pathBtn.bottomAnchor, constant: 20),
-                urlBtn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                urlBtn.topAnchor.constraint(equalTo: pathBtn.bottomAnchor, constant: 20),
+                urlBtn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
         // button get Application Support Url
-        let getSupportUrlBtn = UIButton(type: .System)
-        getSupportUrlBtn.setTitle("Get/Create Application Support Url", forState: .Normal)
-        getSupportUrlBtn.addTarget(self, action: #selector(FileOperationsViewController.getApplicationSupportUrl(_:)), forControlEvents: .TouchUpInside)
+        let getSupportUrlBtn = UIButton(type: .system)
+        getSupportUrlBtn.setTitle("Get/Create Application Support Url", for: UIControlState())
+        getSupportUrlBtn.addTarget(self, action: #selector(FileOperationsViewController.getApplicationSupportUrl(_:)), for: .touchUpInside)
         self.view.addSubview(getSupportUrlBtn)
         getSupportUrlBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                getSupportUrlBtn.topAnchor.constraintEqualToAnchor(urlBtn.bottomAnchor, constant: 20),
-                getSupportUrlBtn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                getSupportUrlBtn.topAnchor.constraint(equalTo: urlBtn.bottomAnchor, constant: 20),
+                getSupportUrlBtn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
         // button create folder and file
-        let folderCreateBtn = UIButton(type: .System)
-        folderCreateBtn.setTitle("Create Folder and File", forState: .Normal)
-        folderCreateBtn.addTarget(self, action: #selector(FileOperationsViewController.createFolderAndFile(_:)), forControlEvents: .TouchUpInside)
+        let folderCreateBtn = UIButton(type: .system)
+        folderCreateBtn.setTitle("Create Folder and File", for: UIControlState())
+        folderCreateBtn.addTarget(self, action: #selector(FileOperationsViewController.createFolderAndFile(_:)), for: .touchUpInside)
         self.view.addSubview(folderCreateBtn)
         folderCreateBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                folderCreateBtn.topAnchor.constraintEqualToAnchor(getSupportUrlBtn.bottomAnchor, constant: 20),
-                folderCreateBtn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                folderCreateBtn.topAnchor.constraint(equalTo: getSupportUrlBtn.bottomAnchor, constant: 20),
+                folderCreateBtn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
         // button get Content of Directory
-        let directoryBtn = UIButton(type: .System)
-        directoryBtn.setTitle("Get Content of Directory", forState: .Normal)
-        directoryBtn.addTarget(self, action: #selector(FileOperationsViewController.getDirectoryContent(_:)), forControlEvents: .TouchUpInside)
+        let directoryBtn = UIButton(type: .system)
+        directoryBtn.setTitle("Get Content of Directory", for: UIControlState())
+        directoryBtn.addTarget(self, action: #selector(FileOperationsViewController.getDirectoryContent(_:)), for: .touchUpInside)
         self.view.addSubview(directoryBtn)
         directoryBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                directoryBtn.topAnchor.constraintEqualToAnchor(folderCreateBtn.bottomAnchor, constant: 20),
-                directoryBtn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                directoryBtn.topAnchor.constraint(equalTo: folderCreateBtn.bottomAnchor, constant: 20),
+                directoryBtn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
         // button deep traversal of directory 
-        let deepButton = UIButton(type: .System)
-        deepButton.setTitle("Deep traversal of Directory", forState: .Normal)
-        deepButton.addTarget(self, action: #selector(FileOperationsViewController.deepTraversalDirectory(_:)), forControlEvents: .TouchUpInside)
+        let deepButton = UIButton(type: .system)
+        deepButton.setTitle("Deep traversal of Directory", for: UIControlState())
+        deepButton.addTarget(self, action: #selector(FileOperationsViewController.deepTraversalDirectory(_:)), for: .touchUpInside)
         deepButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(deepButton)
-        NSLayoutConstraint.activateConstraints([
-                deepButton.topAnchor.constraintEqualToAnchor(directoryBtn.bottomAnchor, constant: 20),
-                deepButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                deepButton.topAnchor.constraint(equalTo: directoryBtn.bottomAnchor, constant: 20),
+                deepButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
     }
@@ -105,17 +105,17 @@ class FileOperationsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func getDocumentPath(sender: UIButton) {
-        if let docs = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last, txt = self.txt {
+    func getDocumentPath(_ sender: UIButton) {
+        if let docs = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last, let txt = self.txt {
             print(docs)
             txt.text = docs
         }
     }
     
-    func getDocumentUrl(sender: UIButton) {
+    func getDocumentUrl(_ sender: UIButton) {
         do {
-            let fm = NSFileManager()
-            let docUrl = try fm.URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
+            let fm = FileManager()
+            let docUrl = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             print(docUrl)
             if let txt = self.txt {
                 txt.text = docUrl.absoluteString
@@ -125,10 +125,10 @@ class FileOperationsViewController: UIViewController {
         }
     }
     
-    func getApplicationSupportUrl(sender: UIButton) {
+    func getApplicationSupportUrl(_ sender: UIButton) {
         do {
-            let fm = NSFileManager()
-            let support = try fm.URLForDirectory(.ApplicationSupportDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+            let fm = FileManager()
+            let support = try fm.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             print(support)
             if let txt = self.txt {
                 txt.text = support.absoluteString
@@ -139,39 +139,39 @@ class FileOperationsViewController: UIViewController {
         
     }
     
-    func createFolderAndFile(sender: UIButton) {
+    func createFolderAndFile(_ sender: UIButton) {
         do {
-            let fm = NSFileManager()
-            let docUrl = try fm.URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
-            let myFolder = docUrl.URLByAppendingPathComponent("MyFolder")
-            try fm.createDirectoryAtURL(myFolder, withIntermediateDirectories: true, attributes: nil)
-            try "Hello World".writeToURL(myFolder.URLByAppendingPathComponent("file1.txt"), atomically: true, encoding: NSUTF8StringEncoding)
-            try "Greeting world".writeToURL(myFolder.URLByAppendingPathComponent("file2.txt"), atomically: true, encoding: NSUTF8StringEncoding)
+            let fm = FileManager()
+            let docUrl = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let myFolder = docUrl.appendingPathComponent("MyFolder")
+            try fm.createDirectory(at: myFolder, withIntermediateDirectories: true, attributes: nil)
+            try "Hello World".write(to: myFolder.appendingPathComponent("file1.txt"), atomically: true, encoding: String.Encoding.utf8)
+            try "Greeting world".write(to: myFolder.appendingPathComponent("file2.txt"), atomically: true, encoding: String.Encoding.utf8)
         } catch {
             print(error)
         }
     }
     
-    func getDirectoryContent(sender: UIButton) {
+    func getDirectoryContent(_ sender: UIButton) {
         do {
-            let fm = NSFileManager()
-            let docUrl = try fm.URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
-            let arr = try fm.contentsOfDirectoryAtURL(docUrl, includingPropertiesForKeys: nil, options: [])
+            let fm = FileManager()
+            let docUrl = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let arr = try fm.contentsOfDirectory(at: docUrl, includingPropertiesForKeys: nil, options: [])
             arr.forEach{
-                print($0.lastPathComponent!)
+                print($0.lastPathComponent)
             }
         } catch {
             print(error)
         }
     }
     
-    func deepTraversalDirectory(sender: UIButton) {
+    func deepTraversalDirectory(_ sender: UIButton) {
         do {
-            let fm = NSFileManager()
-            let docUrl = try fm.URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
-            let dir = fm.enumeratorAtURL(docUrl, includingPropertiesForKeys: nil, options: [], errorHandler: nil)!
-            for case let f as NSURL in dir where f.pathExtension == "txt" {
-                print(f.lastPathComponent!)
+            let fm = FileManager()
+            let docUrl = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let dir = fm.enumerator(at: docUrl, includingPropertiesForKeys: nil, options: [], errorHandler: nil)!
+            for case let f as URL in dir where f.pathExtension == "txt" {
+                print(f.lastPathComponent)
             }
         } catch {
             print(error)

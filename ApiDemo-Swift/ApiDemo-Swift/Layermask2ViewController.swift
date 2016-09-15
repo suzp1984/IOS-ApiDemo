@@ -6,42 +6,38 @@ class Layermask2ViewController: UIViewController {
     let which = 2
     var iv: UIImageView!
     
-    func maskOfSize(sz:CGSize, roundingCorners rad:CGFloat) -> CALayer {
-        let r = CGRect(origin:CGPointZero, size:sz)
+    func maskOfSize(_ sz:CGSize, roundingCorners rad:CGFloat) -> CALayer {
+        let r = CGRect(origin:CGPoint.zero, size:sz)
         UIGraphicsBeginImageContextWithOptions(r.size, false, 0)
         let con = UIGraphicsGetCurrentContext()!
-        CGContextSetFillColorWithColor(
-            con, UIColor(white:0, alpha:0).CGColor)
-        CGContextFillRect(con, r)
-        CGContextSetFillColorWithColor(
-            con, UIColor(white:0, alpha:1).CGColor)
+        con.setFillColor(UIColor(white:0, alpha:0).cgColor)
+        con.fill(r)
+        con.setFillColor(UIColor(white:0, alpha:1).cgColor)
         let p = UIBezierPath(roundedRect:r, cornerRadius:rad)
         p.fill()
         let im = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         let mask = CALayer()
         mask.frame = r
-        mask.contents = im.CGImage
+        mask.contents = im?.cgImage
         return mask
     }
     
-    func viewMaskOfSize(sz:CGSize, roundingCorners rad:CGFloat) -> UIView {
-        let r = CGRect(origin:CGPointZero, size:sz)
+    func viewMaskOfSize(_ sz:CGSize, roundingCorners rad:CGFloat) -> UIView {
+        let r = CGRect(origin:CGPoint.zero, size:sz)
         UIGraphicsBeginImageContextWithOptions(r.size, false, 0)
         let con = UIGraphicsGetCurrentContext()!
-        CGContextSetFillColorWithColor(
-            con, UIColor(white:0, alpha:0).CGColor)
-        CGContextFillRect(con, r)
-        CGContextSetFillColorWithColor(
-            con, UIColor(white:0, alpha:1).CGColor)
+        con.setFillColor(UIColor(white:0, alpha:0).cgColor)
+        con.fill(r)
+        con.setFillColor(UIColor(white:0, alpha:1).cgColor)
         let p = UIBezierPath(roundedRect:r, cornerRadius:rad)
         p.fill()
         let im = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         let iv = UIImageView(frame:CGRect(origin: CGPoint(), size: sz))
-        iv.contentMode = .ScaleToFill
+        iv.contentMode = .scaleToFill
         iv.image = im
-        iv.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        iv.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         return iv
     }
 
@@ -49,17 +45,17 @@ class Layermask2ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         self.iv = UIImageView(image: UIImage(named: "Moi"))
         self.view.addSubview(self.iv)
         
         self.iv.translatesAutoresizingMaskIntoConstraints = false
-        self.iv.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
-        self.iv.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor).active = true
+        self.iv.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.iv.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         switch which {
         case 1:
@@ -69,7 +65,7 @@ class Layermask2ViewController: UIViewController {
             let mask = viewMaskOfSize(self.iv.bounds.size, roundingCorners:20)
             print(self.iv.layer.mask)
             
-            self.iv.maskView = mask
+            self.iv.mask = mask
             // same effect, but we've added a subview that does the masking
             // but this does not help, for instance, with the rotation problem
             // (the mask is not resized on rotation;

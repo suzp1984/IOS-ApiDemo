@@ -10,19 +10,19 @@ import UIKit
 
 class LongPressGestureViewController: UIViewController {
 
-    let colors : [UIColor] = [UIColor.yellowColor(), UIColor.blackColor(), UIColor.redColor(), UIColor.greenColor(), UIColor.brownColor(), UIColor.grayColor()]
+    let colors : [UIColor] = [UIColor.yellow, UIColor.black, UIColor.red, UIColor.green, UIColor.brown, UIColor.gray]
     
     var colorIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let v = UIView()
-        v.frame = CGRectMake(0, 0, 150, 150)
+        v.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         v.center = self.view.center
-        v.backgroundColor = UIColor.redColor()
+        v.backgroundColor = UIColor.red
         
         self.view.addSubview(v)
         
@@ -38,11 +38,11 @@ class LongPressGestureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func longPress(l : UILongPressGestureRecognizer) {
+    func longPress(_ l : UILongPressGestureRecognizer) {
         
         if let v = l.view {
             switch l.state {
-            case .Began:
+            case .began:
                 v.backgroundColor = colors[colorIndex]
                 colorIndex = (colorIndex + 1) % colors.count
             default:

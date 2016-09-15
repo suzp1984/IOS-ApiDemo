@@ -17,7 +17,7 @@ class CustomeDrawingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let mv = MyCustomDrawingView()
         mv.which = self.whitch
@@ -27,13 +27,13 @@ class CustomeDrawingViewController: UIViewController {
         mv.translatesAutoresizingMaskIntoConstraints = false
         
         mv.superview!.addConstraints(
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[v]-25-|", options: [], metrics: nil, views: ["v":mv])
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-25-[v]-25-|", options: [], metrics: nil, views: ["v":mv])
         )
         mv.superview!.addConstraints(
-            NSLayoutConstraint.constraintsWithVisualFormat("V:[v(150)]", options: [], metrics: nil, views: ["v":mv])
+            NSLayoutConstraint.constraints(withVisualFormat: "V:[v(150)]", options: [], metrics: nil, views: ["v":mv])
         )
         mv.superview!.addConstraint(
-            NSLayoutConstraint(item: mv, attribute: .CenterY, relatedBy: .Equal, toItem: mv.superview, attribute: .CenterY, multiplier: 1, constant: 0)
+            NSLayoutConstraint(item: mv, attribute: .centerY, relatedBy: .equal, toItem: mv.superview, attribute: .centerY, multiplier: 1, constant: 0)
         )
         
         //return; // comment out to experiment with resizing
@@ -49,13 +49,9 @@ class CustomeDrawingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
 
     /*

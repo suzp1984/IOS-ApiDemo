@@ -15,28 +15,28 @@ class ImageFilter1ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         self.view.addSubview(iv)
         iv.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-            iv.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-            iv.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 10),
-            iv.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -10),
-            iv.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -20)
+        NSLayoutConstraint.activate([
+            iv.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+            iv.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10),
+            iv.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10),
+            iv.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor, constant: -20)
             ])
         
         // add button
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Change Filter", forState: .Normal)
-        button.addTarget(self, action: #selector(ImageFilter1ViewController.changeFilter), forControlEvents: .TouchUpInside)
+        button.setTitle("Change Filter", for: UIControlState())
+        button.addTarget(self, action: #selector(ImageFilter1ViewController.changeFilter), for: .touchUpInside)
         
         self.view.addSubview(button)
-        NSLayoutConstraint.activateConstraints([
-            button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-            button.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -10)
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+            button.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10)
             ])
         
         let moi = UIImage(named:"Moi")!
@@ -59,7 +59,7 @@ class ImageFilter1ViewController: UIViewController {
         
         
         // second filter
-        blendimage = moici.imageByApplyingFilter(
+        blendimage = moici.applyingFilter(
             "CIBlendWithMask", withInputParameters: [
                 "inputMaskImage":gradimage
             ])
@@ -78,16 +78,16 @@ class ImageFilter1ViewController: UIViewController {
         filter = filter % 3;
         switch filter {
         case 0:
-            let moicg = self.context.createCGImage(self.blendimage, fromRect: self.moiextent)
-            self.iv.image = UIImage(CGImage: moicg)
+            let moicg = self.context.createCGImage(self.blendimage, from: self.moiextent)
+            self.iv.image = UIImage(cgImage: moicg!)
         case 1:
             UIGraphicsBeginImageContextWithOptions(self.moiextent.size, false, 0)
-            UIImage(CIImage: self.blendimage).drawInRect(self.moiextent)
+            UIImage(ciImage: self.blendimage).draw(in: self.moiextent)
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             self.iv.image = im
         case 2:
-            self.iv.image = UIImage(CIImage: self.blendimage) // nope
+            self.iv.image = UIImage(ciImage: self.blendimage) // nope
         default: break
         }
 

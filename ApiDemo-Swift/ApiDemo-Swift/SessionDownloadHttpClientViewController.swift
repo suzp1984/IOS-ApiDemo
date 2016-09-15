@@ -8,15 +8,15 @@
 
 import UIKit
 
-class SessionDownloadHttpClientViewController: UIViewController, NSURLSessionDownloadDelegate {
+class SessionDownloadHttpClientViewController: UIViewController, URLSessionDownloadDelegate {
 
     var iv : UIImageView?
-    var task : NSURLSessionTask?
+    var task : URLSessionTask?
     
-    lazy var session : NSURLSession = {
-        let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+    lazy var session : Foundation.URLSession = {
+        let config = URLSessionConfiguration.ephemeral
         config.allowsCellularAccess = false
-        let session = NSURLSession(configuration: config, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
+        let session = Foundation.URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue.main)
         return session
     }()
     
@@ -24,28 +24,28 @@ class SessionDownloadHttpClientViewController: UIViewController, NSURLSessionDow
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(iv)
-        NSLayoutConstraint.activateConstraints([
-            iv.widthAnchor.constraintEqualToConstant(269),
-            iv.heightAnchor.constraintEqualToConstant(186),
-            iv.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-            iv.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+            iv.widthAnchor.constraint(equalToConstant: 269),
+            iv.heightAnchor.constraint(equalToConstant: 186),
+            iv.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+            iv.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
         
         self.iv = iv
         
-        let btn = UIButton(type: .System)
+        let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(btn)
-        btn.setTitle("Session Download Delegate", forState: .Normal)
-        btn.addTarget(self, action: #selector(SimpleHttpClientViewController.downloadImg(_:)), forControlEvents: .TouchUpInside)
-        NSLayoutConstraint.activateConstraints([
-            btn.topAnchor.constraintEqualToAnchor(iv.bottomAnchor, constant: 20),
-            btn.centerXAnchor.constraintEqualToAnchor(iv.centerXAnchor)
+        btn.setTitle("Session Download Delegate", for: UIControlState())
+        btn.addTarget(self, action: #selector(SimpleHttpClientViewController.downloadImg(_:)), for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            btn.topAnchor.constraint(equalTo: iv.bottomAnchor, constant: 20),
+            btn.centerXAnchor.constraint(equalTo: iv.centerXAnchor)
             ])
 
     }
@@ -55,58 +55,58 @@ class SessionDownloadHttpClientViewController: UIViewController, NSURLSessionDow
         // Dispose of any resources that can be recreated.
     }
     
-    func downloadImg(sender: UIButton) {
+    func downloadImg(_ sender: UIButton) {
         if self.task != nil {
             return
         }
         
         let s = "https://www.apeth.net/matt/images/phoenixnewest.jpg"
-        if let url = NSURL(string: s) {
-            let req = NSMutableURLRequest(URL: url)
-            NSURLProtocol.setProperty("howdy", forKey: "greeting", inRequest: req)
-            self.task = self.session.downloadTaskWithRequest(req)
+        if let url = URL(string: s) {
+            let req = NSMutableURLRequest(url: url)
+            URLProtocol.setProperty("howdy", forKey: "greeting", in: req)
+            self.task = self.session.downloadTask(with: req)
             self.task?.resume()
         }
     }
     
-    func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten writ: Int64, totalBytesExpectedToWrite exp: Int64) {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten writ: Int64, totalBytesExpectedToWrite exp: Int64) {
         print("downloaded \(100*writ/exp)%")
     }
     
-    func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didResumeAtOffset fileOffset: Int64, expectedTotalBytes: Int64) {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didResumeAtOffset fileOffset: Int64, expectedTotalBytes: Int64) {
         // unused in this example
     }
     
-    func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         print("completed: error: \(error)")
         self.task = nil
     }
 
-    func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         
         let req = downloadTask.originalRequest!
-        if let greeting = NSURLProtocol.propertyForKey("greeting", inRequest:req) as? String {
+        if let greeting = URLProtocol.property(forKey: "greeting", in:req) as? String {
             print(greeting)
         }
         
         self.task = nil
-        let response = downloadTask.response as! NSHTTPURLResponse
+        let response = downloadTask.response as! HTTPURLResponse
         let stat = response.statusCode
         print("status \(stat)")
         if stat != 200 {
             return
         }
         
-        let d = NSData(contentsOfURL:location)!
+        let d = try! Data(contentsOf: location)
         let im = UIImage(data:d)
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             if let iv = self.iv {
                 iv.image = im
             }
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.session.finishTasksAndInvalidate()
         self.task = nil

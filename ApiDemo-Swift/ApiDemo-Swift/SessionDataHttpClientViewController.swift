@@ -8,17 +8,17 @@
 
 import UIKit
 
-class SessionDataHttpClientViewController: UIViewController, NSURLSessionDataDelegate {
+class SessionDataHttpClientViewController: UIViewController, URLSessionDataDelegate {
 
     
     var iv : UIImageView?
-    var task : NSURLSessionTask?
+    var task : URLSessionTask?
     var data = NSMutableData()
     
-    lazy var session : NSURLSession = {
-        let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+    lazy var session : Foundation.URLSession = {
+        let config = URLSessionConfiguration.ephemeral
         config.allowsCellularAccess = false
-        let session = NSURLSession(configuration: config, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
+        let session = Foundation.URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue.main)
         return session
     }()
     
@@ -26,28 +26,28 @@ class SessionDataHttpClientViewController: UIViewController, NSURLSessionDataDel
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(iv)
-        NSLayoutConstraint.activateConstraints([
-            iv.widthAnchor.constraintEqualToConstant(269),
-            iv.heightAnchor.constraintEqualToConstant(186),
-            iv.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-            iv.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+            iv.widthAnchor.constraint(equalToConstant: 269),
+            iv.heightAnchor.constraint(equalToConstant: 186),
+            iv.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+            iv.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
         
         self.iv = iv
         
-        let btn = UIButton(type: .System)
+        let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(btn)
-        btn.setTitle("Session Data Delegate", forState: .Normal)
-        btn.addTarget(self, action: #selector(SimpleHttpClientViewController.downloadImg(_:)), forControlEvents: .TouchUpInside)
-        NSLayoutConstraint.activateConstraints([
-            btn.topAnchor.constraintEqualToAnchor(iv.bottomAnchor, constant: 20),
-            btn.centerXAnchor.constraintEqualToAnchor(iv.centerXAnchor)
+        btn.setTitle("Session Data Delegate", for: UIControlState())
+        btn.addTarget(self, action: #selector(SimpleHttpClientViewController.downloadImg(_:)), for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            btn.topAnchor.constraint(equalTo: iv.bottomAnchor, constant: 20),
+            btn.centerXAnchor.constraint(equalTo: iv.centerXAnchor)
             ])
 
     }
@@ -57,37 +57,38 @@ class SessionDataHttpClientViewController: UIViewController, NSURLSessionDataDel
         // Dispose of any resources that can be recreated.
     }
 
-    func downloadImg(sender: UIButton) {
+    func downloadImg(_ sender: UIButton) {
         if self.task != nil {
             return
         }
         
         let s = "https://www.apeth.net/matt/images/phoenixnewest.jpg"
-        if let url = NSURL(string: s) {
-            let req = NSMutableURLRequest(URL: url)
-            NSURLProtocol.setProperty("howdy", forKey: "greeting", inRequest: req)
-            self.task = self.session.dataTaskWithRequest(req)
+        if let url = URL(string: s) {
+            let req = NSMutableURLRequest(url: url)
+            URLProtocol.setProperty("howdy", forKey: "greeting", in: req)
+            self.task = self.session.dataTask(with: url)
+        
             self.data.length = 0
             self.task?.resume()
         }
     }
 
-    func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
-        print("received \(data.length) bytes of data")
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        print("received \(data.count) bytes of data")
         // do something with the data here!
-        self.data.appendData(data)
+        self.data.append(data)
     }
     
     
-    func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         print("completed: error: \(error)")
         self.task = nil
         if error == nil, let iv = self.iv {
-            iv.image = UIImage(data:self.data)
+            iv.image = UIImage(data:self.data as Data)
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.session.finishTasksAndInvalidate()
         self.task = nil

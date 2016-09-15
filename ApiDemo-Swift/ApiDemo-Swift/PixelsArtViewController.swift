@@ -13,10 +13,10 @@ class PixelsArtViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let pixels = PixelsArtView()
         pixels.frame = self.view.bounds
-        pixels.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        pixels.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(pixels)
     }

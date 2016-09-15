@@ -15,16 +15,16 @@ class EmbededVideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        if let url = NSBundle.mainBundle().URLForResource("ElMirage", withExtension: "mp4") {
-            let player = AVPlayer(URL: url)
+        if let url = Bundle.main.url(forResource: "ElMirage", withExtension: "mp4") {
+            let player = AVPlayer(url: url)
             let av = AVPlayerViewController()
             av.player = player
-            av.view.frame = CGRectMake(10, 100, 300, 200)
+            av.view.frame = CGRect(x: 10, y: 100, width: 300, height: 200)
             self.addChildViewController(av)
             self.view.addSubview(av.view)
-            av.didMoveToParentViewController(self)
+            av.didMove(toParentViewController: self)
         }
     }
 

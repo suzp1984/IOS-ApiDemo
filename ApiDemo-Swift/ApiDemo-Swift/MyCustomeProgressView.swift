@@ -24,29 +24,31 @@ class MyCustomeProgressView: UIView {
         }
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         if let c = UIGraphicsGetCurrentContext() {
             
-            UIColor.whiteColor().set()
+            UIColor.white.set()
             
             let ins : CGFloat = 2.0
             let r = self.bounds.insetBy(dx: ins, dy: ins)
             let radius : CGFloat = r.size.height / 2.0
             let mpi = CGFloat(M_PI)
-            let path = CGPathCreateMutable()
+            let path = CGMutablePath()
+            // path.move(to: CGPoint(x: r.maxX - radius, y: ins))
             CGPathMoveToPoint(path, nil, r.maxX - radius, ins)
+            
             CGPathAddArc(path, nil,
                          radius+ins, radius+ins, radius, -mpi/2.0, mpi/2.0, true)
             CGPathAddArc(path, nil,
                          r.maxX - radius, radius+ins, radius, mpi/2.0, -mpi/2.0, true)
-            CGPathCloseSubpath(path)
-            CGContextAddPath(c, path)
-            CGContextSetLineWidth(c, 2)
-            CGContextStrokePath(c)
-            CGContextAddPath(c, path)
-            CGContextClip(c)
-            CGContextFillRect(c, CGRectMake(
-                r.origin.x, r.origin.y, r.size.width * self.value, r.size.height))
+            path.closeSubpath()
+            c.addPath(path)
+            c.setLineWidth(2)
+            c.strokePath()
+            c.addPath(path)
+            c.clip()
+            c.fill(CGRect(
+                x: r.origin.x, y: r.origin.y, width: r.size.width * self.value, height: r.size.height))
         }
         
     }

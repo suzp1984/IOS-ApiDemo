@@ -17,31 +17,31 @@ class UIPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
-        picker.backgroundColor = UIColor.yellowColor()
+        picker.backgroundColor = UIColor.yellow
         self.view.addSubview(picker)
         
         picker.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                picker.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor)
+        NSLayoutConstraint.activate([
+                picker.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
             ])
         
         let selected = UILabel()
         selected.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(selected)
-        NSLayoutConstraint.activateConstraints([
-                selected.bottomAnchor.constraintEqualToAnchor(picker.topAnchor, constant: -20),
-                selected.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+                selected.bottomAnchor.constraint(equalTo: picker.topAnchor, constant: -20),
+                selected.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
         
         self.selectedLabel = selected
         
-        if let f = NSBundle.mainBundle().pathForResource("usa-states", ofType: "txt") {
-            let s = try! String(contentsOfFile: f, encoding: NSUTF8StringEncoding)
-            self.states = s.componentsSeparatedByString("\n")
+        if let f = Bundle.main.path(forResource: "usa-states", ofType: "txt") {
+            let s = try! String(contentsOfFile: f, encoding: String.Encoding.utf8)
+            self.states = s.components(separatedBy: "\n")
         }
     }
 
@@ -50,11 +50,11 @@ class UIPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Dispose of any resources that can be recreated.
     }
 
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if let states = self.states {
             return states.count
         }
@@ -62,7 +62,7 @@ class UIPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return 0
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let lab : UILabel
         if let label = view as? UILabel {
             lab = label
@@ -76,13 +76,13 @@ class UIPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             lab.text = states[row]
         }
         
-        lab.backgroundColor = UIColor.clearColor()
+        lab.backgroundColor = UIColor.clear
         lab.sizeToFit()
         return lab
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if let selectedLabel = self.selectedLabel, states = self.states {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if let selectedLabel = self.selectedLabel, let states = self.states {
             selectedLabel.text = states[row]
         }
     }
@@ -95,8 +95,8 @@ class MyLabel : UILabel {
 }
 
 class MyPickerView: UIPickerView {
-    override func intrinsicContentSize() -> CGSize {
-        var sz = super.intrinsicContentSize()
+    override var intrinsicContentSize : CGSize {
+        var sz = super.intrinsicContentSize
         let h : CGFloat = 140
         sz.height = h
         return sz

@@ -17,23 +17,23 @@ class LayerTransitionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         self.v = UIView()
         self.view.addSubview(v)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 100).active = true
-        v.widthAnchor.constraintEqualToConstant(100.0).active = true
-        v.heightAnchor.constraintEqualToConstant(100.0).active = true
-        v.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor, constant: 0.0).active = true
+        v.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 100).isActive = true
+        v.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        v.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        v.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
         
-        let button = UIButton(type: .System)
-        button.setTitle("Start", forState: .Normal)
-        button.addTarget(self, action: #selector(LayerTransitionViewController.startTransition), forControlEvents: .TouchUpInside)
+        let button = UIButton(type: .system)
+        button.setTitle("Start", for: UIControlState())
+        button.addTarget(self, action: #selector(LayerTransitionViewController.startTransition), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button)
-        button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 10).active = true
-        button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 10).active = true
+        button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 10).isActive = true
+        button.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10).isActive = true
         
         self.layer = CALayer()
         self.v.layer.addSublayer(layer)
@@ -46,7 +46,7 @@ class LayerTransitionViewController: UIViewController {
         // Do not add sublayer in viewDidLayoutSubViews method
         // v.layer.addSublayer(layer)
         self.isMars = true
-        layer.contents = UIImage(named: "Mars")?.CGImage
+        layer.contents = UIImage(named: "Mars")?.cgImage
         layer.contentsGravity = kCAGravityResizeAspectFill
         v.layer.masksToBounds = false // try making this false to see what difference it makes
         v.layer.borderWidth = 2
@@ -65,13 +65,13 @@ class LayerTransitionViewController: UIViewController {
         t.duration = 2
         CATransaction.setDisableActions(true)
         if (self.isMars) {
-            self.layer.contents = UIImage(named: "smiley")?.CGImage
+            self.layer.contents = UIImage(named: "smiley")?.cgImage
         } else {
-            self.layer.contents = UIImage(named: "Mars")?.CGImage
+            self.layer.contents = UIImage(named: "Mars")?.cgImage
         }
         
         self.isMars = !self.isMars
         
-        self.layer.addAnimation(t, forKey: nil)
+        self.layer.add(t, forKey: nil)
     }
 }

@@ -14,37 +14,37 @@ class ImageRenderModeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let iv = UIImageView()
         if let image = UIImage(named: "SmileyTemplate") {
-            image.imageWithRenderingMode(.Automatic)
-            iv.tintColor = UIColor.redColor()
+            image.withRenderingMode(.automatic)
+            iv.tintColor = UIColor.red
             iv.image = image
         }
         
         self.view.addSubview(iv)
         iv.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                iv.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                iv.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor),
-                iv.widthAnchor.constraintEqualToConstant(50),
-                iv.heightAnchor.constraintEqualToConstant(50)
+        NSLayoutConstraint.activate([
+                iv.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                iv.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+                iv.widthAnchor.constraint(equalToConstant: 50),
+                iv.heightAnchor.constraint(equalToConstant: 50)
             ])
         
         let ib = UIButton()
-        ib.tintColor = UIColor.redColor()
+        ib.tintColor = UIColor.red
         if let image = UIImage(named: "SmileyVector") {
-            image.imageWithRenderingMode(.AlwaysTemplate)
-            ib.setBackgroundImage(image, forState: .Normal)
+            image.withRenderingMode(.alwaysTemplate)
+            ib.setBackgroundImage(image, for: UIControlState())
         }
         
         self.view.addSubview(ib)
         ib.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                ib.topAnchor.constraintEqualToAnchor(iv.bottomAnchor, constant: 10),
-                ib.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
+        NSLayoutConstraint.activate([
+                ib.topAnchor.constraint(equalTo: iv.bottomAnchor, constant: 10),
+                ib.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             ])
     }
 

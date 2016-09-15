@@ -12,10 +12,10 @@ class DownloaderTableViewController: UITableViewController {
 
     let cellIdentifier = "downloader"
     
-    lazy var configuration : NSURLSessionConfiguration = {
-        let configuration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+    lazy var configuration : URLSessionConfiguration = {
+        let configuration = URLSessionConfiguration.ephemeral
         configuration.allowsCellularAccess = false
-        configuration.URLCache = nil
+        configuration.urlCache = nil
         return configuration
     }()
     
@@ -53,7 +53,7 @@ class DownloaderTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15)
         self.tableView.rowHeight = 58
     }
@@ -65,19 +65,19 @@ class DownloaderTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.model.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
-        let m = self.model[indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let m = self.model[(indexPath as NSIndexPath).row]
         cell.textLabel!.text = m.text
         // have we got a picture?
         if let im = m.im {
@@ -91,11 +91,11 @@ class DownloaderTableViewController: UITableViewController {
                     if url == nil {
                         return
                     }
-                    let data = NSData(contentsOfURL: url)!
+                    let data = try! Data(contentsOf: url)
                     let im = UIImage(data:data)
                     m.im = im
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self!.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+                    DispatchQueue.main.async {
+                        self!.tableView.reloadRows(at: [indexPath], with: .none)
                     }
                 }
             }
@@ -104,7 +104,7 @@ class DownloaderTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
     }
     
@@ -119,5 +119,5 @@ class Model {
     var text : String!
     var im : UIImage!
     var picurl : String!
-    var task : NSURLSessionTask!
+    var task : URLSessionTask!
 }

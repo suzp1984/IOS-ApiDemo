@@ -13,17 +13,17 @@ class ScreenEdgePanGestureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let v = UIView()
-        v.frame = CGRectMake(0, 0, 150, 150)
+        v.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         v.center = CGPoint(x: self.view.bounds.width - 75, y: self.view.center.y)
-        v.backgroundColor = UIColor.redColor()
+        v.backgroundColor = UIColor.red
         
         self.view.addSubview(v)
         
         let edge = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(ScreenEdgePanGestureViewController.edgePanHandle(_:)))
-        edge.edges = .Right
+        edge.edges = .right
         
         v.addGestureRecognizer(edge)
     }
@@ -33,18 +33,18 @@ class ScreenEdgePanGestureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func edgePanHandle(e : UIScreenEdgePanGestureRecognizer) {
+    func edgePanHandle(_ e : UIScreenEdgePanGestureRecognizer) {
         
         if let v = e.view {
             switch e.state {
-            case .Began, .Changed:
-                let delta = e.translationInView(v.superview)
+            case .began, .changed:
+                let delta = e.translation(in: v.superview)
                 var c = v.center
                 c.x += delta.x
                 c.y += delta.y
                 v.center = c
-                e.setTranslation(CGPointZero, inView: v.superview)
-            case .Failed:
+                e.setTranslation(CGPoint.zero, in: v.superview)
+            case .failed:
                 print("Dragging states is failed.")
             default:
                 break

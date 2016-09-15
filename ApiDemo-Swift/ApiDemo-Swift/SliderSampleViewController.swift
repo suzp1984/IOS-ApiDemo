@@ -15,26 +15,26 @@ class SliderSampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let slider = UISlider()
         slider.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(slider)
         
-        NSLayoutConstraint.activateConstraints([
-                slider.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                slider.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                slider.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, constant: -40)
+        NSLayoutConstraint.activate([
+                slider.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                slider.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                slider.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -40)
             ])
         
-        slider.addTarget(self, action: #selector(SliderSampleViewController.sliderValue(_:)), forControlEvents: .ValueChanged)
+        slider.addTarget(self, action: #selector(SliderSampleViewController.sliderValue(_:)), for: .valueChanged)
         
         self.label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(label)
-        NSLayoutConstraint.activateConstraints([
-                label.topAnchor.constraintEqualToAnchor(slider.bottomAnchor, constant: 10),
-                label.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+                label.topAnchor.constraint(equalTo: slider.bottomAnchor, constant: 10),
+                label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
         
         // custome slider
@@ -48,7 +48,7 @@ class SliderSampleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func sliderValue(sender: UISlider) {
+    func sliderValue(_ sender: UISlider) {
         label.text = String(sender.value)
         // print(sender.value)
     }

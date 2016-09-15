@@ -23,25 +23,25 @@ class CIFilterTransitionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let button = UIButton(type: .System)
-        button.setTitle("Start", forState: .Normal)
-        button.addTarget(self, action: #selector(CIFilterTransitionViewController.start), forControlEvents: .TouchUpInside)
+        let button = UIButton(type: .system)
+        button.setTitle("Start", for: UIControlState())
+        button.addTarget(self, action: #selector(CIFilterTransitionViewController.start), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button)
         
-        button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20).active = true
-        button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20).active = true
+        button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20).isActive = true
+        button.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20).isActive = true
         
         let v = UIView()
         self.view.addSubview(v)
-        v.backgroundColor = UIColor.redColor()
+        v.backgroundColor = UIColor.red
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.topAnchor.constraintEqualToAnchor(button.bottomAnchor, constant: 20).active = true
-        v.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor, constant: 0.0).active = true
-        v.widthAnchor.constraintEqualToConstant(240.0).active = true
-        v.heightAnchor.constraintEqualToConstant(240.0).active = true
+        v.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20).isActive = true
+        v.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
+        v.widthAnchor.constraint(equalToConstant: 240.0).isActive = true
+        v.heightAnchor.constraint(equalToConstant: 240.0).isActive = true
         
         self.v = v
     }
@@ -57,9 +57,9 @@ class CIFilterTransitionViewController: UIViewController {
         self.moiextent = moi.extent
         
         let col = CIFilter(name:"CIConstantColorGenerator")!
-        let cicol = CIColor(color:UIColor.redColor())
+        let cicol = CIColor(color:UIColor.red)
         col.setValue(cicol, forKey:"inputColor")
-        let colorimage = col.valueForKey("outputImage") as! CIImage
+        let colorimage = col.value(forKey: "outputImage") as! CIImage
         
         let tran = CIFilter(name:"CIFlashTransition")!
         tran.setValue(colorimage, forKey:"inputImage")
@@ -71,25 +71,25 @@ class CIFilterTransitionViewController: UIViewController {
         self.timestamp = 0.0 // signal that we are starting
         self.context = CIContext(options:nil)
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             
             let link = CADisplayLink(target:self, selector:#selector(self.nextFrame))
-            link.addToRunLoop(NSRunLoop.mainRunLoop(), forMode:NSDefaultRunLoopMode)
+            link.add(to: RunLoop.main, forMode:RunLoopMode.defaultRunLoopMode)
             
         }
     }
     
-    func nextFrame(sender:CADisplayLink) {
+    func nextFrame(_ sender:CADisplayLink) {
         if self.timestamp < 0.01 { // pick up and store first timestamp
             self.timestamp = sender.timestamp
             self.frame = 0.0
         } else { // calculate frame
             self.frame = (sender.timestamp - self.timestamp) * SCALE
         }
-        sender.paused = true // defend against frame loss
+        sender.isPaused = true // defend against frame loss
         
         self.tran.setValue(self.frame, forKey:"inputTime")
-        let moi = self.context.createCGImage(tran.outputImage!, fromRect:self.moiextent)
+        let moi = self.context.createCGImage(tran.outputImage!, from:self.moiextent)
         CATransaction.setDisableActions(true)
         self.v.layer.contents = moi
         
@@ -97,7 +97,7 @@ class CIFilterTransitionViewController: UIViewController {
             print("invalidate")
             sender.invalidate()
         }
-        sender.paused = false
+        sender.isPaused = false
         
         print("here \(self.frame)") // useful for seeing dropped frame rate
     }

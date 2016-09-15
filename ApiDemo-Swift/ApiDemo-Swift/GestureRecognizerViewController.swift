@@ -13,18 +13,18 @@ class GestureRecognizerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let v = UIView()
-        v.backgroundColor = UIColor.redColor()
+        v.backgroundColor = UIColor.red
         v.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(v)
-        NSLayoutConstraint.activateConstraints([
-                v.widthAnchor.constraintEqualToConstant(150),
-                v.heightAnchor.constraintEqualToConstant(150),
-                v.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 40),
-                v.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+                v.widthAnchor.constraint(equalToConstant: 150),
+                v.heightAnchor.constraint(equalToConstant: 150),
+                v.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 40),
+                v.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
         
         let t2 = UITapGestureRecognizer(target: self, action: #selector(GestureRecognizerViewController.doubleTap))
@@ -32,7 +32,7 @@ class GestureRecognizerViewController: UIViewController {
         v.addGestureRecognizer(t2)
         
         let t1 = UITapGestureRecognizer(target: self, action: #selector(GestureRecognizerViewController.singleTap))
-        t1.requireGestureRecognizerToFail(t2)
+        t1.require(toFail: t2)
         v.addGestureRecognizer(t1)
         
         let p = UIPanGestureRecognizer(target: self, action: #selector(GestureRecognizerViewController.dragging(_:)))
@@ -52,17 +52,17 @@ class GestureRecognizerViewController: UIViewController {
         print("double tap")
     }
     
-    func dragging(p: UIPanGestureRecognizer) {
+    func dragging(_ p: UIPanGestureRecognizer) {
         if let v = p.view {
             switch p.state {
-            case .Began, .Changed:
-                let delta = p.translationInView(v.superview)
+            case .began, .changed:
+                let delta = p.translation(in: v.superview)
                 var c = v.center
                 c.x += delta.x
                 c.y += delta.y
                 v.center = c
-                p.setTranslation(CGPointZero, inView: v.superview)
-            case .Failed:
+                p.setTranslation(CGPoint.zero, in: v.superview)
+            case .failed:
                 print("Dragging states is failed.")
             default:
                 break

@@ -13,11 +13,11 @@ class MandelBrotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let mandelbrot = MandelbrotDrawView()
         mandelbrot.frame = self.view.bounds
-        mandelbrot.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        mandelbrot.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(mandelbrot)
     }

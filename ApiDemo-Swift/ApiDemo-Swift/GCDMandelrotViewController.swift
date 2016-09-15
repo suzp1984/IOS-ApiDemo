@@ -16,28 +16,28 @@ class GCDMandelrotViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let mandelbrot = GCDMandelrotView()
         mandelbrot.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(mandelbrot)
-        NSLayoutConstraint.activateConstraints([
-            mandelbrot.widthAnchor.constraintEqualToConstant(350),
-            mandelbrot.heightAnchor.constraintEqualToConstant(250),
-            mandelbrot.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-            mandelbrot.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+            mandelbrot.widthAnchor.constraint(equalToConstant: 350),
+            mandelbrot.heightAnchor.constraint(equalToConstant: 250),
+            mandelbrot.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+            mandelbrot.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
-        mandelbrot.backgroundColor = UIColor.redColor()
+        mandelbrot.backgroundColor = UIColor.red
         self.mandelbrot = mandelbrot
         
-        let button = UIButton(type: .System)
-        button.setTitle("draw puppy", forState: .Normal)
-        button.addTarget(self, action: #selector(NoThreadMandelbrotViewController.doDraw(_:)), forControlEvents: .TouchUpInside)
+        let button = UIButton(type: .system)
+        button.setTitle("draw puppy", for: UIControlState())
+        button.addTarget(self, action: #selector(NoThreadMandelbrotViewController.doDraw(_:)), for: .touchUpInside)
         self.view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-            button.topAnchor.constraintEqualToAnchor(mandelbrot.bottomAnchor, constant: 20),
-            button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: mandelbrot.bottomAnchor, constant: 20),
+            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
 
     }
@@ -47,7 +47,7 @@ class GCDMandelrotViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func doDraw(sender: UIButton) {
+    func doDraw(_ sender: UIButton) {
         if let mandelbrot = self.mandelbrot {
             mandelbrot.drawThatPuppy()
         }

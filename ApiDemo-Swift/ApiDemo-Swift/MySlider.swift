@@ -21,29 +21,29 @@ class MySlider: UISlider {
         //    self.maximumTrackTintColor = UIColor.greenColor()
         //    self.thumbTintColor = UIColor.orangeColor()
         
-        self.setThumbImage(UIImage(named:"moneybag1.png")!, forState: .Normal)
-        let coinEnd = UIImage(named:"coin2.png")!.resizableImageWithCapInsets(
-            UIEdgeInsetsMake(0,7,0,7), resizingMode: .Stretch)
-        self.setMinimumTrackImage(coinEnd, forState: .Normal)
-        self.setMaximumTrackImage(coinEnd, forState: .Normal)
+        self.setThumbImage(UIImage(named:"moneybag1.png")!, for: UIControlState())
+        let coinEnd = UIImage(named:"coin2.png")!.resizableImage(
+            withCapInsets: UIEdgeInsetsMake(0,7,0,7), resizingMode: .stretch)
+        self.setMinimumTrackImage(coinEnd, for: UIControlState())
+        self.setMaximumTrackImage(coinEnd, for: UIControlState())
         
         // self.bounds.size.height += 30
     }
     
-    override func intrinsicContentSize() -> CGSize {
-        var sz = super.intrinsicContentSize()
+    override var intrinsicContentSize : CGSize {
+        var sz = super.intrinsicContentSize
         sz.height += 30
         return sz
     }
     
-    func tapped(g:UIGestureRecognizer) {
+    func tapped(_ g:UIGestureRecognizer) {
         let s = g.view as! UISlider
-        if s.highlighted {
+        if s.isHighlighted {
             return // tap on thumb, let slider deal with it
         }
-        let pt = g.locationInView(s)
-        let track = s.trackRectForBounds(s.bounds)
-        if !CGRectContainsPoint(CGRectInset(track, 0, -10), pt) {
+        let pt = g.location(in: s)
+        let track = s.trackRect(forBounds: s.bounds)
+        if !track.insetBy(dx: 0, dy: -10).contains(pt) {
             return // not on track, forget it
         }
         let percentage = pt.x / s.bounds.size.width
@@ -57,24 +57,24 @@ class MySlider: UISlider {
         // still broken in iOS 9
     }
     
-    override func maximumValueImageRectForBounds(bounds: CGRect) -> CGRect {
-        return super.maximumValueImageRectForBounds(bounds).offsetBy(dx: 31, dy: 0)
+    override func maximumValueImageRect(forBounds bounds: CGRect) -> CGRect {
+        return super.maximumValueImageRect(forBounds: bounds).offsetBy(dx: 31, dy: 0)
     }
     
-    override func minimumValueImageRectForBounds(bounds: CGRect) -> CGRect {
-        return super.minimumValueImageRectForBounds(bounds).offsetBy(dx: -31, dy: 0)
+    override func minimumValueImageRect(forBounds bounds: CGRect) -> CGRect {
+        return super.minimumValueImageRect(forBounds: bounds).offsetBy(dx: -31, dy: 0)
     }
     
-    override func trackRectForBounds(bounds: CGRect) -> CGRect {
-        var result = super.trackRectForBounds(bounds)
+    override func trackRect(forBounds bounds: CGRect) -> CGRect {
+        var result = super.trackRect(forBounds: bounds)
         result.origin.x = 0
         result.size.width = bounds.size.width
         return result
     }
     
-    override func thumbRectForBounds(bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
-        return super.thumbRectForBounds(
-            bounds, trackRect: rect, value: value)
+    override func thumbRect(forBounds bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
+        return super.thumbRect(
+            forBounds: bounds, trackRect: rect, value: value)
             .offsetBy(dx: 0, dy: -7)
     }
 

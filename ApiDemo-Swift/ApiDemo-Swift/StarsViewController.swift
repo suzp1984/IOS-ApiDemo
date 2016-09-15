@@ -13,11 +13,11 @@ class StarsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let star = StarsView()
         star.frame = self.view.bounds
-        star.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        star.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(star)
     }

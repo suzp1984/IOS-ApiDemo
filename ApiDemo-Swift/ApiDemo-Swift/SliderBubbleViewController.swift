@@ -14,15 +14,15 @@ class SliderBubbleViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let bubble = SliderBubbleView()
         bubble.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(bubble)
-        NSLayoutConstraint.activateConstraints([
-                bubble.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor),
-                bubble.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                bubble.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, constant: -40)
+        NSLayoutConstraint.activate([
+                bubble.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+                bubble.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                bubble.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -40)
             ])
     }
 

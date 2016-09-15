@@ -13,7 +13,7 @@ class LabelFontViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let label1 = UILabel()
         label1.text = "A sane and stupied label"
@@ -27,20 +27,20 @@ class LabelFontViewController: UIViewController {
         self.view.addSubview(label1)
         self.view.addSubview(label2)
         
-        NSLayoutConstraint.activateConstraints([
-            label1.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 30),
-            label1.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20),
-            label2.topAnchor.constraintEqualToAnchor(label1.bottomAnchor, constant: 20),
-            label2.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+            label1.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 30),
+            label1.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20),
+            label2.topAnchor.constraint(equalTo: label1.bottomAnchor, constant: 20),
+            label2.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
         // set label2 font
         
         // print all font family and its fontnames first
-        for family: String in UIFont.familyNames()
+        for family: String in UIFont.familyNames
         {
             print("\(family)")
-            for names: String in UIFont.fontNamesForFamilyName(family)
+            for names: String in UIFont.fontNames(forFamilyName: family)
             {
                 print("== \(names)")
             }
@@ -54,7 +54,7 @@ class LabelFontViewController: UIViewController {
 
         
         // set lable1 fonts
-        label1.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        label1.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         
         let name = "NanumBrush" // another one to try: YuppySC-Regular, also good old LucidaGrande
         let size : CGFloat = 24
@@ -70,24 +70,24 @@ class LabelFontViewController: UIViewController {
             [desc], nil, {
                 (state:CTFontDescriptorMatchingState, prog:CFDictionary!) -> Bool in
                 switch state {
-                case .DidBegin:
+                case .didBegin:
                     NSLog("%@", "matching did begin")
-                case .WillBeginDownloading:
+                case .willBeginDownloading:
                     NSLog("%@", "downloading will begin")
-                case .Downloading:
+                case .downloading:
                     let d = prog as NSDictionary
                     let key = kCTFontDescriptorMatchingPercentage
                     let cur : AnyObject? = d[key as NSString]
                     if let cur = cur as? NSNumber {
                         NSLog("progress: %@%%", cur)
                     }
-                case .DidFinishDownloading:
+                case .didFinishDownloading:
                     NSLog("%@", "downloading did finish")
-                case .DidFailWithError:
+                case .didFailWithError:
                     NSLog("%@", "downloading failed")
-                case .DidFinish:
+                case .didFinish:
                     NSLog("%@", "matching did finish")
-                    dispatch_async(dispatch_get_main_queue(), {
+                    DispatchQueue.main.async(execute: {
                         let f : UIFont! = UIFont(name:name, size:size)
                         if f != nil {
                             NSLog("%@", "got the font!")

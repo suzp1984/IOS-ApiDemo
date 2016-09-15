@@ -14,15 +14,15 @@ class ContentScrollViewController: UIViewController {
         super.viewDidLoad()
         
         let sv = UIScrollView()
-        sv.backgroundColor = UIColor.cyanColor()
+        sv.backgroundColor = UIColor.cyan
         sv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(sv)
         
         var constraints = [NSLayoutConstraint]()
-        constraints.append(sv.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor))
-        constraints.append(sv.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor))
-        constraints.append(sv.topAnchor.constraintEqualToAnchor(self.view.topAnchor))
-        constraints.append(sv.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor))
+        constraints.append(sv.leftAnchor.constraint(equalTo: self.view.leftAnchor))
+        constraints.append(sv.rightAnchor.constraint(equalTo: self.view.rightAnchor))
+        constraints.append(sv.topAnchor.constraint(equalTo: self.view.topAnchor))
+        constraints.append(sv.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor))
         
         let content = UIView()
         sv.addSubview(content)
@@ -33,15 +33,15 @@ class ContentScrollViewController: UIViewController {
             let lab = UILabel()
             lab.text = "This is Lable \(i + 1)"
             lab.sizeToFit()
-            lab.frame.origin = CGPointMake(10, y)
+            lab.frame.origin = CGPoint(x: 10, y: y)
             content.addSubview(lab)
             y += lab.bounds.size.height + 10
         }
         
-        content.frame = CGRectMake(0, 0, 0, y)
+        content.frame = CGRect(x: 0, y: 0, width: 0, height: y)
         sv.contentSize = content.frame.size
         
-        NSLayoutConstraint.activateConstraints(constraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     override func didReceiveMemoryWarning() {

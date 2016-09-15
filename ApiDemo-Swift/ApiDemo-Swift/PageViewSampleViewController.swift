@@ -15,17 +15,17 @@ class PageViewSampleViewController: UIViewController, UIPageViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let btn = UIButton(type: .System)
-        btn.setTitle("present PageView", forState: .Normal)
-        btn.addTarget(self, action: #selector(PageViewSampleViewController.doPresent(_:)), forControlEvents: .TouchUpInside)
+        let btn = UIButton(type: .system)
+        btn.setTitle("present PageView", for: UIControlState())
+        btn.addTarget(self, action: #selector(PageViewSampleViewController.doPresent(_:)), for: .touchUpInside)
         
         self.view.addSubview(btn)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                btn.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                btn.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
+        NSLayoutConstraint.activate([
+                btn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                btn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
     }
 
@@ -34,20 +34,20 @@ class PageViewSampleViewController: UIViewController, UIPageViewControllerDelega
         // Dispose of any resources that can be recreated.
     }
     
-    func doPresent(sender: UIButton) {
-        let pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
-        pageController.setViewControllers([SecondPresentViewController()], direction: .Forward, animated: true, completion: nil)
+    func doPresent(_ sender: UIButton) {
+        let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        pageController.setViewControllers([SecondPresentViewController()], direction: .forward, animated: true, completion: nil)
         pageController.dataSource = self
         
         
-        self.presentViewController(pageController, animated: true, completion: nil)
+        self.present(pageController, animated: true, completion: nil)
     }
     
-    func pageViewControllerSupportedInterfaceOrientations(pageViewController: UIPageViewController) -> UIInterfaceOrientationMask {
-        return .Portrait
+    func pageViewControllerSupportedInterfaceOrientations(_ pageViewController: UIPageViewController) -> UIInterfaceOrientationMask {
+        return .portrait
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         if viewController is SecondPresentViewController {
             return ThirdPresentViewController()
@@ -56,7 +56,7 @@ class PageViewSampleViewController: UIViewController, UIPageViewControllerDelega
         return nil
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         if viewController is ThirdPresentViewController {
             return SecondPresentViewController()
@@ -65,11 +65,11 @@ class PageViewSampleViewController: UIViewController, UIPageViewControllerDelega
         return nil
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return 2
     }
     
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         let page = pageViewController.viewControllers![0]
         
         if page is SecondPresentViewController {

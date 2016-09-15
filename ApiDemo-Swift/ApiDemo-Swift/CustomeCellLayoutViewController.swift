@@ -15,7 +15,7 @@ class CustomeCellLayoutViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerClass(MyCell.self, forCellReuseIdentifier: cellIdentifier)
+        self.tableView.register(MyCell.self, forCellReuseIdentifier: cellIdentifier)
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15)
         self.tableView.rowHeight = 58
     }
@@ -27,23 +27,23 @@ class CustomeCellLayoutViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 20
     }
 
  
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MyCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MyCell
 
         if cell.textLabel!.numberOfLines != 2 { // never previously configured
             cell.textLabel!.font = UIFont(name:"Helvetica-Bold", size:16)
-            cell.textLabel!.lineBreakMode = .ByWordWrapping
+            cell.textLabel!.lineBreakMode = .byWordWrapping
             cell.textLabel!.numberOfLines = 2
             // next line fails, I regard this as a bug
             // cell.separatorInset = UIEdgeInsetsMake(0,0,0,0)
@@ -53,12 +53,12 @@ class CustomeCellLayoutViewController: UITableViewController {
         
         // shrink apparent size of image
         let im = UIImage(named:"Moi")!
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(36,36), true, 0.0)
-        im.drawInRect(CGRectMake(0,0,36,36))
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 36,height: 36), true, 0.0)
+        im.draw(in: CGRect(x: 0,y: 0,width: 36,height: 36))
         let im2 = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         cell.imageView!.image = im2
-        cell.imageView!.contentMode = .Center
+        cell.imageView!.contentMode = .center
 
 
         return cell

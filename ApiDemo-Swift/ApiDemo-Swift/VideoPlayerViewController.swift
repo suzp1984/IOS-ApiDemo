@@ -15,17 +15,17 @@ class VideoPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
      
-        let button = UIButton(type: .System)
-        button.setTitle("Video Player", forState: .Normal)
-        button.addTarget(self, action: #selector(VideoPlayerViewController.playVideo(_:)), forControlEvents: .TouchUpInside)
+        let button = UIButton(type: .system)
+        button.setTitle("Video Player", for: UIControlState())
+        button.addTarget(self, action: #selector(VideoPlayerViewController.playVideo(_:)), for: .touchUpInside)
         self.view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                button.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
+        NSLayoutConstraint.activate([
+                button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
     }
 
@@ -34,12 +34,12 @@ class VideoPlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func playVideo(sender: UIButton) {
+    func playVideo(_ sender: UIButton) {
         let av = AVPlayerViewController()
-        if let url = NSBundle.mainBundle().URLForResource("ElMirage", withExtension: "mp4") {
-            let player = AVPlayer(URL: url)
+        if let url = Bundle.main.url(forResource: "ElMirage", withExtension: "mp4") {
+            let player = AVPlayer(url: url)
             av.player = player
-            self.presentViewController(av, animated: true, completion: nil)
+            self.present(av, animated: true, completion: nil)
         }
     }
 }

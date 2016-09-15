@@ -19,7 +19,7 @@ class SimpleTableViewController: UIViewController, UITableViewDelegate, UITableV
         let table = UITableView(frame: self.view.bounds)
         table.delegate = self
         table.dataSource = self
-        table.backgroundColor = UIColor.cyanColor()
+        table.backgroundColor = UIColor.cyan
         
         self.view.addSubview(table)
         self.navigationItem.leftItemsSupplementBackButton = true
@@ -30,35 +30,35 @@ class SimpleTableViewController: UIViewController, UITableViewDelegate, UITableV
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell : UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell : UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if cell == nil {
-            cell = UITableViewCell(style:.Default, reuseIdentifier:cellIdentifier)
+            cell = UITableViewCell(style:.default, reuseIdentifier:cellIdentifier)
             
-            cell.textLabel!.textColor = UIColor.whiteColor()
+            cell.textLabel!.textColor = UIColor.white
             let v = UIImageView()
-            v.contentMode = .ScaleToFill
+            v.contentMode = .scaleToFill
             v.image = UIImage(named: "linen.png")
             cell.backgroundView = v
             let v2 = UIView()
-            v2.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.2)
+            v2.backgroundColor = UIColor.blue.withAlphaComponent(0.2)
             cell.selectedBackgroundView = v2
-            cell.backgroundColor = UIColor.redColor()
+            cell.backgroundColor = UIColor.red
         }
         
-        cell.textLabel!.text = "Hello There! \(indexPath.row)"
+        cell.textLabel!.text = "Hello There! \((indexPath as NSIndexPath).row)"
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 

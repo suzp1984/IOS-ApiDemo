@@ -14,18 +14,18 @@ class TabBarSampleViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         
-        let btn = UIButton(type: .System)
-        btn.setTitle("go to Tabbar", forState: .Normal)
-        btn.addTarget(self, action: #selector(TabBarSampleViewController.doPresent(_:)), forControlEvents: .TouchUpInside)
+        let btn = UIButton(type: .system)
+        btn.setTitle("go to Tabbar", for: UIControlState())
+        btn.addTarget(self, action: #selector(TabBarSampleViewController.doPresent(_:)), for: .touchUpInside)
         self.view.addSubview(btn)
         btn.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                btn.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                btn.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
+        NSLayoutConstraint.activate([
+                btn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                btn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
         
     }
@@ -35,19 +35,19 @@ class TabBarSampleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func doPresent(sender: UIButton) {
+    func doPresent(_ sender: UIButton) {
         let tabControl = UITabBarController()
         let first = SecondPresentViewController()
-        first.tabBarItem = UITabBarItem(tabBarSystemItem: .Bookmarks, tag: 0)
+        first.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
         let third = ThirdPresentViewController()
-        third.tabBarItem = UITabBarItem(tabBarSystemItem: .Contacts, tag: 1)
+        third.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
         
         tabControl.viewControllers = [first, third]
         tabControl.selectedIndex = 1
         
         // UITabBarItem(tabBarSystemItem: .Bookmarks, tag: 0)
         
-        self.presentViewController(tabControl, animated: true, completion: nil)
+        self.present(tabControl, animated: true, completion: nil)
     }
 
 }

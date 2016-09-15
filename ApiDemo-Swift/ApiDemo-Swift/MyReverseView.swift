@@ -7,13 +7,13 @@ class MyReverseView: UIView {
     
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let f = self.bounds.insetBy(dx: 10, dy: 10)
         let con = UIGraphicsGetCurrentContext()!
         if (self.reverse) {
-            CGContextStrokeEllipseInRect(con, f)
+            con.strokeEllipse(in: f)
         } else {
-            CGContextStrokeRect(con, f)
+            con.stroke(f)
         }
         
         self.reverse = !self.reverse

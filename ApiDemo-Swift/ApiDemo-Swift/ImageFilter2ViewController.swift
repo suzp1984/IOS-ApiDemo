@@ -16,28 +16,28 @@ class ImageFilter2ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(iv)
         
-        NSLayoutConstraint.activateConstraints([
-            iv.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-            iv.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 10),
-            iv.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -10),
-            iv.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -20)
+        NSLayoutConstraint.activate([
+            iv.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+            iv.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10),
+            iv.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10),
+            iv.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor, constant: -20)
             ])
         
         let vig = MyVignetteFilter()
         let moici = CIImage(image: UIImage(named:"Moi")!)!
-        vig.setValuesForKeysWithDictionary([
+        vig.setValuesForKeys([
             "inputImage":moici,
             "inputPercentage":0.7
             ])
         let outim = vig.outputImage!
         
-        let outimcg = self.context.createCGImage(outim, fromRect: outim.extent)
-        iv.image = UIImage(CGImage: outimcg)
+        let outimcg = self.context.createCGImage(outim, from: outim.extent)
+        iv.image = UIImage(cgImage: outimcg!)
     }
 
     override func didReceiveMemoryWarning() {

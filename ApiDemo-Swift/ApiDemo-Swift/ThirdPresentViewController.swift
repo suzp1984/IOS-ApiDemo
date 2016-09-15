@@ -13,18 +13,18 @@ class ThirdPresentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.redColor()
+        self.view.backgroundColor = UIColor.red
         
-        let button = UIButton(type: .System)
-        button.setTitle("dismiss", forState: .Normal)
-        button.addTarget(self, action: #selector(ThirdPresentViewController.doDismiss(_:)), forControlEvents: .TouchUpInside)
-        button.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        let button = UIButton(type: .system)
+        button.setTitle("dismiss", for: UIControlState())
+        button.addTarget(self, action: #selector(ThirdPresentViewController.doDismiss(_:)), for: .touchUpInside)
+        button.setTitleColor(UIColor.blue, for: UIControlState())
         
         self.view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-            button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-            button.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
         
         
@@ -35,8 +35,8 @@ class ThirdPresentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func doDismiss(sender: UIButton) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    func doDismiss(_ sender: UIButton) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
 }

@@ -16,24 +16,24 @@ class CustomeDynamicsBehaviorViewController: UIViewController, UIDynamicAnimator
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         self.view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Start", forState: .Normal)
-        button.addTarget(self, action: #selector(DynamicsViewController.start), forControlEvents: .TouchUpInside)
-        button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20).active = true
-        button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20).active = true
+        button.setTitle("Start", for: UIControlState())
+        button.addTarget(self, action: #selector(DynamicsViewController.start), for: .touchUpInside)
+        button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20).isActive = true
+        button.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20).isActive = true
         
         self.iv = MyIV(image: UIImage(named: "Mars"))
         self.iv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.iv)
-        self.iv.topAnchor.constraintEqualToAnchor(button.bottomAnchor, constant: 20).active = true
-        self.iv.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
+        self.iv.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20).isActive = true
+        self.iv.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         // self.iv.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-        self.iv.widthAnchor.constraintEqualToConstant(100).active = true
-        self.iv.heightAnchor.constraintEqualToConstant(100).active = true
+        self.iv.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        self.iv.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         self.anim = UIDynamicAnimator(referenceView: self.view)
         self.anim.delegate = self
@@ -44,17 +44,17 @@ class CustomeDynamicsBehaviorViewController: UIViewController, UIDynamicAnimator
         // Dispose of any resources that can be recreated.
     }
     
-    func start(sender: UIButton) {
-        sender.enabled = false
+    func start(_ sender: UIButton) {
+        sender.isEnabled = false
         
         self.anim.addBehavior(MyDropBounceAndRollBehavior(view:self.iv))
     }
     
-    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
+    func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
         print("pause")
     }
     
-    func dynamicAnimatorWillResume(animator: UIDynamicAnimator) {
+    func dynamicAnimatorWillResume(_ animator: UIDynamicAnimator) {
         print("resume")
     }
 

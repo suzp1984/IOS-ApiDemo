@@ -15,17 +15,17 @@ class StatusBarStyleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor.blue
         
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Hide StatusBar", forState: .Normal)
-        button.setTitleColor(UIColor.yellowColor(), forState: .Normal)
-        button.addTarget(self, action: #selector(StatusBarStyleViewController.toggleStatusBar(_:)), forControlEvents: .TouchUpInside)
+        button.setTitle("Hide StatusBar", for: UIControlState())
+        button.setTitleColor(UIColor.yellow, for: UIControlState())
+        button.addTarget(self, action: #selector(StatusBarStyleViewController.toggleStatusBar(_:)), for: .touchUpInside)
         self.view.addSubview(button)
         
-        button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-        button.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,27 +33,27 @@ class StatusBarStyleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return self.hide
     }
     
-    override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
-        return .Fade
+    override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
+        return .fade
     }
     
-    func toggleStatusBar(sender: UIButton) -> Void {
+    func toggleStatusBar(_ sender: UIButton) -> Void {
         self.hide = !self.hide
         if self.hide {
-            sender.setTitle("Show StatusBar", forState: .Normal)
+            sender.setTitle("Show StatusBar", for: UIControlState())
         } else {
-            sender.setTitle("Hide StatusBar", forState: .Normal)
+            sender.setTitle("Hide StatusBar", for: UIControlState())
         }
         
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.setNeedsStatusBarAppearanceUpdate()
             self.view.layoutIfNeeded()
         })

@@ -6,28 +6,28 @@ class LayerHierarchyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let layer1 = CALayer()
-        layer1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1).CGColor
-        layer1.frame = CGRectMake(113, 111, 132, 194)
+        layer1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1).cgColor
+        layer1.frame = CGRect(x: 113, y: 111, width: 132, height: 194)
         self.view.layer.addSublayer(layer1)
         
         let layer2 = CALayer()
-        layer2.backgroundColor = UIColor(red: 0.5, green: 1, blue: 0, alpha: 1).CGColor
-        layer2.frame = CGRectMake(41, 56, 132, 194)
+        layer2.backgroundColor = UIColor(red: 0.5, green: 1, blue: 0, alpha: 1).cgColor
+        layer2.frame = CGRect(x: 41, y: 56, width: 132, height: 194)
         layer1.addSublayer(layer2)
         
         let layer3 = CALayer()
         let im = UIImage(named: "smiley")!
-        layer3.frame = CGRect(origin: CGPointMake(180, 180), size: im.size)
-        layer3.contents = im.CGImage
+        layer3.frame = CGRect(origin: CGPoint(x: 180, y: 180), size: im.size)
+        layer3.contents = im.cgImage
         
         self.view.layer.addSublayer(layer3)
         
         let layer4 = CALayer()
-        layer4.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1).CGColor
-        layer4.frame = CGRectMake(43, 197, 160, 230)
+        layer4.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1).cgColor
+        layer4.frame = CGRect(x: 43, y: 197, width: 160, height: 230)
         self.view.layer.addSublayer(layer4)
     }
 

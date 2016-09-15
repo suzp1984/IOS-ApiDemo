@@ -15,7 +15,7 @@ class CustomContentViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15)
         self.tableView.rowHeight = 58
     }
@@ -27,18 +27,18 @@ class CustomContentViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 20
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
 
         if cell.viewWithTag(1) == nil {
             let iv = UIImageView()
@@ -49,18 +49,18 @@ class CustomContentViewController: UITableViewController {
             cell.contentView.addSubview(lab)
             iv.translatesAutoresizingMaskIntoConstraints = false
             lab.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activateConstraints([
-                iv.centerYAnchor.constraintEqualToAnchor(cell.contentView.centerYAnchor),
-                iv.widthAnchor.constraintEqualToAnchor(iv.heightAnchor),
-                lab.topAnchor.constraintEqualToAnchor(cell.contentView.topAnchor),
-                lab.bottomAnchor.constraintEqualToAnchor(cell.contentView.bottomAnchor),
-                lab.leftAnchor.constraintEqualToAnchor(cell.contentView.leftAnchor, constant: 15),
-                iv.leftAnchor.constraintEqualToAnchor(lab.rightAnchor, constant: 15),
-                iv.rightAnchor.constraintEqualToAnchor(cell.contentView.rightAnchor, constant: -15)
+            NSLayoutConstraint.activate([
+                iv.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor),
+                iv.widthAnchor.constraint(equalTo: iv.heightAnchor),
+                lab.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
+                lab.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
+                lab.leftAnchor.constraint(equalTo: cell.contentView.leftAnchor, constant: 15),
+                iv.leftAnchor.constraint(equalTo: lab.rightAnchor, constant: 15),
+                iv.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: -15)
                 ])
             
             lab.font = UIFont(name:"Helvetica-Bold", size:16)
-            lab.lineBreakMode = .ByWordWrapping
+            lab.lineBreakMode = .byWordWrapping
             lab.numberOfLines = 2
         }
         
@@ -71,12 +71,12 @@ class CustomContentViewController: UITableViewController {
         
         // shrink apparent size of image
         let im = UIImage(named:"Moi")!
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(36,36), true, 0.0)
-        im.drawInRect(CGRectMake(0,0,36,36))
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 36,height: 36), true, 0.0)
+        im.draw(in: CGRect(x: 0,y: 0,width: 36,height: 36))
         let im2 = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         iv.image = im2
-        iv.contentMode = .Center
+        iv.contentMode = .center
         
         return cell
     }

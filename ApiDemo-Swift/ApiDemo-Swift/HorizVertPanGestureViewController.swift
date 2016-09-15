@@ -13,9 +13,9 @@ class HorizVertPanGestureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
-        let v = UIView(frame: CGRectMake(120, 120, 150, 150))
-        v.backgroundColor = UIColor.redColor()
+        self.view.backgroundColor = UIColor.white
+        let v = UIView(frame: CGRect(x: 120, y: 120, width: 150, height: 150))
+        v.backgroundColor = UIColor.red
         
         self.view.addSubview(v)
         
@@ -32,17 +32,17 @@ class HorizVertPanGestureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func dragging(p: UIPanGestureRecognizer) {
+    func dragging(_ p: UIPanGestureRecognizer) {
         if let v = p.view {
             switch p.state {
-            case .Began, .Changed:
-                let delta = p.translationInView(v.superview)
+            case .began, .changed:
+                let delta = p.translation(in: v.superview)
                 var c = v.center
                 c.x += delta.x
                 c.y += delta.y
                 v.center = c
-                p.setTranslation(CGPointZero, inView: v.superview)
-            case .Failed:
+                p.setTranslation(CGPoint.zero, in: v.superview)
+            case .failed:
                 print("Dragging states is failed.")
             default:
                 break

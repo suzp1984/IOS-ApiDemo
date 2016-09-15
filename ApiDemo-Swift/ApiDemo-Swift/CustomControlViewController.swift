@@ -13,21 +13,21 @@ class CustomControlViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let knob = MyKnob()
-        knob.backgroundColor = UIColor.clearColor()
+        knob.backgroundColor = UIColor.clear
         knob.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(knob)
         
-        NSLayoutConstraint.activateConstraints([
-                knob.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                knob.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor),
-                knob.widthAnchor.constraintEqualToConstant(150),
-                knob.heightAnchor.constraintEqualToConstant(150)
+        NSLayoutConstraint.activate([
+                knob.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                knob.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+                knob.widthAnchor.constraint(equalToConstant: 150),
+                knob.heightAnchor.constraint(equalToConstant: 150)
             ])
         
-        knob.addTarget(self, action: #selector(CustomControlViewController.handleKnobRotate(_:)), forControlEvents: .ValueChanged)
+        knob.addTarget(self, action: #selector(CustomControlViewController.handleKnobRotate(_:)), for: .valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +35,7 @@ class CustomControlViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func handleKnobRotate(sender: MyKnob) {
+    func handleKnobRotate(_ sender: MyKnob) {
         print(sender.angle)
     }
 }

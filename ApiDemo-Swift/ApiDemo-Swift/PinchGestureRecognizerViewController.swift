@@ -13,12 +13,12 @@ class PinchGestureRecognizerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let v = UIView(frame: CGRectMake(0, 0, 150, 150))
-        v.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
+        let v = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        v.center = CGPoint(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2)
         
-        v.backgroundColor = UIColor.redColor()
+        v.backgroundColor = UIColor.red
         
         self.view.addSubview(v)
         
@@ -31,10 +31,10 @@ class PinchGestureRecognizerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func pinchHandler(p: UIPinchGestureRecognizer) {
+    func pinchHandler(_ p: UIPinchGestureRecognizer) {
         // print(p.scale, p.velocity)
         if let v = p.view {
-            v.transform = CGAffineTransformMakeScale(p.scale, p.scale)
+            v.transform = CGAffineTransform(scaleX: p.scale, y: p.scale)
         }
     }
 

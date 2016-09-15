@@ -7,15 +7,15 @@ class CompassViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let compass = CompassView()
         self.view.addSubview(compass)
         
         compass.translatesAutoresizingMaskIntoConstraints = false
-        compass.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor).active = true
-        compass.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor).active = true
-        compass.heightAnchor.constraintEqualToAnchor(compass.widthAnchor).active = true
+        compass.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
+        compass.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        compass.heightAnchor.constraint(equalTo: compass.widthAnchor).isActive = true
     }
 
     override func didReceiveMemoryWarning() {

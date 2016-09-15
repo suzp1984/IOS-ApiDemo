@@ -16,9 +16,9 @@ class OriginChangedViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let v1 = UIView(frame: CGRectMake(113, 111, 132, 194))
+        let v1 = UIView(frame: CGRect(x: 113, y: 111, width: 132, height: 194))
         v1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1)
         self.v1 = v1
         
@@ -28,15 +28,15 @@ class OriginChangedViewController: UIViewController {
         self.view.addSubview(v1)
         v1.addSubview(v2)
         
-        let btn = UIButton(type: .System)
-        btn.setTitle("chang origin", forState: .Normal)
-        btn.addTarget(self, action: #selector(OriginChangedViewController.changeOrigin(_:)), forControlEvents: .TouchUpInside)
+        let btn = UIButton(type: .system)
+        btn.setTitle("chang origin", for: UIControlState())
+        btn.addTarget(self, action: #selector(OriginChangedViewController.changeOrigin(_:)), for: .touchUpInside)
         
         self.view.addSubview(btn)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                btn.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                btn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                btn.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                btn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
     }
 
@@ -45,7 +45,7 @@ class OriginChangedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func changeOrigin(sender: UIButton) {
+    func changeOrigin(_ sender: UIButton) {
         if let v1 = self.v1 {
             v1.bounds.origin.x += 10
             v1.bounds.origin.y += 10

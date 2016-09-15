@@ -14,39 +14,39 @@ class StackViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let stackView = UIStackView()
-        stackView.axis = .Vertical
-        stackView.distribution = .EqualCentering
-        stackView.alignment = .Center
-        stackView.layoutMarginsRelativeArrangement = false
+        stackView.axis = .vertical
+        stackView.distribution = .equalCentering
+        stackView.alignment = .center
+        stackView.isLayoutMarginsRelativeArrangement = false
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(stackView)
         
-        NSLayoutConstraint.activateConstraints([
-            stackView.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor),
-            stackView.leadingAnchor.constraintEqualToAnchor(self.view.leadingAnchor),
-            stackView.trailingAnchor.constraintEqualToAnchor(self.view.trailingAnchor),
-            stackView.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor)
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
             ])
         
         let v1 = UIView()
-        v1.backgroundColor = UIColor.redColor()
-        v1.heightAnchor.constraintEqualToConstant(100).active = true
-        v1.widthAnchor.constraintEqualToConstant(120).active = true
+        v1.backgroundColor = UIColor.red
+        v1.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        v1.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
         let v2 = UIView()
-        v2.backgroundColor = UIColor.greenColor()
-        v2.heightAnchor.constraintEqualToConstant(100).active = true
-        v2.widthAnchor.constraintEqualToConstant(120).active = true
+        v2.backgroundColor = UIColor.green
+        v2.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        v2.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
         let v3 = UIView()
-        v3.backgroundColor = UIColor.yellowColor()
-        v3.heightAnchor.constraintEqualToConstant(100).active = true
-        v3.widthAnchor.constraintEqualToConstant(120).active = true
+        v3.backgroundColor = UIColor.yellow
+        v3.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        v3.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
         stackView.addArrangedSubview(v1)
         stackView.addArrangedSubview(v2)

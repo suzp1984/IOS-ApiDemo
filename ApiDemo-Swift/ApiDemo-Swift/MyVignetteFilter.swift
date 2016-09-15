@@ -14,7 +14,7 @@ class MyVignetteFilter: CIFilter {
         print("farewell")
     }
     
-    private func makeOutputImage () -> CIImage? {
+    fileprivate func makeOutputImage () -> CIImage? {
         guard let inputImage = self.inputImage else {return nil}
         guard let inputPercentage = self.inputPercentage else {return nil}
         

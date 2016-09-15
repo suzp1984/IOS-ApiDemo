@@ -17,29 +17,29 @@ class ContainerControlSampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let panel = UIView()
-        panel.backgroundColor = UIColor.blackColor()
+        panel.backgroundColor = UIColor.black
         
         self.view.addSubview(panel)
         panel.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                panel.widthAnchor.constraintEqualToConstant(150),
-                panel.heightAnchor.constraintEqualToConstant(150),
-                panel.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                panel.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
+        NSLayoutConstraint.activate([
+                panel.widthAnchor.constraint(equalToConstant: 150),
+                panel.heightAnchor.constraint(equalToConstant: 150),
+                panel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                panel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
         self.panel = panel
         
-        let flipBtn = UIButton(type: .System)
-        flipBtn.setTitle("Flip", forState: .Normal)
-        flipBtn.addTarget(self, action: #selector(ContainerControlSampleViewController.flip(_:)), forControlEvents: .TouchUpInside)
+        let flipBtn = UIButton(type: .system)
+        flipBtn.setTitle("Flip", for: UIControlState())
+        flipBtn.addTarget(self, action: #selector(ContainerControlSampleViewController.flip(_:)), for: .touchUpInside)
         self.view.addSubview(flipBtn)
         flipBtn.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-                flipBtn.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                flipBtn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                flipBtn.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                flipBtn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
         // setup swapper child controller
@@ -49,7 +49,7 @@ class ContainerControlSampleViewController: UIViewController {
         self.addChildViewController(vc)
         vc.view.frame = panel.bounds
         panel.addSubview(vc.view)
-        vc.didMoveToParentViewController(self)
+        vc.didMove(toParentViewController: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,20 +57,20 @@ class ContainerControlSampleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func flip(sender: UIButton) {
-        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+    func flip(_ sender: UIButton) {
+        UIApplication.shared.beginIgnoringInteractionEvents()
         let fromVc = self.swappers![cur]
         cur = cur == 0 ? 1 : 0
         let toVc = self.swappers![cur]
         toVc.view.frame = self.panel!.bounds
         
         self.addChildViewController(toVc)
-        fromVc.willMoveToParentViewController(nil)
-        self.transitionFromViewController(fromVc, toViewController: toVc, duration: 0.4, options: .TransitionFlipFromLeft, animations: nil, completion: {
+        fromVc.willMove(toParentViewController: nil)
+        self.transition(from: fromVc, to: toVc, duration: 0.4, options: .transitionFlipFromLeft, animations: nil, completion: {
             _ in
-            toVc.didMoveToParentViewController(self)
+            toVc.didMove(toParentViewController: self)
             fromVc.removeFromParentViewController()
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            UIApplication.shared.endIgnoringInteractionEvents()
         })
     }
 }

@@ -11,14 +11,14 @@ import UIKit
 class MandelbrotDrawView: UIView {
 
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         if let img = generateMandelBrotImg(rect.width, height: rect.height) {
             let con = UIGraphicsGetCurrentContext()
-            CGContextDrawImage(con, rect, img)
+            con?.draw(img, in: rect)
         }
     }
 
-    private func generateMandelBrotImg(width: CGFloat, height: CGFloat) -> CGImage? {
+    fileprivate func generateMandelBrotImg(_ width: CGFloat, height: CGFloat) -> CGImage? {
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let bytesPerPixel = 4
@@ -26,8 +26,8 @@ class MandelbrotDrawView: UIView {
         let bytesPerRow = Int(CGFloat(bytesPerPixel) * width)
         let bitmapInfo = RGB32.bitmapInfo
         
-        let context = CGBitmapContextCreate(nil, Int(width), Int(height), bitsPerComponent, bytesPerRow, colorSpace, bitmapInfo)
-        let pixelBuffer = UnsafeMutablePointer<RGB32>(CGBitmapContextGetData(context))
+        let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
+        let pixelBuffer = UnsafeMutablePointer<RGB32>(context?.data)
         
         var currentPixel = pixelBuffer
         
@@ -51,12 +51,12 @@ class MandelbrotDrawView: UIView {
                 let g = UInt8(log(Double(tmp)) * 46)
                 let b = 128 - UInt8(log(Double(tmp)) * 23)
                 
-                currentPixel.memory = RGB32(red: r, green: g, blue: b, alpha: UInt8(255))
+                currentPixel.pointee = RGB32(red: r, green: g, blue: b, alpha: UInt8(255))
                 currentPixel += 1
             }
         }
         
-        let outImgCG = CGBitmapContextCreateImage(context)
+        let outImgCG = context?.makeImage()
         
         return outImgCG
     }
@@ -84,7 +84,7 @@ class MandelbrotDrawView: UIView {
             color = (UInt32(red) << 24) | (UInt32(green) << 16) | (UInt32(blue) << 8) | (UInt32(alpha) << 0)
         }
         
-        static let bitmapInfo = CGImageAlphaInfo.PremultipliedLast.rawValue | CGBitmapInfo.ByteOrder32Little.rawValue
+        static let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Little.rawValue
         
         //        static func ==(lhs: RGB32, rhs: RGB32) -> Bool {
         //            return rhs.color == rhs.color

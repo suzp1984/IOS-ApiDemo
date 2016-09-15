@@ -3,20 +3,16 @@ import UIKit
 
 class ImageViewAnimationViewController: UIViewController {
 
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         // UIImage animationImages
         let mars = UIImage(named: "Mars")!
@@ -25,7 +21,7 @@ class ImageViewAnimationViewController: UIViewController {
         UIGraphicsEndImageContext()
         let mars_arr = [mars, empty, mars, empty, mars]
         let mars_iv = UIImageView(image:empty)
-        mars_iv.frame.origin = CGPointMake(100,100)
+        mars_iv.frame.origin = CGPoint(x: 100,y: 100)
         self.view.addSubview(mars_iv)
         
         mars_iv.animationImages = mars_arr
@@ -37,29 +33,29 @@ class ImageViewAnimationViewController: UIViewController {
         var howdy_arr = [UIImage]()
         let w : CGFloat = 18
         for i in 0 ..< 6 {
-            UIGraphicsBeginImageContextWithOptions(CGSizeMake(w,w), false, 0)
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: w,height: w), false, 0)
             let con = UIGraphicsGetCurrentContext()!
-            CGContextSetFillColorWithColor(con, UIColor.redColor().CGColor)
+            con.setFillColor(UIColor.red.cgColor)
             let ii = CGFloat(i)
-            CGContextAddEllipseInRect(con, CGRectMake(0+ii,0+ii,w-ii*2,w-ii*2))
-            CGContextFillPath(con)
+            con.addEllipse(in: CGRect(x: 0+ii,y: 0+ii,width: w-ii*2,height: w-ii*2))
+            con.fillPath()
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             howdy_arr += [im]
         }
-        let howdy_im = UIImage.animatedImageWithImages(howdy_arr, duration:0.5)
-        let howdy_b = UIButton(type:.System)
-        howdy_b.setTitle("Howdy", forState:.Normal)
-        howdy_b.setImage(howdy_im, forState:.Normal)
-        howdy_b.center = CGPointMake(100,200)
+        let howdy_im = UIImage.animatedImage(with: howdy_arr, duration:0.5)
+        let howdy_b = UIButton(type:.system)
+        howdy_b.setTitle("Howdy", for:UIControlState())
+        howdy_b.setImage(howdy_im, for:UIControlState())
+        howdy_b.center = CGPoint(x: 100,y: 200)
         howdy_b.sizeToFit()
         self.view.addSubview(howdy_b)
         
         // animated Image Named
         let pac_im = UIImage.animatedImageNamed("pac", duration:1)
-        let pac_b = UIButton(type:.System)
-        pac_b.setImage(pac_im, forState:.Normal)
-        pac_b.center = CGPointMake(100,200)
+        let pac_b = UIButton(type:.system)
+        pac_b.setImage(pac_im, for:UIControlState())
+        pac_b.center = CGPoint(x: 100,y: 200)
         pac_b.sizeToFit()
         self.view.addSubview(pac_b)
         
@@ -67,9 +63,9 @@ class ImageViewAnimationViewController: UIViewController {
         howdy_b.translatesAutoresizingMaskIntoConstraints = false
         pac_b.translatesAutoresizingMaskIntoConstraints = false
         
-        mars_iv.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor).active = true
-        howdy_b.topAnchor.constraintEqualToAnchor(mars_iv.bottomAnchor).active = true
-        pac_b.topAnchor.constraintEqualToAnchor(howdy_b.bottomAnchor).active = true
+        mars_iv.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
+        howdy_b.topAnchor.constraint(equalTo: mars_iv.bottomAnchor).isActive = true
+        pac_b.topAnchor.constraint(equalTo: howdy_b.bottomAnchor).isActive = true
     }
 
     override func didReceiveMemoryWarning() {

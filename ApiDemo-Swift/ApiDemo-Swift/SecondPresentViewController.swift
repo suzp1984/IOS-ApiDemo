@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SecondPresentControllerDelegate : class {
-    func acceptData(data: AnyObject!)
+    func acceptData(_ data: AnyObject!)
 }
 
 class SecondPresentViewController: UIViewController {
@@ -19,30 +19,30 @@ class SecondPresentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor.blue
         
-        let button = UIButton(type: .System)
-        button.setTitle("dismiss", forState: .Normal)
-        button.addTarget(self, action: #selector(SecondPresentViewController.doDismiss(_:)), forControlEvents: .TouchUpInside)
-        button.setTitleColor(UIColor.yellowColor(), forState: .Normal)
+        let button = UIButton(type: .system)
+        button.setTitle("dismiss", for: UIControlState())
+        button.addTarget(self, action: #selector(SecondPresentViewController.doDismiss(_:)), for: .touchUpInside)
+        button.setTitleColor(UIColor.yellow, for: UIControlState())
         
         self.view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-            button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-            button.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor)
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
         
-        let presentButton = UIButton(type: .System)
-        presentButton.setTitle("start Third Controller", forState: .Normal)
-        presentButton.addTarget(self, action: #selector(SecondPresentViewController.startThird(_:)), forControlEvents: .TouchUpInside)
-        presentButton.setTitleColor(UIColor.yellowColor(), forState: .Normal)
+        let presentButton = UIButton(type: .system)
+        presentButton.setTitle("start Third Controller", for: UIControlState())
+        presentButton.addTarget(self, action: #selector(SecondPresentViewController.startThird(_:)), for: .touchUpInside)
+        presentButton.setTitleColor(UIColor.yellow, for: UIControlState())
         
         self.view.addSubview(presentButton)
         presentButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-            presentButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-            presentButton.bottomAnchor.constraintEqualToAnchor(button.topAnchor, constant: -20)
+        NSLayoutConstraint.activate([
+            presentButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            presentButton.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -20)
             ])
        
     }
@@ -52,22 +52,22 @@ class SecondPresentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.delegate?.acceptData("Test")
+        self.delegate?.acceptData("Test" as AnyObject!)
     }
     
-    func doDismiss(sender: UIButton) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    func doDismiss(_ sender: UIButton) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    func startThird(sender: UIButton) {
+    func startThird(_ sender: UIButton) {
         let third = ThirdPresentViewController()
         self.definesPresentationContext = true
-        third.modalPresentationStyle = .CurrentContext
-        third.modalTransitionStyle = .FlipHorizontal
-        self.presentViewController(third, animated: true, completion: nil)
+        third.modalPresentationStyle = .currentContext
+        third.modalTransitionStyle = .flipHorizontal
+        self.present(third, animated: true, completion: nil)
     }
 
 }

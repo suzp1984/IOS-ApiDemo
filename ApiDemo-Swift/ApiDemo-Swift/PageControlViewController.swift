@@ -16,23 +16,23 @@ class PageControlViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let pageControl = UIPageControl()
         pageControl.numberOfPages = demos.count
         pageControl.currentPage = 3
-        pageControl.tintColor = UIColor.redColor()
-        pageControl.pageIndicatorTintColor = UIColor.blackColor()
-        pageControl.currentPageIndicatorTintColor = UIColor.greenColor()
+        pageControl.tintColor = UIColor.red
+        pageControl.pageIndicatorTintColor = UIColor.black
+        pageControl.currentPageIndicatorTintColor = UIColor.green
         
         self.view.addSubview(pageControl)
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                pageControl.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -20),
-                pageControl.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                pageControl.widthAnchor.constraintEqualToConstant(150),
-                pageControl.heightAnchor.constraintEqualToConstant(50)
+        NSLayoutConstraint.activate([
+                pageControl.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor, constant: -20),
+                pageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                pageControl.widthAnchor.constraint(equalToConstant: 150),
+                pageControl.heightAnchor.constraint(equalToConstant: 50)
             ])
         
 //        let scroll = UIScrollView()

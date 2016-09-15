@@ -14,17 +14,17 @@ class AudioPlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let playBtn = UIButton(type: .System)
-        playBtn.setTitle("Play", forState: .Normal)
-        playBtn.addTarget(self, action: #selector(AudioPlayViewController.playAudio(_:)), forControlEvents: .TouchUpInside)
+        let playBtn = UIButton(type: .system)
+        playBtn.setTitle("Play", for: UIControlState())
+        playBtn.addTarget(self, action: #selector(AudioPlayViewController.playAudio(_:)), for: .touchUpInside)
         playBtn.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(playBtn)
         
-        NSLayoutConstraint.activateConstraints([
-                playBtn.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                playBtn.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                playBtn.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                playBtn.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
     }
 
@@ -33,14 +33,14 @@ class AudioPlayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func playAudio(sender: UIButton) {
-        if let sndUrl = NSBundle.mainBundle().URLForResource("test", withExtension: "aif") {
+    func playAudio(_ sender: UIButton) {
+        if let sndUrl = Bundle.main.url(forResource: "test", withExtension: "aif") {
             // print("play Test now")
-            sender.enabled = false
+            sender.isEnabled = false
             var snd : SystemSoundID = 0
-            AudioServicesCreateSystemSoundID(sndUrl, &snd)
+            AudioServicesCreateSystemSoundID(sndUrl as CFURL, &snd)
             AudioServicesPlaySystemSoundWithCompletion(snd, { () in
-                sender.enabled = true
+                sender.isEnabled = true
                 AudioServicesDisposeSystemSoundID(snd)
             })
         }

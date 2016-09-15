@@ -15,28 +15,28 @@ class SimpleHttpClientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(iv)
-        NSLayoutConstraint.activateConstraints([
-                iv.widthAnchor.constraintEqualToConstant(269),
-                iv.heightAnchor.constraintEqualToConstant(186),
-                iv.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                iv.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        NSLayoutConstraint.activate([
+                iv.widthAnchor.constraint(equalToConstant: 269),
+                iv.heightAnchor.constraint(equalToConstant: 186),
+                iv.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                iv.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
             ])
         
         self.iv = iv
         
-        let btn = UIButton(type: .System)
+        let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(btn)
-        btn.setTitle("Download Img", forState: .Normal)
-        btn.addTarget(self, action: #selector(SimpleHttpClientViewController.downloadImg(_:)), forControlEvents: .TouchUpInside)
-        NSLayoutConstraint.activateConstraints([
-            btn.topAnchor.constraintEqualToAnchor(iv.bottomAnchor, constant: 20),
-            btn.centerXAnchor.constraintEqualToAnchor(iv.centerXAnchor)
+        btn.setTitle("Download Img", for: UIControlState())
+        btn.addTarget(self, action: #selector(SimpleHttpClientViewController.downloadImg(_:)), for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            btn.topAnchor.constraint(equalTo: iv.bottomAnchor, constant: 20),
+            btn.centerXAnchor.constraint(equalTo: iv.centerXAnchor)
             ])
     }
 
@@ -46,32 +46,32 @@ class SimpleHttpClientViewController: UIViewController {
     }
     
 
-    func downloadImg(sender: UIButton) {
+    func downloadImg(_ sender: UIButton) {
         let s = "https://www.apeth.net/matt/images/phoenixnewest.jpg"
-        let session = NSURLSession.sharedSession()
-        if let url = NSURL(string: s) {
-            let task = session.downloadTaskWithURL(url) {
-                (loc:NSURL?, response:NSURLResponse?, error:NSError?) in
+        let session = URLSession.shared
+        if let url = URL(string: s) {
+            let task = session.downloadTask(with: url, completionHandler: {
+                (loc:URL?, response:URLResponse?, error:NSError?) in
                 if error != nil {
                     print(error)
                     return
                 }
                 
-                let status = (response as! NSHTTPURLResponse).statusCode
+                let status = (response as! HTTPURLResponse).statusCode
                 print("response status: \(status)")
                 if status != 200 {
                     print("oh well")
                     return
                 }
-                let d = NSData(contentsOfURL:loc!)!
+                let d = try! Data(contentsOf: loc!)
                 let im = UIImage(data:d)
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async {
                     self.iv!.image = im
                     print("done")
                 }
 
                 
-            }
+            } as! (URL?, URLResponse?, Error?) -> Void) 
             
             task.resume()
         }

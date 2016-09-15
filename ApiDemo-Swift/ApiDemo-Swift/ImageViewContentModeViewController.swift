@@ -10,13 +10,9 @@ import UIKit
 
 class ImageViewContentModeViewController: UIViewController {
 
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
     
     override func viewDidLoad() {
@@ -24,23 +20,23 @@ class ImageViewContentModeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let mainView = self.view
-        mainView.backgroundColor = UIColor.whiteColor()
+        mainView?.backgroundColor = UIColor.white
         
         let iv = UIImageView(image: UIImage(named: "Mars"))
-        mainView.addSubview(iv)
+        mainView?.addSubview(iv)
         iv.clipsToBounds = true
-        iv.contentMode = .ScaleAspectFit
+        iv.contentMode = .scaleAspectFit
         
-        iv.layer.borderColor = UIColor.blackColor().CGColor
+        iv.layer.borderColor = UIColor.black.cgColor
         iv.layer.borderWidth = 2
         iv.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-            iv.centerXAnchor.constraintEqualToAnchor(iv.superview!.centerXAnchor),
-            iv.centerYAnchor.constraintEqualToAnchor(iv.superview!.centerYAnchor)
+        NSLayoutConstraint.activate([
+            iv.centerXAnchor.constraint(equalTo: iv.superview!.centerXAnchor),
+            iv.centerYAnchor.constraint(equalTo: iv.superview!.centerYAnchor)
             ])
         
-        NSLayoutConstraint.activateConstraints([
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|[tlg]-(>=10)-[iv]-(>=10)-[blg]|", options: [],
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|[tlg]-(>=10)-[iv]-(>=10)-[blg]|", options: [],
                 metrics: nil, views: ["tlg":self.topLayoutGuide, "iv":iv, "blg":self.bottomLayoutGuide])
             ].flatMap{$0})
         

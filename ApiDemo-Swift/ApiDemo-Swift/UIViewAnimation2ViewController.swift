@@ -7,71 +7,71 @@ class UIViewAnimation2ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let v1 = UIView()
-        v1.backgroundColor = UIColor.blueColor()
-        v1.frame = CGRectMake(100, 100, 100, 100)
+        v1.backgroundColor = UIColor.blue
+        v1.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         
         self.view.addSubview(v1)
         
-        UIView.animateWithDuration(2, animations: {
+        UIView.animate(withDuration: 2, animations: {
             v1.center.x += 100
         })
         
-        let v2 = UIView(frame: CGRectMake(100, 200, 100, 100))
-        v2.backgroundColor = UIColor.yellowColor()
+        let v2 = UIView(frame: CGRect(x: 100, y: 200, width: 100, height: 100))
+        v2.backgroundColor = UIColor.yellow
         
         self.view.addSubview(v2)
         var start = 0.0
-        UIView.animateKeyframesWithDuration(4, delay: 0, options: [], animations: {
-            UIView.addKeyframeWithRelativeStartTime(start, relativeDuration: 1.0, animations: {
+        UIView.animateKeyframes(withDuration: 4, delay: 0, options: [], animations: {
+            UIView.addKeyframe(withRelativeStartTime: start, relativeDuration: 1.0, animations: {
                 v2.center.x += 80
-                v2.backgroundColor = UIColor.blackColor()
+                v2.backgroundColor = UIColor.black
             })
             
             start += 1.0
-            UIView.addKeyframeWithRelativeStartTime(start, relativeDuration: 1.0, animations: {
+            UIView.addKeyframe(withRelativeStartTime: start, relativeDuration: 1.0, animations: {
                 v2.center.x += 80
-                v2.backgroundColor = UIColor.redColor()
+                v2.backgroundColor = UIColor.red
             })
             
             start += 1.0
-            UIView.addKeyframeWithRelativeStartTime(start, relativeDuration: 1.0, animations: {
+            UIView.addKeyframe(withRelativeStartTime: start, relativeDuration: 1.0, animations: {
                 v2.center.x -= 80
-                v2.backgroundColor = UIColor.brownColor()
+                v2.backgroundColor = UIColor.brown
             })
             
             start += 1.0
-            UIView.addKeyframeWithRelativeStartTime(start, relativeDuration: 1.0, animations: {
+            UIView.addKeyframe(withRelativeStartTime: start, relativeDuration: 1.0, animations: {
                 v2.center.x += 20
-                v2.backgroundColor = UIColor.cyanColor()
+                v2.backgroundColor = UIColor.cyan
             })
             }, completion: nil)
         
         let v3 = UIView()
         v3.translatesAutoresizingMaskIntoConstraints = false
-        v3.backgroundColor = UIColor.blueColor()
+        v3.backgroundColor = UIColor.blue
         self.view.addSubview(v3)
-        v3.widthAnchor.constraintEqualToConstant(100).active = true
-        v3.heightAnchor.constraintEqualToConstant(100).active = true
-        v3.topAnchor.constraintEqualToAnchor(v2.bottomAnchor).active = true
-        v3.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 100).active = true
+        v3.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        v3.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        v3.topAnchor.constraint(equalTo: v2.bottomAnchor).isActive = true
+        v3.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 100).isActive = true
         
         v3.layoutIfNeeded()
-        UIView.animateWithDuration(2, animations: {
+        UIView.animate(withDuration: 2, animations: {
             //v3.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 200).active = true
             v3.center.x += 100
             v3.layoutIfNeeded()
         })
         
-        let v4 = UIView(frame: CGRectMake(100, 400, 100, 100))
-        v4.backgroundColor = UIColor.redColor()
+        let v4 = UIView(frame: CGRect(x: 100, y: 400, width: 100, height: 100))
+        v4.backgroundColor = UIColor.red
         self.view.addSubview(v4)
-        UIView.animateWithDuration(2.0, delay: 0,
+        UIView.animate(withDuration: 2.0, delay: 0,
                                    usingSpringWithDamping: 0.1,
                                    initialSpringVelocity: 2,
-                                   options: UIViewAnimationOptions.Autoreverse,
+                                   options: UIViewAnimationOptions.autoreverse,
                                    animations: {
                 UIView.setAnimationRepeatCount(3)
                 v4.center.x += 100

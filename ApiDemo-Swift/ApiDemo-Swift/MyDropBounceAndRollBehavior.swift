@@ -17,7 +17,7 @@ class MyDropBounceAndRollBehavior: UIDynamicBehavior, UICollisionBehaviorDelegat
     }
     
     
-    override func willMoveToAnimator(anim: UIDynamicAnimator?) {
+    override func willMove(to anim: UIDynamicAnimator?) {
         guard let anim = anim else { return }
         
         let sup = self.v.superview!
@@ -28,8 +28,8 @@ class MyDropBounceAndRollBehavior: UIDynamicBehavior, UICollisionBehaviorDelegat
             // this is actually a simpler case for memory management,
             // because "self" incorporates all the behaviors at once
             [unowned self] in // * changed from weak to unowned here
-            let items = anim.itemsInRect(sup.bounds) as! [UIView]
-            if items.indexOf(self.v) == nil {
+            let items = anim.items(in: sup.bounds) as! [UIView]
+            if items.index(of: self.v) == nil {
                 anim.removeBehavior(self)
                 self.v.removeFromSuperview()
                 print("done")
@@ -38,17 +38,17 @@ class MyDropBounceAndRollBehavior: UIDynamicBehavior, UICollisionBehaviorDelegat
         self.addChildBehavior(grav)
         grav.addItem(self.v)
         
-        let push = UIPushBehavior(items:[self.v], mode:.Instantaneous)
-        push.pushDirection = CGVectorMake(1, 0)
+        let push = UIPushBehavior(items:[self.v], mode:.instantaneous)
+        push.pushDirection = CGVector(dx: 1, dy: 0)
         //push.setTargetOffsetFromCenter(UIOffsetMake(0,-200), forItem: self.iv)
         self.addChildBehavior(push)
         
         let coll = UICollisionBehavior()
-        coll.collisionMode = .Boundaries
+        coll.collisionMode = .boundaries
         coll.collisionDelegate = self
-        coll.addBoundaryWithIdentifier("floor",
-                                       fromPoint:CGPointMake(0, sup.bounds.maxY),
-                                       toPoint:CGPointMake(sup.bounds.maxX, sup.bounds.maxY))
+        coll.addBoundary(withIdentifier: "floor" as NSCopying,
+                                       from:CGPoint(x: 0, y: sup.bounds.maxY),
+                                       to:CGPoint(x: sup.bounds.maxX, y: sup.bounds.maxY))
         self.addChildBehavior(coll)
         coll.addItem(self.v)
         
@@ -59,20 +59,20 @@ class MyDropBounceAndRollBehavior: UIDynamicBehavior, UICollisionBehaviorDelegat
         
     }
     
-    func collisionBehavior(behavior: UICollisionBehavior,
-                           beganContactForItem item: UIDynamicItem,
+    func collisionBehavior(_ behavior: UICollisionBehavior,
+                           beganContactFor item: UIDynamicItem,
                                                withBoundaryIdentifier identifier: NSCopying?,
-                                                                      atPoint p: CGPoint) {
+                                                                      at p: CGPoint) {
         print(p)
         // look for the dynamic item behavior
         let b = self.childBehaviors
-        if let ix = b.indexOf({$0 is UIDynamicItemBehavior}) {
+        if let ix = b.index(where: {$0 is UIDynamicItemBehavior}) {
             let bounce = b[ix] as! UIDynamicItemBehavior
-            let v = bounce.angularVelocityForItem(item)
+            let v = bounce.angularVelocity(for: item)
             print(v)
             if v <= 6 {
                 print("adding angular velocity")
-                bounce.addAngularVelocity(6, forItem:item)
+                bounce.addAngularVelocity(6, for:item)
             }
         }
     }

@@ -17,25 +17,25 @@ class AnimationAutoLayoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button)
-        button.setTitle("Start", forState: .Normal)
-        button.addTarget(self, action: #selector(AnimationAutoLayoutViewController.start), forControlEvents: .TouchUpInside)
-        button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20).active = true
-        button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20).active = true
+        button.setTitle("Start", for: UIControlState())
+        button.addTarget(self, action: #selector(AnimationAutoLayoutViewController.start), for: .touchUpInside)
+        button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20).isActive = true
+        button.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20).isActive = true
         
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(v)
-        v.backgroundColor = UIColor.blackColor()
-        v.widthAnchor.constraintEqualToConstant(100.0).active = true
-        v.heightAnchor.constraintEqualToConstant(100.0).active = true
-        v.topAnchor.constraintEqualToAnchor(button.bottomAnchor, constant: 20.0).active = true
-        constraint = v.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20.0)
-        constraint.active = true
+        v.backgroundColor = UIColor.black
+        v.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        v.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        v.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20.0).isActive = true
+        constraint = v.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20.0)
+        constraint.isActive = true
         
         self.v = v
         // v.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 30)
@@ -50,11 +50,11 @@ class AnimationAutoLayoutViewController: UIViewController {
         if let v = self.v {
             switch which {
             case 1:
-                UIView.animateWithDuration(1, animations:{
+                UIView.animate(withDuration: 1, animations:{
                     v.center.x += 100
                 }) // everything *looks* okay, but it isn't
             case 2:
-                UIView.animateWithDuration(1, animations:{
+                UIView.animate(withDuration: 1, animations:{
                     v.center.x += 100
                     }, completion: {
                         _ in
@@ -64,16 +64,16 @@ class AnimationAutoLayoutViewController: UIViewController {
                 })
             case 3:
                 self.constraint.constant += 100
-                UIView.animateWithDuration(1, animations:{
+                UIView.animate(withDuration: 1, animations:{
                     v.superview!.layoutIfNeeded()
                     }, completion: nil)
             case 4:
                 // this works fine in iOS 8! does not trigger spurious layout
-                UIView.animateWithDuration(0.3, delay: 0, options: .Autoreverse, animations: {
-                    v.transform = CGAffineTransformMakeScale(1.1, 1.1)
+                UIView.animate(withDuration: 0.3, delay: 0, options: .autoreverse, animations: {
+                    v.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                     }, completion: {
                         _ in
-                        v.transform = CGAffineTransformIdentity
+                        v.transform = CGAffineTransform.identity
                 })
                 
             case 5:
@@ -81,15 +81,15 @@ class AnimationAutoLayoutViewController: UIViewController {
                 let ba = CABasicAnimation(keyPath:"transform")
                 ba.autoreverses = true
                 ba.duration = 0.3
-                ba.toValue = NSValue(CATransform3D:CATransform3DMakeScale(1.1, 1.1, 1))
-                v.layer.addAnimation(ba, forKey:nil)
+                ba.toValue = NSValue(caTransform3D:CATransform3DMakeScale(1.1, 1.1, 1))
+                v.layer.add(ba, forKey:nil)
             case 6:
-                let snap = v.snapshotViewAfterScreenUpdates(false)
-                snap.frame = v.frame
-                v.superview!.addSubview(snap)
-                v.hidden = true
-                UIView.animateWithDuration(1, animations:{
-                    snap.center.x += 100
+                let snap = v.snapshotView(afterScreenUpdates: false)
+                snap?.frame = v.frame
+                v.superview!.addSubview(snap!)
+                v.isHidden = true
+                UIView.animate(withDuration: 1, animations:{
+                    snap?.center.x += 100
                 })
 
 

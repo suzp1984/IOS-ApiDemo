@@ -23,7 +23,7 @@ class TouchesSampleController: UIViewController, UINavigationControllerDelegate,
         let table = UITableView(frame: self.view.bounds)
         table.delegate = self
         table.dataSource = self
-        table.backgroundColor = UIColor.cyanColor()
+        table.backgroundColor = UIColor.cyan
         
         self.view.addSubview(table)
         self.navigationItem.leftItemsSupplementBackButton = true
@@ -34,37 +34,37 @@ class TouchesSampleController: UIViewController, UINavigationControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demos.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell : UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell : UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if cell == nil {
-            cell = UITableViewCell(style:.Default, reuseIdentifier:cellIdentifier)
+            cell = UITableViewCell(style:.default, reuseIdentifier:cellIdentifier)
             
-            cell.textLabel!.textColor = UIColor.whiteColor()
+            cell.textLabel!.textColor = UIColor.white
             
             let v2 = UIView() // no need to set frame
-            v2.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.2)
+            v2.backgroundColor = UIColor.blue.withAlphaComponent(0.2)
             cell.selectedBackgroundView = v2
             // next line no longer necessary in iOS 7!
             // cell.textLabel.backgroundColor = UIColor.clearColor()
             
             // next line didn't work until iOS 7!
-            cell.backgroundColor = UIColor.redColor()
+            cell.backgroundColor = UIColor.red
         }
         
-        cell.textLabel!.text = demos[indexPath.row]
+        cell.textLabel!.text = demos[(indexPath as NSIndexPath).row]
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch demos[indexPath.row] {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch demos[(indexPath as NSIndexPath).row] {
         case demos[0]:
             self.navigationController?.pushViewController(TouchesViewController(), animated: true)
         case demos[1]:

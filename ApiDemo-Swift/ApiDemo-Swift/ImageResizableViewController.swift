@@ -20,33 +20,33 @@ class ImageResizableViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         self.iv = UIImageView()
         self.view.addSubview(iv)
         
         iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.heightAnchor.constraintEqualToConstant(120).active = true
-        iv.widthAnchor.constraintEqualToConstant(240).active = true
-        iv.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-        iv.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+        iv.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        iv.widthAnchor.constraint(equalToConstant: 240).isActive = true
+        iv.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        iv.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
         self.mars = UIImage(named: "Mars")!
     
-        self.marsTiled = mars!.resizableImageWithCapInsets(UIEdgeInsetsZero, resizingMode: .Tile)
+        self.marsTiled = mars!.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .tile)
         
         iv.image = marsTiled
         
-        let button = UIButton(type: .System)
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button)
         
-        button.setTitle("Tile CapInsets", forState: .Normal)
-        button.addTarget(self, action: #selector(ImageResizableViewController.changeCapInsets), forControlEvents: .TouchUpInside)
-        button.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 40).active = true
-        button.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20).active = true
+        button.setTitle("Tile CapInsets", for: UIControlState())
+        button.addTarget(self, action: #selector(ImageResizableViewController.changeCapInsets), for: .touchUpInside)
+        button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 40).isActive = true
+        button.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20).isActive = true
         
-        self.insets = [UIEdgeInsetsZero,
+        self.insets = [UIEdgeInsets.zero,
                        UIEdgeInsetsMake(
                         mars!.size.height / 4.0,
                         mars!.size.width / 4.0,
@@ -76,7 +76,7 @@ class ImageResizableViewController: UIViewController {
         print("change CapInsets")
         i += 1;
         i = i % insets.count
-        self.marsTiled = mars.resizableImageWithCapInsets(insets[i], resizingMode: i < 2 ? .Tile : .Stretch)
+        self.marsTiled = mars.resizableImage(withCapInsets: insets[i], resizingMode: i < 2 ? .tile : .stretch)
         self.iv.image = self.marsTiled
     }
     /*

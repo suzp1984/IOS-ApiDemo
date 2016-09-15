@@ -15,36 +15,36 @@ class SearchBarViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.searchBar = UISearchBar()
         self.searchBar.delegate = self
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.searchBar)
         
-        NSLayoutConstraint.activateConstraints([
-                searchBar.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor),
-                searchBar.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 50),
-                searchBar.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor),
-                searchBar.heightAnchor.constraintEqualToConstant(140)
+        NSLayoutConstraint.activate([
+                searchBar.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                searchBar.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 50),
+                searchBar.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+                searchBar.heightAnchor.constraint(equalToConstant: 140)
             ])
         
         self.searchBar.enablesReturnKeyAutomatically = true
-        self.searchBar.searchBarStyle = .Default
-        self.searchBar.translucent = true
-        self.searchBar.tintColor = UIColor.greenColor()
+        self.searchBar.searchBarStyle = .default
+        self.searchBar.isTranslucent = true
+        self.searchBar.tintColor = UIColor.green
         var linim : UIImage? = nil
         
         if let lin = UIImage(named: "linen.png") {
-            linim = lin.resizableImageWithCapInsets(UIEdgeInsetsMake(1, 1, 1, 1), resizingMode: .Stretch)
-            self.searchBar.setBackgroundImage(linim, forBarPosition: .Any, barMetrics: .Default)
-            self.searchBar.setBackgroundImage(linim, forBarPosition: .Any, barMetrics: .DefaultPrompt)
+            linim = lin.resizableImage(withCapInsets: UIEdgeInsetsMake(1, 1, 1, 1), resizingMode: .stretch)
+            self.searchBar.setBackgroundImage(linim, for: .any, barMetrics: .default)
+            self.searchBar.setBackgroundImage(linim, for: .any, barMetrics: .defaultPrompt)
         }
         
-        let sepim = imageFromContextOfSize(CGSizeMake(320,20)) {
-            UIBezierPath(roundedRect:CGRectMake(5,0,320-5*2,20), cornerRadius:8).addClip()
-            UIImage(named:"sepia.jpg")!.drawInRect(CGRectMake(0,0,320,20))
+        let sepim = imageFromContextOfSize(CGSize(width: 320,height: 20)) {
+            UIBezierPath(roundedRect:CGRect(x: 5,y: 0,width: 320-5*2,height: 20), cornerRadius:8).addClip()
+            UIImage(named:"sepia.jpg")!.draw(in: CGRect(x: 0,y: 0,width: 320,height: 20))
         }
-        self.searchBar.setSearchFieldBackgroundImage(sepim, forState:.Normal)
+        self.searchBar.setSearchFieldBackgroundImage(sepim, for:UIControlState())
         // just to show what it does:
         self.searchBar.searchFieldBackgroundPositionAdjustment = UIOffsetMake(0, -10) // up from center
      
@@ -52,7 +52,7 @@ class SearchBarViewController: UIViewController, UISearchBarDelegate {
         for v in self.searchBar.subviews[0].subviews {
             if let tf = v as? UITextField {
                 print("got that puppy")
-                tf.textColor = UIColor.whiteColor()
+                tf.textColor = UIColor.white
                 // tf.enabled = false
                 break
             }
@@ -60,17 +60,17 @@ class SearchBarViewController: UIViewController, UISearchBarDelegate {
 
         self.searchBar.text = "Search Me"
         let manny = UIImage(named:"manny.jpg")!
-        self.searchBar.setImage(manny, forSearchBarIcon:.Search, state:.Normal)
-        let mannyim = imageFromContextOfSize(CGSizeMake(20,20)) {
-            manny.drawInRect(CGRectMake(0,0,20,20))
+        self.searchBar.setImage(manny, for:.search, state:UIControlState())
+        let mannyim = imageFromContextOfSize(CGSize(width: 20,height: 20)) {
+            manny.draw(in: CGRect(x: 0,y: 0,width: 20,height: 20))
         }
-        self.searchBar.setImage(mannyim, forSearchBarIcon:.Clear, state:.Normal)
+        self.searchBar.setImage(mannyim, for:.clear, state:UIControlState())
         
         let moe = UIImage(named:"moe.jpg")!
-        let moeim = imageFromContextOfSize(CGSizeMake(20,20)) {
-            moe.drawInRect(CGRectMake(0,0,20,20))
+        let moeim = imageFromContextOfSize(CGSize(width: 20,height: 20)) {
+            moe.draw(in: CGRect(x: 0,y: 0,width: 20,height: 20))
         }
-        self.searchBar.setImage(moeim, forSearchBarIcon:.Clear, state:.Highlighted)
+        self.searchBar.setImage(moeim, for:.clear, state:.highlighted)
         
         self.searchBar.showsScopeBar = true
         self.searchBar.scopeButtonTitles = ["Manny", "Moe", "Jack"]
@@ -78,23 +78,23 @@ class SearchBarViewController: UIViewController, UISearchBarDelegate {
         self.searchBar.scopeBarBackgroundImage = UIImage(named:"sepia.jpg")
         
         if let linim = linim {
-            self.searchBar.setScopeBarButtonBackgroundImage(linim, forState:.Normal)
+            self.searchBar.setScopeBarButtonBackgroundImage(linim, for:UIControlState())
         }
         
-        let divim = imageFromContextOfSize(CGSizeMake(2,2)) {
-            UIColor.whiteColor().setFill()
-            UIBezierPath(rect:CGRectMake(0,0,2,2)).fill()
+        let divim = imageFromContextOfSize(CGSize(width: 2,height: 2)) {
+            UIColor.white.setFill()
+            UIBezierPath(rect:CGRect(x: 0,y: 0,width: 2,height: 2)).fill()
         }
         self.searchBar.setScopeBarButtonDividerImage(divim,
-                                              forLeftSegmentState:.Normal, rightSegmentState:.Normal)
+                                              forLeftSegmentState:UIControlState(), rightSegmentState:UIControlState())
         
         let atts = [
             NSFontAttributeName: UIFont(name:"GillSans-Bold", size:16)!,
-            NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleDouble.rawValue
-        ]
-        self.searchBar.setScopeBarButtonTitleTextAttributes(atts, forState:.Normal)
-        self.searchBar.setScopeBarButtonTitleTextAttributes(atts, forState:.Selected)
+            NSForegroundColorAttributeName: UIColor.white,
+            NSUnderlineStyleAttributeName: NSUnderlineStyle.styleDouble.rawValue
+        ] as [String : Any]
+        self.searchBar.setScopeBarButtonTitleTextAttributes(atts, for:UIControlState())
+        self.searchBar.setScopeBarButtonTitleTextAttributes(atts, for:.selected)
 
     }
 
@@ -103,22 +103,22 @@ class SearchBarViewController: UIViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         
         self.view.endEditing(true)
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
     
-    func imageFromContextOfSize(size:CGSize, closure:() -> ()) -> UIImage {
+    func imageFromContextOfSize(_ size:CGSize, closure:() -> ()) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         closure()
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return result
+        return result!
     }
 
     /*

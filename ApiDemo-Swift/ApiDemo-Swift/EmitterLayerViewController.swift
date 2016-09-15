@@ -15,13 +15,13 @@ class EmitterLayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(10,10), false, 1)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 10,height: 10), false, 1)
         let con = UIGraphicsGetCurrentContext()!
-        CGContextAddEllipseInRect(con, CGRectMake(0,0,10,10))
-        CGContextSetFillColorWithColor(con, UIColor.grayColor().CGColor)
-        CGContextFillPath(con)
+        con.addEllipse(in: CGRect(x: 0,y: 0,width: 10,height: 10))
+        con.setFillColor(UIColor.gray.cgColor)
+        con.fillPath()
         let im = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -29,10 +29,10 @@ class EmitterLayerViewController: UIViewController {
         cell.birthRate = 5
         cell.lifetime = 1
         cell.velocity = 100
-        cell.contents = im.CGImage
+        cell.contents = im?.cgImage
         
         let emit = CAEmitterLayer()
-        emit.emitterPosition = CGPointMake(30,100)
+        emit.emitterPosition = CGPoint(x: 30,y: 100)
         emit.emitterShape = kCAEmitterLayerPoint
         emit.emitterMode = kCAEmitterLayerPoints
         
@@ -56,7 +56,7 @@ class EmitterLayerViewController: UIViewController {
             cell.scaleRange = 0.2
             cell.scaleSpeed = 0.2
             
-            cell.color = UIColor.blueColor().CGColor
+            cell.color = UIColor.blue.cgColor
             cell.greenRange = 0.5
             cell.greenSpeed = 0.75
             
@@ -76,14 +76,14 @@ class EmitterLayerViewController: UIViewController {
             ba.duration = 4
             ba.autoreverses = true
             ba.repeatCount = Float.infinity
-            emit.addAnimation(ba, forKey:nil)
+            emit.add(ba, forKey:nil)
             
             if which > 3 {fallthrough}
             
         case 4...5:
             let cell2 = CAEmitterCell()
             cell.emitterCells = [cell2]
-            cell2.contents = im.CGImage
+            cell2.contents = im?.cgImage
             cell2.emissionRange = CGFloat(M_PI)
             cell2.birthRate = 200
             cell2.lifetime = 0.4
@@ -110,20 +110,20 @@ class EmitterLayerViewController: UIViewController {
             if which > 4 {fallthrough}
             
         case 5:
-            emit.emitterPosition = CGPointMake(100,25)
-            emit.emitterSize = CGSizeMake(100,100)
+            emit.emitterPosition = CGPoint(x: 100,y: 25)
+            emit.emitterSize = CGSize(width: 100,height: 100)
             emit.emitterShape = kCAEmitterLayerLine
             emit.emitterMode = kCAEmitterLayerOutline
             cell.emissionLongitude = 3*CGFloat(M_PI)/4
             
             // might also be fun to animate position of source back and forth
             let ba2 = CABasicAnimation(keyPath:"emitterPosition")
-            ba2.fromValue = NSValue(CGPoint:CGPointMake(30,100))
-            ba2.toValue = NSValue(CGPoint:CGPointMake(200,100))
+            ba2.fromValue = NSValue(cgPoint:CGPoint(x: 30,y: 100))
+            ba2.toValue = NSValue(cgPoint:CGPoint(x: 200,y: 100))
             ba2.duration = 6
             ba2.autoreverses = true
             ba2.repeatCount = Float.infinity
-            emit.addAnimation(ba2, forKey:nil)
+            emit.add(ba2, forKey:nil)
             
             
         default: break

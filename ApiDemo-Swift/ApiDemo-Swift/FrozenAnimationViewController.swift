@@ -16,22 +16,22 @@ class FrozenAnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         let slide = UISlider()
         
         self.view.addSubview(slide)
         
         slide.translatesAutoresizingMaskIntoConstraints = false
-        slide.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 10).active = true
-        slide.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30).active = true
-        slide.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, constant: -60).active = true
-        slide.heightAnchor.constraintEqualToConstant(20.0).active = true
+        slide.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 10).isActive = true
+        slide.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 30).isActive = true
+        slide.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -60).isActive = true
+        slide.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         
-        slide.addTarget(self, action: #selector(FrozenAnimationViewController.doSlide(_:)), forControlEvents: .ValueChanged)
-        slide.backgroundColor = UIColor.clearColor()
+        slide.addTarget(self, action: #selector(FrozenAnimationViewController.doSlide(_:)), for: .valueChanged)
+        slide.backgroundColor = UIColor.clear
         slide.minimumValue = 0.0
         slide.maximumValue = 1.0
-        slide.continuous = true
+        slide.isContinuous = true
         slide.value = 0
         
         CATransaction.setDisableActions(true)
@@ -39,13 +39,13 @@ class FrozenAnimationViewController: UIViewController {
         // add view
         self.v = UIView()
         self.view.addSubview(v)
-        v.backgroundColor = UIColor.clearColor()
+        v.backgroundColor = UIColor.clear
         
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.topAnchor.constraintEqualToAnchor(slide.bottomAnchor, constant: 10).active = true
-        v.widthAnchor.constraintEqualToConstant(200).active = true
-        v.heightAnchor.constraintEqualToConstant(200).active = true
-        v.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor, constant: 0.0).active = true
+        v.topAnchor.constraint(equalTo: slide.bottomAnchor, constant: 10).isActive = true
+        v.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        v.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        v.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0.0).isActive = true
         
         // add shape sublayer
         self.shape = CAShapeLayer()
@@ -57,14 +57,14 @@ class FrozenAnimationViewController: UIViewController {
         
         self.shape.frame = self.v.bounds
         
-        self.shape.fillColor = UIColor.clearColor().CGColor
-        self.shape.strokeColor = UIColor.redColor().CGColor
+        self.shape.fillColor = UIColor.clear.cgColor
+        self.shape.strokeColor = UIColor.red.cgColor
         // self.shape.lineWidth = 4.0
         
-        let path = CGPathCreateWithRect(shape.bounds, nil)
+        let path = CGPath(rect: shape.bounds, transform: nil)
         self.shape.path = path
         
-        let path2 = CGPathCreateWithEllipseInRect(shape.bounds, nil)
+        let path2 = CGPath(ellipseIn: shape.bounds, transform: nil)
         let ba = CABasicAnimation(keyPath: "path")
         ba.duration = 1
         ba.fromValue = path
@@ -72,11 +72,11 @@ class FrozenAnimationViewController: UIViewController {
         
         shape.speed = 0
         shape.timeOffset = 0
-        shape.addAnimation(ba, forKey: nil)
+        shape.add(ba, forKey: nil)
         shape.opacity = 1.0
     }
     
-    func doSlide(sender: UISlider!) {
+    func doSlide(_ sender: UISlider!) {
         print(sender.value)
         self.shape.timeOffset = Double(sender.value)
     }

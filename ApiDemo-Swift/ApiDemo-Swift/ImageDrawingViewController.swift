@@ -14,7 +14,7 @@ class ImageDrawingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let iv1 = UIImageView()
         let iv2 = UIImageView()
@@ -32,20 +32,20 @@ class ImageDrawingViewController: UIViewController {
         iv6.translatesAutoresizingMaskIntoConstraints = false
         iv7.translatesAutoresizingMaskIntoConstraints = false
         
-        iv1.widthAnchor.constraintEqualToConstant(106).active = true
-        iv1.heightAnchor.constraintEqualToConstant(54).active = true
-        iv2.widthAnchor.constraintEqualToConstant(106).active = true
-        iv2.heightAnchor.constraintEqualToConstant(106).active = true
-        iv3.widthAnchor.constraintEqualToConstant(106).active = true
-        iv3.heightAnchor.constraintEqualToConstant(54).active = true
-        iv4.widthAnchor.constraintEqualToConstant(106).active = true
-        iv4.heightAnchor.constraintEqualToConstant(54).active = true
-        iv5.widthAnchor.constraintEqualToConstant(106).active = true
-        iv5.heightAnchor.constraintEqualToConstant(54).active = true
-        iv6.widthAnchor.constraintEqualToConstant(106).active = true
-        iv6.heightAnchor.constraintEqualToConstant(54).active = true
-        iv7.widthAnchor.constraintEqualToConstant(106).active = true
-        iv7.heightAnchor.constraintEqualToConstant(54).active = true
+        iv1.widthAnchor.constraint(equalToConstant: 106).isActive = true
+        iv1.heightAnchor.constraint(equalToConstant: 54).isActive = true
+        iv2.widthAnchor.constraint(equalToConstant: 106).isActive = true
+        iv2.heightAnchor.constraint(equalToConstant: 106).isActive = true
+        iv3.widthAnchor.constraint(equalToConstant: 106).isActive = true
+        iv3.heightAnchor.constraint(equalToConstant: 54).isActive = true
+        iv4.widthAnchor.constraint(equalToConstant: 106).isActive = true
+        iv4.heightAnchor.constraint(equalToConstant: 54).isActive = true
+        iv5.widthAnchor.constraint(equalToConstant: 106).isActive = true
+        iv5.heightAnchor.constraint(equalToConstant: 54).isActive = true
+        iv6.widthAnchor.constraint(equalToConstant: 106).isActive = true
+        iv6.heightAnchor.constraint(equalToConstant: 54).isActive = true
+        iv7.widthAnchor.constraint(equalToConstant: 106).isActive = true
+        iv7.heightAnchor.constraint(equalToConstant: 54).isActive = true
         
         self.view.addSubview(iv1)
         self.view.addSubview(iv2)
@@ -55,18 +55,18 @@ class ImageDrawingViewController: UIViewController {
         self.view.addSubview(iv6)
         self.view.addSubview(iv7)
         
-        let vs = ["iv1":iv1, "iv2":iv2, "iv3": iv3, "iv4": iv4, "iv5": iv5, "iv6":iv6, "iv7": iv7, "tlg":self.topLayoutGuide]
+        let vs = ["iv1":iv1, "iv2":iv2, "iv3": iv3, "iv4": iv4, "iv5": iv5, "iv6":iv6, "iv7": iv7, "tlg":self.topLayoutGuide] as [String : Any]
         
-        NSLayoutConstraint.activateConstraints([
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|[tlg]-(10)-[iv1]-(10)-[iv3]-(10)-[iv4]-(10)-[iv5]-(10)-[iv6]-(10)-[iv7]", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|[tlg]-(10)-[iv2]", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv1]", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:[iv2]-(10)-|", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv3]", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv4]", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv5]", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv6]", options: [], metrics: nil, views: vs as! [String : AnyObject]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv7]", options: [], metrics: nil, views: vs as! [String : AnyObject])
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|[tlg]-(10)-[iv1]-(10)-[iv3]-(10)-[iv4]-(10)-[iv5]-(10)-[iv6]-(10)-[iv7]", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|[tlg]-(10)-[iv2]", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv1]", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:[iv2]-(10)-|", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv3]", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv4]", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv5]", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv6]", options: [], metrics: nil, views: vs as [String : AnyObject]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv7]", options: [], metrics: nil, views: vs as [String : AnyObject])
             ].flatMap{$0})
         
 //        NSLayoutConstraint.activateConstraints([
@@ -91,9 +91,9 @@ class ImageDrawingViewController: UIViewController {
             let mars = UIImage(named:"Mars")!
             let sz = mars.size
             UIGraphicsBeginImageContextWithOptions(
-                CGSizeMake(sz.width*2, sz.height), false, 0)
-            mars.drawAtPoint(CGPointMake(0,0))
-            mars.drawAtPoint(CGPointMake(sz.width,0))
+                CGSize(width: sz.width*2, height: sz.height), false, 0)
+            mars.draw(at: CGPoint(x: 0,y: 0))
+            mars.draw(at: CGPoint(x: sz.width,y: 0))
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             iv1.image = im
@@ -105,9 +105,9 @@ class ImageDrawingViewController: UIViewController {
             let mars = UIImage(named:"Mars")!
             let sz = mars.size
             UIGraphicsBeginImageContextWithOptions(
-                CGSizeMake(sz.width*2, sz.height*2), false, 0)
-            mars.drawInRect(CGRectMake(0,0,sz.width*2, sz.height*2))
-            mars.drawInRect(CGRectMake(sz.width/2.0, sz.height/2.0, sz.width, sz.height), blendMode: .Multiply, alpha: 1.0)
+                CGSize(width: sz.width*2, height: sz.height*2), false, 0)
+            mars.draw(in: CGRect(x: 0,y: 0,width: sz.width*2, height: sz.height*2))
+            mars.draw(in: CGRect(x: sz.width/2.0, y: sz.height/2.0, width: sz.width, height: sz.height), blendMode: .multiply, alpha: 1.0)
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             iv2.image = im
@@ -119,8 +119,8 @@ class ImageDrawingViewController: UIViewController {
             let mars = UIImage(named:"Mars")!
             let sz = mars.size
             UIGraphicsBeginImageContextWithOptions(
-                CGSizeMake(sz.width/2.0, sz.height), false, 0)
-            mars.drawAtPoint(CGPointMake(-sz.width/2.0,0))
+                CGSize(width: sz.width/2.0, height: sz.height), false, 0)
+            mars.draw(at: CGPoint(x: -sz.width/2.0,y: 0))
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             iv3.image = im
@@ -131,22 +131,16 @@ class ImageDrawingViewController: UIViewController {
         do {
             let mars = UIImage(named:"Mars")!
             // extract each half as CGImage
-            let marsCG = mars.CGImage
+            let marsCG = mars.cgImage
             let sz = mars.size
-            let marsLeft = CGImageCreateWithImageInRect(
-                marsCG,
-                CGRectMake(0,0,sz.width/2.0,sz.height))
-            let marsRight = CGImageCreateWithImageInRect(
-                marsCG,
-                CGRectMake(sz.width/2.0,0,sz.width/2.0,sz.height))
+            let marsLeft = marsCG?.cropping(to: CGRect(x: 0,y: 0,width: sz.width/2.0,height: sz.height))
+            let marsRight = marsCG?.cropping(to: CGRect(x: sz.width/2.0,y: 0,width: sz.width/2.0,height: sz.height))
             // draw each CGImage
             UIGraphicsBeginImageContextWithOptions(
-                CGSizeMake(sz.width*1.5, sz.height), false, 0)
+                CGSize(width: sz.width*1.5, height: sz.height), false, 0)
             let con = UIGraphicsGetCurrentContext()!
-            CGContextDrawImage(con,
-                               CGRectMake(0,0,sz.width/2.0,sz.height), marsLeft)
-            CGContextDrawImage(con,
-                               CGRectMake(sz.width,0,sz.width/2.0,sz.height), marsRight)
+            con.draw(marsLeft!, in: CGRect(x: 0,y: 0,width: sz.width/2.0,height: sz.height))
+            con.draw(marsRight!, in: CGRect(x: sz.width,y: 0,width: sz.width/2.0,height: sz.height))
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             // no memory management
@@ -160,21 +154,15 @@ class ImageDrawingViewController: UIViewController {
             let mars = UIImage(named:"Mars")!
             // extract each half as CGImage
             let sz = mars.size
-            let marsCG = mars.CGImage
-            let marsLeft = CGImageCreateWithImageInRect(
-                marsCG,
-                CGRectMake(0,0,sz.width/2.0,sz.height))
-            let marsRight = CGImageCreateWithImageInRect(
-                marsCG,
-                CGRectMake(sz.width/2.0,0,sz.width/2.0,sz.height))
+            let marsCG = mars.cgImage
+            let marsLeft = marsCG?.cropping(to: CGRect(x: 0,y: 0,width: sz.width/2.0,height: sz.height))
+            let marsRight = marsCG?.cropping(to: CGRect(x: sz.width/2.0,y: 0,width: sz.width/2.0,height: sz.height))
             // draw each CGImage flipped
             UIGraphicsBeginImageContextWithOptions(
-                CGSizeMake(sz.width*1.5, sz.height), false, 0)
+                CGSize(width: sz.width*1.5, height: sz.height), false, 0)
             let con = UIGraphicsGetCurrentContext()!
-            CGContextDrawImage(con,
-                               CGRectMake(0,0,sz.width/2.0,sz.height), flip(marsLeft!))
-            CGContextDrawImage(con,
-                               CGRectMake(sz.width,0,sz.width/2.0,sz.height), flip(marsRight!))
+            con.draw(flip(marsLeft!), in: CGRect(x: 0,y: 0,width: sz.width/2.0,height: sz.height))
+            con.draw(flip(marsRight!), in: CGRect(x: sz.width,y: 0,width: sz.width/2.0,height: sz.height))
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             // no memory management
@@ -186,22 +174,18 @@ class ImageDrawingViewController: UIViewController {
         do {
             let mars = UIImage(named:"Mars")!
             let sz = mars.size
-            let marsCG = mars.CGImage
-            let szCG = CGSizeMake(CGFloat(CGImageGetWidth(marsCG)), CGFloat(CGImageGetHeight(marsCG)))
+            let marsCG = mars.cgImage
+            let szCG = CGSize(width: CGFloat((marsCG?.width)!), height: CGFloat((marsCG?.height)!))
             let marsLeft =
-                CGImageCreateWithImageInRect(
-                    marsCG, CGRectMake(0,0,szCG.width/2.0,szCG.height))
+                marsCG?.cropping(to: CGRect(x: 0,y: 0,width: szCG.width/2.0,height: szCG.height))
             let marsRight =
-                CGImageCreateWithImageInRect(
-                    marsCG, CGRectMake(szCG.width/2.0,0,szCG.width/2.0,szCG.height))
+                marsCG?.cropping(to: CGRect(x: szCG.width/2.0,y: 0,width: szCG.width/2.0,height: szCG.height))
             UIGraphicsBeginImageContextWithOptions(
-                CGSizeMake(sz.width*1.5, sz.height), false, 0)
+                CGSize(width: sz.width*1.5, height: sz.height), false, 0)
             // the rest as before, draw each CGImage flipped
             let con = UIGraphicsGetCurrentContext()!
-            CGContextDrawImage(con,
-                               CGRectMake(0,0,sz.width/2.0,sz.height), flip(marsLeft!))
-            CGContextDrawImage(con,
-                               CGRectMake(sz.width,0,sz.width/2.0,sz.height), flip(marsRight!))
+            con.draw(flip(marsLeft!), in: CGRect(x: 0,y: 0,width: sz.width/2.0,height: sz.height))
+            con.draw(flip(marsRight!), in: CGRect(x: sz.width,y: 0,width: sz.width/2.0,height: sz.height))
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             // no memory management
@@ -213,23 +197,21 @@ class ImageDrawingViewController: UIViewController {
         do {
             let mars = UIImage(named:"Mars")!
             let sz = mars.size
-            let marsCG = mars.CGImage
-            let szCG = CGSizeMake(CGFloat(CGImageGetWidth(marsCG)), CGFloat(CGImageGetHeight(marsCG)))
+            let marsCG = mars.cgImage
+            let szCG = CGSize(width: CGFloat((marsCG?.width)!), height: CGFloat((marsCG?.height)!))
             let marsLeft =
-                CGImageCreateWithImageInRect(
-                    marsCG, CGRectMake(0,0,szCG.width/2.0,szCG.height))
+                marsCG?.cropping(to: CGRect(x: 0,y: 0,width: szCG.width/2.0,height: szCG.height))
             let marsRight =
-                CGImageCreateWithImageInRect(
-                    marsCG, CGRectMake(szCG.width/2.0,0,szCG.width/2.0,szCG.height))
+                marsCG?.cropping(to: CGRect(x: szCG.width/2.0,y: 0,width: szCG.width/2.0,height: szCG.height))
             UIGraphicsBeginImageContextWithOptions(
-                CGSizeMake(sz.width*1.5, sz.height), false, 0)
+                CGSize(width: sz.width*1.5, height: sz.height), false, 0)
             // instead of calling flip, pass through UIImage
-            UIImage(CGImage: marsLeft!, scale: mars.scale,
+            UIImage(cgImage: marsLeft!, scale: mars.scale,
                 orientation: mars.imageOrientation)
-                .drawAtPoint(CGPointMake(0,0))
-            UIImage(CGImage: marsRight!, scale: mars.scale,
+                .draw(at: CGPoint(x: 0,y: 0))
+            UIImage(cgImage: marsRight!, scale: mars.scale,
                 orientation: mars.imageOrientation)
-                .drawAtPoint(CGPointMake(sz.width,0))
+                .draw(at: CGPoint(x: sz.width,y: 0))
             let im = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             // no memory management
@@ -254,12 +236,11 @@ class ImageDrawingViewController: UIViewController {
     }
     */
     
-    func flip (im: CGImage) -> CGImage {
-        let sz = CGSizeMake(CGFloat(CGImageGetWidth(im)), CGFloat(CGImageGetHeight(im)))
+    func flip (_ im: CGImage) -> CGImage {
+        let sz = CGSize(width: CGFloat(im.width), height: CGFloat(im.height))
         UIGraphicsBeginImageContextWithOptions(sz, false, 0)
-        CGContextDrawImage(UIGraphicsGetCurrentContext()!,
-                           CGRectMake(0, 0, sz.width, sz.height), im)
-        let result = UIGraphicsGetImageFromCurrentImageContext().CGImage
+        UIGraphicsGetCurrentContext()!.draw(im, in: CGRect(x: 0, y: 0, width: sz.width, height: sz.height))
+        let result = UIGraphicsGetImageFromCurrentImageContext()?.cgImage
         UIGraphicsEndImageContext()
         return result!
     }

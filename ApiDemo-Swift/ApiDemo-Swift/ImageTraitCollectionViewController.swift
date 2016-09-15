@@ -14,65 +14,65 @@ class ImageTraitCollectionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let iv1 = UIImageView()
         iv1.translatesAutoresizingMaskIntoConstraints = false
-        iv1.widthAnchor.constraintEqualToConstant(120).active = true
-        iv1.heightAnchor.constraintEqualToConstant(120).active = true
+        iv1.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        iv1.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
         let iv2 = UIImageView()
         iv2.translatesAutoresizingMaskIntoConstraints = false
-        iv2.widthAnchor.constraintEqualToConstant(120).active = true
-        iv2.heightAnchor.constraintEqualToConstant(120).active = true
+        iv2.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        iv2.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
-        let button = UIButton(type: .System)
-        button.setTitle("Button", forState: UIControlState.Normal)
+        let button = UIButton(type: .system)
+        button.setTitle("Button", for: UIControlState())
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraintEqualToConstant(50).active = true
-        button.heightAnchor.constraintEqualToConstant(50).active = true
+        button.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         let myiv = MyImageView()
         myiv.translatesAutoresizingMaskIntoConstraints = false
-        myiv.widthAnchor.constraintEqualToConstant(120).active = true
-        myiv.heightAnchor.constraintEqualToConstant(120).active = true
+        myiv.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        myiv.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
         self.view.addSubview(iv1)
         self.view.addSubview(iv2)
         self.view.addSubview(button)
         self.view.addSubview(myiv)
         
-        NSLayoutConstraint.activateConstraints([
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv1]-(>=10)-[button]-(10)-|", options: [], metrics: nil, views: ["iv1":iv1, "button":button]),
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(10)-[iv2]-(>=10)-[myview]-(10)-|", options: [], metrics: nil, views: ["iv2":iv2, "myview": myiv]),
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv1]-(>=10)-[button]-(10)-|", options: [], metrics: nil, views: ["iv1":iv1, "button":button]),
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(10)-[iv2]-(>=10)-[myview]-(10)-|", options: [], metrics: nil, views: ["iv2":iv2, "myview": myiv]),
             // NSLayoutConstraint.constraintsWithVisualFormat("H:[button]-(10)-|", options: [], metrics: nil, views: ["button":button]),
             // NSLayoutConstraint.constraintsWithVisualFormat("H:[myview]-(10)-|", options: [], metrics: nil, views: ["myview": myiv]),
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|[tlg]-(10)-[iv1]-(10)-[iv2]", options: [], metrics: nil, views: ["tlg":self.topLayoutGuide, "iv1":iv1, "iv2":iv2]),
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|[tlg]-(10)-[button]-(10)-[myview]", options: [], metrics: nil, views: ["tlg":self.topLayoutGuide, "button":button, "myview":myiv])
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|[tlg]-(10)-[iv1]-(10)-[iv2]", options: [], metrics: nil, views: ["tlg":self.topLayoutGuide, "iv1":iv1, "iv2":iv2]),
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|[tlg]-(10)-[button]-(10)-[myview]", options: [], metrics: nil, views: ["tlg":self.topLayoutGuide, "button":button, "myview":myiv])
             ].flatMap{$0})
         
         // set image
         iv1.image = UIImage(named: "Moods")
         
-        let tcdisp = UITraitCollection(displayScale: UIScreen.mainScreen().scale)
-        let tcphone = UITraitCollection(userInterfaceIdiom: .Phone)
-        let tcreg = UITraitCollection(verticalSizeClass: .Regular)
-        let tc1 = UITraitCollection(traitsFromCollections: [tcdisp, tcphone, tcreg])
-        let tccom = UITraitCollection(verticalSizeClass: .Compact)
-        let tc2 = UITraitCollection(traitsFromCollections: [tcdisp, tcphone, tccom])
+        let tcdisp = UITraitCollection(displayScale: UIScreen.main.scale)
+        let tcphone = UITraitCollection(userInterfaceIdiom: .phone)
+        let tcreg = UITraitCollection(verticalSizeClass: .regular)
+        let tc1 = UITraitCollection(traitsFrom: [tcdisp, tcphone, tcreg])
+        let tccom = UITraitCollection(verticalSizeClass: .compact)
+        let tc2 = UITraitCollection(traitsFrom: [tcdisp, tcphone, tccom])
         let moods = UIImageAsset()
-        let frowney = UIImage(named:"frowney")!.imageWithRenderingMode(.AlwaysOriginal)
-        let smiley = UIImage(named:"smiley")!.imageWithRenderingMode(.AlwaysOriginal)
-        moods.registerImage(frowney, withTraitCollection: tc1)
-        moods.registerImage(smiley, withTraitCollection: tc2)
+        let frowney = UIImage(named:"frowney")!.withRenderingMode(.alwaysOriginal)
+        let smiley = UIImage(named:"smiley")!.withRenderingMode(.alwaysOriginal)
+        moods.register(frowney, with: tc1)
+        moods.register(smiley, with: tc2)
         
         let tc = self.traitCollection
-        let im = moods.imageWithTraitCollection(tc)
+        let im = moods.image(with: tc)
 
         iv2.image = im
         
-        button.setImage(im, forState: .Normal)
-        button.setImage(im, forState: .Highlighted)
+        button.setImage(im, for: UIControlState())
+        button.setImage(im, for: .highlighted)
         
         myiv.image = im
         

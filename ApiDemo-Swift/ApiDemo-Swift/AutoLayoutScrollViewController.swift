@@ -13,17 +13,17 @@ class AutoLayoutScrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let sv = UIScrollView()
-        sv.backgroundColor = UIColor.greenColor()
+        sv.backgroundColor = UIColor.green
         sv.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(sv)
         var constraints = [NSLayoutConstraint]()
-        constraints.append(sv.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor))
-        constraints.append(sv.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor))
-        constraints.append(sv.topAnchor.constraintEqualToAnchor(self.view.topAnchor))
-        constraints.append(sv.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor))
+        constraints.append(sv.leftAnchor.constraint(equalTo: self.view.leftAnchor))
+        constraints.append(sv.rightAnchor.constraint(equalTo: self.view.rightAnchor))
+        constraints.append(sv.topAnchor.constraint(equalTo: self.view.topAnchor))
+        constraints.append(sv.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor))
         
         var previousLab : UILabel? = nil
         
@@ -32,21 +32,21 @@ class AutoLayoutScrollViewController: UIViewController {
             lab.translatesAutoresizingMaskIntoConstraints = false
             lab.text = "This is Label \(i+1)"
             sv.addSubview(lab)
-            constraints.append(lab.leftAnchor.constraintEqualToAnchor(sv.leftAnchor, constant: 10))
+            constraints.append(lab.leftAnchor.constraint(equalTo: sv.leftAnchor, constant: 10))
             if let previousLab = previousLab {
-                constraints.append(lab.topAnchor.constraintEqualToAnchor(previousLab.bottomAnchor, constant: 10))
+                constraints.append(lab.topAnchor.constraint(equalTo: previousLab.bottomAnchor, constant: 10))
             } else {
-                constraints.append(lab.topAnchor.constraintEqualToAnchor(sv.topAnchor, constant: 10))
+                constraints.append(lab.topAnchor.constraint(equalTo: sv.topAnchor, constant: 10))
             }
             
             previousLab = lab
         }
         
         if let previousLab = previousLab {
-        constraints.append(previousLab.bottomAnchor.constraintEqualToAnchor(sv.bottomAnchor, constant: -10))
+        constraints.append(previousLab.bottomAnchor.constraint(equalTo: sv.bottomAnchor, constant: -10))
         }
         
-        NSLayoutConstraint.activateConstraints(constraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     override func didReceiveMemoryWarning() {

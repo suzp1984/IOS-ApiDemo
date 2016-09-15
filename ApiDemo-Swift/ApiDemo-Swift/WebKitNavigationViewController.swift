@@ -16,27 +16,27 @@ class WebKitNavigationViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let wk = WKWebView(frame: CGRectZero)
+        let wk = WKWebView(frame: CGRect.zero)
         self.wk = wk
         
         wk.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(wk)
         
-        NSLayoutConstraint.activateConstraints([
-            wk.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor),
-            wk.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor),
-            wk.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor),
-            wk.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor)
+        NSLayoutConstraint.activate([
+            wk.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor),
+            wk.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor),
+            wk.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            wk.rightAnchor.constraint(equalTo: self.view.rightAnchor)
             ])
 
         wk.navigationDelegate = self
     }
 
-    override func viewDidAppear(animated: Bool) {
-        let url = NSURL(string: "https://www.apple.com")
+    override func viewDidAppear(_ animated: Bool) {
+        let url = URL(string: "https://www.apple.com")
         
-        if let wk = self.wk, url = url {
-            wk.loadRequest(NSURLRequest(URL: url))
+        if let wk = self.wk, let url = url {
+            wk.load(URLRequest(url: url))
         }
         
     }
@@ -46,16 +46,16 @@ class WebKitNavigationViewController: UIViewController, WKNavigationDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
-        if navigationAction.navigationType == .LinkActivated {
-            if let url = navigationAction.request.URL {
-                UIApplication.sharedApplication().openURL(url)
-                decisionHandler(.Cancel)
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if navigationAction.navigationType == .linkActivated {
+            if let url = navigationAction.request.url {
+                UIApplication.shared.openURL(url)
+                decisionHandler(.cancel)
                 return
             }
         }
         
-        decisionHandler(.Allow)
+        decisionHandler(.allow)
     }
 
 }

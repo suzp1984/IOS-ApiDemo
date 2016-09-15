@@ -17,32 +17,32 @@ class HtmlStringWKViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let wk = WKWebView(frame: CGRectZero)
+        let wk = WKWebView(frame: CGRect.zero)
         self.wk = wk
         
         wk.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(wk)
         
-        NSLayoutConstraint.activateConstraints([
-            wk.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor),
-            wk.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor),
-            wk.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor),
-            wk.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor)
+        NSLayoutConstraint.activate([
+            wk.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor),
+            wk.bottomAnchor.constraint(equalTo: self.bottomLayoutGuide.topAnchor),
+            wk.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            wk.rightAnchor.constraint(equalTo: self.view.rightAnchor)
             ])
 
     }
 
-    override func viewDidAppear(animated: Bool) {
-        let templatePath = NSBundle.mainBundle().pathForResource("htmlTemplate", ofType: "txt")
-        let contentPath = NSBundle.mainBundle().pathForResource("htmlbody", ofType: "txt")
+    override func viewDidAppear(_ animated: Bool) {
+        let templatePath = Bundle.main.path(forResource: "htmlTemplate", ofType: "txt")
+        let contentPath = Bundle.main.path(forResource: "htmlbody", ofType: "txt")
         
-        if let templatePath = templatePath, contentPath = contentPath {
-            let base = NSURL.fileURLWithPath(templatePath)
-            let template = try? String(contentsOfFile: templatePath, encoding: NSUTF8StringEncoding)
-            let content = try? String(contentsOfFile: contentPath, encoding: NSUTF8StringEncoding)
+        if let templatePath = templatePath, let contentPath = contentPath {
+            let base = URL(fileURLWithPath: templatePath)
+            let template = try? String(contentsOfFile: templatePath, encoding: String.Encoding.utf8)
+            let content = try? String(contentsOfFile: contentPath, encoding: String.Encoding.utf8)
             
-            if let template = template, content = content {
-                let html = template.stringByReplacingOccurrencesOfString("<content>", withString: content)
+            if let template = template, let content = content {
+                let html = template.replacingOccurrences(of: "<content>", with: content)
                 self.wk?.loadHTMLString(html, baseURL: base)
             }
         }

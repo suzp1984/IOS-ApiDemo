@@ -17,15 +17,15 @@ class StepperViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let stepper = UIStepper()
         stepper.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(stepper)
-        NSLayoutConstraint.activateConstraints([
-                stepper.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                stepper.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -20)
+        NSLayoutConstraint.activate([
+                stepper.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                stepper.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20)
             ])
         
         stepper.minimumValue = 0
@@ -37,114 +37,114 @@ class StepperViewController: UIViewController {
         self.view.addSubview(label)
         self.label = label
         
-        NSLayoutConstraint.activateConstraints([
-                label.topAnchor.constraintEqualToAnchor(self.topLayoutGuide.bottomAnchor, constant: 20),
-                label.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                label.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 20),
+                label.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
-        stepper.addTarget(self, action: #selector(StepperViewController.stepperEvent(_:)), forControlEvents: .ValueChanged)
+        stepper.addTarget(self, action: #selector(StepperViewController.stepperEvent(_:)), for: .valueChanged)
         
         // custome stepper
         let customeStepper = UIStepper()
-        customeStepper.tintColor = UIColor.yellowColor()
+        customeStepper.tintColor = UIColor.yellow
         
         let imdis = UIImage(named: "pic2.png")!
-            .resizableImageWithCapInsets(
-                UIEdgeInsetsMake(1, 1, 1, 1), resizingMode:.Stretch)
-        customeStepper.setBackgroundImage(imdis, forState:.Disabled)
+            .resizableImage(
+                withCapInsets: UIEdgeInsetsMake(1, 1, 1, 1), resizingMode:.stretch)
+        customeStepper.setBackgroundImage(imdis, for:.disabled)
         
         let imnorm = UIImage(named: "pic1.png")!
-            .resizableImageWithCapInsets(
-                UIEdgeInsetsMake(1, 1, 1, 1), resizingMode:.Stretch)
-        customeStepper.setBackgroundImage(imnorm, forState:.Normal)
+            .resizableImage(
+                withCapInsets: UIEdgeInsetsMake(1, 1, 1, 1), resizingMode:.stretch)
+        customeStepper.setBackgroundImage(imnorm, for:UIControlState())
         
-        let tint = imageOfSize(CGSizeMake(3,3)) {
+        let tint = imageOfSize(CGSize(width: 3,height: 3)) {
             customeStepper.tintColor.setFill()
-            CGContextFillRect(UIGraphicsGetCurrentContext()!, CGRectMake(0,0,3,3))
-            }.resizableImageWithCapInsets(
-                UIEdgeInsetsMake(1, 1, 1, 1), resizingMode:.Stretch)
-        customeStepper.setDividerImage(tint, forLeftSegmentState:.Normal, rightSegmentState:.Normal)
-        customeStepper.setDividerImage(tint, forLeftSegmentState:.Highlighted, rightSegmentState:.Normal)
-        customeStepper.setDividerImage(tint, forLeftSegmentState:.Normal, rightSegmentState:.Highlighted)
+            UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0,y: 0,width: 3,height: 3))
+            }.resizableImage(
+                withCapInsets: UIEdgeInsetsMake(1, 1, 1, 1), resizingMode:.stretch)
+        customeStepper.setDividerImage(tint, forLeftSegmentState:UIControlState(), rightSegmentState:UIControlState())
+        customeStepper.setDividerImage(tint, forLeftSegmentState:.highlighted, rightSegmentState:UIControlState())
+        customeStepper.setDividerImage(tint, forLeftSegmentState:UIControlState(), rightSegmentState:.highlighted)
         
-        let imleft = imageOfSize(CGSizeMake(45,29)) {
+        let imleft = imageOfSize(CGSize(width: 45,height: 29)) {
             NSAttributedString(string:"\u{21DA}", attributes:[
                 NSFontAttributeName: UIFont(name:"GillSans-Bold", size:30)!,
-                NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSForegroundColorAttributeName: UIColor.white,
                 NSParagraphStyleAttributeName: self.lend {
                     (para : NSMutableParagraphStyle) in
-                    para.alignment = .Center
+                    para.alignment = .center
                 }
-                ]).drawInRect(CGRectMake(0,-5,45,29))
-            }.imageWithRenderingMode(.AlwaysOriginal)
-        customeStepper.setDecrementImage(imleft, forState:.Normal)
+                ]).draw(in: CGRect(x: 0,y: -5,width: 45,height: 29))
+            }.withRenderingMode(.alwaysOriginal)
+        customeStepper.setDecrementImage(imleft, for:UIControlState())
         
-        let imleftblack = imageOfSize(CGSizeMake(45,29)) {
+        let imleftblack = imageOfSize(CGSize(width: 45,height: 29)) {
             NSAttributedString(string:"\u{21DA}", attributes:[
                 NSFontAttributeName: UIFont(name:"GillSans-Bold", size:30)!,
-                NSForegroundColorAttributeName: UIColor.blackColor(),
+                NSForegroundColorAttributeName: UIColor.black,
                 NSParagraphStyleAttributeName: self.lend {
                     (para : NSMutableParagraphStyle) in
-                    para.alignment = .Center
+                    para.alignment = .center
                 }
-                ]).drawInRect(CGRectMake(0,-5,45,29))
-            }.imageWithRenderingMode(.AlwaysOriginal)
-        customeStepper.setDecrementImage(imleftblack, forState:.Disabled)
+                ]).draw(in: CGRect(x: 0,y: -5,width: 45,height: 29))
+            }.withRenderingMode(.alwaysOriginal)
+        customeStepper.setDecrementImage(imleftblack, for:.disabled)
         
-        let imlefttint = imageOfSize(CGSizeMake(45,29)) {
+        let imlefttint = imageOfSize(CGSize(width: 45,height: 29)) {
             NSAttributedString(string:"\u{21DA}", attributes:[
                 NSFontAttributeName: UIFont(name:"GillSans-Bold", size:30)!,
                 NSForegroundColorAttributeName: customeStepper.tintColor,
                 NSParagraphStyleAttributeName: self.lend {
                     (para : NSMutableParagraphStyle) in
-                    para.alignment = .Center
+                    para.alignment = .center
                 }
-                ]).drawInRect(CGRectMake(0,-5,45,29))
-            }.imageWithRenderingMode(.AlwaysOriginal)
-        customeStepper.setDecrementImage(imlefttint, forState:.Highlighted)
+                ]).draw(in: CGRect(x: 0,y: -5,width: 45,height: 29))
+            }.withRenderingMode(.alwaysOriginal)
+        customeStepper.setDecrementImage(imlefttint, for:.highlighted)
         
-        let imright = imageOfSize(CGSizeMake(45,29)) {
+        let imright = imageOfSize(CGSize(width: 45,height: 29)) {
             NSAttributedString(string:"\u{21DB}", attributes:[
                 NSFontAttributeName: UIFont(name:"GillSans-Bold", size:30)!,
-                NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSForegroundColorAttributeName: UIColor.white,
                 NSParagraphStyleAttributeName: self.lend {
                     (para : NSMutableParagraphStyle) in
-                    para.alignment = .Center
+                    para.alignment = .center
                 }
-                ]).drawInRect(CGRectMake(0,-5,45,29))
-            }.imageWithRenderingMode(.AlwaysOriginal)
-        customeStepper.setIncrementImage(imright, forState:.Normal)
+                ]).draw(in: CGRect(x: 0,y: -5,width: 45,height: 29))
+            }.withRenderingMode(.alwaysOriginal)
+        customeStepper.setIncrementImage(imright, for:UIControlState())
         
-        let imrightblack = imageOfSize(CGSizeMake(45,29)) {
+        let imrightblack = imageOfSize(CGSize(width: 45,height: 29)) {
             NSAttributedString(string:"\u{21DB}", attributes:[
                 NSFontAttributeName: UIFont(name:"GillSans-Bold", size:30)!,
-                NSForegroundColorAttributeName: UIColor.blackColor(),
+                NSForegroundColorAttributeName: UIColor.black,
                 NSParagraphStyleAttributeName: self.lend {
                     (para : NSMutableParagraphStyle) in
-                    para.alignment = .Center
+                    para.alignment = .center
                 }
-                ]).drawInRect(CGRectMake(0,-5,45,29))
-            }.imageWithRenderingMode(.AlwaysOriginal)
-        customeStepper.setIncrementImage(imrightblack, forState:.Disabled)
+                ]).draw(in: CGRect(x: 0,y: -5,width: 45,height: 29))
+            }.withRenderingMode(.alwaysOriginal)
+        customeStepper.setIncrementImage(imrightblack, for:.disabled)
         
-        let imrighttint = imageOfSize(CGSizeMake(45,29)) {
+        let imrighttint = imageOfSize(CGSize(width: 45,height: 29)) {
             NSAttributedString(string:"\u{21DB}", attributes:[
                 NSFontAttributeName: UIFont(name:"GillSans-Bold", size:30)!,
                 NSForegroundColorAttributeName: customeStepper.tintColor,
                 NSParagraphStyleAttributeName: self.lend {
                     (para : NSMutableParagraphStyle) in
-                    para.alignment = .Center
+                    para.alignment = .center
                 }
-                ]).drawInRect(CGRectMake(0,-5,45,29))
-            }.imageWithRenderingMode(.AlwaysOriginal)
-        customeStepper.setIncrementImage(imrighttint, forState:.Highlighted)
+                ]).draw(in: CGRect(x: 0,y: -5,width: 45,height: 29))
+            }.withRenderingMode(.alwaysOriginal)
+        customeStepper.setIncrementImage(imrighttint, for:.highlighted)
 
         self.view.addSubview(customeStepper)
         customeStepper.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activateConstraints([
-                customeStepper.topAnchor.constraintEqualToAnchor(stepper.bottomAnchor, constant: 20),
-                customeStepper.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -20)
+        NSLayoutConstraint.activate([
+                customeStepper.topAnchor.constraint(equalTo: stepper.bottomAnchor, constant: 20),
+                customeStepper.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20)
             ])
         
         customeStepper.maximumValue = 10
@@ -156,12 +156,12 @@ class StepperViewController: UIViewController {
         self.customeLable.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(self.customeLable)
-        NSLayoutConstraint.activateConstraints([
-                self.customeLable.topAnchor.constraintEqualToAnchor(customeStepper.topAnchor),
-                self.customeLable.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20)
+        NSLayoutConstraint.activate([
+                self.customeLable.topAnchor.constraint(equalTo: customeStepper.topAnchor),
+                self.customeLable.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20)
             ])
         
-        customeStepper.addTarget(self, action: #selector(StepperViewController.customeStepperEvent(_:)), forControlEvents: .ValueChanged)
+        customeStepper.addTarget(self, action: #selector(StepperViewController.customeStepperEvent(_:)), for: .valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -169,25 +169,25 @@ class StepperViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func imageOfSize(size:CGSize, closure:() -> ()) -> UIImage {
+    fileprivate func imageOfSize(_ size:CGSize, closure:() -> ()) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         closure()
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return result
+        return result!
     }
     
-    private func lend<T where T:NSObject> (closure:(T)->()) -> T {
+    fileprivate func lend<T> (_ closure:(T)->()) -> T where T:NSObject {
         let orig = T()
         closure(orig)
         return orig
     }
 
-    func stepperEvent(sender: UIStepper) {
+    func stepperEvent(_ sender: UIStepper) {
         self.label.text = String(sender.value)
     }
     
-    func customeStepperEvent(sender: UIStepper) {
+    func customeStepperEvent(_ sender: UIStepper) {
         self.customeLable.text = String(sender.value)
     }
 }

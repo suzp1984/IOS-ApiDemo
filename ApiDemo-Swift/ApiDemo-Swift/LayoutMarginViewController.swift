@@ -15,7 +15,7 @@ class LayoutMarginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     
@@ -26,28 +26,28 @@ class LayoutMarginViewController: UIViewController {
         
         let mainView = self.view
         let v = UIView()
-        v.backgroundColor = UIColor.redColor()
+        v.backgroundColor = UIColor.red
         v.translatesAutoresizingMaskIntoConstraints = false
         self.topLayoutGuide
         self.bottomLayoutGuide
         
-        mainView.addSubview(v)
+        mainView?.addSubview(v)
         
-        NSLayoutConstraint.activateConstraints([
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[v]-(0)-|", options: [], metrics: nil, views: ["v":v]),
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|-[tlg]-(0)-[v]-(0)-[blg]-|", options: [], metrics: nil, views: ["v":v, "tlg":self.topLayoutGuide, "blg":self.bottomLayoutGuide])
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[v]-(0)-|", options: [], metrics: nil, views: ["v":v]),
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|-[tlg]-(0)-[v]-(0)-[blg]-|", options: [], metrics: nil, views: ["v":v, "tlg":self.topLayoutGuide, "blg":self.bottomLayoutGuide])
             ].flatMap{$0})
         
         v.preservesSuperviewLayoutMargins = true
         
         let v1 = UIView()
-        v1.backgroundColor = UIColor.greenColor()
+        v1.backgroundColor = UIColor.green
         v1.translatesAutoresizingMaskIntoConstraints = false
         v.addSubview(v1)
         
-        NSLayoutConstraint.activateConstraints([
-            NSLayoutConstraint.constraintsWithVisualFormat("H:|-[v1]-|", options: [], metrics: nil, views: ["v1":v1]),
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|-[v1]-|", options: [], metrics: nil, views: ["v1":v1])
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint.constraints(withVisualFormat: "H:|-[v1]-|", options: [], metrics: nil, views: ["v1":v1]),
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|-[v1]-|", options: [], metrics: nil, views: ["v1":v1])
             ].flatMap{$0})
     }
 

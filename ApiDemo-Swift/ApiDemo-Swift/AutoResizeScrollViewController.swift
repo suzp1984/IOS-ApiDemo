@@ -13,19 +13,19 @@ class AutoResizeScrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let sv = UIScrollView(frame: self.view.bounds)
-        sv.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        sv.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.addSubview(sv)
-        sv.backgroundColor = UIColor.whiteColor()
+        sv.backgroundColor = UIColor.white
         
         var y : CGFloat = 10
         for i in 0 ..< 30 {
             let lab = UILabel()
             lab.text = "This is Lable \(i+1)"
             lab.sizeToFit()
-            lab.frame.origin = CGPointMake(10, y)
+            lab.frame.origin = CGPoint(x: 10, y: y)
             sv.addSubview(lab)
             y += lab.bounds.size.height + 10
         }
