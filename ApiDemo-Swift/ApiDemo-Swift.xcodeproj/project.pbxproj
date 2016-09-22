@@ -105,6 +105,8 @@
 		3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */; };
 		379922621D941C450003D4D5 /* KastenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922611D941C450003D4D5 /* KastenView.swift */; };
 		379922641D9423F00003D4D5 /* KastenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922631D9423F00003D4D5 /* KastenViewController.swift */; };
+		379922661D9429810003D4D5 /* ManuelKastenSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922651D9429810003D4D5 /* ManuelKastenSecondView.swift */; };
+		379922681D942DEE0003D4D5 /* KastenSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922671D942DEE0003D4D5 /* KastenSecondViewController.swift */; };
 		379FAC201D85738D00103F58 /* MandelbrotDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC1F1D85738D00103F58 /* MandelbrotDrawView.swift */; };
 		379FAC221D8577DF00103F58 /* MandelBrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC211D8577DF00103F58 /* MandelBrotViewController.swift */; };
 		379FAC241D86F25F00103F58 /* MartinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC231D86F25F00103F58 /* MartinView.swift */; };
@@ -349,6 +351,8 @@
 		3796A0E31D3F846D007BC3B3 /* GroupedAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedAnimationViewController.swift; sourceTree = "<group>"; };
 		379922611D941C450003D4D5 /* KastenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KastenView.swift; sourceTree = "<group>"; };
 		379922631D9423F00003D4D5 /* KastenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KastenViewController.swift; sourceTree = "<group>"; };
+		379922651D9429810003D4D5 /* ManuelKastenSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManuelKastenSecondView.swift; sourceTree = "<group>"; };
+		379922671D942DEE0003D4D5 /* KastenSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KastenSecondViewController.swift; sourceTree = "<group>"; };
 		379FAC1F1D85738D00103F58 /* MandelbrotDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotDrawView.swift; sourceTree = "<group>"; };
 		379FAC211D8577DF00103F58 /* MandelBrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelBrotViewController.swift; sourceTree = "<group>"; };
 		379FAC231D86F25F00103F58 /* MartinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MartinView.swift; sourceTree = "<group>"; };
@@ -782,6 +786,8 @@
 				379FAC251D87000B00103F58 /* MartinArtViewController.swift */,
 				379922611D941C450003D4D5 /* KastenView.swift */,
 				379922631D9423F00003D4D5 /* KastenViewController.swift */,
+				379922651D9429810003D4D5 /* ManuelKastenSecondView.swift */,
+				379922671D942DEE0003D4D5 /* KastenSecondViewController.swift */,
 			);
 			name = Drawing;
 			sourceTree = "<group>";
@@ -1196,6 +1202,7 @@
 				37E20A551CEABE6500383A56 /* ImageFilter2ViewController.swift in Sources */,
 				37DF59181D54CF460069ADAF /* UIPickerViewController.swift in Sources */,
 				3796A0E41D3F846D007BC3B3 /* GroupedAnimationViewController.swift in Sources */,
+				379922681D942DEE0003D4D5 /* KastenSecondViewController.swift in Sources */,
 				37670FE51D48FF25001E353C /* CustomeCellLayoutViewController.swift in Sources */,
 				37B3DB6C1D40B9D400CFF75A /* EmitterLayerViewController.swift in Sources */,
 				3710B17B1D4B6C4100FB8099 /* WebViewSamplesController.swift in Sources */,
@@ -1273,6 +1280,7 @@
 				37DF594C1D5630D50069ADAF /* SliderBubbleViewController.swift in Sources */,
 				37C7D21E1CEA0C5E00407AA8 /* ImageDrawingViewController.swift in Sources */,
 				37A6E0A41CF7112D00632BDF /* CompassView.swift in Sources */,
+				379922661D9429810003D4D5 /* ManuelKastenSecondView.swift in Sources */,
 				37FE42521CEB47E300EE8E38 /* VisualEffectViewController.swift in Sources */,
 				37C7D2181CE9F93000407AA8 /* GraphicContextViewController.swift in Sources */,
 				37CEC1D81D50B2620013DF8C /* DownloaderTableViewController.swift in Sources */,
