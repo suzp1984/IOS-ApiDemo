@@ -107,6 +107,8 @@
 		379922641D9423F00003D4D5 /* KastenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922631D9423F00003D4D5 /* KastenViewController.swift */; };
 		379922661D9429810003D4D5 /* ManuelKastenSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922651D9429810003D4D5 /* ManuelKastenSecondView.swift */; };
 		379922681D942DEE0003D4D5 /* KastenSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922671D942DEE0003D4D5 /* KastenSecondViewController.swift */; };
+		3799226A1D956ABC0003D4D5 /* PhagocyteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379922691D956ABC0003D4D5 /* PhagocyteView.swift */; };
+		3799226C1D9579DA0003D4D5 /* PhagocyteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799226B1D9579DA0003D4D5 /* PhagocyteViewController.swift */; };
 		379FAC201D85738D00103F58 /* MandelbrotDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC1F1D85738D00103F58 /* MandelbrotDrawView.swift */; };
 		379FAC221D8577DF00103F58 /* MandelBrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC211D8577DF00103F58 /* MandelBrotViewController.swift */; };
 		379FAC241D86F25F00103F58 /* MartinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FAC231D86F25F00103F58 /* MartinView.swift */; };
@@ -353,6 +355,8 @@
 		379922631D9423F00003D4D5 /* KastenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KastenViewController.swift; sourceTree = "<group>"; };
 		379922651D9429810003D4D5 /* ManuelKastenSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManuelKastenSecondView.swift; sourceTree = "<group>"; };
 		379922671D942DEE0003D4D5 /* KastenSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KastenSecondViewController.swift; sourceTree = "<group>"; };
+		379922691D956ABC0003D4D5 /* PhagocyteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhagocyteView.swift; sourceTree = "<group>"; };
+		3799226B1D9579DA0003D4D5 /* PhagocyteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhagocyteViewController.swift; sourceTree = "<group>"; };
 		379FAC1F1D85738D00103F58 /* MandelbrotDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelbrotDrawView.swift; sourceTree = "<group>"; };
 		379FAC211D8577DF00103F58 /* MandelBrotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MandelBrotViewController.swift; sourceTree = "<group>"; };
 		379FAC231D86F25F00103F58 /* MartinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MartinView.swift; sourceTree = "<group>"; };
@@ -788,6 +792,8 @@
 				379922631D9423F00003D4D5 /* KastenViewController.swift */,
 				379922651D9429810003D4D5 /* ManuelKastenSecondView.swift */,
 				379922671D942DEE0003D4D5 /* KastenSecondViewController.swift */,
+				379922691D956ABC0003D4D5 /* PhagocyteView.swift */,
+				3799226B1D9579DA0003D4D5 /* PhagocyteViewController.swift */,
 			);
 			name = Drawing;
 			sourceTree = "<group>";
@@ -1184,6 +1190,7 @@
 				377D929E1D4C2C7C00E57237 /* ProgressBarViewController.swift in Sources */,
 				37DF59581D5B55860069ADAF /* RotationGestureRecognizerViewController.swift in Sources */,
 				37FEE9A51CE092C4002A28E2 /* ConstraintSwapViewController.swift in Sources */,
+				3799226A1D956ABC0003D4D5 /* PhagocyteView.swift in Sources */,
 				37B3DB721D41DB9100CFF75A /* CustomeDynamicsBehaviorViewController.swift in Sources */,
 				37DF594A1D562EFC0069ADAF /* SliderBubbleView.swift in Sources */,
 				37DF59621D5F6D390069ADAF /* PageViewSampleViewController.swift in Sources */,
@@ -1224,6 +1231,7 @@
 				37DF595E1D5B60CD0069ADAF /* LongPressGestureViewController.swift in Sources */,
 				37DF59501D5A1B360069ADAF /* GestureRecognizerViewController.swift in Sources */,
 				37A6E09E1CF6F9F400632BDF /* DrawingIntoLayerViewController.swift in Sources */,
+				3799226C1D9579DA0003D4D5 /* PhagocyteViewController.swift in Sources */,
 				37DF591C1D54E2790069ADAF /* SearchBarViewController.swift in Sources */,
 				37B3DB8D1D46E9EE00CFF75A /* AutoResizeScrollViewController.swift in Sources */,
 				379FAC201D85738D00103F58 /* MandelbrotDrawView.swift in Sources */,
