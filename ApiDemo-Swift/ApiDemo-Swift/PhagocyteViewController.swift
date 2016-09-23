@@ -14,7 +14,8 @@ class PhagocyteViewController: UIViewController {
         super.viewDidLoad()
 
         let phagocyte = PhagocyteView()
-        phagocyte.frame = self.view.bounds
+        // phagocyte.frame = self.view.bounds
+        phagocyte.frame = CGRect(x: 0, y: 0, width: 1024, height: 1024)
         phagocyte.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(phagocyte)
